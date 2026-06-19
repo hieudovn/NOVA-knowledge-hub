@@ -1,0 +1,7 @@
+services:
+  wiki:
+    build:
+      context: .
+      dockerfile: apps/wiki/Dockerfile
+    ports:
+      - "3000:80"

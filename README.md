@@ -44,6 +44,35 @@ Start with:
 - `docs/SECURITY_AND_ACCESS.md`
 - `docs/DECISION_LOG.md`
 
+## M1 Wiki
+
+The Docusaurus wiki lives in `apps/wiki` and reads markdown/MDX knowledge pages from `content/wiki`.
+
+Local development:
+
+```bash
+cd apps/wiki
+npm install
+npm run start
+```
+
+Production build:
+
+```bash
+cd apps/wiki
+npm run build
+```
+
+Docker:
+
+```bash
+docker compose up --build wiki
+```
+
+Then open `http://localhost:3000`.
+
+Each wiki page must include metadata front matter for `type`, `status`, `visibility`, `tags`, and `source_refs`. Run `npm run validate:metadata` inside `apps/wiki` to check this before building.
+
 ## Guiding Principle
 
 Human owns direction. AI owns acceleration. Human owns the final decision.

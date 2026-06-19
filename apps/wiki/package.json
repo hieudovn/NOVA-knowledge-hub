@@ -1,0 +1,28 @@
+{
+  "name": "@nova-knowledge-hub/wiki",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Docusaurus wiki for NOVA Knowledge Hub.",
+  "scripts": {
+    "start": "docusaurus start --host 0.0.0.0",
+    "build": "npm run validate:metadata && docusaurus build",
+    "serve": "docusaurus serve --host 0.0.0.0",
+    "clear": "docusaurus clear",
+    "validate:metadata": "node scripts/validate-metadata.js"
+  },
+  "dependencies": {
+    "@docusaurus/core": "^3.8.1",
+    "@docusaurus/preset-classic": "^3.8.1",
+    "@easyops-cn/docusaurus-search-local": "latest",
+    "@mdx-js/react": "^3.1.0",
+    "clsx": "^2.1.1",
+    "gray-matter": "^4.0.3",
+    "prism-react-renderer": "^2.4.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "overrides": {
+    "serialize-javascript": "^7.0.5"
+  },
+  "devDependencies": {}
+}
