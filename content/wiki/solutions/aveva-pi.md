@@ -22,32 +22,68 @@ reviewed_by: null
 
 ## Summary
 
-Draft solution page for AVEVA PI as a core industrial data historian reference.
+AVEVA PI is a draft solution page in the industrial historian and operational data knowledge base.
+
+In NOVA Knowledge Hub M1, this page acts as a placeholder for organizing reviewed AVEVA PI knowledge before it is used for historian comparisons, architecture patterns, or tender preparation.
+
+## Scope
+
+- In scope:
+  - AVEVA PI as a candidate industrial historian and operational data solution
+  - historian-related solution mapping
+  - links to related capability and pattern pages
+  - source-backed notes for comparison and tender preparation
+- Out of scope for this page:
+  - final vendor claims before source review
+  - pricing, licensing, or commercial terms
+  - public marketing content
+  - unsupported migration, replacement, or competitive claims
 
 ## Problem It Solves
 
-- Plant data capture and long-term historian storage.
-- Operational data access for engineers, operations, and analytics teams.
-- Integration with enterprise and industrial systems.
+- Industrial plants need a trusted way to capture, store, retrieve, and use operational time-series data.
+- Engineering, operations, and analytics teams need access to historical data for troubleshooting, reporting, monitoring, and analysis.
+- Presales and tender teams need to distinguish historian scope from IIoT platform, APM, dashboard, and enterprise reporting scope.
 
-## Core Capabilities
+## Core Concepts or Capabilities
 
 | Capability | Notes | Evidence |
 |---|---|---|
-| Time-series historian | To be extracted from source documents. | `SRC-APM-IIOT-0008` |
-| Asset/context model | To be validated. | `SRC-APM-IIOT-0008` |
-| Enterprise data access | To be extracted from source documents. | `SRC-APM-IIOT-0008` |
+| Time-series historian | Candidate area for source review; confirm storage, retention, retrieval, and data management scope. | `SRC-APM-IIOT-0008` |
+| Data collection | Candidate area for source review; confirm interfaces, collectors, and supported source systems. | `SRC-APM-IIOT-0008` |
+| Context model | Candidate area for source review; confirm how asset or operational context is modeled. | `SRC-APM-IIOT-0008` |
+| Data access | Candidate area for source review; confirm reporting, API, integration, or downstream data access options. | `SRC-APM-IIOT-0008` |
 
 ## Architecture Notes
 
-Document server components, interfaces, security model, high availability options, and integration targets after source review.
+- Document server components, interfaces, security model, availability options, and integration targets after source review.
+- Separate confirmed AVEVA PI architecture from general historian concepts.
+- Use pattern pages for reusable ingestion, historian-to-APM, and enterprise integration flows.
 
 ## Tender Notes
 
 - Map requirements around historian, integration, retention, reporting, and availability.
 - Track any restricted commercial notes outside public content.
+- Separate confirmed AVEVA PI fit from assumptions or project-specific interpretations.
+
+## Related Capability Pages
+
+- [Industrial Historian](../capabilities/industrial-historian)
+- [IIoT Platform](../capabilities/iiot-platform)
+- [Asset Performance Management](../capabilities/apm)
+
+## Related Pattern Pages
+
+- [SCADA/DCS Data Ingestion](../patterns/scada-dcs-data-ingestion)
+- [Historian to APM](../patterns/historian-to-apm)
+- [OPC UA Integration](../patterns/opc-ua-integration)
+
+## Source Traceability
+
+Current content is a draft structure based on the registered AVEVA PI source folder. Validate all capability, architecture, and comparison notes against `SRC-APM-IIOT-0008` before moving this page beyond `draft`.
 
 ## Review Notes
 
 - Confirm current product naming and module boundaries.
 - Avoid unsupported migration or comparison claims.
+- Keep neutral historian concepts on the Industrial Historian capability page and vendor-specific evidence here.
