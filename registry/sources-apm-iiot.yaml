@@ -9,6 +9,15 @@ source_domain:
   confidentiality: internal
   purpose: Initial source domain for Tech Knowledge Base
   status: registered
+  extraction_status: not_started
+  related_pages:
+    - content/wiki/index.md
+    - content/wiki/solutions/index.md
+    - content/wiki/capabilities/index.md
+    - content/wiki/patterns/index.md
+    - content/wiki/comparisons/index.md
+    - content/wiki/tender/index.md
+  notes: Domain-level source folder. Store pointers and metadata only; do not copy raw source content into the repository.
 
 sources:
   - id: SRC-APM-IIOT-0001
@@ -18,6 +27,15 @@ sources:
     drive_id: 1OKfe48zNwTjB1196QU45f8jqNyT8OyszAwLQ-D1gdEw
     confidentiality: internal
     extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/index.md
+      - content/wiki/capabilities/apm.md
+      - content/wiki/capabilities/iiot-platform.md
+      - content/wiki/capabilities/industrial-historian.md
+      - content/wiki/comparisons/apm-solution-landscape.md
+      - content/wiki/tender/apm-iiot-compliance-notes.md
+    notes: Portfolio-level source for manual extraction planning, capability matrix, and landscape mapping.
     suggested_output:
       - solution_overview_pages
       - capability_matrix
@@ -30,6 +48,9 @@ sources:
     drive_id: 12NDQP7jzeR-8tJrGmhTO7RxtBHvIjFnTlXhh-fjiUsI
     confidentiality: restricted
     extraction_priority: low
+    extraction_status: deferred_restricted
+    related_pages: []
+    notes: Restricted pricing source. Do not extract pricing, licensing, or commercial terms into wiki pages during M2-lite.
     suggested_output:
       - pricing_internal_notes
 
@@ -40,6 +61,13 @@ sources:
     drive_id: 12QuvECztoR38WDkCp5x_NiYvxT9-BE1s
     confidentiality: internal
     extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/ai-plantops.md
+      - content/wiki/capabilities/iiot-platform.md
+      - content/wiki/patterns/scada-dcs-data-ingestion.md
+      - content/wiki/patterns/edge-to-center.md
+    notes: Candidate solution source for AI PlantOps draft page. Keep extraction focused on reviewed product facts and M1 technical knowledge.
 
   - id: SRC-APM-IIOT-0004
     title: Luca BDS
@@ -48,6 +76,9 @@ sources:
     drive_id: 1LNdeA2uNC6dp0IA63m1V5UV0_6Vv8mkg
     confidentiality: internal
     extraction_priority: medium
+    extraction_status: not_started
+    related_pages: []
+    notes: Registered source without an M1 wiki page yet. Defer page creation until manual extraction confirms useful M1 technical content.
 
   - id: SRC-APM-IIOT-0005
     title: AVEVA APM
@@ -56,6 +87,14 @@ sources:
     drive_id: 1Uvz9XDPR2cpRJJjnC2nmq-fp9XusnDAz
     confidentiality: internal
     extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/aveva-apm.md
+      - content/wiki/capabilities/apm.md
+      - content/wiki/capabilities/condition-monitoring.md
+      - content/wiki/comparisons/apm-solution-landscape.md
+      - content/wiki/tender/apm-requirement-mapping.md
+    notes: Candidate source for AVEVA APM draft page and APM landscape mapping. Validate claims before moving beyond draft.
 
   - id: SRC-APM-IIOT-0006
     title: Litmus Edge
@@ -64,6 +103,14 @@ sources:
     drive_id: 1-7gdIlVX57hafsnErRT15WhyNivoA3CN
     confidentiality: internal
     extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/litmus-edge.md
+      - content/wiki/capabilities/iiot-platform.md
+      - content/wiki/patterns/edge-to-center.md
+      - content/wiki/patterns/opc-ua-integration.md
+      - content/wiki/patterns/mqtt-sparkplug.md
+    notes: Candidate source for Litmus Edge draft page and edge/IIoT integration patterns.
 
   - id: SRC-APM-IIOT-0007
     title: EtaPRO
@@ -72,6 +119,15 @@ sources:
     drive_id: 1ePyS23Vwv1KjJ_TaB2U5JArxVyOH7YJE
     confidentiality: internal
     extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/etapro.md
+      - content/wiki/capabilities/apm.md
+      - content/wiki/capabilities/condition-monitoring.md
+      - content/wiki/comparisons/etapro-vs-mas-apm.md
+      - content/wiki/comparisons/apm-solution-landscape.md
+      - content/wiki/tender/apm-requirement-mapping.md
+    notes: High-priority source for EtaPRO solution overview and APM comparison work.
 
   - id: SRC-APM-IIOT-0008
     title: AVEVA PI
@@ -80,6 +136,14 @@ sources:
     drive_id: 1kGv21UF86OTf9nuybNDlq7BCOQriEfEr
     confidentiality: internal
     extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/aveva-pi.md
+      - content/wiki/capabilities/industrial-historian.md
+      - content/wiki/comparisons/canary-vs-aveva-pi.md
+      - content/wiki/tender/historian-requirement-mapping.md
+      - content/wiki/patterns/historian-to-apm.md
+    notes: High-priority source for AVEVA PI solution overview, historian mapping, and Canary comparison.
 
   - id: SRC-APM-IIOT-0009
     title: Retina360
@@ -88,6 +152,9 @@ sources:
     drive_id: 1V1b9HektU5cFp6Kq8hPTvggxoPfJEVDj
     confidentiality: internal
     extraction_priority: medium
+    extraction_status: not_started
+    related_pages: []
+    notes: Registered source without an M1 wiki page yet. Defer page creation until manual extraction confirms useful M1 technical content.
 
   - id: SRC-APM-IIOT-0010
     title: Canary
@@ -96,6 +163,14 @@ sources:
     drive_id: 1HFjWEw-kl8ExbDkf3hoMXsaBmBAUMdUk
     confidentiality: internal
     extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/canary.md
+      - content/wiki/capabilities/industrial-historian.md
+      - content/wiki/comparisons/canary-vs-aveva-pi.md
+      - content/wiki/tender/historian-requirement-mapping.md
+      - content/wiki/patterns/scada-dcs-data-ingestion.md
+    notes: High-priority source for Canary solution overview, historian mapping, and AVEVA PI comparison.
 
   - id: SRC-APM-IIOT-0011
     title: IDBoxRT
@@ -104,3 +179,12 @@ sources:
     drive_id: 17Q2yiUSr7GmIlhvRyclGZ4whhPsezzov
     confidentiality: internal
     extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/idboxrt.md
+      - content/wiki/capabilities/iiot-platform.md
+      - content/wiki/comparisons/idboxrt-vs-historian.md
+      - content/wiki/patterns/edge-to-center.md
+      - content/wiki/patterns/scada-dcs-data-ingestion.md
+      - content/wiki/tender/apm-iiot-compliance-notes.md
+    notes: High-priority source for IDBoxRT solution overview, IIoT capability mapping, and IDBoxRT vs historian comparison.
