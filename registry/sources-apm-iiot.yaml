@@ -1,0 +1,106 @@
+source_domain:
+  id: SRC-DOMAIN-APM-IIOT
+  title: APM & IIoT Solutions
+  type: google_drive_folder
+  url: https://drive.google.com/drive/folders/1Jqc5baQrXENomrDRxEpaIy6QhkNrYIvw
+  folder_id: 1Jqc5baQrXENomrDRxEpaIy6QhkNrYIvw
+  owner: Hieu Do
+  organization: Personal / Avenue Context
+  confidentiality: internal
+  purpose: Initial source domain for Tech Knowledge Base
+  status: registered
+
+sources:
+  - id: SRC-APM-IIOT-0001
+    title: AVENUE APM & IIoT Solutions
+    type: google_sheet
+    url: https://docs.google.com/spreadsheets/d/1OKfe48zNwTjB1196QU45f8jqNyT8OyszAwLQ-D1gdEw
+    drive_id: 1OKfe48zNwTjB1196QU45f8jqNyT8OyszAwLQ-D1gdEw
+    confidentiality: internal
+    extraction_priority: high
+    suggested_output:
+      - solution_overview_pages
+      - capability_matrix
+      - portfolio_landscape
+
+  - id: SRC-APM-IIOT-0002
+    title: APM & IIoT Solutions Pricing Structure
+    type: google_sheet
+    url: https://docs.google.com/spreadsheets/d/12NDQP7jzeR-8tJrGmhTO7RxtBHvIjFnTlXhh-fjiUsI
+    drive_id: 12NDQP7jzeR-8tJrGmhTO7RxtBHvIjFnTlXhh-fjiUsI
+    confidentiality: restricted
+    extraction_priority: low
+    suggested_output:
+      - pricing_internal_notes
+
+  - id: SRC-APM-IIOT-0003
+    title: AI PlantOps
+    type: google_drive_folder
+    url: https://drive.google.com/drive/folders/12QuvECztoR38WDkCp5x_NiYvxT9-BE1s
+    drive_id: 12QuvECztoR38WDkCp5x_NiYvxT9-BE1s
+    confidentiality: internal
+    extraction_priority: medium
+
+  - id: SRC-APM-IIOT-0004
+    title: Luca BDS
+    type: google_drive_folder
+    url: https://drive.google.com/drive/folders/1LNdeA2uNC6dp0IA63m1V5UV0_6Vv8mkg
+    drive_id: 1LNdeA2uNC6dp0IA63m1V5UV0_6Vv8mkg
+    confidentiality: internal
+    extraction_priority: medium
+
+  - id: SRC-APM-IIOT-0005
+    title: AVEVA APM
+    type: google_drive_folder
+    url: https://drive.google.com/drive/folders/1Uvz9XDPR2cpRJJjnC2nmq-fp9XusnDAz
+    drive_id: 1Uvz9XDPR2cpRJJjnC2nmq-fp9XusnDAz
+    confidentiality: internal
+    extraction_priority: medium
+
+  - id: SRC-APM-IIOT-0006
+    title: Litmus Edge
+    type: google_drive_folder
+    url: https://drive.google.com/drive/folders/1-7gdIlVX57hafsnErRT15WhyNivoA3CN
+    drive_id: 1-7gdIlVX57hafsnErRT15WhyNivoA3CN
+    confidentiality: internal
+    extraction_priority: medium
+
+  - id: SRC-APM-IIOT-0007
+    title: EtaPRO
+    type: google_drive_folder
+    url: https://drive.google.com/drive/folders/1ePyS23Vwv1KjJ_TaB2U5JArxVyOH7YJE
+    drive_id: 1ePyS23Vwv1KjJ_TaB2U5JArxVyOH7YJE
+    confidentiality: internal
+    extraction_priority: high
+
+  - id: SRC-APM-IIOT-0008
+    title: AVEVA PI
+    type: google_drive_folder
+    url: https://drive.google.com/drive/folders/1kGv21UF86OTf9nuybNDlq7BCOQriEfEr
+    drive_id: 1kGv21UF86OTf9nuybNDlq7BCOQriEfEr
+    confidentiality: internal
+    extraction_priority: high
+
+  - id: SRC-APM-IIOT-0009
+    title: Retina360
+    type: google_drive_folder
+    url: https://drive.google.com/drive/folders/1V1b9HektU5cFp6Kq8hPTvggxoPfJEVDj
+    drive_id: 1V1b9HektU5cFp6Kq8hPTvggxoPfJEVDj
+    confidentiality: internal
+    extraction_priority: medium
+
+  - id: SRC-APM-IIOT-0010
+    title: Canary
+    type: google_drive_folder
+    url: https://drive.google.com/drive/folders/1HFjWEw-kl8ExbDkf3hoMXsaBmBAUMdUk
+    drive_id: 1HFjWEw-kl8ExbDkf3hoMXsaBmBAUMdUk
+    confidentiality: internal
+    extraction_priority: high
+
+  - id: SRC-APM-IIOT-0011
+    title: IDBoxRT
+    type: google_drive_folder
+    url: https://drive.google.com/drive/folders/17Q2yiUSr7GmIlhvRyclGZ4whhPsezzov
+    drive_id: 17Q2yiUSr7GmIlhvRyclGZ4whhPsezzov
+    confidentiality: internal
+    extraction_priority: high
