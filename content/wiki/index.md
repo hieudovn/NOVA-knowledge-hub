@@ -17,13 +17,21 @@ NOVA Knowledge Hub is the markdown-first technical knowledge base for solution, 
 
 This M1 wiki skeleton focuses on the APM, IIoT, historian, and IBM MAS knowledge base. It is intentionally separate from AI query, knowledge graph, CRM, public portal, landing pages, and user management.
 
-## Sections
+## Browse the Wiki
 
-- [Solutions](./solutions/)
-- [Capabilities](./capabilities/)
-- [Patterns](./patterns/)
-- [Comparisons](./comparisons/)
-- [Tender](./tender/)
+| Section | Purpose |
+|---|---|
+| [Solutions](./solutions/) | Draft solution anchors for IDBoxRT, Canary, AVEVA PI, EtaPRO, IBM MAS, AVEVA APM, Litmus Edge, and AI PlantOps. |
+| [Capabilities](./capabilities/) | Neutral capability anchors for APM, IIoT Platform, Industrial Historian, Condition Monitoring, and Predictive Maintenance. |
+| [Patterns](./patterns/) | Reusable architecture and integration patterns for historian, edge, OPC UA, MQTT, Maximo, and SCADA/DCS ingestion topics. |
+| [Comparisons](./comparisons/) | Conservative draft comparison frameworks for solution evaluation and landscape mapping. |
+| [Tender](./tender/) | Draft requirement mapping templates for APM, IIoT, historian, and compliance notes. |
+
+## M1 Boundaries
+
+- Content is draft and private unless explicitly reviewed later.
+- Source traceability is required before any page becomes approved knowledge.
+- Pricing, licensing, public marketing, AI chat, CRM, backend, database, Knowledge Graph, Modes, Skills, and AI orchestration are outside this phase.
 
 ## Page Metadata
 

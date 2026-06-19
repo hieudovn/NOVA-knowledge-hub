@@ -27,16 +27,42 @@ reviewed_by: null
 
 Draft comparison framework for EtaPRO and IBM MAS APM-related capabilities.
 
+This page is not a final product recommendation. It is a structure for separating performance monitoring, APM, reliability, predictive maintenance, and maintenance workflow scope.
+
 ## Comparison Criteria
 
 | Criteria | EtaPRO | IBM MAS APM | Notes |
 |---|---|---|---|
 | Primary use case | To validate | To validate | Source review required |
 | Asset classes | To validate | To validate | Source review required |
+| Performance monitoring | To validate | To validate | Source review required |
+| Condition monitoring | To validate | To validate | Source review required |
+| Predictive maintenance | To validate | To validate | Source review required |
 | Maintenance workflow | To validate | To validate | Source review required |
 | Analytics model | To validate | To validate | Source review required |
+| Integration with historian or IIoT | To validate | To validate | Source review required |
+
+## Draft Decision Guidance
+
+- Use this page to clarify whether the opportunity is mainly performance monitoring, APM analytics, EAM workflow, or a combined architecture.
+- Avoid treating IBM MAS, EtaPRO, or any APM solution as automatically satisfying all APM-related requirements.
+- Keep module names, product scope, and comparison criteria tied to reviewed source evidence.
+
+## Related Pages
+
+- [EtaPRO](../solutions/etapro)
+- [IBM Maximo Application Suite](../solutions/ibm-mas)
+- [Asset Performance Management](../capabilities/apm)
+- [Condition Monitoring](../capabilities/condition-monitoring)
+- [Predictive Maintenance](../capabilities/predictive-maintenance)
+- [Maximo Integration](../patterns/maximo-integration)
+
+## Source Traceability
+
+Current content is a draft comparison structure based on the registered EtaPRO source folder and IBM MAS source materials. Validate each row against `SRC-APM-IIOT-0007` and `SRC-PORTFOLIO-IBM-MAS` before moving beyond `draft`.
 
 ## Review Notes
 
 - Separate performance monitoring, reliability, health, predictive maintenance, and EAM workflow scope.
 - Confirm IBM MAS module names before approval.
+- Keep comparison statements neutral until reviewed source references are added.

@@ -22,9 +22,19 @@ reviewed_by: null
 
 ## Summary
 
-Pattern for event-driven IIoT data movement using MQTT and Sparkplug-style payload conventions where appropriate.
+MQTT Sparkplug is a draft pattern for event-driven IIoT data movement using MQTT and Sparkplug-style payload conventions where appropriate.
 
-## Flow
+## Purpose
+
+Provide a reusable structure for discussing MQTT-based data publishing, subscription, and topic organization for industrial data movement.
+
+## When to Use
+
+- An architecture requires publish/subscribe data movement.
+- Edge nodes or gateways need to publish operational data to a broker.
+- Tender requirements mention MQTT, Sparkplug, IIoT messaging, or event-driven integration.
+
+## Architecture Flow
 
 ```text
 Edge node
@@ -33,14 +43,53 @@ Edge node
   -> Historian / IIoT platform / analytics
 ```
 
-## Design Questions
+## Inputs
 
-- Is MQTT required by the customer or proposed by the solution team?
-- What namespace and payload conventions are expected?
-- How are retained messages, birth/death certificates, and quality handled?
-- Which systems publish and subscribe?
+- Source data from equipment, gateway, platform, or edge node.
+- Topic namespace and payload conventions.
+- Broker endpoint, security settings, and access control.
+- Subscriber requirements for historian, platform, monitoring, or analytics systems.
 
-## Related Pages
+## Outputs
+
+- Published messages for downstream subscribers.
+- Topic and payload mapping for operations data.
+- Clarification points for quality, retained messages, and connectivity behavior.
+
+## Common Risks
+
+- MQTT may be named in tenders without clear payload or namespace requirements.
+- Broker ownership, security, and network placement may be unclear.
+- Subscribers may require different payload structures or data quality handling.
+- Sparkplug conventions may be expected but not explicitly specified.
+
+## Related Solutions
+
+- [IDBoxRT](../solutions/idboxrt)
+- [Litmus Edge](../solutions/litmus-edge)
+- [AI PlantOps](../solutions/ai-plantops)
+
+## Related Capabilities
+
+- [IIoT Platform](../capabilities/iiot-platform)
+- [Industrial Historian](../capabilities/industrial-historian)
+
+## Tender Notes
+
+- Ask whether MQTT alone is required or whether Sparkplug conventions are specifically expected.
+- Clarify publisher, broker, subscriber, payload, namespace, and security responsibilities.
+- Avoid claiming support for MQTT or Sparkplug until reviewed solution evidence is attached.
+
+## Source Traceability
+
+Current content is a draft pattern based on the registered APM & IIoT solution domain. Validate protocol support and architecture details against solution source materials before approval.
+
+## Review Notes
+
+- Add source-backed examples after reviewing edge and IIoT solution materials.
+- Keep this page as a messaging pattern, not a final reference architecture.
+
+## Related Pattern Pages
 
 - [Edge to Center](./edge-to-center)
-- [IIoT Platform](../capabilities/iiot-platform)
+- [SCADA/DCS Data Ingestion](./scada-dcs-data-ingestion)

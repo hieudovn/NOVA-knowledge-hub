@@ -25,18 +25,41 @@ reviewed_by: null
 
 ## Summary
 
-Draft comparison framework for distinguishing IDBoxRT-style IIoT platform needs from traditional historian needs.
+Draft comparison framework for distinguishing IDBoxRT-style IIoT platform needs from industrial historian needs.
+
+This page is not a replacement claim. It is a structure for clarifying whether a project needs an IIoT platform, a historian, or both.
 
 ## Comparison Criteria
 
-| Criteria | IDBoxRT | Traditional Historian | Notes |
+| Criteria | IDBoxRT | Industrial Historian | Notes |
 |---|---|---|---|
-| Primary role | To validate | Time-series storage | Validate from sources |
+| Primary role | To validate | Time-series storage and retrieval | Validate from sources |
+| Data collection | To validate | To validate | Source review required |
 | Edge capabilities | To validate | To validate | Source review required |
 | Context model | To validate | To validate | Source review required |
 | Application layer | To validate | To validate | Source review required |
+| Historian retention | To validate | To validate | Source review required |
+| Downstream integration | To validate | To validate | Source review required |
+
+## Draft Decision Guidance
+
+- Use this page to clarify whether the requirement is data enablement, historian storage, application enablement, or a combination.
+- Avoid positioning IDBoxRT as a historian replacement unless reviewed evidence and project context support that conclusion.
+- Keep the Industrial Historian capability page as the neutral anchor for historian concepts.
+
+## Related Pages
+
+- [IDBoxRT](../solutions/idboxrt)
+- [Industrial Historian](../capabilities/industrial-historian)
+- [IIoT Platform](../capabilities/iiot-platform)
+- [Edge to Center](../patterns/edge-to-center)
+
+## Source Traceability
+
+Current content is a draft comparison structure based on the registered IDBoxRT source folder and APM & IIoT source domain. Validate each comparison row against `SRC-APM-IIOT-0011` and `SRC-DOMAIN-APM-IIOT` before moving beyond `draft`.
 
 ## Review Notes
 
 - Avoid framing this as a replacement comparison unless source evidence supports it.
 - Clarify whether the customer needs both platform and historian layers.
+- Keep commercial, pricing, and licensing notes outside this page.
