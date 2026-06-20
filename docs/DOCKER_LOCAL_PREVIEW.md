@@ -77,6 +77,12 @@ docker compose --env-file .env.example down
 docker compose --env-file .env.example up -d nova-wiki
 ```
 
+If Docker reports orphan containers from an older service name, clean them up with:
+
+```powershell
+docker compose --env-file .env.example up -d --remove-orphans nova-wiki
+```
+
 ## Rebuild After Content Changes
 
 The container serves the production build. After changing wiki content, registry-driven docs, Docusaurus config, or dependencies, rebuild and restart:
@@ -149,7 +155,7 @@ docker compose --env-file .env.example up -d nova-wiki
 
 `npm run serve` serves the already-built Docusaurus static output from `apps/wiki/build`. It is useful for checking a production build locally, but it can collide with local ports if not managed carefully.
 
-Docker preview builds the production site in a container and serves it through Docker Compose on the configured host port. It is the recommended private preview path when checking the wiki as a production-style static site.
+Docker preview builds the production site in a container and serves the generated static files through Docker Compose on the configured host port. It is the recommended private preview path when checking the wiki as a production-style static site.
 
 ## Recommended Daily Workflow
 

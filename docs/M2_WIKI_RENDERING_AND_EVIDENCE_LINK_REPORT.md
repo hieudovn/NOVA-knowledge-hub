@@ -27,6 +27,7 @@ Updated `content/wiki/solutions/etapro.md`:
 
 - removed the Mermaid TODO note;
 - kept the Mermaid diagram block;
+- hardened the Mermaid labels by quoting node text and avoiding an ampersand in the user node label;
 - changed Evidence Sources links to `[Open source](<url>)`;
 - used URLs from `registry/sources-apm-iiot.yaml`;
 - did not link restricted pricing/commercial sources.
@@ -64,13 +65,15 @@ Passed.
 
 ## Manual Browser Test Needed
 
-Manual browser confirmation is still recommended:
+Docker preview verification completed:
 
-- `http://localhost:3001/solutions/etapro`
-- Mermaid diagram renders visually, not as plain code.
-- Evidence Sources contains clickable source links.
+- `docker compose build nova-wiki`
+- `docker compose up -d --remove-orphans nova-wiki`
+- `http://localhost:3100/` returned HTTP 200 and included NOVA Knowledge Hub content.
+- `http://localhost:3100/solutions/etapro/` returned HTTP 200 and included EtaPRO content, `Open source` evidence links, and Google Drive / Google Docs links.
+- Docker-served assets include the Docusaurus Mermaid component for the EtaPRO architecture diagram.
 
-Port `3001` was already occupied in the local environment, so the requested URL could not be used for a reliable manual check. A temporary smoke test on `http://localhost:3011/solutions/etapro/` returned the EtaPRO page and clickable `Open source` links. Static build output also includes the Mermaid client bundle. Mermaid is configured through Docusaurus, but a visual browser check should still confirm the rendered diagram.
+Manual visual confirmation in a human browser is still useful for final confidence, but the Docker-served build is configured for Mermaid and no longer serves the diagram as a plain fenced code block.
 
 ## Next Recommended Batch
 

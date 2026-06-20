@@ -32,7 +32,11 @@ This batch did not add backend, API, database, authentication, crawler, AI Q&A, 
 - `docker compose --env-file .env.example build nova-wiki`
 - `docker version`
 - `docker compose --env-file .env.example ps`
-- Local runtime-command smoke test using `node node_modules/@docusaurus/core/bin/docusaurus.mjs serve --host 127.0.0.1 --port 3012`
+- `docker compose build nova-wiki`
+- `docker compose up -d nova-wiki`
+- `docker compose logs --tail 80 nova-wiki`
+- `Invoke-WebRequest http://localhost:3100/`
+- `Invoke-WebRequest http://localhost:3100/solutions/etapro/`
 
 ## Validation Result
 
@@ -50,22 +54,25 @@ Passed.
 
 ## Docker Build Result
 
-Blocked by local Docker engine availability.
+Passed.
 
-- Initial sandboxed run could not access the Windows Docker config/buildx directory.
-- Escalated run reached Docker but failed with Docker Desktop Linux engine not responding:
-  - `request returned 500 Internal Server Error ... dockerDesktopLinuxEngine/_ping`
-- Follow-up Docker status checks timed out.
-- `docker compose --env-file .env.example config` passed and confirmed the resolved mapping `3100:3000`.
+- Docker image `nova-knowledge-hub-nova-wiki` rebuilt successfully.
+- The Docker build ran `npm run build` inside the image and validated 32 wiki pages.
+- Runtime stage now uses Nginx to serve the generated static build on container port `3000`.
 
 ## Docker Run Result
 
-Not completed because Docker build was blocked by the local Docker Desktop engine.
+Passed after runtime-stage fix.
 
-Runtime command sanity check passed outside Docker:
+- Root URL `http://localhost:3100/` returned HTTP 200 and included NOVA Knowledge Hub content.
+- EtaPRO URL `http://localhost:3100/solutions/etapro/` returned HTTP 200 and included EtaPRO content and `Open source` evidence links.
+- `docker compose ps` shows `nova-wiki` running with `0.0.0.0:3100->3000/tcp`.
 
-- Docusaurus served the existing production build on `http://127.0.0.1:3012/`.
-- The response returned HTTP 200 and included the NOVA Knowledge Hub page content.
+Troubleshooting root cause:
+
+- The earlier runtime image used `docusaurus serve` but only copied `build` and `node_modules`.
+- Docusaurus still attempted to load `docusaurus.config.js` at runtime and exited with `No config file found in site dir`.
+- The fix was to serve the already-built static output with Nginx instead of requiring Docusaurus runtime configuration.
 
 ## Known Limitations
 
@@ -74,7 +81,7 @@ Runtime command sanity check passed outside Docker:
 - Rebuild the image after content, config, or dependency changes.
 - No persistent content volume is added because wiki content remains in the repository and is baked into the preview image.
 - No database volume is added because this batch does not introduce a database.
-- Docker build/run still need to be retried after Docker Desktop Linux engine is running normally.
+- A stopped orphan container named `nova-knowledge-hub-wiki-1` may remain from the previous `wiki` service name. It used the old `3000:80` mapping and can be removed with `docker compose up -d --remove-orphans nova-wiki` or `docker compose down --remove-orphans` when cleanup is desired.
 
 ## Next Recommended Batch
 

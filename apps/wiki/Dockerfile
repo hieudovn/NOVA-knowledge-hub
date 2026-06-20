@@ -13,16 +13,12 @@ COPY apps/wiki ./apps/wiki
 WORKDIR /app/apps/wiki
 RUN npm run build
 
-FROM node:20-alpine AS runtime
+FROM nginx:1.27-alpine AS runtime
 
-WORKDIR /app/apps/wiki
+COPY --from=build /app/apps/wiki/build /usr/share/nginx/html
 
-ENV NODE_ENV=production
-
-COPY --from=build /app/apps/wiki/package*.json ./
-COPY --from=build /app/apps/wiki/node_modules ./node_modules
-COPY --from=build /app/apps/wiki/build ./build
+RUN printf 'server {\n  listen 3000;\n  server_name _;\n  root /usr/share/nginx/html;\n  index index.html;\n\n  location / {\n    try_files $uri $uri/ /index.html;\n  }\n}\n' > /etc/nginx/conf.d/default.conf
 
 EXPOSE 3000
 
-CMD ["node", "node_modules/@docusaurus/core/bin/docusaurus.mjs", "serve", "--host", "0.0.0.0", "--port", "3000"]
+CMD ["nginx", "-g", "daemon off;"]

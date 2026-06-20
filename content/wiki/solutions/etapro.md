@@ -77,14 +77,14 @@ This conceptual draft shows the current source-backed EtaPRO data flow at a high
 
 ```mermaid
 flowchart TD
-  OT[Plant OT systems: DCS / SCADA / PLC / sensors] --> DA[Data acquisition / interfaces]
-  DA --> Archive[EtaPRO Archive / data management]
-  Archive --> Analytics[EtaPRO analytics modules]
+  OT["Plant OT systems: DCS / SCADA / PLC / sensors"] --> DA["Data acquisition / interfaces"]
+  DA --> Archive["EtaPRO Archive / data management"]
+  Archive --> Analytics["EtaPRO analytics modules"]
   Analytics --> VP[VirtualPlant]
   Analytics --> APR[APR]
   Analytics --> Predictor[Predictor]
-  Analytics --> UI[Operators / engineers / M&D users]
-  Analytics --> External[External systems: CMMS / BI / enterprise reporting]
+  Analytics --> UI["Operators / engineers / monitoring users"]
+  Analytics --> External["External systems: CMMS / BI / enterprise reporting"]
 ```
 
 Diagram evidence: `SRC-ETAPRO-DOC-0001`, `SRC-ETAPRO-DOC-0004`, `SRC-ETAPRO-DOC-0005`. Review status: conceptual draft. External-system and protocol details remain `Still to validate`.
