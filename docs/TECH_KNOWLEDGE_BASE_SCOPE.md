@@ -240,6 +240,15 @@ Build comparison pages:
 5. Use AI output only as draft.
 6. Approved wiki pages are the operational knowledge layer.
 
+### Pricing and Commercial Information Handling
+
+- Do not put pricing, licensing, discounts, commercial quotes, proposal prices, budgetary prices, BOM prices, service fees, support fees, training fees, or commercial terms into wiki knowledge pages, even if the wiki is private/internal.
+- Pricing information may only be used by the Product Owner/Admin for BOM building, budget estimation, proposal estimation, or internal commercial planning.
+- General case study benefit statements may be included when source-backed and non-pricing, including avoided cost, savings, ROI, efficiency improvement, downtime reduction, production gain, or maintenance cost avoidance.
+- Do not disclose specific vendor pricing, license fees, discounts, proposal prices, or commercial terms in wiki pages.
+- If a source contains pricing and technical knowledge together, extract only technical knowledge into wiki pages and mark pricing sections as excluded/restricted.
+- Any pricing source must remain restricted and must not be used for public/internal wiki knowledge enrichment.
+
 ---
 
 ## 9. Relationship to Business Knowledge

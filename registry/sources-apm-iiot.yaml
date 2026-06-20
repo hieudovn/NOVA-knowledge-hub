@@ -50,7 +50,7 @@ sources:
     extraction_priority: low
     extraction_status: deferred_restricted
     related_pages: []
-    notes: Restricted pricing source. Do not extract pricing, licensing, or commercial terms into wiki pages during M2-lite.
+    notes: Restricted pricing source. Do not extract pricing, licensing, discounts, commercial quotes, proposal prices, budgetary prices, BOM prices, service fees, support fees, training fees, or commercial terms into wiki pages. Product Owner/Admin use only for BOM building, budget estimation, proposal estimation, or internal commercial planning.
     suggested_output:
       - pricing_internal_notes
 
@@ -641,3 +641,132 @@ document_sources:
       - data_access_controls
       - customer_example
     notes: Exact case study found in Canary reference materials. Inventory only; do not extract content until a validation batch.
+
+derived_sources:
+  - id: SRC-ETAPRO-EXTRACT-FOLDER-0001
+    title: 00_Extracted Data
+    parent_source_id: SRC-APM-IIOT-0007
+    type: notebooklm_extracted_data_folder
+    url: https://drive.google.com/drive/folders/18FAWinREsJ-2435b1JxfdzwHWlkjmPEs
+    drive_id: 18FAWinREsJ-2435b1JxfdzwHWlkjmPEs
+    confidentiality: internal
+    extraction_status: not_started
+    validation_status: needs_source_validation
+    related_pages:
+      - content/wiki/solutions/etapro.md
+      - content/wiki/capabilities/apm.md
+      - content/wiki/capabilities/condition-monitoring.md
+      - content/wiki/tender/apm-requirement-mapping.md
+    intended_use:
+      - accelerate_manual_review
+      - identify_candidate_topics
+      - map_extracted_summary_to_primary_sources
+      - plan_document_validation
+    restricted_content_policy:
+      - derived_source_only_not_primary_evidence
+      - validate_against_original_sources_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+    notes: NotebookLM-generated Extracted Data folder for EtaPRO. Treat as derived guidance only; validate against original source documents before adding or changing wiki facts.
+
+  - id: SRC-ETAPRO-EXTRACT-0001
+    title: 01_EtaPRO Extracted Keys.md
+    parent_source_id: SRC-APM-IIOT-0007
+    type: notebooklm_markdown
+    url: https://drive.google.com/file/d/1ns4b-DoLCPEtXUJe8G2N0-6wKLmzJR8R/view?usp=drivesdk
+    drive_id: 1ns4b-DoLCPEtXUJe8G2N0-6wKLmzJR8R
+    confidentiality: internal
+    extraction_status: not_started
+    validation_status: needs_source_validation
+    related_pages:
+      - content/wiki/solutions/etapro.md
+      - content/wiki/capabilities/apm.md
+      - content/wiki/capabilities/condition-monitoring.md
+    intended_use:
+      - identify_candidate_key_facts
+      - prepare_validation_questions
+      - map_claims_to_primary_document_sources
+    restricted_content_policy:
+      - derived_source_only_not_primary_evidence
+      - validate_against_original_sources_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+    notes: NotebookLM-generated markdown summary. Registered from exact Drive metadata; file size was reported as 0 during folder listing, so review accessibility before relying on it.
+
+  - id: SRC-ETAPRO-EXTRACT-0002
+    title: 02_EtaPRO Business Section.md
+    parent_source_id: SRC-APM-IIOT-0007
+    type: notebooklm_markdown
+    url: https://drive.google.com/file/d/1nSjgBEgmwtrCRhy1QzcStFp8HPAFRitB/view?usp=drivesdk
+    drive_id: 1nSjgBEgmwtrCRhy1QzcStFp8HPAFRitB
+    confidentiality: internal
+    extraction_status: not_started
+    validation_status: needs_source_validation
+    related_pages:
+      - content/wiki/solutions/etapro.md
+      - content/wiki/capabilities/apm.md
+      - content/wiki/tender/apm-requirement-mapping.md
+    intended_use:
+      - identify_candidate_business_positioning
+      - prepare_use_case_review
+      - map_business_claims_to_primary_document_sources
+    restricted_content_policy:
+      - derived_source_only_not_primary_evidence
+      - validate_against_original_sources_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+    notes: NotebookLM-generated markdown summary for business-oriented review. Do not treat as approved vendor truth or commercial source.
+
+  - id: SRC-ETAPRO-EXTRACT-0003
+    title: 03_EtaPRO Technical Section.md
+    parent_source_id: SRC-APM-IIOT-0007
+    type: notebooklm_markdown
+    url: https://drive.google.com/file/d/1-T-gLOlXFOQzfU_rCQ9AHSi2fClZ2ZDd/view?usp=drivesdk
+    drive_id: 1-T-gLOlXFOQzfU_rCQ9AHSi2fClZ2ZDd
+    confidentiality: internal
+    extraction_status: not_started
+    validation_status: needs_source_validation
+    related_pages:
+      - content/wiki/solutions/etapro.md
+      - content/wiki/capabilities/apm.md
+      - content/wiki/capabilities/condition-monitoring.md
+    intended_use:
+      - identify_candidate_technical_claims
+      - prepare_architecture_and_integration_review
+      - map_technical_claims_to_primary_document_sources
+    restricted_content_policy:
+      - derived_source_only_not_primary_evidence
+      - validate_against_original_sources_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+    notes: NotebookLM-generated markdown summary for technical review. Use only to speed manual validation against original EtaPRO documents.
+
+  - id: SRC-ETAPRO-EXTRACT-0004
+    title: 04_EtaPRO Usecases, deployment, BOM, roadmap.md
+    parent_source_id: SRC-APM-IIOT-0007
+    type: notebooklm_markdown
+    url: https://drive.google.com/file/d/11_OhRYRmwH7YZKJnio9bi_r5OkEdRKK2/view?usp=drivesdk
+    drive_id: 11_OhRYRmwH7YZKJnio9bi_r5OkEdRKK2
+    confidentiality: internal
+    extraction_status: not_started
+    validation_status: needs_source_validation
+    related_pages:
+      - content/wiki/solutions/etapro.md
+      - content/wiki/tender/apm-requirement-mapping.md
+      - content/wiki/comparisons/etapro-vs-mas-apm.md
+    intended_use:
+      - identify_candidate_use_cases
+      - prepare_deployment_review
+      - identify_noncommercial_bom_or_roadmap_items_requiring_source_validation
+    restricted_content_policy:
+      - derived_source_only_not_primary_evidence
+      - validate_against_original_sources_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+      - do_not_extract_commercial_bom_pricing_or_roadmap_commitments_into_wiki
+    notes: NotebookLM-generated markdown summary. The title includes BOM and roadmap; treat those areas as restricted for wiki extraction unless later validated as non-commercial technical scope.

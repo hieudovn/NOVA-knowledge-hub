@@ -223,6 +223,17 @@ Before approving a wiki page, verify:
 - Is the content safe to use internally or publicly?
 - Does the page contain confidential information?
 - Does it need legal/commercial review before publication?
+- Does the page avoid pricing, licensing, discounts, commercial quotes, proposal prices, budgetary prices, BOM prices, fees, and commercial terms?
+
+### Pricing and Commercial Information Handling
+
+Do not put pricing, licensing, discounts, commercial quotes, proposal prices, budgetary prices, BOM prices, service fees, support fees, training fees, or commercial terms into wiki knowledge pages.
+
+Pricing information may only be used by the Product Owner/Admin for BOM building, budget estimation, proposal estimation, or internal commercial planning.
+
+General case study benefits may be included when source-backed and non-pricing. This includes avoided cost, savings, ROI, efficiency improvement, downtime reduction, production gain, or maintenance cost avoidance, provided no specific vendor pricing, license fees, discounts, proposal prices, or commercial terms are disclosed.
+
+If a source mixes pricing and technical knowledge, extract only technical knowledge into wiki pages and mark pricing sections as excluded/restricted.
 
 ---
 

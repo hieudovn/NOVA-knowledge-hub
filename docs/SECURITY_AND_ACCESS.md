@@ -185,6 +185,20 @@ Rules:
 - tender documents are restricted by default
 - pricing and proposal strategy are restricted by default
 
+### Pricing and Commercial Information Handling
+
+Pricing and commercial information is restricted even when the wiki itself is private/internal.
+
+Do not place pricing, licensing, discounts, commercial quotes, proposal prices, budgetary prices, BOM prices, service fees, support fees, training fees, or commercial terms into wiki knowledge pages.
+
+Pricing information may only be used by the Product Owner/Admin for BOM building, budget estimation, proposal estimation, or internal commercial planning.
+
+Case study benefits may remain in wiki pages only when they are source-backed and non-pricing, such as avoided cost, savings, ROI, efficiency improvement, downtime reduction, production gain, or maintenance cost avoidance without specific vendor pricing, license fees, discounts, proposal prices, or commercial terms.
+
+If a source mixes pricing and technical knowledge, extract only the technical knowledge into wiki pages and mark pricing sections as excluded/restricted.
+
+Any pricing source must remain restricted and must not be used for public/internal wiki knowledge enrichment.
+
 ---
 
 ## 9. Audit Log

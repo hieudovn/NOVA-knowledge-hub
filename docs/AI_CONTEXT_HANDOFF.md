@@ -170,6 +170,15 @@ Business Knowledge will be added later.
 5. Pricing and tender-sensitive materials are restricted by default.
 6. Landing pages must be generated from approved/public knowledge, not written as separate source of truth.
 
+### Pricing and Commercial Information Handling
+
+- Do not put pricing, licensing, discounts, commercial quotes, proposal prices, budgetary prices, BOM prices, service fees, support fees, training fees, or commercial terms into wiki knowledge pages, even if pages are private/internal.
+- Pricing information may only be used by the Product Owner/Admin for BOM building, budget estimation, proposal estimation, or internal commercial planning.
+- Non-pricing case study benefits may be used when source-backed, including avoided cost, savings, ROI, efficiency improvement, downtime reduction, production gain, or maintenance cost avoidance.
+- Do not include specific vendor pricing, license fees, discounts, proposal prices, or commercial terms in wiki pages.
+- If a source mixes pricing and technical knowledge, extract only the technical knowledge and mark pricing sections as excluded/restricted.
+- Pricing sources remain restricted and must not be used for public/internal wiki knowledge enrichment.
+
 ---
 
 ## 8. Development Rules

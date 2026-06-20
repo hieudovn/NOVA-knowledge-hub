@@ -296,5 +296,18 @@ Avoid:
 - mixing raw source text with approved wiki without review
 - making landing pages the source of truth
 - storing confidential tender or pricing content in public pages
+- storing pricing, licensing, discounts, commercial quotes, proposal prices, budgetary prices, BOM prices, fees, or commercial terms in any wiki knowledge page, including private/internal pages
 - letting AI generate unverified claims
 - making Avenue-specific assumptions part of the core model
+
+## 11. Pricing and Commercial Information Handling
+
+Pricing and commercial information is not wiki knowledge.
+
+Do not put pricing, licensing, discounts, commercial quotes, proposal prices, budgetary prices, BOM prices, service fees, support fees, training fees, or commercial terms into wiki pages.
+
+Pricing information may only be used by the Product Owner/Admin for BOM building, budget estimation, proposal estimation, or internal commercial planning.
+
+Case study benefits may be included only when they are source-backed and do not disclose specific vendor pricing, license fees, discounts, proposal prices, or commercial terms.
+
+If a source contains pricing and technical knowledge together, extract only technical knowledge into wiki pages and mark the pricing section as excluded/restricted.

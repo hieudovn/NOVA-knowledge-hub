@@ -12,7 +12,7 @@ source_domain:
     - content/wiki/solutions/ibm-mas.md
     - content/wiki/patterns/maximo-integration.md
     - content/wiki/comparisons/etapro-vs-mas-apm.md
-  notes: Stub registry domain. Add exact source folders/documents later. Do not copy raw source content into the repository.
+  notes: Stub registry domain. Add exact source folders/documents later. Do not copy raw source content into the repository. Do not extract pricing, licensing, discounts, quotes, proposal prices, budgetary prices, BOM prices, fees, or commercial terms into wiki pages.
 
 sources:
   - id: SRC-IBM-MAS-PENDING-0001
@@ -26,4 +26,4 @@ sources:
       - content/wiki/solutions/ibm-mas.md
       - content/wiki/patterns/maximo-integration.md
       - content/wiki/comparisons/etapro-vs-mas-apm.md
-    notes: Placeholder only. Replace or supplement with exact IBM MAS folders/documents when source locations are known. Do not invent URLs.
+    notes: Placeholder only. Replace or supplement with exact IBM MAS folders/documents when source locations are known. Do not invent URLs. Pricing/commercial information is restricted to Product Owner/Admin planning use and must not be used for wiki knowledge enrichment.

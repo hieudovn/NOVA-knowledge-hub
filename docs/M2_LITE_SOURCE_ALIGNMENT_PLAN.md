@@ -124,9 +124,13 @@ Follow-up source reference needs:
 
 Handling rules:
 
-- Do not extract pricing, licensing, or commercial terms into wiki pages during M2-lite.
+- Do not extract pricing, licensing, discounts, commercial quotes, proposal prices, budgetary prices, BOM prices, service fees, support fees, training fees, or commercial terms into wiki pages during M2-lite or later phases, even if the wiki is private/internal.
 - Do not paste raw spreadsheet content into the repository.
-- Keep any future pricing notes private, restricted, and separate from solution, comparison, tender, or public-facing knowledge.
+- Pricing information may only be used by the Product Owner/Admin for BOM building, budget estimation, proposal estimation, or internal commercial planning.
+- Keep any future pricing notes restricted and separate from solution, comparison, tender, or public-facing knowledge.
+- If a source mixes pricing and technical knowledge, extract only the technical knowledge and mark pricing sections as excluded/restricted.
+- General case study benefits such as avoided cost, savings, ROI, efficiency improvement, downtime reduction, production gain, or maintenance cost avoidance may remain eligible for wiki use only when source-backed and not tied to specific vendor pricing, license fees, discounts, proposal prices, or commercial terms.
+- Pricing sources must not be used for public/internal wiki knowledge enrichment.
 
 ## Acceptance Criteria for Manual Extraction
 

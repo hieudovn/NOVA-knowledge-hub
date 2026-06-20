@@ -91,6 +91,20 @@ NOVA can query Knowledge Hub for technical and solution knowledge.
 
 Integration should happen through APIs, not tight database coupling.
 
+### 4.8 Pricing and Commercial Information Handling
+
+Pricing and commercial information must not become wiki knowledge, even in private/internal wiki pages.
+
+Do not put pricing, licensing, discounts, commercial quotes, proposal prices, budgetary prices, BOM prices, service fees, support fees, training fees, or commercial terms into wiki knowledge pages.
+
+Pricing information may only be used by the Product Owner/Admin for BOM building, budget estimation, proposal estimation, or internal commercial planning.
+
+Case study information about general benefits, avoided cost, savings, ROI, efficiency improvement, downtime reduction, production gain, or maintenance cost avoidance may be included in wiki pages if it does not disclose specific vendor pricing, license fees, discounts, proposal prices, or commercial terms.
+
+If a source contains pricing and technical knowledge together, extract only the technical knowledge into wiki pages and mark the pricing section as excluded/restricted.
+
+Any pricing source must remain restricted and must not be used for public/internal wiki knowledge enrichment.
+
 ---
 
 ## 5. Product Boundary
@@ -183,6 +197,7 @@ MVP is successful when:
 4. Do not build landing pages before the wiki content model is stable.
 5. Do not process large raw sources repeatedly without hash/cache control.
 6. Do not expose public AI Q&A without quota, rate limit, and scope control.
+7. Do not place pricing, licensing, discounts, quotes, proposal prices, budgetary prices, BOM prices, fees, or commercial terms into wiki knowledge pages.
 
 ---
 
