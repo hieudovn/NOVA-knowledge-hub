@@ -993,7 +993,7 @@ document_sources:
     drive_id: 1EUZX1O0heO_sdI99S-aFxv6Qz6_Ejpzd
     confidentiality: internal
     extraction_priority: high
-    extraction_status: not_started
+    extraction_status: in_progress
     related_pages:
       - content/wiki/solutions/luca-bds.md
       - content/wiki/capabilities/iiot-platform.md
@@ -1017,7 +1017,31 @@ document_sources:
       - do_not_copy_long_raw_content_into_repository
       - do_not_extract_quote_license_or_commercial_call_to_action_content_into_wiki
       - treat_ai_llm_agent_claims_as_product_context_only_not_nova_scope_expansion
-    notes: Exact LUCA BDS product overview found in reference materials. Mixed source containing technical/product positioning plus AI, reference, resource, and commercial-signaling sections; use only for conservative scope fit and future technical validation.
+    notes: Exact LUCA BDS product overview found in reference materials. Mixed source containing technical/product positioning plus AI, reference, resource, and commercial-signaling sections; use only for conservative scope fit and technical validation. Batch 1.13 uses this as the primary overview evidence source for controlled draft enrichment.
+
+public_reference_sources:
+  - id: SRC-LUCA-BDS-WEB-0001
+    title: Official LUCA BDS Website
+    parent_source_id: SRC-APM-IIOT-0004
+    type: official_website
+    url: https://www.luca-bds.com/
+    confidentiality: public
+    access_date: 2026-06-20
+    extraction_status: referenced
+    related_pages:
+      - content/wiki/solutions/luca-bds.md
+    validation_focus:
+      - public_positioning
+      - terminology
+      - product_overview_crosscheck
+    pricing_risk: possible
+    restricted_content_policy:
+      - use_only_official_luca_bds_website_pages
+      - public_supporting_reference_not_primary_internal_evidence
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - exclude_commercial_calls_to_action_contact_sales_form_and_procurement_language
+      - do_not_copy_long_website_content_into_repository
+    notes: Official public LUCA BDS website provided by the user for supporting reference. Batch 1.13 records the URL and access date; local shell access was unavailable, so claims remain grounded primarily in SRC-LUCA-BDS-DOC-0001 and website content should be rechecked by a human reviewer before stronger public-positioning claims.
 
 derived_sources:
   - id: SRC-ETAPRO-EXTRACT-FOLDER-0001
