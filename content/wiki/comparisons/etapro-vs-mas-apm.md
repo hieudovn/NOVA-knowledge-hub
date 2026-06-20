@@ -13,6 +13,8 @@ tags:
 source_refs:
   - source_id: SRC-APM-IIOT-0007
     title: EtaPRO
+  - source_id: SRC-APM-IIOT-0001
+    title: AVENUE APM & IIoT Solutions
   - source_id: SRC-PORTFOLIO-IBM-MAS
     title: IBM Maximo Application Suite source materials
 landing_candidate: false
@@ -50,6 +52,7 @@ This page is not a final product recommendation. It is a structure for separatin
 
 ## Manual Extraction TODO
 
+- Use `SRC-APM-IIOT-0001` as the preliminary matrix source for EtaPRO, but keep comparison cells conservative until solution-specific evidence is checked.
 - Fill EtaPRO cells only after reviewing source documents under `SRC-APM-IIOT-0007`.
 - Fill IBM MAS cells only after registering and reviewing exact IBM MAS source documents under `SRC-PORTFOLIO-IBM-MAS`.
 - Keep all criteria as `To validate` until both sides have reviewed evidence.

@@ -13,6 +13,8 @@ tags:
 source_refs:
   - source_id: SRC-DOMAIN-APM-IIOT
     title: APM & IIoT Solutions
+  - source_id: SRC-APM-IIOT-0001
+    title: AVENUE APM & IIoT Solutions
 landing_candidate: false
 confidence: low
 last_reviewed: null
@@ -82,6 +84,7 @@ In NOVA Knowledge Hub M1, this page defines historian knowledge as a core data i
 
 ## Manual Extraction Pointers
 
+- Batch 1 added source-backed draft notes from `SRC-APM-IIOT-0001` to the [Canary](../solutions/canary) and [AVEVA PI](../solutions/aveva-pi) solution pages.
 - Use `SRC-APM-IIOT-0010` to validate Canary-related historian notes after source documents are identified.
 - Use `SRC-APM-IIOT-0008` to validate AVEVA PI-related historian notes after source documents are identified.
 - Keep vendor-specific evidence on the [Canary](../solutions/canary) and [AVEVA PI](../solutions/aveva-pi) solution pages until reviewed evidence supports updating this neutral capability page.

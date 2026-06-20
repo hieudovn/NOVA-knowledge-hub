@@ -15,6 +15,8 @@ source_refs:
     title: IDBoxRT
   - source_id: SRC-DOMAIN-APM-IIOT
     title: APM & IIoT Solutions
+  - source_id: SRC-APM-IIOT-0001
+    title: AVENUE APM & IIoT Solutions
 landing_candidate: false
 confidence: low
 last_reviewed: null
@@ -49,6 +51,7 @@ This page is not a replacement claim. It is a structure for clarifying whether a
 
 ## Manual Extraction TODO
 
+- Use `SRC-APM-IIOT-0001` as the preliminary matrix source, but keep comparison cells conservative until solution-specific evidence is checked.
 - Fill IDBoxRT cells only after reviewing source documents under `SRC-APM-IIOT-0011`.
 - Keep Industrial Historian cells tied to neutral capability evidence or reviewed historian solution sources.
 - Keep all replacement or overlap language conservative until evidence supports it.

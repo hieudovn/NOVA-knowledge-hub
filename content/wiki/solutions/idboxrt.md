@@ -12,6 +12,8 @@ tags:
 source_refs:
   - source_id: SRC-APM-IIOT-0011
     title: IDBoxRT
+  - source_id: SRC-APM-IIOT-0001
+    title: AVENUE APM & IIoT Solutions
 landing_candidate: false
 confidence: low
 last_reviewed: null
@@ -79,24 +81,31 @@ In NOVA Knowledge Hub M1, this page acts as a placeholder for organizing reviewe
 - [MQTT Sparkplug](../patterns/mqtt-sparkplug)
 - [SCADA/DCS Data Ingestion](../patterns/scada-dcs-data-ingestion)
 
-## Manual Extraction Notes
+## Source-Backed Draft Notes
 
 ### Source Coverage
 
 | Source ID | Source Title | Extraction Status | Notes |
 |---|---|---|---|
-| `SRC-APM-IIOT-0011` | IDBoxRT | Planned | Registered source folder exists; exact source documents still need to be identified before facts are extracted. |
+| `SRC-APM-IIOT-0001` | AVENUE APM & IIoT Solutions | In progress | Main source used for this draft extraction batch. |
+| `SRC-APM-IIOT-0011` | IDBoxRT | Planned | Registered source folder exists; detailed source documents still need to be identified and reviewed. |
 
-### Evidence-Backed Draft Facts
+### Draft Facts from Source
 
-| Claim / Fact | Evidence Source | Confidence | Review Status |
+| Topic | Draft Note | Evidence Source | Review Status |
 |---|---|---|---|
-| No source-backed facts extracted yet. | `SRC-APM-IIOT-0011` | low | Pending source document review |
+| General concept | The sheet positions IDBoxRT as a real-time operational data monitoring and analysis platform, described as an Operational Intelligence and information data hub layer. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| Vendor | The sheet lists CIC Consulting Informático from Spain as the vendor. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| Problems solved | The sheet associates IDBoxRT with fragmented operational data, energy data silos, and difficulty consolidating information from equipment, production, and plant levels. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| Core capabilities | The sheet lists heterogeneous data collection, operational data standardization, signal contextualization, preprocessing, KPI calculation, and interactive reporting as candidate capability areas. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| Integration relevance | The sheet frames IDBoxRT around ISA-95-style integration across field devices, SCADA/Historian layers, and ERP/BI layers; architecture details still require validation. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| APM / IIoT / Historian positioning | Based on the sheet, IDBoxRT is best treated in this wiki as an IIoT / operational intelligence / industrial data hub candidate, not as an approved historian replacement. | `SRC-APM-IIOT-0001` | Draft, pending validation |
 
 ### Open Questions
 
-- Which IDBoxRT source documents should be treated as authoritative for product scope?
-- Which integration methods, deployment options, and use cases are explicitly supported by reviewed source documents?
+- Which IDBoxRT documents should be treated as authoritative for architecture and deployment claims?
+- Which integration protocols and interfaces are officially supported versus inferred from solution positioning?
+- Which use cases should be separated into energy management, operational intelligence, IIoT platform, and APM-adjacent categories?
 
 ### Extraction TODO
 

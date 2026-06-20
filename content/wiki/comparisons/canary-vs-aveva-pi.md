@@ -15,6 +15,8 @@ source_refs:
     title: Canary
   - source_id: SRC-APM-IIOT-0008
     title: AVEVA PI
+  - source_id: SRC-APM-IIOT-0001
+    title: AVENUE APM & IIoT Solutions
 landing_candidate: false
 confidence: low
 last_reviewed: null
@@ -49,6 +51,7 @@ This page is not a conclusion. It is a structure for collecting reviewed evidenc
 
 ## Manual Extraction TODO
 
+- Use `SRC-APM-IIOT-0001` as the preliminary matrix source, but keep comparison cells conservative until solution-specific evidence is checked.
 - Fill Canary cells only after reviewing source documents under `SRC-APM-IIOT-0010`.
 - Fill AVEVA PI cells only after reviewing source documents under `SRC-APM-IIOT-0008`.
 - Keep all criteria as `To validate` until both sides have reviewed evidence.

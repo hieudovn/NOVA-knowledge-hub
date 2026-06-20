@@ -27,7 +27,7 @@ sources:
     drive_id: 1OKfe48zNwTjB1196QU45f8jqNyT8OyszAwLQ-D1gdEw
     confidentiality: internal
     extraction_priority: high
-    extraction_status: not_started
+    extraction_status: in_progress
     related_pages:
       - content/wiki/solutions/index.md
       - content/wiki/capabilities/apm.md

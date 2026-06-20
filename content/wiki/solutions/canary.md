@@ -12,6 +12,8 @@ tags:
 source_refs:
   - source_id: SRC-APM-IIOT-0010
     title: Canary
+  - source_id: SRC-APM-IIOT-0001
+    title: AVENUE APM & IIoT Solutions
 landing_candidate: false
 confidence: low
 last_reviewed: null
@@ -78,24 +80,31 @@ In NOVA Knowledge Hub M1, this page acts as a placeholder for organizing reviewe
 - [Historian to APM](../patterns/historian-to-apm)
 - [OPC UA Integration](../patterns/opc-ua-integration)
 
-## Manual Extraction Notes
+## Source-Backed Draft Notes
 
 ### Source Coverage
 
 | Source ID | Source Title | Extraction Status | Notes |
 |---|---|---|---|
-| `SRC-APM-IIOT-0010` | Canary | Planned | Registered source folder exists; exact source documents still need to be identified before facts are extracted. |
+| `SRC-APM-IIOT-0001` | AVENUE APM & IIoT Solutions | In progress | Main source used for this draft extraction batch. |
+| `SRC-APM-IIOT-0010` | Canary | Planned | Registered source folder exists; detailed source documents still need to be identified and reviewed. |
 
-### Evidence-Backed Draft Facts
+### Draft Facts from Source
 
-| Claim / Fact | Evidence Source | Confidence | Review Status |
+| Topic | Draft Note | Evidence Source | Review Status |
 |---|---|---|---|
-| No source-backed facts extracted yet. | `SRC-APM-IIOT-0010` | low | Pending source document review |
+| General concept | The sheet describes Canary as a NoSQL time-series database and industrial historian optimized for industrial automation. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| Vendor | The sheet lists Canary Labs from the United States as the vendor. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| Problems solved | The sheet associates Canary with high tag-volume historian performance, preservation of raw time-series data, tag naming inconsistency, network disruption risk, and historian administration burden. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| Core capabilities | The sheet lists continuous industrial data collection, high-volume time-series storage, data contextualization, asset modeling, unified namespace concepts, visualization, and Excel access as candidate capability areas. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| Typical use cases | The sheet includes industrial historian use cases across manufacturing, oil and gas, power and utilities, water/wastewater, and life sciences examples. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| APM / IIoT / Historian positioning | Based on the sheet, Canary should be treated primarily as an Industrial Historian candidate with possible downstream support for APM, analytics, and reporting workflows. | `SRC-APM-IIOT-0001` | Draft, pending validation |
 
 ### Open Questions
 
-- Which Canary source documents should be treated as authoritative for historian scope?
-- Which data collection, storage, visualization, and integration capabilities are explicitly supported by reviewed source documents?
+- Which Canary documents should be treated as authoritative for historian architecture and deployment models?
+- Which use cases are reusable for Avenue positioning versus customer-specific examples?
+- Which comparison criteria with AVEVA PI can be supported directly by source evidence?
 
 ### Extraction TODO
 

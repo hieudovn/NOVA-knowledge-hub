@@ -2,18 +2,26 @@
 
 ## Summary
 
-Manual Extraction Batch 1 prepared the high-priority APM & IIoT solution pages for source-backed manual extraction.
+Manual Extraction Batch 1 extracted concise draft knowledge from `SRC-APM-IIOT-0001` into the four high-priority solution pages: IDBoxRT, Canary, AVEVA PI, and EtaPRO.
 
-Exact source documents were not available locally, so no vendor facts were extracted. The work added structured extraction TODO sections, evidence placeholders, capability pointers, and comparison TODO notes only.
+The Google Sheet was used as the main source of truth for this batch. Reference URLs were not used as extraction sources. No website content was scraped or copied.
 
-## Sources Covered
+## Source Used
 
-| Source ID | Source Title | Registry Status | Result |
+| Source ID | Title | Source Type | Extraction Status |
 |---|---|---|---|
-| `SRC-APM-IIOT-0011` | IDBoxRT | planned | Extraction scaffolding added to the solution page. |
-| `SRC-APM-IIOT-0010` | Canary | planned | Extraction scaffolding added to the solution page. |
-| `SRC-APM-IIOT-0008` | AVEVA PI | planned | Extraction scaffolding added to the solution page. |
-| `SRC-APM-IIOT-0007` | EtaPRO | planned | Extraction scaffolding added to the solution page. |
+| `SRC-APM-IIOT-0001` | AVENUE APM & IIoT Solutions | Google Sheet | `in_progress` |
+
+Google Sheet:
+
+`https://docs.google.com/spreadsheets/d/1OKfe48zNwTjB1196QU45f8jqNyT8OyszAwLQ-D1gdEw`
+
+Relevant extraction columns:
+
+- IDBoxRT
+- EtaPRO APM
+- Canary
+- AVEVA PI System
 
 ## Pages Updated
 
@@ -24,13 +32,13 @@ Solution pages:
 - `content/wiki/solutions/aveva-pi.md`
 - `content/wiki/solutions/etapro.md`
 
-Capability pages:
+Related capability pages:
 
 - `content/wiki/capabilities/iiot-platform.md`
 - `content/wiki/capabilities/industrial-historian.md`
 - `content/wiki/capabilities/apm.md`
 
-Comparison pages:
+Related comparison pages:
 
 - `content/wiki/comparisons/canary-vs-aveva-pi.md`
 - `content/wiki/comparisons/idboxrt-vs-historian.md`
@@ -40,33 +48,57 @@ Registry:
 
 - `registry/sources-apm-iiot.yaml`
 
-## Claims Added
+## Extracted Topics
 
-No new source-backed vendor claims were added.
+Extracted into each target solution page under `Source-Backed Draft Notes`:
 
-Each solution page now contains an `Evidence-Backed Draft Facts` table with a placeholder row stating that no source-backed facts have been extracted yet.
+- General concept
+- Vendor
+- Problems solved
+- Core capabilities
+- Typical use cases where present in the sheet
+- Integration relevance where present in the sheet
+- APM / IIoT / Historian positioning
+- Open questions
+- Extraction TODO
 
-## Open Questions
+Every extracted draft note references `SRC-APM-IIOT-0001`.
 
-- Which exact documents inside each registered Google Drive folder should be treated as authoritative?
-- Which source documents define product scope for IDBoxRT, Canary, AVEVA PI, and EtaPRO?
-- Which architecture, deployment, integration, use case, limitation, and assumption notes can be supported by reviewed source evidence?
-- Which comparison criteria should remain generic, and which should be filled from source-backed solution evidence?
+## Claims Requiring Validation
+
+All extracted notes remain draft and require validation against detailed source documents or vendor-confirmed material.
+
+Priority validation areas:
+
+- Product scope and official naming.
+- Architecture and deployment model.
+- Integration protocols and supported interfaces.
+- Supported use cases by industry.
+- Limitations and assumptions.
+- Comparison criteria between Canary and AVEVA PI.
+- Comparison criteria between IDBoxRT and historian solutions.
+- Comparison criteria between EtaPRO and IBM MAS APM.
 
 ## Deferred Items
 
-- Actual source-backed extraction is deferred until exact source documents are available for review.
-- Comparison table cells remain `To validate`.
-- IBM MAS comparison cells in `etapro-vs-mas-apm.md` remain deferred until exact IBM MAS source documents are registered and reviewed.
-- No source is marked `completed`.
+- No final comparison conclusions were added.
+- No target page was moved beyond `draft`.
+- Product-specific source folders remain separate and should still be reviewed:
+  - `SRC-APM-IIOT-0011` - IDBoxRT
+  - `SRC-APM-IIOT-0010` - Canary
+  - `SRC-APM-IIOT-0008` - AVEVA PI
+  - `SRC-APM-IIOT-0007` - EtaPRO
+- IBM MAS comparison content remains deferred until exact IBM MAS source documents are registered and reviewed.
 
 ## Restricted Content Check
 
 No pricing, licensing, or commercial terms were added.
 
-No raw confidential source document content was pasted into the repository.
+The pricing row in the source sheet was not extracted into wiki pages.
 
-`SRC-APM-IIOT-0002` remains restricted and deferred outside this batch.
+No raw confidential documents were copied into the repository.
+
+`SRC-APM-IIOT-0002` remains restricted and outside this extraction batch.
 
 ## Validation Result
 
@@ -94,13 +126,14 @@ Result: Passed.
 
 Docusaurus production build completed successfully with no broken-link failures.
 
-## Recommended Next Batch
+## Next Recommended Batch
 
 Recommended next batch: Manual Extraction Batch 1.1.
 
-Scope:
+Suggested scope:
 
-- Identify exact source documents inside `SRC-APM-IIOT-0011`, `SRC-APM-IIOT-0010`, `SRC-APM-IIOT-0008`, and `SRC-APM-IIOT-0007`.
-- Add document-level registry entries or notes where exact documents are known.
-- Extract only short, source-backed facts into the existing `Evidence-Backed Draft Facts` tables.
-- Keep all pages `draft`, `private`, and `confidence: low` until human review.
+- Review the product-specific source folders for IDBoxRT, Canary, AVEVA PI, and EtaPRO.
+- Validate the draft facts extracted from `SRC-APM-IIOT-0001`.
+- Add document-level registry entries if exact source documents are identified.
+- Keep comparison pages conservative until both sides of each comparison have reviewed evidence.
+- Keep all edited pages `draft`, `private`, and `confidence: low` until human review.

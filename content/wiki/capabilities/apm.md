@@ -13,6 +13,8 @@ tags:
 source_refs:
   - source_id: SRC-DOMAIN-APM-IIOT
     title: APM & IIoT Solutions
+  - source_id: SRC-APM-IIOT-0001
+    title: AVENUE APM & IIoT Solutions
 landing_candidate: false
 confidence: low
 last_reviewed: null
@@ -84,6 +86,7 @@ In NOVA Knowledge Hub M1, this page defines the working boundary of APM knowledg
 
 ## Manual Extraction Pointers
 
+- Batch 1 added source-backed draft notes from `SRC-APM-IIOT-0001` to the [EtaPRO](../solutions/etapro) solution page.
 - Use `SRC-APM-IIOT-0007` to validate EtaPRO-related APM and performance monitoring notes after source documents are identified.
 - Keep EtaPRO-specific evidence on the [EtaPRO](../solutions/etapro) solution page until reviewed evidence supports updating this neutral capability page.
 - Do not add pricing, licensing, or commercial details to this capability page.
