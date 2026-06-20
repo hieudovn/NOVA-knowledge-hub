@@ -14,6 +14,32 @@ source_refs:
     title: IDBoxRT
   - source_id: SRC-APM-IIOT-0001
     title: AVENUE APM & IIoT Solutions
+  - source_id: SRC-IDBOXRT-DOC-0001
+    title: IDboxRT description and technical architecture.docx
+  - source_id: SRC-IDBOXRT-DOC-0002
+    title: IDboxRT documentation.pdf
+  - source_id: SRC-IDBOXRT-DOC-0003
+    title: IDbox User Manual.pdf
+  - source_id: SRC-IDBOXRT-DOC-0004
+    title: IDboxRT connectors.pdf
+  - source_id: SRC-IDBOXRT-DOC-0005
+    title: IDBoxRT General Presentation - 06.05.2024.pptx
+  - source_id: SRC-IDBOXRT-DOC-0006
+    title: Dashboards.pdf
+  - source_id: SRC-IDBOXRT-DOC-0007
+    title: IDboxRT synoptic examples.pdf
+  - source_id: SRC-IDBOXRT-DOC-0008
+    title: IDboxRT mobile app EN.pdf
+  - source_id: SRC-IDBOXRT-DOC-0009
+    title: Installation Review - Avenue.docx
+  - source_id: SRC-IDBOXRT-DOC-0010
+    title: Guía Instalación IDbox 3 en Windows desde Cero (IDboxRT)_en.pdf
+  - source_id: SRC-IDBOXRT-DOC-0011
+    title: Guía Instalación Keycloak en Windows (IDboxRT)_en.pdf
+  - source_id: SRC-IDBOXRT-DOC-0012
+    title: IDBoxRT as new Historian Solution for Power Generation Customers.docx
+  - source_id: SRC-IDBOXRT-DOC-0013
+    title: IDboxRT migration pathv2.pdf
 landing_candidate: false
 confidence: low
 last_reviewed: null
@@ -121,7 +147,20 @@ Industry-specific case studies and quantified benefits remain deferred until sel
 | Source ID | Title | Link | Evidence Role | Review Status |
 |---|---|---|---|---|
 | `SRC-APM-IIOT-0001` | AVENUE APM & IIoT Solutions | [Open source](<https://docs.google.com/spreadsheets/d/1OKfe48zNwTjB1196QU45f8jqNyT8OyszAwLQ-D1gdEw>) | Initial Batch 1 portfolio-level draft context and current source-backed facts | Draft extracted |
-| `SRC-APM-IIOT-0011` | IDBoxRT source folder | [Open source](<https://drive.google.com/drive/folders/17Q2yiUSr7GmIlhvRyclGZ4whhPsezzov>) | Parent IDBoxRT source folder and future validation target | Pending document audit |
+| `SRC-APM-IIOT-0011` | IDBoxRT source folder | [Open source](<https://drive.google.com/drive/folders/17Q2yiUSr7GmIlhvRyclGZ4whhPsezzov>) | Parent IDBoxRT source folder and future validation target | Batch 1.10 document audit completed |
+| `SRC-IDBOXRT-DOC-0001` | IDboxRT description and technical architecture.docx | [Open source](<https://docs.google.com/document/d/1qD_TuIVzKLma3pB2uTAlhl-BufEfQDX7/edit?usp=drivesdk&ouid=108564093758567510758&rtpof=true&sd=true>) | Primary validation target for product positioning, architecture, modules, connectors, contextualization, and KPI model | Not started |
+| `SRC-IDBOXRT-DOC-0002` | IDboxRT documentation.pdf | [Open source](<https://drive.google.com/file/d/1fL2X0yelmvvhNWQHTYDFae-AedkAFtYc/view?usp=drivesdk>) | Primary validation target for documentation, deployment, storage, security, connectors, and limitations | Not started |
+| `SRC-IDBOXRT-DOC-0003` | IDbox User Manual.pdf | [Open source](<https://drive.google.com/file/d/1MSLnC2M6eqyk44kCUwGTDAtJmXcUFV5r/view?usp=drivesdk>) | Primary validation target for functional capabilities, user workflows, dashboards, and access control | Not started |
+| `SRC-IDBOXRT-DOC-0004` | IDboxRT connectors.pdf | [Open source](<https://drive.google.com/file/d/1kzn0dCMwvGUXCQROvTQKhcWDliPHPlb9/view?usp=drivesdk>) | Primary validation target for supported data sources, connectors, protocols, APIs, and SCADA/historian relationship | Not started |
+| `SRC-IDBOXRT-DOC-0005` | IDBoxRT General Presentation - 06.05.2024.pptx | [Open source](<https://docs.google.com/presentation/d/1Wre2K4U0KW_Dfol5K4uYt98LrofP582y/edit?usp=drivesdk&ouid=108564093758567510758&rtpof=true&sd=true>) | Future validation target for product positioning, vendor context, capabilities overview, and use cases; review for sales/commercial language | Not started |
+| `SRC-IDBOXRT-DOC-0006` | Dashboards.pdf | [Open source](<https://drive.google.com/file/d/1JA_SUw5kvNbZjC_3q1nSABbXn6Vcvu4X/view?usp=drivesdk>) | Future validation target for dashboard and reporting capabilities | Not started |
+| `SRC-IDBOXRT-DOC-0007` | IDboxRT synoptic examples.pdf | [Open source](<https://drive.google.com/file/d/15rxUqy_C_hhIWCSRrVbk41dg1V8cKyai/view?usp=drivesdk>) | Future validation target for visualization and operator UI examples; do not copy screenshots into wiki without review | Not started |
+| `SRC-IDBOXRT-DOC-0008` | IDboxRT mobile app EN.pdf | [Open source](<https://drive.google.com/file/d/1PQoxtN1D7YpeqJb3HYTnHqMp51kJlKlt/view?usp=drivesdk>) | Future validation target for mobile access, workflows, and security implications | Not started |
+| `SRC-IDBOXRT-DOC-0009` | Installation Review - Avenue.docx | [Open source](<https://docs.google.com/document/d/1pksaaUjO4mrTcxFfNnxwUMbVskhQeZPi/edit?usp=drivesdk&ouid=108564093758567510758&rtpof=true&sd=true>) | Future validation target for deployment and infrastructure; review for project-specific or restricted context | Not started |
+| `SRC-IDBOXRT-DOC-0010` | Guía Instalación IDbox 3 en Windows desde Cero (IDboxRT)_en.pdf | [Open source](<https://drive.google.com/file/d/1kTDMXa66k8F6cIP4jdAjKRR4A8y9hspp/view?usp=drivesdk>) | Future validation target for deployment model, installation, system requirements, and limitations | Not started |
+| `SRC-IDBOXRT-DOC-0011` | Guía Instalación Keycloak en Windows (IDboxRT)_en.pdf | [Open source](<https://drive.google.com/file/d/170zRcfOEfaiaQ-riMYBfH-zNJ3OIDuN4/view?usp=drivesdk>) | Future validation target for access-control and authentication-adjacent deployment details | Not started |
+| `SRC-IDBOXRT-DOC-0012` | IDBoxRT as new Historian Solution for Power Generation Customers.docx | [Open source](<https://docs.google.com/document/d/1ihZ2ItXGpEYD9kQA-zOKJiAOMVjfbdPn/edit?usp=drivesdk&ouid=108564093758567510758&rtpof=true&sd=true>) | Future validation target for historian positioning and assumptions; no comparison conclusions in this batch | Not started |
+| `SRC-IDBOXRT-DOC-0013` | IDboxRT migration pathv2.pdf | [Open source](<https://drive.google.com/file/d/1AJk6ujx-CgxNHpbj4DvQ5eoWFzdlIvEn/view?usp=drivesdk>) | Future validation target for migration and coexistence questions; no comparison conclusions in this batch | Not started |
 | `SRC-IDBOXRT-EXTRACT-0001` | 01_IDBoxRT Extracted Keys.md | [Open source](<https://drive.google.com/file/d/1YNaeMQ3JkAxYN0uf4KNPO1ZrydBY9Mz4/view?usp=drivesdk>) | Derived review aid only; candidate capability and tender topic discovery | Not evidence for final claims |
 | `SRC-IDBOXRT-EXTRACT-0002` | 02_IDBoxRT Business Section.md | [Open source](<https://drive.google.com/file/d/1h__UK28RSeJDhj6IMiRl2AmK63UUt6XM/view?usp=drivesdk>) | Derived review aid only; candidate business and use-case framing | Not evidence for final claims |
 | `SRC-IDBOXRT-EXTRACT-0003` | 03_IDBoxRT Technical Section.md | [Open source](<https://drive.google.com/file/d/1a6_NerCFHyrFX-wbgrFr_rCwrVdSJ9aL/view?usp=drivesdk>) | Derived review aid only; candidate architecture and integration checklist support | Not evidence for final claims |
@@ -134,7 +173,7 @@ Industry-specific case studies and quantified benefits remain deferred until sel
 | Source ID | Source Title | Extraction Status | Notes |
 |---|---|---|---|
 | `SRC-APM-IIOT-0001` | AVENUE APM & IIoT Solutions | Batch 1 draft extracted | Main source used for the initial IDBoxRT draft extraction batch; reference URLs in the sheet were treated only as supporting references. |
-| `SRC-APM-IIOT-0011` | IDBoxRT | Pending document audit | Registered source folder exists; detailed source documents still need to be identified and reviewed. |
+| `SRC-APM-IIOT-0011` | IDBoxRT | Batch 1.10 document audit completed | Registered source folder exists; document-level source candidates have been identified and still need validation before stronger claims are added. |
 | `SRC-IDBOXRT-EXTRACT-0001` to `SRC-IDBOXRT-EXTRACT-0003` | IDBoxRT NotebookLM markdown summaries | Review aids only | Used only for organizing candidate review topics; not treated as primary evidence. |
 
 ### Draft Facts from Source

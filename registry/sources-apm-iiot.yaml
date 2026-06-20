@@ -149,7 +149,7 @@ sources:
     confidentiality: internal
     extraction_priority: high
     extraction_status: planned
-    document_inventory_status: pending_document_audit
+    document_inventory_status: document_audit_completed_batch_1_10
     validation_target_pages:
       - content/wiki/solutions/aveva-pi.md
     related_pages:
@@ -641,6 +641,342 @@ document_sources:
       - data_access_controls
       - customer_example
     notes: Exact case study found in Canary reference materials. Inventory only; do not extract content until a validation batch.
+
+  - id: SRC-IDBOXRT-DOC-0001
+    title: IDboxRT description and technical architecture.docx
+    parent_source_id: SRC-APM-IIOT-0011
+    type: docx
+    url: https://docs.google.com/document/d/1qD_TuIVzKLma3pB2uTAlhl-BufEfQDX7/edit?usp=drivesdk&ouid=108564093758567510758&rtpof=true&sd=true
+    drive_id: 1qD_TuIVzKLma3pB2uTAlhl-BufEfQDX7
+    confidentiality: internal
+    extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/idboxrt.md
+      - content/wiki/capabilities/iiot-platform.md
+      - content/wiki/patterns/scada-dcs-data-ingestion.md
+    validation_focus:
+      - official_product_positioning
+      - architecture_and_modules
+      - supported_data_sources_connectors
+      - protocols_api_support
+      - contextualization_preprocessing
+      - kpi_calculation_model
+      - product_boundaries
+    pricing_risk: none
+    restricted_content_policy:
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - validate_against_document_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+    notes: Exact technical architecture document found in IDBoxRT reference materials. Inventory only; do not extract content until a validation batch.
+
+  - id: SRC-IDBOXRT-DOC-0002
+    title: IDboxRT documentation.pdf
+    parent_source_id: SRC-APM-IIOT-0011
+    type: pdf
+    url: https://drive.google.com/file/d/1fL2X0yelmvvhNWQHTYDFae-AedkAFtYc/view?usp=drivesdk
+    drive_id: 1fL2X0yelmvvhNWQHTYDFae-AedkAFtYc
+    confidentiality: internal
+    extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/idboxrt.md
+      - content/wiki/capabilities/iiot-platform.md
+      - content/wiki/patterns/edge-to-center.md
+      - content/wiki/patterns/scada-dcs-data-ingestion.md
+    validation_focus:
+      - architecture_and_modules
+      - deployment_models
+      - data_storage_and_retention
+      - security_access_control
+      - supported_data_sources_connectors
+      - limitations_and_product_boundaries
+    pricing_risk: none
+    restricted_content_policy:
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - validate_against_document_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+    notes: Exact IDBoxRT documentation PDF found in reference materials. Inventory only; do not extract content until a validation batch.
+
+  - id: SRC-IDBOXRT-DOC-0003
+    title: IDbox User Manual.pdf
+    parent_source_id: SRC-APM-IIOT-0011
+    type: pdf
+    url: https://drive.google.com/file/d/1MSLnC2M6eqyk44kCUwGTDAtJmXcUFV5r/view?usp=drivesdk
+    drive_id: 1MSLnC2M6eqyk44kCUwGTDAtJmXcUFV5r
+    confidentiality: internal
+    extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/idboxrt.md
+      - content/wiki/capabilities/iiot-platform.md
+    validation_focus:
+      - functional_capabilities
+      - user_workflows
+      - dashboard_reporting_capabilities
+      - security_access_control
+      - limitations_and_product_boundaries
+    pricing_risk: none
+    restricted_content_policy:
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - validate_against_document_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+    notes: Exact user manual found in IDBoxRT reference materials. Inventory only; do not extract content until a validation batch.
+
+  - id: SRC-IDBOXRT-DOC-0004
+    title: IDboxRT connectors.pdf
+    parent_source_id: SRC-APM-IIOT-0011
+    type: pdf
+    url: https://drive.google.com/file/d/1kzn0dCMwvGUXCQROvTQKhcWDliPHPlb9/view?usp=drivesdk
+    drive_id: 1kzn0dCMwvGUXCQROvTQKhcWDliPHPlb9
+    confidentiality: internal
+    extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/idboxrt.md
+      - content/wiki/capabilities/iiot-platform.md
+      - content/wiki/patterns/scada-dcs-data-ingestion.md
+    validation_focus:
+      - supported_data_sources_connectors
+      - protocols_api_support
+      - scada_historian_relationship
+      - integration_claims
+      - limitations_and_product_boundaries
+    pricing_risk: none
+    restricted_content_policy:
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - validate_against_document_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+    notes: Exact connectors document found in IDBoxRT reference materials. Inventory only; do not extract connector or protocol claims until validation.
+
+  - id: SRC-IDBOXRT-DOC-0005
+    title: IDBoxRT General Presentation - 06.05.2024.pptx
+    parent_source_id: SRC-APM-IIOT-0011
+    type: pptx
+    url: https://docs.google.com/presentation/d/1Wre2K4U0KW_Dfol5K4uYt98LrofP582y/edit?usp=drivesdk&ouid=108564093758567510758&rtpof=true&sd=true
+    drive_id: 1Wre2K4U0KW_Dfol5K4uYt98LrofP582y
+    confidentiality: internal
+    extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/idboxrt.md
+      - content/wiki/capabilities/iiot-platform.md
+      - content/wiki/tender/apm-iiot-compliance-notes.md
+    validation_focus:
+      - official_product_positioning
+      - vendor_legal_identity
+      - capabilities_overview
+      - use_cases
+      - product_boundaries
+    pricing_risk: possible
+    restricted_content_policy:
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - validate_against_document_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - review_for_sales_or_commercial_language_before_wiki_use
+    notes: Exact general presentation found in IDBoxRT reference materials. Use cautiously for positioning; exclude any sales, proposal, or commercial content.
+
+  - id: SRC-IDBOXRT-DOC-0006
+    title: Dashboards.pdf
+    parent_source_id: SRC-APM-IIOT-0011
+    type: pdf
+    url: https://drive.google.com/file/d/1JA_SUw5kvNbZjC_3q1nSABbXn6Vcvu4X/view?usp=drivesdk
+    drive_id: 1JA_SUw5kvNbZjC_3q1nSABbXn6Vcvu4X
+    confidentiality: internal
+    extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/idboxrt.md
+      - content/wiki/capabilities/iiot-platform.md
+    validation_focus:
+      - dashboard_reporting_capabilities
+      - presentation_ui
+      - user_workflows
+      - limitations_and_product_boundaries
+    pricing_risk: none
+    restricted_content_policy:
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - validate_against_document_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+    notes: Exact dashboard document found in IDBoxRT reference materials. Inventory only; do not copy screenshots or raw visual content into the wiki.
+
+  - id: SRC-IDBOXRT-DOC-0007
+    title: IDboxRT synoptic examples.pdf
+    parent_source_id: SRC-APM-IIOT-0011
+    type: pdf
+    url: https://drive.google.com/file/d/15rxUqy_C_hhIWCSRrVbk41dg1V8cKyai/view?usp=drivesdk
+    drive_id: 15rxUqy_C_hhIWCSRrVbk41dg1V8cKyai
+    confidentiality: internal
+    extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/idboxrt.md
+      - content/wiki/capabilities/iiot-platform.md
+    validation_focus:
+      - dashboard_reporting_capabilities
+      - presentation_ui
+      - operator_visualization
+      - limitations_and_product_boundaries
+    pricing_risk: none
+    restricted_content_policy:
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - validate_against_document_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - do_not_copy_images_or_screenshots_into_wiki_without_review
+    notes: Exact synoptic examples document found in IDBoxRT reference materials. Inventory only; visual examples require separate review before any wiki use.
+
+  - id: SRC-IDBOXRT-DOC-0008
+    title: IDboxRT mobile app EN.pdf
+    parent_source_id: SRC-APM-IIOT-0011
+    type: pdf
+    url: https://drive.google.com/file/d/1PQoxtN1D7YpeqJb3HYTnHqMp51kJlKlt/view?usp=drivesdk
+    drive_id: 1PQoxtN1D7YpeqJb3HYTnHqMp51kJlKlt
+    confidentiality: internal
+    extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/idboxrt.md
+      - content/wiki/capabilities/iiot-platform.md
+    validation_focus:
+      - mobile_access
+      - dashboard_reporting_capabilities
+      - user_workflows
+      - security_access_control
+      - limitations_and_product_boundaries
+    pricing_risk: none
+    restricted_content_policy:
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - validate_against_document_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+    notes: Exact mobile app document found in IDBoxRT reference materials. Inventory only; validate scope and security implications before wiki claims.
+
+  - id: SRC-IDBOXRT-DOC-0009
+    title: Installation Review - Avenue.docx
+    parent_source_id: SRC-APM-IIOT-0011
+    type: docx
+    url: https://docs.google.com/document/d/1pksaaUjO4mrTcxFfNnxwUMbVskhQeZPi/edit?usp=drivesdk&ouid=108564093758567510758&rtpof=true&sd=true
+    drive_id: 1pksaaUjO4mrTcxFfNnxwUMbVskhQeZPi
+    confidentiality: internal
+    extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/idboxrt.md
+      - content/wiki/patterns/edge-to-center.md
+    validation_focus:
+      - deployment_models
+      - installation_review
+      - infrastructure_requirements
+      - security_access_control
+      - limitations_and_product_boundaries
+    pricing_risk: possible
+    restricted_content_policy:
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - validate_against_document_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - review_for_customer_project_or_commercial_context_before_wiki_use
+    notes: Exact installation review document found in IDBoxRT reference materials. Treat as a deployment validation candidate and review for project-specific or restricted context before extraction.
+
+  - id: SRC-IDBOXRT-DOC-0010
+    title: Guía Instalación IDbox 3 en Windows desde Cero (IDboxRT)_en.pdf
+    parent_source_id: SRC-APM-IIOT-0011
+    type: pdf
+    url: https://drive.google.com/file/d/1kTDMXa66k8F6cIP4jdAjKRR4A8y9hspp/view?usp=drivesdk
+    drive_id: 1kTDMXa66k8F6cIP4jdAjKRR4A8y9hspp
+    confidentiality: internal
+    extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/idboxrt.md
+      - content/wiki/patterns/edge-to-center.md
+    validation_focus:
+      - deployment_models
+      - installation_steps
+      - infrastructure_requirements
+      - system_requirements
+      - limitations_and_product_boundaries
+    pricing_risk: none
+    restricted_content_policy:
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - validate_against_document_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+    notes: Exact installation guide found in IDBoxRT reference materials. Inventory only; extract only normalized deployment facts in a later validation batch.
+
+  - id: SRC-IDBOXRT-DOC-0011
+    title: Guía Instalación Keycloak en Windows (IDboxRT)_en.pdf
+    parent_source_id: SRC-APM-IIOT-0011
+    type: pdf
+    url: https://drive.google.com/file/d/170zRcfOEfaiaQ-riMYBfH-zNJ3OIDuN4/view?usp=drivesdk
+    drive_id: 170zRcfOEfaiaQ-riMYBfH-zNJ3OIDuN4
+    confidentiality: internal
+    extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/idboxrt.md
+    validation_focus:
+      - security_access_control
+      - deployment_models
+      - authentication_integration
+      - system_requirements
+      - limitations_and_product_boundaries
+    pricing_risk: none
+    restricted_content_policy:
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - validate_against_document_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+    notes: Exact Keycloak installation guide found in IDBoxRT reference materials. Inventory only; do not add authentication architecture claims until validation.
+
+  - id: SRC-IDBOXRT-DOC-0012
+    title: IDBoxRT as new Historian Solution for Power Generation Customers.docx
+    parent_source_id: SRC-APM-IIOT-0011
+    type: docx
+    url: https://docs.google.com/document/d/1ihZ2ItXGpEYD9kQA-zOKJiAOMVjfbdPn/edit?usp=drivesdk&ouid=108564093758567510758&rtpof=true&sd=true
+    drive_id: 1ihZ2ItXGpEYD9kQA-zOKJiAOMVjfbdPn
+    confidentiality: internal
+    extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/idboxrt.md
+      - content/wiki/capabilities/industrial-historian.md
+      - content/wiki/comparisons/idboxrt-vs-historian.md
+    validation_focus:
+      - scada_historian_relationship
+      - data_storage_and_retention
+      - historian_positioning
+      - power_generation_use_case
+      - assumptions_to_check
+    pricing_risk: possible
+    restricted_content_policy:
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - validate_against_document_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - do_not_add_comparison_conclusions_without_separate_review
+    notes: Exact historian-positioning document found in IDBoxRT reference materials. Use only as a future validation target; no comparison conclusions in this batch.
+
+  - id: SRC-IDBOXRT-DOC-0013
+    title: IDboxRT migration pathv2.pdf
+    parent_source_id: SRC-APM-IIOT-0011
+    type: pdf
+    url: https://drive.google.com/file/d/1AJk6ujx-CgxNHpbj4DvQ5eoWFzdlIvEn/view?usp=drivesdk
+    drive_id: 1AJk6ujx-CgxNHpbj4DvQ5eoWFzdlIvEn
+    confidentiality: internal
+    extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/idboxrt.md
+      - content/wiki/comparisons/idboxrt-vs-historian.md
+    validation_focus:
+      - migration_considerations
+      - scada_historian_relationship
+      - coexistence_questions
+      - assumptions_to_check
+      - limitations_and_product_boundaries
+    pricing_risk: possible
+    restricted_content_policy:
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - validate_against_document_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - do_not_add_migration_or_comparison_claims_without_separate_review
+    notes: Exact migration-path document found in the IDBoxRT replacing PI folder. Use only as a future validation target; no comparison conclusions in this batch.
 
 derived_sources:
   - id: SRC-ETAPRO-EXTRACT-FOLDER-0001
