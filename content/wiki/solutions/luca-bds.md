@@ -33,9 +33,11 @@ reviewed_by: null
 
 ## Executive Summary
 
-LUCA BDS is tracked in this wiki as a draft business intelligence, data integration, and analytics solution related to the APM & IIoT portfolio. `SRC-LUCA-BDS-DOC-0001` positions the product around access to data from multiple systems, centralized analysis, dashboards, reports, and business/operational decision support.
+LUCA BDS is a business intelligence, data integration, and analytics layer for teams that need usable views of data spread across multiple business and operational systems. Position it when the customer problem is not a historian or APM requirement by itself, but a need to access data, organize queries and data flows, build dashboards/reports/forms/navigation, and support business or operational decision-making.
 
-This page is a controlled M2 draft. It is useful for solution orientation and presales qualification, but it is not yet approved knowledge. NotebookLM extracted files are review aids only, and the official website is registered as a public supporting reference rather than primary internal technical evidence.
+At a practical presales level, LUCA BDS fits conversations about dispersed data, reporting workload, integrated views, shared analysis workspaces, and decision support. AI/LLM-related material appears in source context, but this page keeps those claims bounded and does not position LUCA BDS as a general AI platform.
+
+This page remains a source-backed draft. The top sections are written for fast sales/presales reading; the lower sections preserve evidence links, validation notes, open questions, and restricted-content handling.
 
 ## Scope Decision
 
@@ -52,6 +54,12 @@ LUCA BDS fits the current M2 Tech Knowledge Base as a business intelligence, dat
 | APM & IIoT portfolio relevance | LUCA BDS is relevant where industrial or utility data needs to be consolidated for analysis, reporting, and operational visibility. | `SRC-LUCA-BDS-DOC-0001` | Partially supported |
 | Historian / IIoT platform relationship | LUCA BDS should not yet be treated as a historian or IIoT platform replacement. | `SRC-LUCA-BDS-DOC-0001` | Still to validate |
 | AI / LLM product material | Source material includes product-specific AI/LLM context, but this is not enough to expand NOVA Knowledge Hub scope or define LUCA BDS as an AI platform. | `SRC-LUCA-BDS-DOC-0001` | Still to validate |
+
+## Validation Status
+
+- Validated draft: BI/data integration/analytics positioning, multi-source data access, query-driven reports/dashboards/forms/navigation, and business/operational reporting use.
+- Partially validated: APM & IIoT portfolio relevance, on-premises/local-control positioning, shared workspaces, real-time BI language, and live-query/no-copy behavior.
+- Still to validate: connector details, deployment topology, security/access control, storage/caching behavior, performance limits, AI/LLM boundaries, and whether any historian/APM/IIoT-platform wording is appropriate.
 
 ## Customer Problems It Addresses
 
@@ -87,7 +95,7 @@ flowchart TD
   Apps --> Users["Business / operational users"]
 ```
 
-Review status: `Partially supported` by `SRC-LUCA-BDS-DOC-0001`. Connector details, deployment topology, security model, and performance boundaries are still to validate.
+Diagram caption: This conceptual draft shows business and operational data sources flowing through LUCA BDS query/connectors and a business data service layer into reports, dashboards, forms, navigation, shared workspaces, and users. Evidence: `SRC-LUCA-BDS-DOC-0001`. Connector details, deployment topology, security model, and performance boundaries remain `Still to validate`.
 
 ## Core Capabilities
 

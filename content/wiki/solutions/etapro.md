@@ -42,21 +42,49 @@ reviewed_by: null
 
 ## Executive Summary
 
-EtaPRO is a draft APM, performance monitoring, and condition monitoring solution page for power-generation contexts. Primary EtaPRO sources describe it as a real-time performance and condition monitoring platform that combines plant data management, thermodynamic modeling, anomaly detection, machinery diagnostics, reporting, and user-facing monitoring tools. Evidence: `SRC-ETAPRO-DOC-0002`, `SRC-ETAPRO-DOC-0003`, `SRC-ETAPRO-DOC-0005`. Review status: draft, source-backed, pending human review.
+EtaPRO is a power-generation performance and condition monitoring solution. Position it when a customer needs better visibility into plant performance, early warning of abnormal behavior, rotating equipment diagnostics, and decision support for operations, engineering, maintenance, or monitoring center teams.
 
-In this wiki, EtaPRO is most useful for teams evaluating power plant performance management, early anomaly detection, predictive maintenance, and historian-linked analytics. It should not yet be treated as a final vendor claim set; deployment, protocol, security, limitation, and product-boundary details still need deeper review. Evidence: `SRC-ETAPRO-DOC-0001`, `SRC-ETAPRO-DOC-0004`. Review status: partially validated.
+At a practical presales level, EtaPRO helps turn plant data into performance insight. The current draft supports Archive / EPArchive, VirtualPlant, APR, Predictor, monitoring, diagnostics, reporting, and web/mobile visibility as key product areas. Use it for APM-oriented conversations in power generation, especially where the customer is asking about performance degradation, thermal modeling, anomaly detection, predictive diagnostics, and fleet visibility.
 
-## Scope
+This page remains a source-backed draft. The top sections are written for fast sales/presales reading; the evidence and validation details are preserved in the lower sections.
 
-- In scope:
-  - EtaPRO as a candidate APM, performance monitoring, or condition monitoring solution for power generation.
-  - Source-backed module, integration, deployment, and use-case notes.
-  - Draft support for tender preparation and future comparison analysis.
-- Out of scope:
-  - final vendor claims before human review;
-  - pricing, licensing, BOM, quote, fee, discount, or commercial terms;
-  - public marketing content;
-  - unsupported comparison claims against IBM MAS or other APM solutions.
+## Where It Fits
+
+| Fit Area | Presales Guidance | Confidence |
+|---|---|---|
+| Primary positioning conversation | Power plant performance monitoring, condition monitoring, anomaly detection, diagnostics, and M&D-style operational visibility. | Validated draft |
+| Primary audience | Operations, engineering, maintenance, reliability, performance, and monitoring center teams. | Validated draft |
+| Data relationship | EtaPRO can work with plant OT data and historian-style data management through EtaPRO Archive / EPArchive and related interfaces. | Partially validated |
+| APM positioning | Strong fit for power-generation APM/performance discussions. Avoid treating this page as final vendor wording until human review. | Validated draft |
+| IIoT positioning | Do not position EtaPRO as a general-purpose IIoT platform from current evidence. | Still to validate |
+| Comparison positioning | Keep IBM MAS and other APM comparisons out of this page until a separate comparison batch. | Still to validate |
+
+## Customer Problems It Addresses
+
+| Customer Problem | How EtaPRO Helps |
+|---|---|
+| Plant performance is degrading but root causes are hard to see. | Uses performance monitoring, thermodynamic modeling, trends, calculations, and reports to support performance review. |
+| Abnormal behavior is detected late. | APR supports anomaly detection by comparing current behavior against normal operating patterns. |
+| Rotating equipment faults need earlier diagnosis. | Predictor supports machinery diagnostics using vibration and machinery-dynamics data. |
+| Operations, engineering, and maintenance teams need shared visibility. | Monitoring, dashboards, reports, logs, trends, web/mobile access, and M&D workflows support shared review. |
+| Fleet or multi-unit performance is difficult to compare. | Sources support fleet and multi-generating-unit contexts, but exact deployment and governance details remain to validate. |
+
+## What It Does
+
+| Capability Area | Plain-Language Description | Confidence |
+|---|---|---|
+| Archive / EPArchive | Provides the data management foundation for process data, EtaPRO results, KPIs, trends, reports, and downstream EtaPRO applications. | Validated draft |
+| VirtualPlant | Models plant cycles and supports performance analysis, process-data validation, reference-condition correction, and what-if studies. | Validated draft |
+| APR | Detects abnormal operating behavior by comparing current data against empirical models of normal operation. | Validated draft |
+| Predictor | Supports rotating machinery diagnostics and fault-development review. | Validated draft |
+| Monitoring and reporting utilities | Supports dashboards, trends, reports, logging, data mining, alerts, issue review, and monitoring workflows. | Validated draft |
+| Integration with CMMS/EAM | Avenue context mentions possible Maximo handoff for abnormal-condition follow-up, but official product integration details remain open. | Partially validated |
+
+## Validation Status
+
+- Validated draft: product category, power-generation fit, core module family, historian-linked data management, performance monitoring, anomaly detection, rotating machinery diagnostics, dashboards/reporting, and M&D-style workflows.
+- Partially validated: deployment models, exact interfaces, Maximo/CMMS handoff, web/mobile boundaries, fleet deployment details, and generation-technology coverage.
+- Still to validate: cybersecurity, authentication, protocol/API completeness, detailed system requirements, limitations, and comparison with IBM MAS or other APM solutions.
 
 ## Product Positioning
 
@@ -87,7 +115,7 @@ flowchart TD
   Analytics --> External["External systems: CMMS / BI / enterprise reporting"]
 ```
 
-Diagram evidence: `SRC-ETAPRO-DOC-0001`, `SRC-ETAPRO-DOC-0004`, `SRC-ETAPRO-DOC-0005`. Review status: conceptual draft. External-system and protocol details remain `Still to validate`.
+Diagram caption: This conceptual draft shows plant OT data flowing into EtaPRO Archive / data management, then into analytics modules and user-facing or external follow-up paths. Evidence: `SRC-ETAPRO-DOC-0001`, `SRC-ETAPRO-DOC-0004`, `SRC-ETAPRO-DOC-0005`. External-system and protocol details remain `Still to validate`.
 
 ## Core Modules
 
@@ -137,6 +165,23 @@ Do not add wider protocol lists from derived sources until each protocol or API 
 | Generation technology coverage | Sources mention gas, coal, nuclear, geothermal, hydro, wind, solar, and battery contexts; exact module coverage varies and should be checked by technology and module. | `SRC-ETAPRO-DOC-0002`, `SRC-ETAPRO-DOC-0003` | Partially supported |
 
 Case-study benefits may be summarized later only when non-pricing and source-backed. Specific savings amounts, commercial terms, and contract/payment details are excluded.
+
+## Presales Qualification Notes
+
+- Position EtaPRO when the customer is focused on power-generation performance, condition monitoring, anomaly detection, rotating equipment diagnostics, or M&D-style operational visibility.
+- Confirm the target generation technologies, units, critical assets, existing historian/data sources, and operations/maintenance workflows.
+- Ask whether the need is performance modeling, anomaly detection, machinery diagnostics, reporting, fleet visibility, or CMMS/EAM follow-up.
+- Treat integration to Maximo/CMMS and external enterprise systems as a validation topic, not a final promise.
+- Keep comparison with IBM MAS or other APM tools out of the main positioning conversation until a comparison batch is completed.
+
+## What To Validate With Customer
+
+- Which plant data sources, historians, DCS/SCADA systems, and interfaces must EtaPRO connect to?
+- Which modules are required: Archive, VirtualPlant, APR, Predictor, monitoring/diagnostics, or reporting utilities?
+- What deployment model is required: local, hosted, centralized, decentralized, mixed, or fleet-wide?
+- What cybersecurity, authentication, network-zone, and access-control requirements apply?
+- Which performance, reliability, diagnostics, reporting, and work-process outcomes matter most?
+- Which assumptions need vendor confirmation before tender or proposal use?
 
 ## Evidence Sources
 
@@ -200,7 +245,7 @@ Case-study benefits may be summarized later only when non-pricing and source-bac
 
 | Topic | Batch 1 Draft Note | Validation Result | Evidence Source | Review Status |
 |---|---|---|---|---|
-| General concept | EtaPRO APM is described as a solution for optimizing power plant operations and maintenance by combining data integration, analytics, condition monitoring, and performance monitoring. | Refined by primary sources: EtaPRO is best described here as a real-time performance and condition monitoring platform for power-generation assets, with APM-oriented modules for data archiving, thermodynamic modeling, anomaly detection, diagnostics, reporting, and user visibility. | `SRC-ETAPRO-DOC-0002`, `SRC-ETAPRO-DOC-0003`, `SRC-ETAPRO-DOC-0005` | Draft, pending human review |
+| General concept | EtaPRO APM is described as a solution for optimizing power plant operations and maintenance by combining data integration, analytics, condition monitoring, and performance monitoring. | Refined by primary sources: EtaPRO is described here as a real-time performance and condition monitoring platform for power-generation assets, with APM-oriented modules for data archiving, thermodynamic modeling, anomaly detection, diagnostics, reporting, and user visibility. | `SRC-ETAPRO-DOC-0002`, `SRC-ETAPRO-DOC-0003`, `SRC-ETAPRO-DOC-0005` | Draft, pending human review |
 | Vendor | The sheet lists Toshiba Energy Systems & Solutions Corporation as the vendor. | Still to validate: sources show Toshiba and EtaPRO LLC contexts; use neutral vendor wording until product ownership and official local representation are confirmed. | `SRC-ETAPRO-DOC-0001`, `SRC-ETAPRO-DOC-0002`, `SRC-ETAPRO-DOC-0003` | Still to validate |
 | Problems solved | EtaPRO is associated with unplanned downtime, performance degradation, data silos, and availability or outage reporting risk. | Refined by source: reviewed sources support performance monitoring, anomaly detection, predictive diagnostics, reporting, logging, fleet visibility, and issue follow-up. Availability/outage reporting detail remains partially validated. | `SRC-ETAPRO-DOC-0002`, `SRC-ETAPRO-DOC-0003`, `SRC-ETAPRO-DOC-0005`, `SRC-ETAPRO-DOC-0009` | Draft, pending human review |
 | Core capabilities | Candidate capability areas include thermodynamic modeling, anomaly detection, rotating equipment analysis, historian/performance data storage, and performance monitoring. | Validated by primary sources at module-family level: Archive, VirtualPlant, APR, and Predictor are supported across reviewed documents. | `SRC-ETAPRO-DOC-0001`, `SRC-ETAPRO-DOC-0003`, `SRC-ETAPRO-DOC-0004`, `SRC-ETAPRO-DOC-0005`, `SRC-ETAPRO-DOC-0006`, `SRC-ETAPRO-DOC-0007`, `SRC-ETAPRO-DOC-0008` | Draft, pending human review |

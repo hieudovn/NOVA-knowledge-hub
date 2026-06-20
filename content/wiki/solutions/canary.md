@@ -30,22 +30,50 @@ reviewed_by: null
 
 ## Executive Summary
 
-Canary is a draft industrial historian and time-series data platform page for operational technology environments. The reviewed Canary brochure positions Canary as data historian technology for industrial automation, with source-backed draft notes around data collection, historian storage, contextualization, visualization, calculations, event monitoring, and data access. Evidence: `SRC-CANARY-DOC-0001`. Review status: draft, source-backed at overview level, pending human review.
+Canary is an industrial historian and time-series data foundation for plant and operational technology environments. Position it when a customer needs to collect, store, organize, visualize, and make industrial process data usable for operations, engineering, reliability, and analytics workflows.
 
-In this wiki, Canary is most useful for teams evaluating plant data history, operational trend review, contextualized historian access, and downstream analytics support. Detailed connector lists, retention behavior, deployment architecture, security model, and AVEVA PI comparison claims remain unresolved. Evidence: `SRC-CANARY-DOC-0001`; validation targets: `SRC-CANARY-DOC-0002`, `SRC-CANARY-DOC-0003`.
+At a practical presales level, Canary belongs in conversations about scattered OT data, missing historical visibility, hard-to-use tag data, dashboarding, trend analysis, contextualized historian views, and analytics-ready plant data. Treat it as historian-centered infrastructure, not as a full APM platform.
 
-## Scope
+This page remains a source-backed draft. The top sections are written for quick sales/presales orientation; the lower sections preserve source IDs, validation notes, open questions, and restricted-content handling.
 
-- In scope:
-  - Canary as a candidate industrial historian solution.
-  - Historian-related architecture, collection, visualization, and data-layer mapping.
-  - Source-backed notes for future historian requirement mapping and tender preparation.
-  - Open questions for later Canary and AVEVA PI validation.
-- Out of scope:
-  - final vendor claims before source review;
-  - pricing, licensing, BOM, quote, fee, discount, or commercial terms;
-  - public marketing content;
-  - unsupported comparison claims against AVEVA PI or other historian tools.
+## Where It Fits
+
+| Fit Area | Presales Guidance | Confidence |
+|---|---|---|
+| Primary positioning conversation | Industrial historian, plant time-series data, trend review, contextualized data access, and dashboards. | Validated draft |
+| Primary audience | Operations, engineering, reliability, automation, and data/analytics teams. | Validated draft |
+| Data relationship | Collects and stores operational time-series data and exposes it through views, visualization, calculations, and downstream access paths. | Partially validated |
+| APM relationship | Can support APM or reliability workflows as a data foundation, but it should not be positioned as an APM product from current evidence. | Still to validate |
+| IIoT relationship | Can sit in a plant data layer around industrial automation and edge contexts, but broad IIoT-platform claims remain open. | Partially validated |
+| Comparison positioning | Keep Canary vs AVEVA PI conclusions deferred until AVEVA PI evidence is reviewed. | Still to validate |
+
+## Customer Problems It Addresses
+
+| Customer Problem | How Canary Helps |
+|---|---|
+| OT data is scattered across systems and difficult to reuse. | Provides historian-centered data collection, storage, and access patterns for industrial process data. |
+| Teams cannot easily see historical trends. | Axiom supports dashboards, trends, and reports around historian data. |
+| Raw tags lack operating context. | Views and asset modeling help organize data into more meaningful structures. |
+| Calculations and event visibility are handled inconsistently. | Calculation server and event monitoring are supported at overview level and need deeper validation for design use. |
+| Analytics teams need usable plant data. | Canary can act as a historian-centered data layer for downstream analytics, while exact APIs and enterprise integration remain to validate. |
+
+## What It Does
+
+| Capability Area | Plain-Language Description | Confidence |
+|---|---|---|
+| Data collection | Brings industrial process data into the historian layer from automation, edge, and IIoT device contexts. | Partially validated |
+| Historian storage | Stores operational time-series/tag data for later review and use. | Partially validated |
+| Views / contextualization | Organizes historian data through virtual views and asset modeling. | Partially validated |
+| Visualization | Provides Axiom dashboards, trends, and reports for user-facing analysis. | Validated draft |
+| Calculations | Supports calculation capabilities around historian data. | Partially validated |
+| Event monitoring | Supports event-monitoring concepts tied to operational data. | Partially validated |
+| Data access | Can support downstream data use, but exact connector/API details require additional source review. | Still to validate |
+
+## Validation Status
+
+- Validated draft: historian-centered positioning, Axiom visualization, high-level collection/storage/contextualization/calculation/event-monitoring concepts.
+- Partially validated: edge/site/enterprise/cloud positioning, virtual views, asset modeling, deployment patterns, and downstream data access.
+- Still to validate: supported collectors/protocols, retention behavior, compression, sizing, security, store-and-forward, API/Excel access, operational limits, and Canary vs AVEVA PI comparison.
 
 ## Product Positioning
 
@@ -72,7 +100,7 @@ flowchart TD
   Views --> External["External analytics / enterprise systems"]
 ```
 
-Diagram evidence: `SRC-CANARY-DOC-0001`. Review status: conceptual draft. Collector details, deployment topology, external-system interfaces, and protocol/API support remain `Still to validate`.
+Diagram caption: This conceptual draft shows Canary as a historian-centered data flow from plant OT systems into collectors, historian storage, contextualized views, visualization, users, and downstream access. Evidence: `SRC-CANARY-DOC-0001`. Collector details, deployment topology, external-system interfaces, and protocol/API support remain `Still to validate`.
 
 ## Core Components
 
@@ -122,6 +150,23 @@ Do not add protocol lists, API claims, Excel access, or AVEVA PI migration/compa
 | Tender historian requirements | Use Canary as a candidate reference when mapping collection, storage, contextualization, visualization, and data-access requirements. | `SRC-CANARY-DOC-0001`; `SRC-APM-IIOT-0010` | Draft planning use |
 
 Industry-specific and case-study benefits remain deferred until selected primary case-study documents are reviewed. Non-pricing benefits may be included later only if source-backed and reviewed.
+
+## Presales Qualification Notes
+
+- Position Canary when the customer needs an industrial historian, time-series data foundation, contextualized plant data, dashboards/trends, or analytics-ready operational data.
+- Confirm whether the customer needs a site historian, enterprise historian pattern, edge/site/cloud data path, or historian-adjacent analytics layer.
+- Ask which OT systems, tags, assets, views, dashboards, calculations, events, and downstream systems are in scope.
+- Keep Canary vs AVEVA PI and historian migration language out of the main positioning conversation until the comparison evidence is ready.
+- Treat exact protocol/API, retention, compression, sizing, security, and store-and-forward details as validation topics.
+
+## What To Validate With Customer
+
+- Which SCADA, DCS, PLC, sensor, edge, or existing historian sources need to be connected?
+- What historical retention, sampling, compression, performance, and availability expectations apply?
+- Does the customer need contextualized views, asset modeling, namespace governance, or virtual views?
+- Which dashboards, trends, reports, calculations, and event-monitoring workflows are required?
+- What security, access-control, backup/restore, and operational responsibilities apply?
+- Which comparison questions against AVEVA PI should be deferred to the dedicated comparison page?
 
 ## Evidence Sources
 

@@ -50,23 +50,50 @@ reviewed_by: null
 
 ## Executive Summary
 
-IDBoxRT is a draft operational intelligence and industrial data hub platform for integrating, processing, analyzing, and visualizing historical and real-time industrial data. `SRC-IDBOXRT-DOC-0001` supports the product framing as a data hub that collects raw information from heterogeneous sources, prepares it for analysis, and makes it available to different user profiles through use-case-specific tools. Review status: source-backed draft, pending human review.
+IDBoxRT is an operational intelligence and industrial data hub solution for connecting plant, enterprise, and external data sources, preparing data for analysis, and presenting it through dashboards, reports, synoptics, maps, alarms, events, notifications, web/mobile access, and API-style exposure.
 
-For this wiki, IDBoxRT should be treated as an IIoT / operational intelligence data layer rather than a confirmed APM platform or historian replacement. The strongest validated areas in this batch are architecture, data acquisition, connector categories, preprocessing, persistence strategies, dashboards/reporting, and access-control concepts. Historian-replacement and product-comparison conclusions remain deferred. Evidence: `SRC-IDBOXRT-DOC-0001`, `SRC-IDBOXRT-DOC-0002`, `SRC-IDBOXRT-DOC-0004`.
+Position IDBoxRT when a customer needs to unify heterogeneous industrial data, contextualize it with assets and signals, calculate operational KPIs, and expose usable information to operators, engineers, managers, and external systems. It is strongest in this draft as a plant data integration and operational visibility layer. Historian-replacement, migration, and AVEVA PI comparison claims remain deferred.
 
-## Scope
+This page remains a source-backed draft. The top sections are written for sales/presales clarity; the lower sections preserve source traceability, validation notes, open questions, and restricted-content handling.
 
-- In scope:
-  - IDBoxRT as a draft IIoT, operational intelligence, and industrial data hub solution.
-  - Architecture, acquisition, connector, preprocessing, persistence, dashboard/reporting, deployment, and security notes validated from selected primary documents.
-  - Source-backed notes for future manual validation and tender preparation.
-  - Open questions for later historian, migration, comparison, and limitation review.
-- Out of scope:
-  - final vendor claims before human review;
-  - pricing, licensing, BOM, quote, fee, discount, or commercial terms;
-  - public marketing content;
-  - IDBoxRT vs AVEVA PI or IDBoxRT vs historian conclusions;
-  - claims based only on NotebookLM-derived files.
+## Where It Fits
+
+| Fit Area | Presales Guidance | Confidence |
+|---|---|---|
+| Primary positioning conversation | Operational intelligence, industrial data hub, plant data integration, dashboards/reporting, and cross-system data exposure. | Validated draft |
+| Primary audience | Operations, engineering, automation, reliability, IT/OT integration, and business users who need operational data. | Validated draft |
+| Data relationship | Connects heterogeneous data sources, preprocesses and contextualizes data, persists selected real-time/historical data, and exposes it to users or third-party systems. | Partially validated |
+| IIoT / data platform relationship | Useful as an IIoT-adjacent plant data layer, but broad platform claims should remain source-bound. | Partially validated |
+| Historian relationship | Connector evidence supports SCADA/historian integration relevance, but historian replacement is not concluded here. | Still to validate |
+| Comparison positioning | Keep IDBoxRT vs AVEVA PI, migration, and historian comparison claims out of this page until a separate comparison batch. | Still to validate |
+
+## Customer Problems It Addresses
+
+| Customer Problem | How IDBoxRT Helps |
+|---|---|
+| Plant and enterprise data is fragmented across many systems. | Uses connectors/drivers to acquire information from industrial, SCADA/historian, IoT, enterprise, file, database, API, and service categories. |
+| Operational data needs context before it is useful. | Supports asset and signal context, preprocessing, tasks, calculations, and business-rule style preparation. |
+| Teams need dashboards, reports, and operational visibility. | Provides user-facing tools such as synoptics, charts, historical views, dashboards, maps, alarms, events, notifications, and reports. |
+| Other systems need access to cleaned or transformed data. | Supports gateway/API-style exposure and third-party data exposure paths. |
+| Security and user access need administration. | Documentation supports users, roles, permissions, security groups, access groups, sessions, and access-management concepts. |
+
+## What It Does
+
+| Capability Area | Plain-Language Description | Confidence |
+|---|---|---|
+| Connectors / drivers | Acquires data from industrial systems, SCADA/historians, IoT sources, enterprise systems, databases, files, APIs, and services. | Validated draft |
+| Streaming and acquisition | Moves acquired data from connectors into processing components. | Validated draft |
+| Preprocessing / tasks | Applies preparation, quality filters, synchronization, resampling, filtering, unit conversion, and related processing before use. | Validated draft |
+| Persistence | Supports multiple strategies for real-time and historical data persistence, including recent/older history concepts. | Partially validated |
+| Asset and signal context | Organizes signals, assets, templates, groups, and hierarchy concepts for navigation and analysis. | Validated draft |
+| Dashboard and reporting tools | Presents data through synoptics, charts, dashboards, reports, maps, alarms, events, and notifications. | Validated draft |
+| API / external exposure | Exposes raw or transformed data to third-party systems or external architectures. | Validated draft |
+
+## Validation Status
+
+- Validated draft: operational intelligence / information data hub framing, connector categories, user-facing tools, REST/API exposure, dashboards/reports, assets/signals, and security administration concepts.
+- Partially validated: deployment options, persistence strategies, historical storage tiers, Keycloak/LDAP/Active Directory context, and KPI/calculation governance.
+- Still to validate: legal vendor identity, production sizing, redundancy, backup/restore, connector limits, API limits, retention scale, product limitations, historian replacement, migration, and comparison conclusions.
 
 ## Product Positioning
 
@@ -98,7 +125,7 @@ flowchart TD
   API --> External["External systems / data lakes / analytics tools"]
 ```
 
-Diagram evidence: `SRC-IDBOXRT-DOC-0001`, with user-facing module support from `SRC-IDBOXRT-DOC-0002`. Review status: conceptual source-backed draft. Detailed deployment topology, sizing, redundancy, and operational limits remain `Still to validate`.
+Diagram caption: This conceptual draft shows IDBoxRT collecting heterogeneous plant and enterprise data, processing and contextualizing it, persisting selected data, and exposing it through APIs and user-facing tools. Evidence: `SRC-IDBOXRT-DOC-0001`, with user-facing module support from `SRC-IDBOXRT-DOC-0002`. Detailed deployment topology, sizing, redundancy, and operational limits remain `Still to validate`.
 
 ## Core Components
 
@@ -155,6 +182,23 @@ Do not infer integration suitability for a specific customer architecture until 
 | Historian-adjacent data enablement | IDBoxRT has historian and SCADA connector relevance, but historian replacement or migration conclusions remain out of scope for this page. | `SRC-IDBOXRT-DOC-0004` | Still to validate |
 
 Case-study benefits and quantified outcomes remain deferred until selected primary case-study sources are reviewed. Non-pricing benefits may be included later only if source-backed and reviewed.
+
+## Presales Qualification Notes
+
+- Position IDBoxRT when the customer needs an operational data hub, industrial data integration layer, KPI/calculation layer, dashboard/reporting layer, or API-style exposure of plant data.
+- Confirm whether the need is data consolidation, real-time visibility, historical analysis, dashboarding, reporting, integration, or historian-adjacent data enablement.
+- Ask which industrial systems, SCADA/historians, enterprise applications, databases, files, APIs, and IoT sources are in scope.
+- Keep historian replacement, migration, and AVEVA PI comparison claims deferred until the dedicated source documents and comparison pages are reviewed.
+- Treat detailed deployment, sizing, redundancy, access control, API limits, data retention, and product limitations as validation topics.
+
+## What To Validate With Customer
+
+- Which source systems and connector categories are mandatory?
+- Which data must be persisted, calculated, exposed live, or sent to external systems?
+- What dashboard, synoptic, report, map, alarm, event, notification, and mobile workflows are required?
+- What user roles, security groups, permissions, access groups, and directory integrations are required?
+- What production deployment model, infrastructure, redundancy, backup/restore, and network-zone constraints apply?
+- Is the customer asking for a historian, a historian complement, or a historian replacement? Keep the answer open until source-backed comparison review.
 
 ## Evidence Sources
 
