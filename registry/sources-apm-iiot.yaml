@@ -650,7 +650,7 @@ document_sources:
     drive_id: 1qD_TuIVzKLma3pB2uTAlhl-BufEfQDX7
     confidentiality: internal
     extraction_priority: high
-    extraction_status: not_started
+    extraction_status: in_progress
     related_pages:
       - content/wiki/solutions/idboxrt.md
       - content/wiki/capabilities/iiot-platform.md
@@ -678,7 +678,7 @@ document_sources:
     drive_id: 1fL2X0yelmvvhNWQHTYDFae-AedkAFtYc
     confidentiality: internal
     extraction_priority: high
-    extraction_status: not_started
+    extraction_status: in_progress
     related_pages:
       - content/wiki/solutions/idboxrt.md
       - content/wiki/capabilities/iiot-platform.md
@@ -731,7 +731,7 @@ document_sources:
     drive_id: 1kzn0dCMwvGUXCQROvTQKhcWDliPHPlb9
     confidentiality: internal
     extraction_priority: high
-    extraction_status: not_started
+    extraction_status: in_progress
     related_pages:
       - content/wiki/solutions/idboxrt.md
       - content/wiki/capabilities/iiot-platform.md
