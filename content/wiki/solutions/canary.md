@@ -86,7 +86,7 @@ In NOVA Knowledge Hub M1, this page acts as a placeholder for organizing reviewe
 
 | Source ID | Source Title | Extraction Status | Notes |
 |---|---|---|---|
-| `SRC-APM-IIOT-0001` | AVENUE APM & IIoT Solutions | In progress | Main source used for this draft extraction batch. |
+| `SRC-APM-IIOT-0001` | AVENUE APM & IIoT Solutions | Batch 1 draft extracted | Main source used for this draft extraction batch; reference URLs in the sheet were treated only as supporting references. |
 | `SRC-APM-IIOT-0010` | Canary | Planned | Registered source folder exists; detailed source documents still need to be identified and reviewed. |
 
 ### Draft Facts from Source
@@ -98,23 +98,26 @@ In NOVA Knowledge Hub M1, this page acts as a placeholder for organizing reviewe
 | Problems solved | The sheet associates Canary with high tag-volume historian performance, preservation of raw time-series data, tag naming inconsistency, network disruption risk, and historian administration burden. | `SRC-APM-IIOT-0001` | Draft, pending validation |
 | Core capabilities | The sheet lists continuous industrial data collection, high-volume time-series storage, data contextualization, asset modeling, unified namespace concepts, visualization, and Excel access as candidate capability areas. | `SRC-APM-IIOT-0001` | Draft, pending validation |
 | Typical use cases | The sheet includes industrial historian use cases across manufacturing, oil and gas, power and utilities, water/wastewater, and life sciences examples. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| Integration relevance | The sheet describes Canary as collecting data from industrial automation sources and supporting downstream use through visualization, calculations, Excel access, and API-style consumption; exact interfaces require validation. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| Deployment model | The sheet describes site historian, enterprise historian, hierarchical local-to-central historian, on-premises, and cloud deployment as candidate models; validate before treating as confirmed architecture. | `SRC-APM-IIOT-0001` | Draft, pending validation |
 | APM / IIoT / Historian positioning | Based on the sheet, Canary should be treated primarily as an Industrial Historian candidate with possible downstream support for APM, analytics, and reporting workflows. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| Open questions | The sheet gives strong historian positioning but does not by itself prove current product limits, supported connectors, deployment constraints, or comparison conclusions against AVEVA PI. | `SRC-APM-IIOT-0001` | To validate |
 
 ### Open Questions
 
 - Which Canary documents should be treated as authoritative for historian architecture and deployment models?
 - Which use cases are reusable for Avenue positioning versus customer-specific examples?
 - Which comparison criteria with AVEVA PI can be supported directly by source evidence?
+- Which integration interfaces and retention behaviors are confirmed by current Canary documentation?
 
 ### Extraction TODO
 
-- Identify source documents inside the registered source folder.
-- Extract product scope.
-- Extract architecture or deployment notes.
-- Extract integration capabilities.
-- Extract supported use cases.
-- Extract limitations and assumptions.
-- Avoid pricing/licensing/commercial details.
+- Identify detailed source documents.
+- Validate product architecture.
+- Validate deployment model.
+- Validate integration claims.
+- Validate limitations.
+- Keep pricing/commercial information out of wiki.
 
 ## Source Traceability
 

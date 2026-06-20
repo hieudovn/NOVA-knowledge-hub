@@ -2,7 +2,7 @@
 
 ## Summary
 
-Manual Extraction Batch 1 extracted concise draft knowledge from `SRC-APM-IIOT-0001` into the four high-priority solution pages: IDBoxRT, Canary, AVEVA PI, and EtaPRO.
+Manual Extraction Batch 1 extracted and refined concise draft knowledge from `SRC-APM-IIOT-0001` into the four high-priority solution pages: IDBoxRT, Canary, AVEVA PI, and EtaPRO.
 
 The Google Sheet was used as the main source of truth for this batch. Reference URLs were not used as extraction sources. No website content was scraped or copied.
 
@@ -10,7 +10,7 @@ The Google Sheet was used as the main source of truth for this batch. Reference 
 
 | Source ID | Title | Source Type | Extraction Status |
 |---|---|---|---|
-| `SRC-APM-IIOT-0001` | AVENUE APM & IIoT Solutions | Google Sheet | `in_progress` |
+| `SRC-APM-IIOT-0001` | AVENUE APM & IIoT Solutions | Google Sheet | `batch_1_draft_extracted` |
 
 Google Sheet:
 
@@ -32,21 +32,11 @@ Solution pages:
 - `content/wiki/solutions/aveva-pi.md`
 - `content/wiki/solutions/etapro.md`
 
-Related capability pages:
+Deliverable report:
 
-- `content/wiki/capabilities/iiot-platform.md`
-- `content/wiki/capabilities/industrial-historian.md`
-- `content/wiki/capabilities/apm.md`
+- `docs/MANUAL_EXTRACTION_BATCH_1_REPORT.md`
 
-Related comparison pages:
-
-- `content/wiki/comparisons/canary-vs-aveva-pi.md`
-- `content/wiki/comparisons/idboxrt-vs-historian.md`
-- `content/wiki/comparisons/etapro-vs-mas-apm.md`
-
-Registry:
-
-- `registry/sources-apm-iiot.yaml`
+Optional related pages were not expanded in this pass. Existing comparison pages remain conservative and use `To validate` where evidence is incomplete.
 
 ## Extracted Topics
 
@@ -58,6 +48,7 @@ Extracted into each target solution page under `Source-Backed Draft Notes`:
 - Core capabilities
 - Typical use cases where present in the sheet
 - Integration relevance where present in the sheet
+- Deployment model where present in the sheet, marked for validation
 - APM / IIoT / Historian positioning
 - Open questions
 - Extraction TODO
@@ -82,6 +73,7 @@ Priority validation areas:
 ## Deferred Items
 
 - No final comparison conclusions were added.
+- No optional capability-page expansion was added in this pass.
 - No target page was moved beyond `draft`.
 - Product-specific source folders remain separate and should still be reviewed:
   - `SRC-APM-IIOT-0011` - IDBoxRT
@@ -94,7 +86,7 @@ Priority validation areas:
 
 No pricing, licensing, or commercial terms were added.
 
-The pricing row in the source sheet was not extracted into wiki pages.
+The pricing row in the source sheet was not extracted into wiki pages. Mentions of pricing or commercial terms in edited pages are exclusion rules only, not extracted commercial content.
 
 No raw confidential documents were copied into the repository.
 

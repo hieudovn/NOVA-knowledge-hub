@@ -87,7 +87,7 @@ In NOVA Knowledge Hub M1, this page acts as a placeholder for organizing reviewe
 
 | Source ID | Source Title | Extraction Status | Notes |
 |---|---|---|---|
-| `SRC-APM-IIOT-0001` | AVENUE APM & IIoT Solutions | In progress | Main source used for this draft extraction batch. |
+| `SRC-APM-IIOT-0001` | AVENUE APM & IIoT Solutions | Batch 1 draft extracted | Main source used for this draft extraction batch; reference URLs in the sheet were treated only as supporting references. |
 | `SRC-APM-IIOT-0011` | IDBoxRT | Planned | Registered source folder exists; detailed source documents still need to be identified and reviewed. |
 
 ### Draft Facts from Source
@@ -95,27 +95,30 @@ In NOVA Knowledge Hub M1, this page acts as a placeholder for organizing reviewe
 | Topic | Draft Note | Evidence Source | Review Status |
 |---|---|---|---|
 | General concept | The sheet positions IDBoxRT as a real-time operational data monitoring and analysis platform, described as an Operational Intelligence and information data hub layer. | `SRC-APM-IIOT-0001` | Draft, pending validation |
-| Vendor | The sheet lists CIC Consulting Informático from Spain as the vendor. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| Vendor | The sheet lists CIC Consulting Informatico from Spain as the vendor. | `SRC-APM-IIOT-0001` | Draft, pending validation |
 | Problems solved | The sheet associates IDBoxRT with fragmented operational data, energy data silos, and difficulty consolidating information from equipment, production, and plant levels. | `SRC-APM-IIOT-0001` | Draft, pending validation |
 | Core capabilities | The sheet lists heterogeneous data collection, operational data standardization, signal contextualization, preprocessing, KPI calculation, and interactive reporting as candidate capability areas. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| Typical use cases | The sheet points to plant operations visibility, energy and asset data consolidation, operational KPI calculation, and interactive reporting as candidate use cases. | `SRC-APM-IIOT-0001` | Draft, pending validation |
 | Integration relevance | The sheet frames IDBoxRT around ISA-95-style integration across field devices, SCADA/Historian layers, and ERP/BI layers; architecture details still require validation. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| Deployment model | The sheet describes on-premises, cloud, and hybrid deployment as candidate models; this must be validated against detailed product documents. | `SRC-APM-IIOT-0001` | Draft, pending validation |
 | APM / IIoT / Historian positioning | Based on the sheet, IDBoxRT is best treated in this wiki as an IIoT / operational intelligence / industrial data hub candidate, not as an approved historian replacement. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| Open questions | The sheet gives enough structure for draft positioning, but not enough to confirm official architecture, supported protocol list, limitations, or deployment constraints. | `SRC-APM-IIOT-0001` | To validate |
 
 ### Open Questions
 
 - Which IDBoxRT documents should be treated as authoritative for architecture and deployment claims?
 - Which integration protocols and interfaces are officially supported versus inferred from solution positioning?
 - Which use cases should be separated into energy management, operational intelligence, IIoT platform, and APM-adjacent categories?
+- What limitations should be documented for historian-style retention, analytics, and enterprise integration scenarios?
 
 ### Extraction TODO
 
-- Identify source documents inside the registered source folder.
-- Extract product scope.
-- Extract architecture or deployment notes.
-- Extract integration capabilities.
-- Extract supported use cases.
-- Extract limitations and assumptions.
-- Avoid pricing/licensing/commercial details.
+- Identify detailed source documents.
+- Validate product architecture.
+- Validate deployment model.
+- Validate integration claims.
+- Validate limitations.
+- Keep pricing/commercial information out of wiki.
 
 ## Source Traceability
 

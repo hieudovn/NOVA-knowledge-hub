@@ -87,7 +87,7 @@ In NOVA Knowledge Hub M1, this page acts as a placeholder for organizing reviewe
 
 | Source ID | Source Title | Extraction Status | Notes |
 |---|---|---|---|
-| `SRC-APM-IIOT-0001` | AVENUE APM & IIoT Solutions | In progress | Main source used for this draft extraction batch. |
+| `SRC-APM-IIOT-0001` | AVENUE APM & IIoT Solutions | Batch 1 draft extracted | Main source used for this draft extraction batch; reference URLs in the sheet were treated only as supporting references. |
 | `SRC-APM-IIOT-0007` | EtaPRO | Planned | Registered source folder exists; detailed source documents still need to be identified and reviewed. |
 
 ### Draft Facts from Source
@@ -100,23 +100,25 @@ In NOVA Knowledge Hub M1, this page acts as a placeholder for organizing reviewe
 | Core capabilities | The sheet lists thermodynamic modeling, anomaly detection, rotating equipment analysis, historian/performance data storage, and performance monitoring as candidate capability areas. | `SRC-APM-IIOT-0001` | Draft, pending validation |
 | Typical use cases | The sheet emphasizes power generation use cases, including thermal, gas, renewables, hydro, geothermal, nuclear, and industrial co-generation or utilities contexts. | `SRC-APM-IIOT-0001` | Draft, pending validation |
 | Integration relevance | The sheet lists interfaces with DCS, PLC, PI, OPC UA, Modbus, and Bently Nevada 3500 as candidate integration areas requiring validation. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| Deployment model | The sheet describes on-premises or cloud deployment as candidate models; confirm detailed deployment architecture before using this in solution design. | `SRC-APM-IIOT-0001` | Draft, pending validation |
 | APM / IIoT / Historian positioning | Based on the sheet, EtaPRO should be treated as an APM and performance monitoring candidate for asset-intensive operations, especially power generation. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| Open questions | The sheet gives draft module and integration names, but official module boundaries, deployment constraints, and limitations require detailed source review. | `SRC-APM-IIOT-0001` | To validate |
 
 ### Open Questions
 
 - Which EtaPRO documents should be treated as authoritative for module names and architecture?
 - Which power-generation use cases are globally supported versus Avenue-specific target opportunities?
 - Which comparison criteria with IBM MAS APM can be supported directly by source evidence?
+- Which modules are standard product capabilities versus optional, project-specific, or configuration-dependent components?
 
 ### Extraction TODO
 
-- Identify source documents inside the registered source folder.
-- Extract product scope.
-- Extract architecture or deployment notes.
-- Extract integration capabilities.
-- Extract supported use cases.
-- Extract limitations and assumptions.
-- Avoid pricing/licensing/commercial details.
+- Identify detailed source documents.
+- Validate product architecture.
+- Validate deployment model.
+- Validate integration claims.
+- Validate limitations.
+- Keep pricing/commercial information out of wiki.
 
 ## Source Traceability
 

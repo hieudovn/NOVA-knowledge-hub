@@ -86,7 +86,7 @@ In NOVA Knowledge Hub M1, this page acts as a placeholder for organizing reviewe
 
 | Source ID | Source Title | Extraction Status | Notes |
 |---|---|---|---|
-| `SRC-APM-IIOT-0001` | AVENUE APM & IIoT Solutions | In progress | Main source used for this draft extraction batch. |
+| `SRC-APM-IIOT-0001` | AVENUE APM & IIoT Solutions | Batch 1 draft extracted | Main source used for this draft extraction batch; reference URLs in the sheet were treated only as supporting references. |
 | `SRC-APM-IIOT-0008` | AVEVA PI | Planned | Registered source folder exists; detailed source documents still need to be identified and reviewed. |
 
 ### Draft Facts from Source
@@ -98,23 +98,26 @@ In NOVA Knowledge Hub M1, this page acts as a placeholder for organizing reviewe
 | Problems solved | The sheet associates AVEVA PI with fragmented legacy data, operational silos, emissions tracking challenges, and enterprise-scale performance optimization needs. | `SRC-APM-IIOT-0001` | Draft, pending validation |
 | Core capabilities | The sheet lists PI Interfaces/Connectors, PI Server with Data Archive and Asset Framework, and PI Vision/CONNECT as architecture or capability areas to validate. | `SRC-APM-IIOT-0001` | Draft, pending validation |
 | Typical use cases | The sheet maps AVEVA PI to oil and gas, energy, chemicals, cement, steel, and large-scale manufacturing contexts. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| Integration relevance | The sheet positions AVEVA PI as a source and infrastructure layer for operational data collection, contextualization, visualization, and enterprise-scale data use; current component boundaries require validation. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| Deployment model | The sheet describes on-premises and hybrid deployment, including CONNECT-related cloud infrastructure, as candidate models; validate current product architecture before reuse. | `SRC-APM-IIOT-0001` | Draft, pending validation |
 | APM / IIoT / Historian positioning | Based on the sheet, AVEVA PI should be treated primarily as an industrial data historian and operational data infrastructure candidate. | `SRC-APM-IIOT-0001` | Draft, pending validation |
+| Open questions | The sheet does not by itself resolve current AVEVA product naming, CONNECT boundaries, migration implications, or comparison conclusions against Canary. | `SRC-APM-IIOT-0001` | To validate |
 
 ### Open Questions
 
 - Which AVEVA PI documents should be treated as authoritative for current product naming and architecture?
 - Which parts of the sheet refer to legacy PI System, current AVEVA PI System, or CONNECT-related capabilities?
 - Which comparison criteria with Canary can be supported directly by source evidence?
+- Which deployment and data access claims remain accurate for the current AVEVA PI portfolio?
 
 ### Extraction TODO
 
-- Identify source documents inside the registered source folder.
-- Extract product scope.
-- Extract architecture or deployment notes.
-- Extract integration capabilities.
-- Extract supported use cases.
-- Extract limitations and assumptions.
-- Avoid pricing/licensing/commercial details.
+- Identify detailed source documents.
+- Validate product architecture.
+- Validate deployment model.
+- Validate integration claims.
+- Validate limitations.
+- Keep pricing/commercial information out of wiki.
 
 ## Source Traceability
 
