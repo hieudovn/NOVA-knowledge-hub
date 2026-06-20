@@ -120,7 +120,7 @@ sources:
     confidentiality: internal
     extraction_priority: high
     extraction_status: planned
-    document_inventory_status: pending_document_audit
+    document_inventory_status: batch_1_3_inventory_completed
     validation_target_pages:
       - content/wiki/solutions/etapro.md
     known_document_candidates:
@@ -220,8 +220,193 @@ document_sources:
     confidentiality: internal
     extraction_priority: high
     extraction_status: in_progress
+    validation_focus:
+      - pilot_document_validation
+      - avenue_positioning_context
+      - module_map
+      - open_questions
     related_pages:
       - content/wiki/solutions/etapro.md
       - content/wiki/capabilities/apm.md
       - content/wiki/capabilities/condition-monitoring.md
     notes: Document-level source for validating EtaPRO Batch 1 draft facts. Do not copy raw document content into repository.
+
+  - id: SRC-ETAPRO-DOC-0002
+    title: Toshiba EtaPRO APM Introduction for Customer_r1.pdf
+    parent_source_id: SRC-APM-IIOT-0007
+    type: pdf
+    url: https://drive.google.com/file/d/1VHsHIaoLSfAve7X3GyY9CHOTP-tRzh9z/view?usp=drivesdk
+    drive_id: 1VHsHIaoLSfAve7X3GyY9CHOTP-tRzh9z
+    confidentiality: internal
+    extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/etapro.md
+      - content/wiki/capabilities/apm.md
+      - content/wiki/capabilities/condition-monitoring.md
+    validation_focus:
+      - vendor_product_scope
+      - customer_facing_positioning
+      - use_cases
+      - module_boundaries
+    notes: Exact product introduction document found in EtaPRO reference materials. Inventory only; do not extract content until a validation batch.
+
+  - id: SRC-ETAPRO-DOC-0003
+    title: EtaPRO Overview (New March 2025).pdf
+    parent_source_id: SRC-APM-IIOT-0007
+    type: pdf
+    url: https://drive.google.com/file/d/1GYySKR-FB9POvCUOpAzFRfdapfS5WUYE/view?usp=drivesdk
+    drive_id: 1GYySKR-FB9POvCUOpAzFRfdapfS5WUYE
+    confidentiality: internal
+    extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/etapro.md
+      - content/wiki/capabilities/apm.md
+      - content/wiki/capabilities/condition-monitoring.md
+    validation_focus:
+      - product_overview
+      - platform_positioning
+      - module_boundaries
+      - use_cases
+    notes: Exact overview document found in EtaPRO reference materials. Inventory only; do not extract content until a validation batch.
+
+  - id: SRC-ETAPRO-DOC-0004
+    title: EtaPRO technology.pdf
+    parent_source_id: SRC-APM-IIOT-0007
+    type: pdf
+    url: https://drive.google.com/file/d/1sIRIN2fajfW3E6eQXHQa2-dMhmNt3oer/view?usp=drivesdk
+    drive_id: 1sIRIN2fajfW3E6eQXHQa2-dMhmNt3oer
+    confidentiality: internal
+    extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/etapro.md
+      - content/wiki/capabilities/apm.md
+      - content/wiki/capabilities/condition-monitoring.md
+    validation_focus:
+      - product_architecture
+      - technology_model
+      - integration_claims
+      - deployment_evidence
+    notes: Exact technology document found in EtaPRO reference materials. Inventory only; do not extract content until a validation batch.
+
+  - id: SRC-ETAPRO-DOC-0005
+    title: EtaPRO-Platform-Flysht-2.pdf
+    parent_source_id: SRC-APM-IIOT-0007
+    type: pdf
+    url: https://drive.google.com/file/d/1qJ7_eOs7DMicBBfrS6S46VrINyOlugVY/view?usp=drivesdk
+    drive_id: 1qJ7_eOs7DMicBBfrS6S46VrINyOlugVY
+    confidentiality: internal
+    extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/etapro.md
+      - content/wiki/capabilities/apm.md
+      - content/wiki/capabilities/condition-monitoring.md
+    validation_focus:
+      - platform_scope
+      - core_capabilities
+      - module_boundaries
+      - limitations_to_check
+    notes: Exact platform flysheet found in EtaPRO reference materials. Inventory only; do not extract content until a validation batch.
+
+  - id: SRC-ETAPRO-DOC-0006
+    title: Brochure-EtaPRO-VirtualPlant-_22.pdf
+    parent_source_id: SRC-APM-IIOT-0007
+    type: pdf
+    url: https://drive.google.com/file/d/1fZm2j9j1GEM0yVWhcJS6VANUoTtnrGYG/view?usp=drivesdk
+    drive_id: 1fZm2j9j1GEM0yVWhcJS6VANUoTtnrGYG
+    confidentiality: internal
+    extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/etapro.md
+      - content/wiki/capabilities/apm.md
+      - content/wiki/capabilities/condition-monitoring.md
+    validation_focus:
+      - virtual_plant_module
+      - thermodynamic_modeling
+      - performance_monitoring
+      - use_cases
+    notes: Exact Virtual Plant brochure found in EtaPRO reference materials. Inventory only; do not extract content until a validation batch.
+
+  - id: SRC-ETAPRO-DOC-0007
+    title: EtaPRO-APR-Flysht-1.pdf
+    parent_source_id: SRC-APM-IIOT-0007
+    type: pdf
+    url: https://drive.google.com/file/d/1P2fBkD8PBaBbl3HVlhRmr8vIz8B37_9q/view?usp=drivesdk
+    drive_id: 1P2fBkD8PBaBbl3HVlhRmr8vIz8B37_9q
+    confidentiality: internal
+    extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/etapro.md
+      - content/wiki/capabilities/apm.md
+      - content/wiki/capabilities/condition-monitoring.md
+    validation_focus:
+      - apr_module
+      - anomaly_detection
+      - condition_monitoring
+      - early_warning_claims
+    notes: Exact APR flysheet found in EtaPRO reference materials. Inventory only; do not extract content until a validation batch.
+
+  - id: SRC-ETAPRO-DOC-0008
+    title: EtaPRO-Predictor-Flysht-1.pdf
+    parent_source_id: SRC-APM-IIOT-0007
+    type: pdf
+    url: https://drive.google.com/file/d/1XxVKDD9yWONNs9QuRKdYfbO3Sf13WTvB/view?usp=drivesdk
+    drive_id: 1XxVKDD9yWONNs9QuRKdYfbO3Sf13WTvB
+    confidentiality: internal
+    extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/etapro.md
+      - content/wiki/capabilities/apm.md
+      - content/wiki/capabilities/condition-monitoring.md
+    validation_focus:
+      - predictor_module
+      - rotating_equipment_diagnostics
+      - condition_monitoring
+      - module_boundaries
+    notes: Exact Predictor flysheet found in EtaPRO reference materials. Inventory only; do not extract content until a validation batch.
+
+  - id: SRC-ETAPRO-DOC-0009
+    title: EtaPROMonitorDiagnBrochure-2.pdf
+    parent_source_id: SRC-APM-IIOT-0007
+    type: pdf
+    url: https://drive.google.com/file/d/1caYtGvWly6qsGMarz7zFjcnRkVS-jAxa/view?usp=drivesdk
+    drive_id: 1caYtGvWly6qsGMarz7zFjcnRkVS-jAxa
+    confidentiality: internal
+    extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/etapro.md
+      - content/wiki/capabilities/apm.md
+      - content/wiki/capabilities/condition-monitoring.md
+    validation_focus:
+      - monitoring_diagnostics
+      - condition_monitoring_scope
+      - asset_health_claims
+      - use_cases
+    notes: Exact monitoring and diagnostics brochure found in EtaPRO reference materials. Inventory only; do not extract content until a validation batch.
+
+  - id: SRC-ETAPRO-DOC-0010
+    title: EtaPRO-FDM-PASS-Product-Info-Sheet-11-_2024.pdf
+    parent_source_id: SRC-APM-IIOT-0007
+    type: pdf
+    url: https://drive.google.com/file/d/1EtfZwomGm9IgsF7Yd2LC7jszv6frVyes/view?usp=drivesdk
+    drive_id: 1EtfZwomGm9IgsF7Yd2LC7jszv6frVyes
+    confidentiality: internal
+    extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/etapro.md
+      - content/wiki/capabilities/apm.md
+      - content/wiki/capabilities/condition-monitoring.md
+    validation_focus:
+      - module_specific_product_info
+      - product_boundaries
+      - limitations_to_check
+      - terminology
+    notes: Exact module-specific product info sheet found in EtaPRO reference materials. Inventory only; do not extract content until a validation batch.
