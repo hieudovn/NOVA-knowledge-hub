@@ -1,0 +1,29 @@
+source_domain:
+  id: SRC-PORTFOLIO-IBM-MAS
+  title: IBM Maximo Application Suite Source Materials
+  type: source_domain
+  owner: Hieu Do
+  organization: Personal / Avenue Context
+  confidentiality: internal
+  purpose: Source domain for IBM MAS, Maximo, EAM, APM, reliability, monitoring, health, and predictive maintenance knowledge
+  status: registered
+  extraction_status: not_started
+  related_pages:
+    - content/wiki/solutions/ibm-mas.md
+    - content/wiki/patterns/maximo-integration.md
+    - content/wiki/comparisons/etapro-vs-mas-apm.md
+  notes: Stub registry domain. Add exact source folders/documents later. Do not copy raw source content into the repository.
+
+sources:
+  - id: SRC-IBM-MAS-PENDING-0001
+    title: IBM MAS source folder or document set
+    type: source_placeholder
+    location_status: pending
+    confidentiality: internal
+    extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/ibm-mas.md
+      - content/wiki/patterns/maximo-integration.md
+      - content/wiki/comparisons/etapro-vs-mas-apm.md
+    notes: Placeholder only. Replace or supplement with exact IBM MAS folders/documents when source locations are known. Do not invent URLs.

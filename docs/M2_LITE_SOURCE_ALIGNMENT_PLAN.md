@@ -12,6 +12,10 @@ Primary registry:
 
 - `registry/sources-apm-iiot.yaml`
 
+Related registry stub:
+
+- `registry/sources-ibm-mas.yaml`
+
 Current state:
 
 - Domain source `SRC-DOMAIN-APM-IIOT` is registered for the Google Drive folder `APM & IIoT Solutions`.
@@ -22,6 +26,7 @@ Current state:
   - `extraction_status`
   - `notes`
 - All extraction statuses are `not_started` except the restricted pricing source, which is `deferred_restricted`.
+- IBM MAS references now have a registered source-domain home through `SRC-PORTFOLIO-IBM-MAS`; exact IBM MAS source folders or documents still need to be registered later.
 
 ## High Priority Sources
 
@@ -104,7 +109,8 @@ No required solution-page mapping gaps were found for the specified APM & IIoT s
 
 Follow-up source reference needs:
 
-- `content/wiki/solutions/ibm-mas.md`, `content/wiki/patterns/maximo-integration.md`, and `content/wiki/comparisons/etapro-vs-mas-apm.md` reference `SRC-PORTFOLIO-IBM-MAS`, which is outside `registry/sources-apm-iiot.yaml`. A separate IBM MAS source registry entry or registry file should be prepared before IBM MAS extraction.
+- `content/wiki/solutions/ibm-mas.md`, `content/wiki/patterns/maximo-integration.md`, and `content/wiki/comparisons/etapro-vs-mas-apm.md` reference `SRC-PORTFOLIO-IBM-MAS`, which now has a stub registry file at `registry/sources-ibm-mas.yaml`.
+- Exact IBM MAS source folders/documents still need to be registered later; no raw IBM MAS source content has been added to the repository.
 - `content/wiki/capabilities/condition-monitoring.md` and `content/wiki/capabilities/predictive-maintenance.md` currently use the domain-level source. Add more specific solution source refs after manual extraction identifies supporting sources.
 - Luca BDS and Retina360 are registered sources but do not yet have M1 wiki pages. Defer page creation until manual extraction confirms M1 technical relevance.
 
