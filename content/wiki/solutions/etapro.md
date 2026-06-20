@@ -73,7 +73,7 @@ In this wiki, EtaPRO is most useful for teams evaluating power plant performance
 
 The current source-backed draft architecture treats EtaPRO as a Client/Server platform that connects plant data sources to EtaPRO data management, analytics modules, and user-facing tools. `SRC-ETAPRO-DOC-0004` supports Client/Server architecture, centralized or decentralized topology options, TCP/IP client communication, client caching/compression, and web/mobile access. `SRC-ETAPRO-DOC-0001` supports a high-level Avenue integration view from OT systems into EtaPRO Archive, APR, and Virtual Plant, with a possible Maximo handoff that still needs official integration validation.
 
-TODO: Enable Mermaid rendering in Docusaurus if needed. The current Docusaurus configuration does not explicitly enable Mermaid, so this diagram is included as a fenced `mermaid` block.
+This conceptual draft shows the current source-backed EtaPRO data flow at a high level. External-system and interface details remain under review.
 
 ```mermaid
 flowchart TD
@@ -142,18 +142,18 @@ Case-study benefits may be summarized later only when non-pricing and source-bac
 
 | Source ID | Title | Link | Evidence Role | Review Status |
 |---|---|---|---|---|
-| `SRC-APM-IIOT-0001` | AVENUE APM & IIoT Solutions | [Google Sheet](https://docs.google.com/spreadsheets/d/1OKfe48zNwTjB1196QU45f8jqNyT8OyszAwLQ-D1gdEw) | Batch 1 portfolio-level draft source | Draft extracted |
-| `SRC-APM-IIOT-0007` | EtaPRO source folder | [Drive folder](https://drive.google.com/drive/folders/1ePyS23Vwv1KjJ_TaB2U5JArxVyOH7YJE) | Parent product source folder | Registered |
-| `SRC-ETAPRO-DOC-0001` | Master_EtaPRO_Knowledge | [Google Doc](https://docs.google.com/document/d/1ou79esVguZeo2w1XKsGAVisUFcLi-qxfdJWTqZksiF0/edit?usp=drivesdk) | High-level positioning, Avenue module map, Avenue integration context | In progress |
-| `SRC-ETAPRO-DOC-0002` | Toshiba EtaPRO APM Introduction for Customer_r1.pdf | [Drive file](https://drive.google.com/file/d/1VHsHIaoLSfAve7X3GyY9CHOTP-tRzh9z/view?usp=drivesdk) | APM overview, stakeholders, use cases, module families | Reviewed for Batch 1.7 |
-| `SRC-ETAPRO-DOC-0003` | EtaPRO Overview (New March 2025).pdf | [Drive file](https://drive.google.com/file/d/1GYySKR-FB9POvCUOpAzFRfdapfS5WUYE/view?usp=drivesdk) | Product overview, platform capabilities, embedded apps, user experience | Reviewed for Batch 1.7 |
-| `SRC-ETAPRO-DOC-0004` | EtaPRO technology.pdf | [Drive file](https://drive.google.com/file/d/1sIRIN2fajfW3E6eQXHQa2-dMhmNt3oer/view?usp=drivesdk) | Architecture, topology, interfaces, modules, deployment notes | Reviewed for Batch 1.7 with commercial sections excluded |
-| `SRC-ETAPRO-DOC-0005` | EtaPRO-Platform-Flysht-2.pdf | [Drive file](https://drive.google.com/file/d/1qJ7_eOs7DMicBBfrS6S46VrINyOlugVY/view?usp=drivesdk) | Platform scope, core modules, Archive, reporting, web/mobile access | Reviewed for Batch 1.7 |
-| `SRC-ETAPRO-DOC-0006` | Brochure-EtaPRO-VirtualPlant-_22.pdf | [Drive file](https://drive.google.com/file/d/1fZm2j9j1GEM0yVWhcJS6VANUoTtnrGYG/view?usp=drivesdk) | VirtualPlant module, thermodynamic modeling, what-if analysis | Reviewed for Batch 1.7 |
-| `SRC-ETAPRO-DOC-0007` | EtaPRO-APR-Flysht-1.pdf | [Drive file](https://drive.google.com/file/d/1P2fBkD8PBaBbl3HVlhRmr8vIz8B37_9q/view?usp=drivesdk) | APR module, anomaly detection, early warning, management by exception | Reviewed for Batch 1.7 with pricing examples excluded |
-| `SRC-ETAPRO-DOC-0008` | EtaPRO-Predictor-Flysht-1.pdf | [Drive file](https://drive.google.com/file/d/1XxVKDD9yWONNs9QuRKdYfbO3Sf13WTvB/view?usp=drivesdk) | Predictor module, rotating machinery diagnostics, AutoDiagnosis | Reviewed for Batch 1.7 |
-| `SRC-ETAPRO-DOC-0009` | EtaPROMonitorDiagnBrochure-2.pdf | [Drive file](https://drive.google.com/file/d/1caYtGvWly6qsGMarz7zFjcnRkVS-jAxa/view?usp=drivesdk) | Monitoring and Diagnostic Center, monitoring workflows, reporting support | Reviewed for Batch 1.7 |
-| `SRC-ETAPRO-EXTRACT-0003` | 03_EtaPRO Technical Section.md | [Drive file](https://drive.google.com/file/d/1-T-gLOlXFOQzfU_rCQ9AHSi2fClZ2ZDd/view?usp=drivesdk) | Derived review aid only; helped organize candidate technical topics | Not evidence for final claims |
+| `SRC-APM-IIOT-0001` | AVENUE APM & IIoT Solutions | [Open source](<https://docs.google.com/spreadsheets/d/1OKfe48zNwTjB1196QU45f8jqNyT8OyszAwLQ-D1gdEw>) | Batch 1 portfolio-level draft source | Draft extracted |
+| `SRC-APM-IIOT-0007` | EtaPRO source folder | [Open source](<https://drive.google.com/drive/folders/1ePyS23Vwv1KjJ_TaB2U5JArxVyOH7YJE>) | Parent product source folder | Registered |
+| `SRC-ETAPRO-DOC-0001` | Master_EtaPRO_Knowledge | [Open source](<https://docs.google.com/document/d/1ou79esVguZeo2w1XKsGAVisUFcLi-qxfdJWTqZksiF0/edit?usp=drivesdk>) | High-level positioning, Avenue module map, Avenue integration context | In progress |
+| `SRC-ETAPRO-DOC-0002` | Toshiba EtaPRO APM Introduction for Customer_r1.pdf | [Open source](<https://drive.google.com/file/d/1VHsHIaoLSfAve7X3GyY9CHOTP-tRzh9z/view?usp=drivesdk>) | APM overview, stakeholders, use cases, module families | Reviewed for Batch 1.7 |
+| `SRC-ETAPRO-DOC-0003` | EtaPRO Overview (New March 2025).pdf | [Open source](<https://drive.google.com/file/d/1GYySKR-FB9POvCUOpAzFRfdapfS5WUYE/view?usp=drivesdk>) | Product overview, platform capabilities, embedded apps, user experience | Reviewed for Batch 1.7 |
+| `SRC-ETAPRO-DOC-0004` | EtaPRO technology.pdf | [Open source](<https://drive.google.com/file/d/1sIRIN2fajfW3E6eQXHQa2-dMhmNt3oer/view?usp=drivesdk>) | Architecture, topology, interfaces, modules, deployment notes | Reviewed for Batch 1.7 with commercial sections excluded |
+| `SRC-ETAPRO-DOC-0005` | EtaPRO-Platform-Flysht-2.pdf | [Open source](<https://drive.google.com/file/d/1qJ7_eOs7DMicBBfrS6S46VrINyOlugVY/view?usp=drivesdk>) | Platform scope, core modules, Archive, reporting, web/mobile access | Reviewed for Batch 1.7 |
+| `SRC-ETAPRO-DOC-0006` | Brochure-EtaPRO-VirtualPlant-_22.pdf | [Open source](<https://drive.google.com/file/d/1fZm2j9j1GEM0yVWhcJS6VANUoTtnrGYG/view?usp=drivesdk>) | VirtualPlant module, thermodynamic modeling, what-if analysis | Reviewed for Batch 1.7 |
+| `SRC-ETAPRO-DOC-0007` | EtaPRO-APR-Flysht-1.pdf | [Open source](<https://drive.google.com/file/d/1P2fBkD8PBaBbl3HVlhRmr8vIz8B37_9q/view?usp=drivesdk>) | APR module, anomaly detection, early warning, management by exception | Reviewed for Batch 1.7 with pricing examples excluded |
+| `SRC-ETAPRO-DOC-0008` | EtaPRO-Predictor-Flysht-1.pdf | [Open source](<https://drive.google.com/file/d/1XxVKDD9yWONNs9QuRKdYfbO3Sf13WTvB/view?usp=drivesdk>) | Predictor module, rotating machinery diagnostics, AutoDiagnosis | Reviewed for Batch 1.7 |
+| `SRC-ETAPRO-DOC-0009` | EtaPROMonitorDiagnBrochure-2.pdf | [Open source](<https://drive.google.com/file/d/1caYtGvWly6qsGMarz7zFjcnRkVS-jAxa/view?usp=drivesdk>) | Monitoring and Diagnostic Center, monitoring workflows, reporting support | Reviewed for Batch 1.7 |
+| `SRC-ETAPRO-EXTRACT-0003` | 03_EtaPRO Technical Section.md | [Open source](<https://drive.google.com/file/d/1-T-gLOlXFOQzfU_rCQ9AHSi2fClZ2ZDd/view?usp=drivesdk>) | Derived review aid only; helped organize candidate technical topics | Not evidence for final claims |
 
 ## Source-Backed Draft Notes
 

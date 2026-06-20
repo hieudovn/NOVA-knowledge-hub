@@ -9,6 +9,7 @@ const config = {
   projectName: 'NOVA-knowledge-hub',
   onBrokenLinks: 'throw',
   markdown: {
+    mermaid: true,
     hooks: {
       onBrokenMarkdownLinks: 'warn',
     },
@@ -51,6 +52,8 @@ const config = {
       },
     ],
   ],
+
+  themes: ['@docusaurus/theme-mermaid'],
 
   themeConfig: {
     navbar: {

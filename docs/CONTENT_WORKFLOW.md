@@ -237,6 +237,16 @@ If a source mixes pricing and technical knowledge, extract only technical knowle
 
 ---
 
+### Source Link Convention
+
+Private/internal wiki pages may link to internal Google Drive source documents when access is restricted to the intended reviewers.
+
+Public pages must not expose private Drive links. Evidence links are for reviewer traceability, not public publication.
+
+Pricing or commercial sources must not be linked from wiki knowledge pages unless the link is inside a Product Owner/Admin-only document outside the wiki.
+
+---
+
 ## 9. AI Draft Quality Rules
 
 AI-generated draft content must:
