@@ -646,6 +646,7 @@ derived_sources:
   - id: SRC-ETAPRO-EXTRACT-FOLDER-0001
     title: 00_Extracted Data
     parent_source_id: SRC-APM-IIOT-0007
+    source_kind: derived_source
     type: notebooklm_extracted_data_folder
     url: https://drive.google.com/drive/folders/18FAWinREsJ-2435b1JxfdzwHWlkjmPEs
     drive_id: 18FAWinREsJ-2435b1JxfdzwHWlkjmPEs
@@ -658,21 +659,28 @@ derived_sources:
       - content/wiki/capabilities/condition-monitoring.md
       - content/wiki/tender/apm-requirement-mapping.md
     intended_use:
-      - accelerate_manual_review
-      - identify_candidate_topics
-      - map_extracted_summary_to_primary_sources
-      - plan_document_validation
+      - business_summary
+      - technical_architecture
+      - capabilities
+      - use_cases
+      - deployment
+      - roadmap
+      - tender_support
+      - comparison_support
+      - restricted_commercial_reference_only
     restricted_content_policy:
       - derived_source_only_not_primary_evidence
       - validate_against_original_sources_before_wiki_claims
       - do_not_copy_long_raw_content_into_repository
       - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
       - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
-    notes: NotebookLM-generated Extracted Data folder for EtaPRO. Treat as derived guidance only; validate against original source documents before adding or changing wiki facts.
+    pricing_risk: high
+    notes: NotebookLM-generated Extracted Data folder for EtaPRO. Treat as derived guidance only; validate against original source documents before adding or changing wiki facts. Folder includes at least one BOM/roadmap file, so commercial sections remain restricted.
 
   - id: SRC-ETAPRO-EXTRACT-0001
     title: 01_EtaPRO Extracted Keys.md
     parent_source_id: SRC-APM-IIOT-0007
+    source_kind: derived_source
     type: notebooklm_markdown
     url: https://drive.google.com/file/d/1ns4b-DoLCPEtXUJe8G2N0-6wKLmzJR8R/view?usp=drivesdk
     drive_id: 1ns4b-DoLCPEtXUJe8G2N0-6wKLmzJR8R
@@ -684,20 +692,22 @@ derived_sources:
       - content/wiki/capabilities/apm.md
       - content/wiki/capabilities/condition-monitoring.md
     intended_use:
-      - identify_candidate_key_facts
-      - prepare_validation_questions
-      - map_claims_to_primary_document_sources
+      - capabilities
+      - tender_support
+      - comparison_support
     restricted_content_policy:
       - derived_source_only_not_primary_evidence
       - validate_against_original_sources_before_wiki_claims
       - do_not_copy_long_raw_content_into_repository
       - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
       - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+    pricing_risk: none
     notes: NotebookLM-generated markdown summary. Registered from exact Drive metadata; file size was reported as 0 during folder listing, so review accessibility before relying on it.
 
   - id: SRC-ETAPRO-EXTRACT-0002
     title: 02_EtaPRO Business Section.md
     parent_source_id: SRC-APM-IIOT-0007
+    source_kind: derived_source
     type: notebooklm_markdown
     url: https://drive.google.com/file/d/1nSjgBEgmwtrCRhy1QzcStFp8HPAFRitB/view?usp=drivesdk
     drive_id: 1nSjgBEgmwtrCRhy1QzcStFp8HPAFRitB
@@ -709,20 +719,22 @@ derived_sources:
       - content/wiki/capabilities/apm.md
       - content/wiki/tender/apm-requirement-mapping.md
     intended_use:
-      - identify_candidate_business_positioning
-      - prepare_use_case_review
-      - map_business_claims_to_primary_document_sources
+      - business_summary
+      - use_cases
+      - tender_support
     restricted_content_policy:
       - derived_source_only_not_primary_evidence
       - validate_against_original_sources_before_wiki_claims
       - do_not_copy_long_raw_content_into_repository
       - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
       - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+    pricing_risk: none
     notes: NotebookLM-generated markdown summary for business-oriented review. Do not treat as approved vendor truth or commercial source.
 
   - id: SRC-ETAPRO-EXTRACT-0003
     title: 03_EtaPRO Technical Section.md
     parent_source_id: SRC-APM-IIOT-0007
+    source_kind: derived_source
     type: notebooklm_markdown
     url: https://drive.google.com/file/d/1-T-gLOlXFOQzfU_rCQ9AHSi2fClZ2ZDd/view?usp=drivesdk
     drive_id: 1-T-gLOlXFOQzfU_rCQ9AHSi2fClZ2ZDd
@@ -734,20 +746,22 @@ derived_sources:
       - content/wiki/capabilities/apm.md
       - content/wiki/capabilities/condition-monitoring.md
     intended_use:
-      - identify_candidate_technical_claims
-      - prepare_architecture_and_integration_review
-      - map_technical_claims_to_primary_document_sources
+      - technical_architecture
+      - capabilities
+      - comparison_support
     restricted_content_policy:
       - derived_source_only_not_primary_evidence
       - validate_against_original_sources_before_wiki_claims
       - do_not_copy_long_raw_content_into_repository
       - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
       - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+    pricing_risk: none
     notes: NotebookLM-generated markdown summary for technical review. Use only to speed manual validation against original EtaPRO documents.
 
   - id: SRC-ETAPRO-EXTRACT-0004
     title: 04_EtaPRO Usecases, deployment, BOM, roadmap.md
     parent_source_id: SRC-APM-IIOT-0007
+    source_kind: derived_source
     type: notebooklm_markdown
     url: https://drive.google.com/file/d/11_OhRYRmwH7YZKJnio9bi_r5OkEdRKK2/view?usp=drivesdk
     drive_id: 11_OhRYRmwH7YZKJnio9bi_r5OkEdRKK2
@@ -759,9 +773,11 @@ derived_sources:
       - content/wiki/tender/apm-requirement-mapping.md
       - content/wiki/comparisons/etapro-vs-mas-apm.md
     intended_use:
-      - identify_candidate_use_cases
-      - prepare_deployment_review
-      - identify_noncommercial_bom_or_roadmap_items_requiring_source_validation
+      - use_cases
+      - deployment
+      - roadmap
+      - tender_support
+      - restricted_commercial_reference_only
     restricted_content_policy:
       - derived_source_only_not_primary_evidence
       - validate_against_original_sources_before_wiki_claims
@@ -769,4 +785,416 @@ derived_sources:
       - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
       - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
       - do_not_extract_commercial_bom_pricing_or_roadmap_commitments_into_wiki
+    pricing_risk: high
     notes: NotebookLM-generated markdown summary. The title includes BOM and roadmap; treat those areas as restricted for wiki extraction unless later validated as non-commercial technical scope.
+
+  - id: SRC-IDBOXRT-EXTRACT-FOLDER-0001
+    title: 00_Extracted Data
+    parent_source_id: SRC-APM-IIOT-0011
+    source_kind: derived_source
+    type: notebooklm_extracted_data_folder
+    url: https://drive.google.com/drive/folders/1UdrkknVr3aqhFgALeCh1LTMdWGgaTbzL
+    drive_id: 1UdrkknVr3aqhFgALeCh1LTMdWGgaTbzL
+    confidentiality: internal
+    extraction_status: not_started
+    validation_status: needs_source_validation
+    related_pages:
+      - content/wiki/solutions/idboxrt.md
+      - content/wiki/capabilities/iiot-platform.md
+      - content/wiki/patterns/edge-to-center.md
+      - content/wiki/patterns/scada-dcs-data-ingestion.md
+      - content/wiki/tender/apm-iiot-compliance-notes.md
+    intended_use:
+      - business_summary
+      - technical_architecture
+      - capabilities
+      - use_cases
+      - deployment
+      - tender_support
+      - comparison_support
+      - restricted_commercial_reference_only
+    restricted_content_policy:
+      - derived_source_only_not_primary_evidence
+      - validate_against_original_sources_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+    pricing_risk: high
+    notes: NotebookLM-generated Extracted Data folder for IDBoxRT. Treat as derived guidance only. Folder includes at least one BOM/deployment file, so commercial sections remain restricted.
+
+  - id: SRC-IDBOXRT-EXTRACT-0001
+    title: 01_IDBoxRT Extracted Keys.md
+    parent_source_id: SRC-APM-IIOT-0011
+    source_kind: derived_source
+    type: notebooklm_markdown
+    url: https://drive.google.com/file/d/1YNaeMQ3JkAxYN0uf4KNPO1ZrydBY9Mz4/view?usp=drivesdk
+    drive_id: 1YNaeMQ3JkAxYN0uf4KNPO1ZrydBY9Mz4
+    confidentiality: internal
+    extraction_status: not_started
+    validation_status: needs_source_validation
+    related_pages:
+      - content/wiki/solutions/idboxrt.md
+      - content/wiki/capabilities/iiot-platform.md
+      - content/wiki/tender/apm-iiot-compliance-notes.md
+    intended_use:
+      - capabilities
+      - tender_support
+      - comparison_support
+    restricted_content_policy:
+      - derived_source_only_not_primary_evidence
+      - validate_against_original_sources_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+    pricing_risk: none
+    notes: NotebookLM-generated markdown summary. Use only to prepare manual validation against original IDBoxRT source documents.
+
+  - id: SRC-IDBOXRT-EXTRACT-0002
+    title: 02_IDBoxRT Business Section.md
+    parent_source_id: SRC-APM-IIOT-0011
+    source_kind: derived_source
+    type: notebooklm_markdown
+    url: https://drive.google.com/file/d/1h__UK28RSeJDhj6IMiRl2AmK63UUt6XM/view?usp=drivesdk
+    drive_id: 1h__UK28RSeJDhj6IMiRl2AmK63UUt6XM
+    confidentiality: internal
+    extraction_status: not_started
+    validation_status: needs_source_validation
+    related_pages:
+      - content/wiki/solutions/idboxrt.md
+      - content/wiki/capabilities/iiot-platform.md
+      - content/wiki/tender/apm-iiot-compliance-notes.md
+    intended_use:
+      - business_summary
+      - use_cases
+      - tender_support
+    restricted_content_policy:
+      - derived_source_only_not_primary_evidence
+      - validate_against_original_sources_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+    pricing_risk: none
+    notes: NotebookLM-generated markdown summary. Use only for candidate business topic discovery until primary sources validate the facts.
+
+  - id: SRC-IDBOXRT-EXTRACT-0003
+    title: 03_IDBoxRT Technical Section.md
+    parent_source_id: SRC-APM-IIOT-0011
+    source_kind: derived_source
+    type: notebooklm_markdown
+    url: https://drive.google.com/file/d/1a6_NerCFHyrFX-wbgrFr_rCwrVdSJ9aL/view?usp=drivesdk
+    drive_id: 1a6_NerCFHyrFX-wbgrFr_rCwrVdSJ9aL
+    confidentiality: internal
+    extraction_status: not_started
+    validation_status: needs_source_validation
+    related_pages:
+      - content/wiki/solutions/idboxrt.md
+      - content/wiki/capabilities/iiot-platform.md
+      - content/wiki/patterns/edge-to-center.md
+      - content/wiki/patterns/scada-dcs-data-ingestion.md
+    intended_use:
+      - technical_architecture
+      - capabilities
+      - comparison_support
+    restricted_content_policy:
+      - derived_source_only_not_primary_evidence
+      - validate_against_original_sources_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+    pricing_risk: none
+    notes: NotebookLM-generated markdown summary. Use only to prepare architecture and integration validation against original IDBoxRT source documents.
+
+  - id: SRC-IDBOXRT-EXTRACT-0004
+    title: 04_IDBoxRT Use cases, Deployment and BOM.md
+    parent_source_id: SRC-APM-IIOT-0011
+    source_kind: derived_source
+    type: notebooklm_markdown
+    url: https://drive.google.com/file/d/1fa8oxxSKBv4tjlaTxJBRZ-1Cq1akZBsS/view?usp=drivesdk
+    drive_id: 1fa8oxxSKBv4tjlaTxJBRZ-1Cq1akZBsS
+    confidentiality: internal
+    extraction_status: not_started
+    validation_status: needs_source_validation
+    related_pages:
+      - content/wiki/solutions/idboxrt.md
+      - content/wiki/tender/apm-iiot-compliance-notes.md
+      - content/wiki/comparisons/idboxrt-vs-historian.md
+    intended_use:
+      - use_cases
+      - deployment
+      - tender_support
+      - restricted_commercial_reference_only
+    restricted_content_policy:
+      - derived_source_only_not_primary_evidence
+      - validate_against_original_sources_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+      - do_not_extract_commercial_bom_pricing_or_proposal_terms_into_wiki
+    pricing_risk: high
+    notes: NotebookLM-generated markdown summary. The title includes BOM; use only for non-commercial use-case/deployment planning and keep any commercial content restricted.
+
+  - id: SRC-CANARY-EXTRACT-FOLDER-0001
+    title: 00_Extracted Data
+    parent_source_id: SRC-APM-IIOT-0010
+    source_kind: derived_source
+    type: notebooklm_extracted_data_folder
+    url: https://drive.google.com/drive/folders/1IrhAb1EC6H4r2CdPG32Ihrx_yT8r1ZQD
+    drive_id: 1IrhAb1EC6H4r2CdPG32Ihrx_yT8r1ZQD
+    confidentiality: internal
+    extraction_status: not_started
+    validation_status: needs_source_validation
+    related_pages:
+      - content/wiki/solutions/canary.md
+      - content/wiki/capabilities/industrial-historian.md
+      - content/wiki/comparisons/canary-vs-aveva-pi.md
+      - content/wiki/tender/historian-requirement-mapping.md
+      - content/wiki/patterns/scada-dcs-data-ingestion.md
+    intended_use:
+      - business_summary
+      - technical_architecture
+      - capabilities
+      - use_cases
+      - deployment
+      - tender_support
+      - comparison_support
+      - restricted_commercial_reference_only
+    restricted_content_policy:
+      - derived_source_only_not_primary_evidence
+      - validate_against_original_sources_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+    pricing_risk: high
+    notes: NotebookLM-generated Extracted Data folder for Canary. Treat as derived guidance only. Folder includes at least one BOM/deployment file, so commercial sections remain restricted.
+
+  - id: SRC-CANARY-EXTRACT-0001
+    title: 01_Canary Extracted Keys.md
+    parent_source_id: SRC-APM-IIOT-0010
+    source_kind: derived_source
+    type: notebooklm_markdown
+    url: https://drive.google.com/file/d/18Mc1wWkPBeMU3gai893-4wFM84EofiCZ/view?usp=drivesdk
+    drive_id: 18Mc1wWkPBeMU3gai893-4wFM84EofiCZ
+    confidentiality: internal
+    extraction_status: not_started
+    validation_status: needs_source_validation
+    related_pages:
+      - content/wiki/solutions/canary.md
+      - content/wiki/capabilities/industrial-historian.md
+      - content/wiki/tender/historian-requirement-mapping.md
+    intended_use:
+      - capabilities
+      - tender_support
+      - comparison_support
+    restricted_content_policy:
+      - derived_source_only_not_primary_evidence
+      - validate_against_original_sources_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+    pricing_risk: none
+    notes: NotebookLM-generated markdown summary. Use only to prepare manual validation against original Canary source documents.
+
+  - id: SRC-CANARY-EXTRACT-0002
+    title: 02_Canary Business Section.md
+    parent_source_id: SRC-APM-IIOT-0010
+    source_kind: derived_source
+    type: notebooklm_markdown
+    url: https://drive.google.com/file/d/1MpHOeUkZ7ouxkwFrQj6mf56SR2fP4I5n/view?usp=drivesdk
+    drive_id: 1MpHOeUkZ7ouxkwFrQj6mf56SR2fP4I5n
+    confidentiality: internal
+    extraction_status: not_started
+    validation_status: needs_source_validation
+    related_pages:
+      - content/wiki/solutions/canary.md
+      - content/wiki/capabilities/industrial-historian.md
+      - content/wiki/tender/historian-requirement-mapping.md
+    intended_use:
+      - business_summary
+      - use_cases
+      - tender_support
+    restricted_content_policy:
+      - derived_source_only_not_primary_evidence
+      - validate_against_original_sources_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+    pricing_risk: none
+    notes: NotebookLM-generated markdown summary. Use only for candidate business topic discovery until primary sources validate the facts.
+
+  - id: SRC-CANARY-EXTRACT-0003
+    title: 03_Canary Technical Section.md
+    parent_source_id: SRC-APM-IIOT-0010
+    source_kind: derived_source
+    type: notebooklm_markdown
+    url: https://drive.google.com/file/d/1E5i32MlSTzOq0s7S9VWieWU58Nm0MMdr/view?usp=drivesdk
+    drive_id: 1E5i32MlSTzOq0s7S9VWieWU58Nm0MMdr
+    confidentiality: internal
+    extraction_status: not_started
+    validation_status: needs_source_validation
+    related_pages:
+      - content/wiki/solutions/canary.md
+      - content/wiki/capabilities/industrial-historian.md
+      - content/wiki/patterns/scada-dcs-data-ingestion.md
+      - content/wiki/comparisons/canary-vs-aveva-pi.md
+    intended_use:
+      - technical_architecture
+      - capabilities
+      - comparison_support
+    restricted_content_policy:
+      - derived_source_only_not_primary_evidence
+      - validate_against_original_sources_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+    pricing_risk: none
+    notes: NotebookLM-generated markdown summary. Use only to prepare historian positioning, architecture, and integration validation against original Canary source documents.
+
+  - id: SRC-CANARY-EXTRACT-0004
+    title: 04_Canary Use cases, BOM and Deployment.md
+    parent_source_id: SRC-APM-IIOT-0010
+    source_kind: derived_source
+    type: notebooklm_markdown
+    url: https://drive.google.com/file/d/1RU81traufiAaQGno303naXauDmV85AsX/view?usp=drivesdk
+    drive_id: 1RU81traufiAaQGno303naXauDmV85AsX
+    confidentiality: internal
+    extraction_status: not_started
+    validation_status: needs_source_validation
+    related_pages:
+      - content/wiki/solutions/canary.md
+      - content/wiki/tender/historian-requirement-mapping.md
+      - content/wiki/comparisons/canary-vs-aveva-pi.md
+    intended_use:
+      - use_cases
+      - deployment
+      - tender_support
+      - restricted_commercial_reference_only
+    restricted_content_policy:
+      - derived_source_only_not_primary_evidence
+      - validate_against_original_sources_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+      - do_not_extract_commercial_bom_pricing_or_proposal_terms_into_wiki
+    pricing_risk: high
+    notes: NotebookLM-generated markdown summary. The title includes BOM; use only for non-commercial use-case/deployment planning and keep any commercial content restricted.
+
+  - id: SRC-LUCA-BDS-EXTRACT-FOLDER-0001
+    title: 00_Extracted Data
+    parent_source_id: SRC-APM-IIOT-0004
+    source_kind: derived_source
+    type: notebooklm_extracted_data_folder
+    url: https://drive.google.com/drive/folders/1Qb-zJ2_SxazvQ2YToNy9ZtnETuMc8m58
+    drive_id: 1Qb-zJ2_SxazvQ2YToNy9ZtnETuMc8m58
+    confidentiality: internal
+    extraction_status: not_started
+    validation_status: needs_source_validation
+    related_pages: []
+    intended_use:
+      - business_summary
+      - technical_architecture
+      - capabilities
+      - use_cases
+      - deployment
+      - restricted_commercial_reference_only
+    restricted_content_policy:
+      - derived_source_only_not_primary_evidence
+      - validate_against_original_sources_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+    pricing_risk: high
+    notes: NotebookLM-generated Extracted Data folder for LUCA BDS. LUCA BDS has no M1 wiki page yet; keep derived sources registered only until M1/M2 scope fit is confirmed. Folder includes at least one BOM/deployment file, so commercial sections remain restricted.
+
+  - id: SRC-LUCA-BDS-EXTRACT-0001
+    title: 01_LUCA BDS Extracted Keys.md
+    parent_source_id: SRC-APM-IIOT-0004
+    source_kind: derived_source
+    type: notebooklm_markdown
+    url: https://drive.google.com/file/d/12SuBJobJFDC0wvbB7QmJDOp7xYJRBCQq/view?usp=drivesdk
+    drive_id: 12SuBJobJFDC0wvbB7QmJDOp7xYJRBCQq
+    confidentiality: internal
+    extraction_status: not_started
+    validation_status: needs_source_validation
+    related_pages: []
+    intended_use:
+      - capabilities
+      - tender_support
+    restricted_content_policy:
+      - derived_source_only_not_primary_evidence
+      - validate_against_original_sources_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+    pricing_risk: none
+    notes: NotebookLM-generated markdown summary. Register only as a derived source until LUCA BDS scope fit and primary source validation are confirmed.
+
+  - id: SRC-LUCA-BDS-EXTRACT-0002
+    title: 02_LUCA BDS Business Sector.md
+    parent_source_id: SRC-APM-IIOT-0004
+    source_kind: derived_source
+    type: notebooklm_markdown
+    url: https://drive.google.com/file/d/1UA2vwL0W3b-FOBWYkLFw_Z59XlTyDlz2/view?usp=drivesdk
+    drive_id: 1UA2vwL0W3b-FOBWYkLFw_Z59XlTyDlz2
+    confidentiality: internal
+    extraction_status: not_started
+    validation_status: needs_source_validation
+    related_pages: []
+    intended_use:
+      - business_summary
+      - use_cases
+    restricted_content_policy:
+      - derived_source_only_not_primary_evidence
+      - validate_against_original_sources_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+    pricing_risk: none
+    notes: NotebookLM-generated markdown summary. Use only for scope assessment and candidate topic discovery until original LUCA BDS sources are reviewed.
+
+  - id: SRC-LUCA-BDS-EXTRACT-0003
+    title: 03_LUCA BDS Technical Sector.md
+    parent_source_id: SRC-APM-IIOT-0004
+    source_kind: derived_source
+    type: notebooklm_markdown
+    url: https://drive.google.com/file/d/1REsPLGzGkoUTCRCxRvL3VNIrJ9TuuzwI/view?usp=drivesdk
+    drive_id: 1REsPLGzGkoUTCRCxRvL3VNIrJ9TuuzwI
+    confidentiality: internal
+    extraction_status: not_started
+    validation_status: needs_source_validation
+    related_pages: []
+    intended_use:
+      - technical_architecture
+      - capabilities
+    restricted_content_policy:
+      - derived_source_only_not_primary_evidence
+      - validate_against_original_sources_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+    pricing_risk: none
+    notes: NotebookLM-generated markdown summary. Use only for scope assessment and primary-source validation planning.
+
+  - id: SRC-LUCA-BDS-EXTRACT-0004
+    title: 04_LUCA BDS Case studies, BOM, Deployment.md
+    parent_source_id: SRC-APM-IIOT-0004
+    source_kind: derived_source
+    type: notebooklm_markdown
+    url: https://drive.google.com/file/d/1ShXXX8L8Ip8Fgq-bHhcxhnm9GtM1SlgC/view?usp=drivesdk
+    drive_id: 1ShXXX8L8Ip8Fgq-bHhcxhnm9GtM1SlgC
+    confidentiality: internal
+    extraction_status: not_started
+    validation_status: needs_source_validation
+    related_pages: []
+    intended_use:
+      - use_cases
+      - deployment
+      - restricted_commercial_reference_only
+    restricted_content_policy:
+      - derived_source_only_not_primary_evidence
+      - validate_against_original_sources_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - product_owner_admin_only_for_bom_budget_proposal_estimation_or_internal_commercial_planning
+      - do_not_extract_commercial_bom_pricing_or_proposal_terms_into_wiki
+    pricing_risk: high
+    notes: NotebookLM-generated markdown summary. The title includes BOM; case-study benefits may be considered later only if source-backed and non-pricing, while all commercial content remains restricted.
