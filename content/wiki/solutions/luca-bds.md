@@ -35,25 +35,26 @@ reviewed_by: null
 
 LUCA BDS is a business intelligence, data integration, and analytics layer for teams that need usable views of data spread across multiple business and operational systems. Position it when the customer problem is not a historian or APM requirement by itself, but a need to access data, organize queries and data flows, build dashboards/reports/forms/navigation, and support business or operational decision-making.
 
-At a practical presales level, LUCA BDS fits conversations about dispersed data, reporting workload, integrated views, shared analysis workspaces, and decision support. AI/LLM-related material appears in source context, but this page keeps those claims bounded and does not position LUCA BDS as a general AI platform.
+At a practical presales level, LUCA BDS fits conversations about dispersed data, reporting workload, integrated views, shared analysis workspaces, and decision support. AI/LLM-related material appears in reviewed product context, but this page keeps those claims bounded and does not position LUCA BDS as a general AI platform.
 
-This page remains a source-backed draft. The top sections are written for fast sales/presales reading; the lower sections preserve evidence links, validation notes, open questions, and restricted-content handling.
+This page is for internal draft use. The top sections are written for fast sales/presales reading; the lower sections preserve evidence links, validation notes, open questions, and restricted-content handling.
 
 ## Scope Decision
 
-Decision after Batch 1.13: `in_scope_for_m2_solution_page`, with controlled overview enrichment only.
+Decision: `in_scope_for_m2_solution_page`, with controlled overview enrichment only.
 
-LUCA BDS fits the current M2 Tech Knowledge Base as a business intelligence, data integration, and analytics layer for operational and business data. It should not yet be described as an IIoT platform, historian, APM system, or AI platform. Those labels remain `Still to validate` unless supported by future primary technical sources.
+LUCA BDS fits the current M2 Tech Knowledge Base as a business intelligence, data integration, and analytics layer for operational and business data. It should not yet be described as an IIoT platform, historian, APM system, or AI platform. Those labels remain `Still to validate` unless future technical review supports them.
 
 ## Where It Fits
 
-| Fit Area | Draft Positioning | Evidence | Review Status |
-|---|---|---|---|
-| Business intelligence / analytics | LUCA BDS is positioned as a solution for integrating and analyzing data from multiple systems and presenting it through dashboards, reports, and views. | `SRC-LUCA-BDS-DOC-0001` | Validated by source |
-| Data integration / access layer | The primary overview describes connecting to multiple data sources and organizing queries, reports, graphs, dashboards, forms, and app views. | `SRC-LUCA-BDS-DOC-0001` | Validated by source |
-| APM & IIoT portfolio relevance | LUCA BDS is relevant where industrial or utility data needs to be consolidated for analysis, reporting, and operational visibility. | `SRC-LUCA-BDS-DOC-0001` | Partially supported |
-| Historian / IIoT platform relationship | LUCA BDS should not yet be treated as a historian or IIoT platform replacement. | `SRC-LUCA-BDS-DOC-0001` | Still to validate |
-| AI / LLM product material | Source material includes product-specific AI/LLM context, but this is not enough to expand NOVA Knowledge Hub scope or define LUCA BDS as an AI platform. | `SRC-LUCA-BDS-DOC-0001` | Still to validate |
+| Fit Area | Presales Guidance | Confidence |
+|---|---|---|
+| Primary positioning conversation | BI, data integration, reporting, dashboards, analytics, and decision-support views across multiple systems. | Validated draft |
+| Primary audience | Business users, operations users, analysts, managers, and teams that need shared data views. | Validated draft |
+| Data relationship | Helps users access, organize, analyze, and present data from multiple business and operational systems. | Validated draft |
+| APM & IIoT relationship | Relevant where industrial or utility data needs business-facing analytics and reporting, but not yet an APM or IIoT platform claim. | Partially validated |
+| Historian relationship | Treat historian behavior, time-series storage, and live-query/no-copy assumptions as validation topics. | Still to validate |
+| AI / LLM positioning | Keep AI/LLM material bounded as product context until implementation, security, and use-case details are reviewed. | Still to validate |
 
 ## Validation Status
 
@@ -63,28 +64,31 @@ LUCA BDS fits the current M2 Tech Knowledge Base as a business intelligence, dat
 
 ## Customer Problems It Addresses
 
-| Problem Area | Draft Note | Evidence | Review Status |
-|---|---|---|---|
-| Dispersed data | LUCA BDS is relevant when data sits across multiple business or operational systems and users need a centralized way to access and analyze it. | `SRC-LUCA-BDS-DOC-0001` | Validated by source |
-| Reporting workload | The source supports dashboards, charts, and reports as core output patterns. | `SRC-LUCA-BDS-DOC-0001` | Validated by source |
-| Data-driven decisions | The product overview frames the solution around improving decision support through integrated data and analytics. | `SRC-LUCA-BDS-DOC-0001` | Validated by source |
-| Secure access and data control | The source includes on-premises/local-control positioning, but deployment and security architecture still need primary technical validation. | `SRC-LUCA-BDS-DOC-0001` | Partially supported |
+| Problem Area | How LUCA BDS Helps |
+|---|---|
+| Dispersed data | Gives users a way to access and analyze data spread across multiple systems. |
+| Reporting workload | Supports dashboards, charts, reports, forms, and structured navigation around data. |
+| Decision support | Helps business and operational users create integrated views for analysis and decision-making. |
+| Shared analysis | Supports shared workspaces and common views so teams are not working from disconnected files or isolated systems. |
+| Data control expectations | Local/on-premises and live-query themes may be relevant, but deployment and security architecture need validation. |
 
 ## What It Does
 
-| Capability | Draft Description | Evidence | Review Status |
-|---|---|---|---|
-| Data source connection | Connects to multiple data sources for analysis and reporting workflows. | `SRC-LUCA-BDS-DOC-0001` | Validated by source |
-| Query and data-flow organization | Supports query-driven construction of dashboards, reports, graphs, forms, navigation trees, and app-like views. | `SRC-LUCA-BDS-DOC-0001` | Validated by source |
-| Dashboards and reporting | Provides dashboard, graph, chart, and report presentation patterns for business and operational users. | `SRC-LUCA-BDS-DOC-0001` | Validated by source |
-| Real-time BI positioning | The primary overview positions LUCA BDS as real-time business intelligence. The precise technical meaning of real-time remains to validate. | `SRC-LUCA-BDS-DOC-0001` | Partially supported |
-| Live-query / no-copy positioning | The source describes a live-query, no-copy/no-replication data approach. Architecture, connector behavior, and performance boundaries still need validation. | `SRC-LUCA-BDS-DOC-0001` | Partially supported |
-| Local / on-premises control | The source presents local or on-premises control as a product theme. Deployment models and security controls remain to validate. | `SRC-LUCA-BDS-DOC-0001` | Partially supported |
-| Product-specific AI assistance | The source includes AI/LLM-related product material. Treat this as product context only until implementation boundaries, security, and use cases are reviewed. | `SRC-LUCA-BDS-DOC-0001` | Still to validate |
+| Capability | Plain-Language Description | Confidence |
+|---|---|---|
+| Data source access | Connects users to data from multiple business and operational systems. | Validated draft |
+| Query and data-flow organization | Helps organize queries, dashboards, reports, graphs, forms, navigation trees, and app-like views. | Validated draft |
+| Dashboards and reporting | Presents data through dashboards, charts, graphs, reports, and shared views. | Validated draft |
+| Real-time BI positioning | Supports a real-time BI conversation, while the precise technical meaning should be clarified per opportunity. | Partially validated |
+| Live-query / no-copy positioning | Useful as a discovery topic for data ownership and architecture; validate actual behavior before design commitments. | Partially validated |
+| Local / on-premises control | Relevant where customers care about local control, data residency, or on-premises analysis. | Partially validated |
+| Product-specific AI assistance | Keep as a bounded product-review topic until security, deployment, and use-case boundaries are confirmed. | Still to validate |
 
 ## Architecture / Data Flow Notes
 
-The current evidence supports only a high-level conceptual data flow. The diagram below is a draft interpretation of the source-backed concepts: source systems, queries/connectors, LUCA BDS organization layer, presentation elements, shared workspaces, and users.
+LUCA BDS can be explained to customers as a business data service layer between source systems and the people who need usable views. Business and operational data sources feed LUCA BDS query/connectors, LUCA BDS organizes that data into reports, graphs, dashboards, forms, navigation trees, and app-like views, and users work from shared analysis spaces.
+
+In a typical discussion, position the architecture as four logical layers: data sources, LUCA BDS access/query layer, presentation and workspace elements, and business or operational users. Connector details, deployment topology, security model, live-query behavior, and performance limits should be validated during solution planning.
 
 ```mermaid
 flowchart TD
@@ -95,30 +99,30 @@ flowchart TD
   Apps --> Users["Business / operational users"]
 ```
 
-Diagram caption: This conceptual draft shows business and operational data sources flowing through LUCA BDS query/connectors and a business data service layer into reports, dashboards, forms, navigation, shared workspaces, and users. Evidence: `SRC-LUCA-BDS-DOC-0001`. Connector details, deployment topology, security model, and performance boundaries remain `Still to validate`.
+Diagram caption: This conceptual view shows business and operational data sources flowing through LUCA BDS query/connectors and a business data service layer into reports, dashboards, forms, navigation, shared workspaces, and users. Connector details, deployment topology, security model, and performance boundaries remain implementation validation items.
 
 ## Core Capabilities
 
-| Capability | Candidate Role | Evidence | Review Status |
-|---|---|---|---|
-| Data integration | Bring data from multiple systems into a unified analysis/reporting experience. | `SRC-LUCA-BDS-DOC-0001` | Validated by source |
-| Business analytics | Support analysis of business and operational data through reusable views and analytics outputs. | `SRC-LUCA-BDS-DOC-0001` | Validated by source |
-| Dashboards / charts | Present data through dashboards, charts, and graphs. | `SRC-LUCA-BDS-DOC-0001` | Validated by source |
-| Reports | Generate and organize reports for users and teams. | `SRC-LUCA-BDS-DOC-0001` | Validated by source |
-| Forms / navigation trees | Build structured views and application-like navigation around data and reports. | `SRC-LUCA-BDS-DOC-0001` | Validated by source |
-| Shared workspaces | Support shared analysis contexts for teams. | `SRC-LUCA-BDS-DOC-0001` | Partially supported |
-| Forecasting / anomaly analytics | Source material references time-series and analytical patterns, but these require deeper validation before becoming strong feature claims. | `SRC-LUCA-BDS-DOC-0001` | Still to validate |
-| Private/local AI assistance | Product-specific AI material appears in the source, but security, deployment, data handling, and boundaries require human review. | `SRC-LUCA-BDS-DOC-0001` | Still to validate |
+| Capability | Role | Presales Explanation |
+|---|---|---|
+| Data integration | Unified access | Bring data from multiple systems into a shared analysis and reporting experience. |
+| Business analytics | Decision support | Support reusable views and analytics outputs for business and operational users. |
+| Dashboards / charts | Visual analysis | Present data through dashboards, charts, and graphs. |
+| Reports | Structured output | Generate and organize reports for users and teams. |
+| Forms / navigation trees | Guided views | Build structured navigation and app-like views around data and reports. |
+| Shared workspaces | Team analysis | Support shared analysis contexts so users can work from common data views. |
+| Forecasting / anomaly analytics | Advanced analytics topic | Keep as a later validation topic before presenting it as a strong feature claim. |
+| Private/local AI assistance | Product-boundary topic | Keep in validation until security, deployment, data handling, and use-case boundaries are reviewed. |
 
 ## Typical Use Cases
 
-| Use Case | Draft Note | Evidence | Review Status |
-|---|---|---|---|
-| Production visibility | Source material includes production-control and OEE-style analysis examples. Treat as a candidate use case until customer context is confirmed. | `SRC-LUCA-BDS-DOC-0001` | Partially supported |
-| Quality analysis | Source material includes quality-control and defect-rate analysis examples. | `SRC-LUCA-BDS-DOC-0001` | Partially supported |
-| Utility energy monitoring | Source material includes energy-efficiency analysis examples. | `SRC-LUCA-BDS-DOC-0001` | Partially supported |
-| Utility water management | Source material includes water-management analysis examples. | `SRC-LUCA-BDS-DOC-0001` | Partially supported |
-| Executive / operational reporting | Dashboards and reports can support management and operational reporting workflows. | `SRC-LUCA-BDS-DOC-0001` | Validated by source |
+| Use Case | Presales Description |
+|---|---|
+| Production visibility | Create integrated views for production and OEE-style analysis when customer context supports it. |
+| Quality analysis | Support quality-control and defect-rate analysis conversations. |
+| Utility energy monitoring | Support energy-efficiency analysis and reporting conversations. |
+| Utility water management | Support water-management analysis and reporting conversations. |
+| Executive / operational reporting | Provide dashboards and reports for management and operational reporting workflows. |
 
 ## Presales Qualification Notes
 

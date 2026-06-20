@@ -79,6 +79,15 @@ Evidence / validation layer:
 - Keep restricted-source notices visible.
 - Do not turn a draft claim into a final claim just to improve readability.
 
+## Keep Evidence Out of the Opening Narrative
+
+- Opening sections should be customer-readable before they are reviewer-readable.
+- Source IDs belong in `Evidence Sources`, `Source-Backed Draft Notes`, `Document-Level Validation Notes`, and similar evidence sections.
+- Do not write opening paragraphs as source audits. Avoid repeated phrases such as "the source supports", "current source-backed draft", "review status", or "document-level source".
+- A top section may include one short evidence-basis note if needed, but avoid paragraph-by-paragraph citations.
+- Consolidate caveats in `Validation Status`, `What To Validate With Customer`, `Open Questions`, and `Review Notes`.
+- Architecture sections should explain the solution architecture first, then name what still needs validation for implementation planning.
+
 ## How to Write Confidence Without Sounding Uncertain
 
 Use controlled confidence labels:

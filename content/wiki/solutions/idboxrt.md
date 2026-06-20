@@ -52,9 +52,9 @@ reviewed_by: null
 
 IDBoxRT is an operational intelligence and industrial data hub solution for connecting plant, enterprise, and external data sources, preparing data for analysis, and presenting it through dashboards, reports, synoptics, maps, alarms, events, notifications, web/mobile access, and API-style exposure.
 
-Position IDBoxRT when a customer needs to unify heterogeneous industrial data, contextualize it with assets and signals, calculate operational KPIs, and expose usable information to operators, engineers, managers, and external systems. It is strongest in this draft as a plant data integration and operational visibility layer. Historian-replacement, migration, and AVEVA PI comparison claims remain deferred.
+Position IDBoxRT when a customer needs to unify heterogeneous industrial data, contextualize it with assets and signals, calculate operational KPIs, and expose usable information to operators, engineers, managers, and external systems. For internal presales use, treat it primarily as a plant data integration and operational visibility layer. Historian-replacement, migration, and AVEVA PI comparison claims remain deferred.
 
-This page remains a source-backed draft. The top sections are written for sales/presales clarity; the lower sections preserve source traceability, validation notes, open questions, and restricted-content handling.
+This page is for internal draft use. The top sections are written for sales/presales clarity; the lower sections preserve evidence links, validation notes, open questions, and restricted-content handling.
 
 ## Where It Fits
 
@@ -63,9 +63,9 @@ This page remains a source-backed draft. The top sections are written for sales/
 | Primary positioning conversation | Operational intelligence, industrial data hub, plant data integration, dashboards/reporting, and cross-system data exposure. | Validated draft |
 | Primary audience | Operations, engineering, automation, reliability, IT/OT integration, and business users who need operational data. | Validated draft |
 | Data relationship | Connects heterogeneous data sources, preprocesses and contextualizes data, persists selected real-time/historical data, and exposes it to users or third-party systems. | Partially validated |
-| IIoT / data platform relationship | Useful as an IIoT-adjacent plant data layer, but broad platform claims should remain source-bound. | Partially validated |
-| Historian relationship | Connector evidence supports SCADA/historian integration relevance, but historian replacement is not concluded here. | Still to validate |
-| Comparison positioning | Keep IDBoxRT vs AVEVA PI, migration, and historian comparison claims out of this page until a separate comparison batch. | Still to validate |
+| IIoT / data platform relationship | Useful as an IIoT-adjacent plant data layer, but broad platform claims should stay within validated scope. | Partially validated |
+| Historian relationship | SCADA/historian connector coverage is relevant, but historian replacement is not concluded here. | Still to validate |
+| Comparison positioning | Keep IDBoxRT vs AVEVA PI, migration, and historian comparison claims out of this page until a dedicated comparison review. | Still to validate |
 
 ## Customer Problems It Addresses
 
@@ -97,19 +97,15 @@ This page remains a source-backed draft. The top sections are written for sales/
 
 ## Product Positioning
 
-| Positioning Area | Draft Position | Evidence | Review Status |
-|---|---|---|---|
-| Operational intelligence platform | IDBoxRT is positioned as a platform for integrating, processing, analyzing, and visualizing historical and real-time operational data. | `SRC-IDBOXRT-DOC-0001` | Validated by source |
-| Industrial data hub / plant data layer | IDBoxRT is described as an information data hub that collects data from heterogeneous sources and prepares it for analytics and business use cases. | `SRC-IDBOXRT-DOC-0001` | Validated by source |
-| ISA-95-style integration layer | The technical architecture document frames IDBoxRT as integrating information across levels from field devices and control systems through corporate applications and BI layers. | `SRC-IDBOXRT-DOC-0001` | Refined by source |
-| Relationship to SCADA / historian systems | IDBoxRT can connect to SCADA and historian systems through connector categories and named examples, but this page does not conclude that IDBoxRT replaces a historian. | `SRC-IDBOXRT-DOC-0001`, `SRC-IDBOXRT-DOC-0004` | Partially supported |
-| Relationship to dashboards and analytics | IDBoxRT includes user-facing analysis, synoptics, dashboards, maps, reports, calculations, alarms, events, and notifications. | `SRC-IDBOXRT-DOC-0001`, `SRC-IDBOXRT-DOC-0002` | Validated by source |
-| Relationship to APM | Selected sources do not establish IDBoxRT as a full APM platform. Treat APM-adjacent uses as future validation topics. | `SRC-IDBOXRT-DOC-0001`, `SRC-IDBOXRT-DOC-0002`, `SRC-IDBOXRT-DOC-0004` | Not supported by selected sources |
-| What remains to validate | Human review should still validate current vendor/legal identity, implementation constraints, detailed sizing, limitations, and comparison criteria. | `SRC-IDBOXRT-DOC-0001`, `SRC-IDBOXRT-DOC-0002`, `SRC-IDBOXRT-DOC-0004` | Still to validate |
+For presales purposes, treat IDBoxRT as an operational intelligence and industrial data hub. It fits opportunities where the customer needs to connect data from field devices, control systems, operational applications, corporate systems, files, databases, APIs, or external services and turn that data into usable operational information.
+
+Position IDBoxRT around the value of connecting, contextualizing, calculating, visualizing, and exposing industrial data. Keep APM claims, historian replacement claims, migration claims, and AVEVA PI comparison conclusions out of the main story until those topics are separately validated.
 
 ## Architecture Overview
 
-The selected primary documents support a more concrete conceptual architecture than the earlier Batch 1 sheet draft. `SRC-IDBOXRT-DOC-0001` describes IDBoxRT as using connectors/drivers to acquire heterogeneous data, a streaming and processing layer, persistence strategies for real-time and historical data, asset hierarchy management, and user-facing web/mobile tools. `SRC-IDBOXRT-DOC-0002` supports the presence of security administration, data acquisition administration, signals, assets, analysis tools, synoptics, charts, historical data, alarms, reports, maps, dashboards, notifications, and sessions.
+IDBoxRT can be explained to customers as a hub between plant/enterprise data sources and the people or systems that need usable operational information. Connectors and drivers acquire data, the acquisition and processing layers prepare it, asset and signal context make it easier to navigate, persistence stores selected real-time or historical data, and web/mobile tools or APIs expose the result.
+
+In a typical discussion, position the architecture as five logical layers: source connectivity, streaming/acquisition, preprocessing and calculations, persistence and context, and user/API access. Detailed deployment topology, sizing, redundancy, storage limits, and operations model should be validated during solution planning.
 
 ```mermaid
 flowchart TD
@@ -125,70 +121,52 @@ flowchart TD
   API --> External["External systems / data lakes / analytics tools"]
 ```
 
-Diagram caption: This conceptual draft shows IDBoxRT collecting heterogeneous plant and enterprise data, processing and contextualizing it, persisting selected data, and exposing it through APIs and user-facing tools. Evidence: `SRC-IDBOXRT-DOC-0001`, with user-facing module support from `SRC-IDBOXRT-DOC-0002`. Detailed deployment topology, sizing, redundancy, and operational limits remain `Still to validate`.
+Diagram caption: This conceptual view shows IDBoxRT collecting heterogeneous plant and enterprise data, processing and contextualizing it, persisting selected data, and exposing it through APIs and user-facing tools. Detailed deployment topology, sizing, redundancy, and operational limits remain implementation validation items.
 
 ## Core Components
 
-| Component | Role | Candidate Capabilities | Evidence | Review Status |
-|---|---|---|---|---|
-| Connectors / drivers | Acquire information from industrial, enterprise, file, service, and other source categories. | Connector catalog covers industrial standards, proprietary protocols, protections, SCADA/other systems, IoT connectors, external services, and other connectors. | `SRC-IDBOXRT-DOC-0001`, `SRC-IDBOXRT-DOC-0004` | Validated by source |
-| Streaming and acquisition layer | Move acquired data from drivers into processing components. | The technical architecture describes real-time streaming from connectors into a message queue layer. | `SRC-IDBOXRT-DOC-0001` | Validated by source |
-| Processing / tasks | Apply preprocessing and business rules before data is exposed or persisted. | Supported processing areas include data preparation, quality filters, synchronization, resampling, re-propagation, filtering, unit conversion, and data-quality stamping. | `SRC-IDBOXRT-DOC-0001` | Refined by source |
-| Persistence layer | Store or expose real-time and historical data according to configured strategies. | The technical architecture describes multiple acquisition/persistence strategies, recent and older historical data tiers, latest-sample storage, and a recommended time-series database approach. | `SRC-IDBOXRT-DOC-0001` | Refined by source |
-| Asset and signal context | Organize signals and assets for analysis and navigation. | Asset inventory, signal groups, assets, templates, and hierarchy concepts are supported by the selected documents. | `SRC-IDBOXRT-DOC-0001`, `SRC-IDBOXRT-DOC-0002` | Validated by source |
-| Gateway / API layer | Expose data and integration methods to other systems. | The technical architecture describes REST API access and proactive data exposure to third-party systems. | `SRC-IDBOXRT-DOC-0001` | Validated by source |
-| Web and mobile application | Provide user access to IDBoxRT information and documents. | The sources support a web application and mobile app access for IDBoxRT elements. | `SRC-IDBOXRT-DOC-0001`, `SRC-IDBOXRT-DOC-0002` | Validated by source |
-| Analysis and presentation tools | Provide operational visibility and analysis surfaces. | Supported tool areas include synoptics, charts, diagrams, historical views, alarms, reports, maps, dashboards, transitions, custom web content, notifications, and events. | `SRC-IDBOXRT-DOC-0001`, `SRC-IDBOXRT-DOC-0002` | Validated by source |
+| Component | Role | Presales Explanation |
+|---|---|---|
+| Connectors / drivers | Source connectivity | Acquire data from industrial, enterprise, file, service, IoT, database, SCADA/historian, and API-style sources. |
+| Streaming and acquisition layer | Data movement | Moves acquired data from source connectors into processing and persistence paths. |
+| Processing / tasks | Data preparation | Applies quality filters, synchronization, resampling, filtering, unit conversion, calculations, and business-rule style preparation. |
+| Persistence layer | Real-time and historical data handling | Stores or exposes selected real-time and historical data according to configured persistence strategies. |
+| Asset and signal context | Operational context | Organizes signals, assets, templates, groups, and hierarchies for navigation and analysis. |
+| Gateway / API layer | Data exposure | Exposes raw or transformed data to third-party systems or external architectures. |
+| Web and mobile application | User access | Gives users access to IDBoxRT information and tools through web and mobile interfaces. |
+| Analysis and presentation tools | Operational visibility | Supports synoptics, charts, diagrams, historical views, dashboards, reports, maps, alarms, events, and notifications. |
 
 ## Integration Notes
 
-| Integration Area | Draft Note | Evidence | Review Status |
-|---|---|---|---|
-| Field and equipment data | IDBoxRT can acquire data from sources such as sensors, meters, analysers, PLCs, IIoT devices, machines, and field networks. | `SRC-IDBOXRT-DOC-0001` | Validated by source |
-| Control and operational systems | IDBoxRT is positioned to integrate with control systems and operational applications such as SCADA, HMI, MES, CMMS, LIMS, and quality systems. | `SRC-IDBOXRT-DOC-0001` | Validated by source |
-| Corporate applications | IDBoxRT can integrate structured data from corporate platforms such as ERP, SAP, accounting, and related business applications. | `SRC-IDBOXRT-DOC-0001` | Validated by source |
-| Industrial protocols | The connector catalog includes industrial standards such as Modbus variants, OPC variants, IEC 60870 variants, IEC 61850, DNP3, ICCP/TASE.2, Siemens S7, Rockwell/CIP family protocols, PROFIBUS, PROFINET, EtherCAT, SNMP, KNX, and related interfaces. | `SRC-IDBOXRT-DOC-0004` | Validated by source |
-| SCADA / historian connectors | The connector catalog includes connectors for OSIsoft PI, PI AF, AspenTech IP21, Wonderware, Citect, OVATION, WinCC, PCS7, and Honeywell PHD. This validates connector relevance, not historian replacement. | `SRC-IDBOXRT-DOC-0004` | Validated by source |
-| IoT connectors | The connector catalog includes MQTT, RabbitMQ, BACnet/IP, Sigfox, LoRa, and other IoT-oriented connectors. | `SRC-IDBOXRT-DOC-0004` | Validated by source |
-| Enterprise and service connectors | The connector catalog includes examples such as IBM Maximo, SAP PM, ServiceNow, SQL Server, Oracle, MySQL, ArcGIS Server, Excel, SharePoint, file readers, FTP file reader, XML file reader, API POST JSON, and monitoring connectors. | `SRC-IDBOXRT-DOC-0004` | Validated by source |
-| REST API / external exposure | IDBoxRT exposes REST API methods and can expose raw or transformed data to third-party systems or external architectures. | `SRC-IDBOXRT-DOC-0001` | Validated by source |
-| Bidirectional integration | The technical architecture describes acquisition and integration as potentially bidirectional across source systems and business applications. | `SRC-IDBOXRT-DOC-0001` | Validated by source |
+IDBoxRT integration discussions can span field equipment, control systems, SCADA, historians, MES, CMMS, LIMS, ERP, databases, files, APIs, IoT messaging, and external services. Use that breadth to frame discovery, not to guarantee fit for a specific project.
 
-Do not infer integration suitability for a specific customer architecture until source documents and project context are reviewed. External-service connector names that imply commercial or market-price data are excluded from this wiki page.
+For customer planning, validate the exact source systems, connector versions, protocol requirements, data direction, API limits, authorization model, and responsibility boundaries. Historian connectors validate integration relevance; they do not by themselves prove historian replacement.
 
 ## Deployment Notes
 
-| Topic | Draft Note | Evidence | Review Status |
-|---|---|---|---|
-| Deployment architecture | The technical architecture references deployment in a Kubernetes cluster and named open-source components. Deployment topology, sizing, and operations model still require a dedicated deployment review. | `SRC-IDBOXRT-DOC-0001` | Partially supported |
-| Customer-premises / cloud / mixed deployment | The technical architecture mentions cloud and customer-premises virtual-machine deployment contexts, with a mixed option. Because this appears near distribution context, validate against deployment-specific sources before treating it as final. | `SRC-IDBOXRT-DOC-0001` | Partially supported |
-| Persistence strategies | IDBoxRT supports multiple acquisition and persistence strategies, including non-persistent raw acquisition, statistics-oriented approaches, and persisted raw/statistical data approaches. | `SRC-IDBOXRT-DOC-0001` | Refined by source |
-| Historical storage tiers | The technical architecture describes storing recent and older historical data in different storage tiers to balance access speed and infrastructure requirements. | `SRC-IDBOXRT-DOC-0001` | Refined by source |
-| Real-time and historical data stores | The technical architecture identifies Redis for latest samples and TimescaleDB as a recommended time-series database, with other database engines possible but not necessarily feature-equivalent. | `SRC-IDBOXRT-DOC-0001` | Refined by source |
-| Asset hierarchy storage | The technical architecture identifies Tessa and Neo4j for asset hierarchy management. | `SRC-IDBOXRT-DOC-0001` | Refined by source |
-| Security administration | The documentation supports security groups, users, roles, permissions, access groups, user profile settings, and session administration concepts. | `SRC-IDBOXRT-DOC-0002` | Validated by source |
-| Access-control integration | The selected sources support Keycloak-based access-management context and synchronization with LDAP or Active Directory. This is a product note only, not a wiki implementation plan. | `SRC-IDBOXRT-DOC-0001`, `SRC-IDBOXRT-DOC-0002` | Partially supported |
-| Infrastructure requirements | Detailed hardware sizing, redundancy, network zoning, backup/restore, and operational runbook requirements are not validated by this page. | `SRC-IDBOXRT-DOC-0002` | Still to validate |
+For presales purposes, describe IDBoxRT deployment as an industrial data platform that may involve containerized/platform components, persistence layers, access-control services, and web/mobile access. Keep deployment options at planning level until the customer environment and deployment documents are reviewed.
+
+Before solution design, validate hosting model, infrastructure sizing, redundancy, network zones, backup/restore, operating responsibility, retention approach, storage tiers, access-control integration, and production support model.
 
 ## Typical Use Cases
 
-| Use Case | Draft Note | Evidence | Review Status |
-|---|---|---|---|
-| Plant operations visibility | Use IDBoxRT as a candidate layer for real-time and historical operational visibility across plant data sources. | `SRC-IDBOXRT-DOC-0001`, `SRC-IDBOXRT-DOC-0002` | Refined by source |
-| Industrial data consolidation | Use IDBoxRT as a candidate data hub for collecting, contextualizing, and preparing heterogeneous data for analysis and downstream systems. | `SRC-IDBOXRT-DOC-0001` | Validated by source |
-| Operational KPI calculation | Use IDBoxRT as a candidate platform for calculations and business rules built from operational signals and contextual data. | `SRC-IDBOXRT-DOC-0001`, `SRC-IDBOXRT-DOC-0002` | Refined by source |
-| Dashboards and reporting | Use IDBoxRT for dashboards, reports, charts, synoptics, maps, alarms, events, and notifications after validating the required modules and permissions. | `SRC-IDBOXRT-DOC-0001`, `SRC-IDBOXRT-DOC-0002` | Validated by source |
-| Integration layer for industrial systems | Use IDBoxRT as a candidate integration layer across industrial protocols, SCADA/historian connectors, IoT connectors, corporate systems, files, databases, and external systems. | `SRC-IDBOXRT-DOC-0001`, `SRC-IDBOXRT-DOC-0004` | Validated by source |
-| Historian-adjacent data enablement | IDBoxRT has historian and SCADA connector relevance, but historian replacement or migration conclusions remain out of scope for this page. | `SRC-IDBOXRT-DOC-0004` | Still to validate |
+| Use Case | Presales Description |
+|---|---|
+| Plant operations visibility | Provide real-time and historical visibility across plant data sources. |
+| Industrial data consolidation | Collect, contextualize, and prepare heterogeneous data for analysis and downstream systems. |
+| Operational KPI calculation | Build calculations and business rules from operational signals and contextual data. |
+| Dashboards and reporting | Present operational information through dashboards, reports, charts, synoptics, maps, alarms, events, and notifications. |
+| Integration layer for industrial systems | Connect industrial, SCADA/historian, IoT, corporate, file, database, API, and external-service sources. |
+| Historian-adjacent data enablement | Support historian-connected data workflows while leaving replacement or migration conclusions for later validation. |
 
-Case-study benefits and quantified outcomes remain deferred until selected primary case-study sources are reviewed. Non-pricing benefits may be included later only if source-backed and reviewed.
+Case-study benefits and quantified outcomes remain deferred until selected primary case-study sources are reviewed. Non-pricing benefits may be included later only when reviewed.
 
 ## Presales Qualification Notes
 
 - Position IDBoxRT when the customer needs an operational data hub, industrial data integration layer, KPI/calculation layer, dashboard/reporting layer, or API-style exposure of plant data.
 - Confirm whether the need is data consolidation, real-time visibility, historical analysis, dashboarding, reporting, integration, or historian-adjacent data enablement.
 - Ask which industrial systems, SCADA/historians, enterprise applications, databases, files, APIs, and IoT sources are in scope.
-- Keep historian replacement, migration, and AVEVA PI comparison claims deferred until the dedicated source documents and comparison pages are reviewed.
+- Keep historian replacement, migration, and AVEVA PI comparison claims deferred until the dedicated validation documents and comparison pages are reviewed.
 - Treat detailed deployment, sizing, redundancy, access control, API limits, data retention, and product limitations as validation topics.
 
 ## What To Validate With Customer
@@ -198,7 +176,7 @@ Case-study benefits and quantified outcomes remain deferred until selected prima
 - What dashboard, synoptic, report, map, alarm, event, notification, and mobile workflows are required?
 - What user roles, security groups, permissions, access groups, and directory integrations are required?
 - What production deployment model, infrastructure, redundancy, backup/restore, and network-zone constraints apply?
-- Is the customer asking for a historian, a historian complement, or a historian replacement? Keep the answer open until source-backed comparison review.
+- Is the customer asking for a historian, a historian complement, or a historian replacement? Keep the answer open until dedicated comparison review.
 
 ## Evidence Sources
 
