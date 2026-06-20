@@ -120,6 +120,18 @@ sources:
     confidentiality: internal
     extraction_priority: high
     extraction_status: planned
+    document_inventory_status: pending_document_audit
+    validation_target_pages:
+      - content/wiki/solutions/etapro.md
+    known_document_candidates:
+      - proposed_id: SRC-ETAPRO-DOC-0001
+        title: Master_EtaPRO_Knowledge
+        type: google_doc
+        url: https://docs.google.com/document/d/1ou79esVguZeo2w1XKsGAVisUFcLi-qxfdJWTqZksiF0/edit?usp=drivesdk
+        drive_id: 1ou79esVguZeo2w1XKsGAVisUFcLi-qxfdJWTqZksiF0
+        inventory_status: discovered_not_reviewed
+        extraction_status: not_started
+        notes: Exact top-level document found during Batch 1.1 folder listing. Do not extract until Batch 1.2 validation.
     related_pages:
       - content/wiki/solutions/etapro.md
       - content/wiki/capabilities/apm.md
@@ -137,6 +149,9 @@ sources:
     confidentiality: internal
     extraction_priority: high
     extraction_status: planned
+    document_inventory_status: pending_document_audit
+    validation_target_pages:
+      - content/wiki/solutions/aveva-pi.md
     related_pages:
       - content/wiki/solutions/aveva-pi.md
       - content/wiki/capabilities/industrial-historian.md
@@ -164,6 +179,9 @@ sources:
     confidentiality: internal
     extraction_priority: high
     extraction_status: planned
+    document_inventory_status: pending_document_audit
+    validation_target_pages:
+      - content/wiki/solutions/canary.md
     related_pages:
       - content/wiki/solutions/canary.md
       - content/wiki/capabilities/industrial-historian.md
@@ -180,6 +198,9 @@ sources:
     confidentiality: internal
     extraction_priority: high
     extraction_status: planned
+    document_inventory_status: pending_document_audit
+    validation_target_pages:
+      - content/wiki/solutions/idboxrt.md
     related_pages:
       - content/wiki/solutions/idboxrt.md
       - content/wiki/capabilities/iiot-platform.md
