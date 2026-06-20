@@ -34,7 +34,8 @@ Secondary documents `SRC-CANARY-DOC-0002` and `SRC-CANARY-DOC-0003` remain defer
 
 ## Facts Refined
 
-- Core capability notes were refined to the brochure-supported terms: collection and storage, virtual views, asset modeling, calculation server, event monitoring, Axiom visualization, and general data connectors.
+- Core capability notes were refined to the brochure-supported terms: data collection, data storage, visualization, virtual views, asset modeling, calculation server, event monitoring, and general data connectors.
+- Collection, storage, and visualization were split into separate validation rows on the Canary page so later technical documents can validate each area independently.
 - Deployment notes were narrowed to edge, site, enterprise, and cloud positioning, with detailed architecture still unresolved.
 - Integration notes were narrowed to general connector relevance, collection from edge and IIoT devices, Axiom visualization, and calculation support.
 
