@@ -16,6 +16,10 @@ source_refs:
     title: AVENUE APM & IIoT Solutions
   - source_id: SRC-CANARY-DOC-0001
     title: Canary System Brochure.pdf
+  - source_id: SRC-CANARY-DOC-0002
+    title: Canary.docx
+  - source_id: SRC-CANARY-DOC-0003
+    title: Virtualize Your World.pdf
 landing_candidate: false
 confidence: low
 last_reviewed: null
@@ -24,63 +28,114 @@ reviewed_by: null
 
 # Canary
 
-## Summary
+## Executive Summary
 
-Canary is a draft solution page in the industrial historian and time-series data knowledge base.
+Canary is a draft industrial historian and time-series data platform page for operational technology environments. The reviewed Canary brochure positions Canary as data historian technology for industrial automation, with source-backed draft notes around data collection, historian storage, contextualization, visualization, calculations, event monitoring, and data access. Evidence: `SRC-CANARY-DOC-0001`. Review status: draft, source-backed at overview level, pending human review.
 
-In NOVA Knowledge Hub M1, this page acts as a placeholder for organizing reviewed Canary knowledge before it is used for historian comparisons, architecture patterns, or tender preparation.
+In this wiki, Canary is most useful for teams evaluating plant data history, operational trend review, contextualized historian access, and downstream analytics support. Detailed connector lists, retention behavior, deployment architecture, security model, and AVEVA PI comparison claims remain unresolved. Evidence: `SRC-CANARY-DOC-0001`; validation targets: `SRC-CANARY-DOC-0002`, `SRC-CANARY-DOC-0003`.
 
 ## Scope
 
 - In scope:
-  - Canary as a candidate industrial historian solution
-  - historian-related solution mapping
-  - links to related capability and pattern pages
-  - source-backed notes for comparison and tender preparation
-- Out of scope for this page:
-  - final vendor claims before source review
-  - pricing, licensing, or commercial terms
-  - public marketing content
-  - unsupported comparison claims against AVEVA PI or other historian tools
+  - Canary as a candidate industrial historian solution.
+  - Historian-related architecture, collection, visualization, and data-layer mapping.
+  - Source-backed notes for future historian requirement mapping and tender preparation.
+  - Open questions for later Canary and AVEVA PI validation.
+- Out of scope:
+  - final vendor claims before source review;
+  - pricing, licensing, BOM, quote, fee, discount, or commercial terms;
+  - public marketing content;
+  - unsupported comparison claims against AVEVA PI or other historian tools.
 
-## Problem It Solves
+## Product Positioning
 
-- Industrial systems generate operational time-series data that must be stored and retrieved reliably.
-- Operations and engineering teams need historical trends, context, and data access for analysis and troubleshooting.
-- Presales and tender teams need to separate historian requirements from APM, IIoT platform, dashboard, and BI requirements.
+| Positioning Area | Draft Position | Evidence | Review Status |
+|---|---|---|---|
+| Industrial historian / time-series historian | Canary is positioned as historian technology for industrial automation and operational time-series data. | `SRC-CANARY-DOC-0001` | Source-backed draft |
+| Operational data platform / plant data layer | Canary can be treated as a plant data layer around collection, historian storage, virtual views, visualization, calculations, and connectors. | `SRC-CANARY-DOC-0001` | Source-backed draft at brochure level |
+| Relationship to SCADA / DCS / PLC data | Canary is relevant to collecting operational process data from industrial automation environments, including edge and IIoT device contexts. Exact source-system interfaces remain to validate. | `SRC-CANARY-DOC-0001` | Partially supported |
+| Relationship to dashboards and analytics | Canary supports user-facing visualization through Axiom, plus calculation and event-monitoring concepts. Broader analytics ecosystem claims remain to validate. | `SRC-CANARY-DOC-0001` | Partially supported |
+| Relationship to APM / IIoT | Canary should not yet be described as a full APM platform. Treat it as historian-centered infrastructure that can support analytics, reporting, and downstream operational workflows. | `SRC-CANARY-DOC-0001` | Conservative boundary note |
+| What remains to validate | Current reviewed evidence is strongest for overview-level historian positioning. Detailed deployment, retention, connectors, API access, security, limitations, and comparison criteria require later source review. | `SRC-CANARY-DOC-0002`, `SRC-CANARY-DOC-0003` as validation targets | Still to validate |
 
-## Core Concepts or Capabilities
+## Architecture Overview
 
-| Capability | Notes | Evidence |
-|---|---|---|
-| Historian storage | Candidate area for source review; confirm storage, retention, and retrieval capabilities. | `SRC-APM-IIOT-0010` |
-| Data collection | Candidate area for source review; confirm supported collection paths and source systems. | `SRC-APM-IIOT-0010` |
-| Visualization and trending | Candidate area for source review; confirm available analysis and user-facing tools. | `SRC-APM-IIOT-0010` |
-| Data access | Candidate area for source review; confirm integration, export, API, or downstream access options. | `SRC-APM-IIOT-0010` |
+The current source-backed draft architecture treats Canary as a historian-centered data layer that collects industrial process data, stores time-series data, provides contextualized views, and exposes data through visualization, calculations, and downstream access paths. `SRC-CANARY-DOC-0001` supports the high-level historian, collection, storage, virtual views, asset modeling, Axiom visualization, calculation server, event monitoring, and connector framing. It does not yet validate detailed protocol lists, system sizing, retention behavior, security architecture, or exact deployment topology.
 
-## Architecture Notes
+```mermaid
+flowchart TD
+  OT["Plant OT systems: PLC / SCADA / DCS / sensors"] --> Collectors["Canary data collectors / interfaces"]
+  Collectors --> Historian["Canary Historian / time-series storage"]
+  Historian --> Views["Views / contextualized data layer"]
+  Views --> Visualization["Axiom / dashboards / trend analysis"]
+  Views --> Users["Operations / engineering / reliability users"]
+  Views --> External["External analytics / enterprise systems"]
+```
 
-- Document collection architecture, historian services, client access, deployment options, and integration patterns after source review.
-- Separate confirmed historian architecture from assumptions about broader APM or IIoT platform roles.
-- Use pattern pages for reusable data ingestion or historian-to-APM flows.
+Diagram evidence: `SRC-CANARY-DOC-0001`. Review status: conceptual draft. Collector details, deployment topology, external-system interfaces, and protocol/API support remain `Still to validate`.
 
-## Tender Notes
+## Core Components
 
-- Identify historian, data retention, visualization, data access, and integration requirements.
-- Separate confirmed capabilities from assumptions.
-- Keep commercial or pricing-sensitive notes out of this page.
+| Component | Role | Candidate Capabilities | Evidence | Review Status |
+|---|---|---|---|---|
+| Data collectors / interfaces | Collect industrial process data into the historian layer. | Collection from industrial automation, edge, and IIoT device contexts. Specific collectors, protocols, and source-system connectors remain to validate. | `SRC-CANARY-DOC-0001` | Partially supported |
+| Canary Historian / time-series storage | Historian foundation for operational tag data. | Historian tag storage and brochure-level scale positioning. Retention behavior, compression model, performance, and sizing assumptions remain to validate. | `SRC-CANARY-DOC-0001` | Partially supported |
+| Views / contextualized data layer | Contextualization layer for organizing historian data. | Virtual views and asset modeling are supported at overview level. Namespace strategy and governance details remain to validate. | `SRC-CANARY-DOC-0001`; `SRC-CANARY-DOC-0003` target | Partially supported |
+| Axiom visualization | User-facing visualization and analysis surface. | Dashboards, trends, and reports through Axiom. Client boundaries, administration, and detailed visualization scope remain to validate. | `SRC-CANARY-DOC-0001` | Partially supported |
+| Calculation server | Historian-adjacent calculation capability. | Calculation support is identified in the brochure. Calculation model, scheduling, dependencies, and limitations remain to validate. | `SRC-CANARY-DOC-0001` | Partially supported |
+| Event monitoring | Operational event visibility around historian data. | Event monitoring is identified as a capability area. Event model, alerting, and workflow boundaries remain to validate. | `SRC-CANARY-DOC-0001` | Partially supported |
+| Data connectors / downstream access | Enables data use by other tools or systems. | General data connector relevance is supported. Exact connector list, Excel access, API-style access, and downstream analytics claims remain to validate. | `SRC-CANARY-DOC-0001`; `SRC-CANARY-DOC-0002` target | Partially supported |
 
-## Related Capability Pages
+## Integration Notes
 
-- [Industrial Historian](../capabilities/industrial-historian)
-- [IIoT Platform](../capabilities/iiot-platform)
-- [Asset Performance Management](../capabilities/apm)
+| Integration Area | Draft Note | Evidence | Review Status |
+|---|---|---|---|
+| Industrial automation data collection | Reviewed evidence supports Canary as collecting process data from industrial automation, edge, and IIoT device contexts. | `SRC-CANARY-DOC-0001` | Partially supported |
+| SCADA / DCS / PLC source systems | SCADA, DCS, PLC, and sensor data are useful architecture categories for this wiki, but exact Canary-supported interfaces still require document validation. | `SRC-CANARY-DOC-0001` | Still to validate for specific interfaces |
+| Visualization and user tools | Axiom is supported as the current reviewed visualization surface for dashboards, trends, and reports. | `SRC-CANARY-DOC-0001` | Source-backed draft |
+| Contextualized data access | Virtual views and asset modeling are supported at overview level; namespace, tag model, and governance details require `SRC-CANARY-DOC-0003` review. | `SRC-CANARY-DOC-0001`, `SRC-CANARY-DOC-0003` target | Partially supported |
+| Calculation and event workflows | Calculation server and event monitoring are supported as capability areas, but configuration and operational details remain to validate. | `SRC-CANARY-DOC-0001` | Partially supported |
+| External analytics / enterprise systems | Downstream analytics and enterprise-system integration are plausible future validation areas, but this page should not list specific systems or APIs until primary documents support them. | `SRC-CANARY-EXTRACT-0003` as review aid only | Still to validate |
 
-## Related Pattern Pages
+Do not add protocol lists, API claims, Excel access, or AVEVA PI migration/comparison claims until the relevant primary documents are reviewed.
 
-- [SCADA/DCS Data Ingestion](../patterns/scada-dcs-data-ingestion)
-- [Historian to APM](../patterns/historian-to-apm)
-- [OPC UA Integration](../patterns/opc-ua-integration)
+## Deployment Notes
+
+| Topic | Draft Note | Evidence | Review Status |
+|---|---|---|---|
+| Edge / site / enterprise positioning | The brochure supports high-level positioning across edge, site, enterprise, and cloud contexts. | `SRC-CANARY-DOC-0001` | Partially supported |
+| Site historian pattern | Canary can be evaluated as a site historian candidate, but detailed local architecture, redundancy, and sizing remain unresolved. | `SRC-CANARY-DOC-0001` | Still to validate |
+| Enterprise historian pattern | Canary can be evaluated for enterprise historian or centralized data-layer patterns, but local-to-central design details require more evidence. | `SRC-CANARY-DOC-0001` | Still to validate |
+| Cloud / hosted positioning | Cloud positioning is supported at a brochure level. Exact hosting model, ownership boundary, security model, and operational responsibility remain to validate. | `SRC-CANARY-DOC-0001` | Still to validate |
+| Store-and-forward behavior | Store-and-forward may be relevant to historian/collector deployment review, but it is not validated by the current page evidence. | `SRC-CANARY-DOC-0002` target | Still to validate |
+| Infrastructure requirements | Hardware sizing, retention sizing, network zones, backup/restore, user access, and cybersecurity controls are not validated by the reviewed brochure. | `SRC-CANARY-DOC-0002` target | Still to validate |
+
+## Typical Use Cases
+
+| Use Case | Draft Note | Evidence | Review Status |
+|---|---|---|---|
+| Industrial process history | Store and retrieve operational time-series data for operations and engineering review. | `SRC-CANARY-DOC-0001` | Source-backed draft |
+| Trends, dashboards, and reports | Use Axiom to review dashboards, trends, and reports around historian data. | `SRC-CANARY-DOC-0001` | Source-backed draft |
+| Contextualized historian access | Use virtual views and asset modeling to organize historian data in a more meaningful operating context. | `SRC-CANARY-DOC-0001`; `SRC-CANARY-DOC-0003` target | Partially supported |
+| Operational calculations | Use calculation capabilities to derive operational metrics from historian data. | `SRC-CANARY-DOC-0001` | Partially supported |
+| Event monitoring | Use historian-linked event monitoring for operational visibility. | `SRC-CANARY-DOC-0001` | Partially supported |
+| Tender historian requirements | Use Canary as a candidate reference when mapping collection, storage, contextualization, visualization, and data-access requirements. | `SRC-CANARY-DOC-0001`; `SRC-APM-IIOT-0010` | Draft planning use |
+
+Industry-specific and case-study benefits remain deferred until selected primary case-study documents are reviewed. Non-pricing benefits may be included later only if source-backed and reviewed.
+
+## Evidence Sources
+
+| Source ID | Title | Link | Evidence Role | Review Status |
+|---|---|---|---|---|
+| `SRC-APM-IIOT-0001` | AVENUE APM & IIoT Solutions | [Open source](<https://docs.google.com/spreadsheets/d/1OKfe48zNwTjB1196QU45f8jqNyT8OyszAwLQ-D1gdEw>) | Initial Batch 1 portfolio-level draft context | Draft extracted |
+| `SRC-APM-IIOT-0010` | Canary source folder | [Open source](<https://drive.google.com/drive/folders/1HFjWEw-kl8ExbDkf3hoMXsaBmBAUMdUk>) | Parent Canary source folder | Document audit completed |
+| `SRC-CANARY-DOC-0001` | Canary System Brochure.pdf | [Open source](<https://drive.google.com/file/d/1PmiSjOIIb7qZYqfFgGO5lDxTkO3lsNZx/view?usp=drivesdk>) | Primary reviewed source for this enrichment pass: overview, historian positioning, core capability framing | In progress |
+| `SRC-CANARY-DOC-0002` | Canary.docx | [Open source](<https://docs.google.com/document/d/1CRUiDWDsmWqnHgPIVFIB9vYH2actwYZl/edit?usp=drivesdk&ouid=108564093758567510758&rtpof=true&sd=true>) | Future validation target for source summary, product scope, draft-fact crosscheck, and open questions | Not started |
+| `SRC-CANARY-DOC-0003` | Virtualize Your World.pdf | [Open source](<https://drive.google.com/file/d/1LxiG-gfofUMwK0Xsl_jdyIT9N8e5-8dN/view?usp=drivesdk>) | Future validation target for virtual views, contextualization, asset modeling, and namespace strategy | Not started |
+| `SRC-CANARY-EXTRACT-0001` | 01_Canary Extracted Keys.md | [Open source](<https://drive.google.com/file/d/18Mc1wWkPBeMU3gai893-4wFM84EofiCZ/view?usp=drivesdk>) | Derived review aid only; candidate fact discovery | Not evidence for final claims |
+| `SRC-CANARY-EXTRACT-0002` | 02_Canary Business Section.md | [Open source](<https://drive.google.com/file/d/1MpHOeUkZ7ouxkwFrQj6mf56SR2fP4I5n/view?usp=drivesdk>) | Derived review aid only; candidate business/use-case framing | Not evidence for final claims |
+| `SRC-CANARY-EXTRACT-0003` | 03_Canary Technical Section.md | [Open source](<https://drive.google.com/file/d/1E5i32MlSTzOq0s7S9VWieWU58Nm0MMdr/view?usp=drivesdk>) | Derived review aid only; candidate technical architecture and integration checklist support | Not evidence for final claims |
+| `SRC-CANARY-EXTRACT-0004` | 04_Canary Use cases, BOM and Deployment.md | No wiki evidence link; restricted pricing-risk source | Excluded from wiki enrichment except to identify restricted content | Restricted / not used |
 
 ## Source-Backed Draft Notes
 
@@ -88,38 +143,27 @@ In NOVA Knowledge Hub M1, this page acts as a placeholder for organizing reviewe
 
 | Source ID | Source Title | Extraction Status | Notes |
 |---|---|---|---|
-| `SRC-APM-IIOT-0001` | AVENUE APM & IIoT Solutions | Batch 1 draft extracted | Main source used for this draft extraction batch; reference URLs in the sheet were treated only as supporting references. |
-| `SRC-APM-IIOT-0010` | Canary | Planned | Registered source folder exists; detailed source documents still need to be identified and reviewed. |
+| `SRC-APM-IIOT-0001` | AVENUE APM & IIoT Solutions | Batch 1 draft extracted | Main source used for the initial Canary draft extraction batch; reference URLs in the sheet were treated only as supporting references. |
+| `SRC-APM-IIOT-0010` | Canary | Batch 1.4 document audit completed | Registered Canary source folder and document inventory. |
+| `SRC-CANARY-DOC-0001` | Canary System Brochure.pdf | Batch 1.5 validation in progress | Reviewed for overview-level historian positioning, core capability framing, deployment positioning, and product boundaries. |
+| `SRC-CANARY-DOC-0002` | Canary.docx | Not started | Deferred validation target for crosschecking product scope and open questions. |
+| `SRC-CANARY-DOC-0003` | Virtualize Your World.pdf | Not started | Deferred validation target for virtual views, contextualization, asset modeling, and namespace strategy. |
+| `SRC-CANARY-EXTRACT-0001` to `SRC-CANARY-EXTRACT-0003` | Canary NotebookLM markdown summaries | Review aids only | Used only for organizing candidate review topics; not treated as primary evidence. |
 
 ### Draft Facts from Source
 
 | Topic | Draft Note | Evidence Source | Review Status |
 |---|---|---|---|
-| General concept | The sheet describes Canary as a NoSQL time-series database and industrial historian optimized for industrial automation. | `SRC-APM-IIOT-0001` | Draft, pending validation |
-| Vendor | The sheet lists Canary Labs from the United States as the vendor. | `SRC-APM-IIOT-0001` | Draft, pending validation |
-| Problems solved | The sheet associates Canary with high tag-volume historian performance, preservation of raw time-series data, tag naming inconsistency, network disruption risk, and historian administration burden. | `SRC-APM-IIOT-0001` | Draft, pending validation |
-| Core capabilities | The sheet lists continuous industrial data collection, high-volume time-series storage, data contextualization, asset modeling, unified namespace concepts, visualization, and Excel access as candidate capability areas. | `SRC-APM-IIOT-0001` | Draft, pending validation |
-| Typical use cases | The sheet includes industrial historian use cases across manufacturing, oil and gas, power and utilities, water/wastewater, and life sciences examples. | `SRC-APM-IIOT-0001` | Draft, pending validation |
-| Integration relevance | The sheet describes Canary as collecting data from industrial automation sources and supporting downstream use through visualization, calculations, Excel access, and API-style consumption; exact interfaces require validation. | `SRC-APM-IIOT-0001` | Draft, pending validation |
-| Deployment model | The sheet describes site historian, enterprise historian, hierarchical local-to-central historian, on-premises, and cloud deployment as candidate models; validate before treating as confirmed architecture. | `SRC-APM-IIOT-0001` | Draft, pending validation |
-| APM / IIoT / Historian positioning | Based on the sheet, Canary should be treated primarily as an Industrial Historian candidate with possible downstream support for APM, analytics, and reporting workflows. | `SRC-APM-IIOT-0001` | Draft, pending validation |
-| Open questions | The sheet gives strong historian positioning but does not by itself prove current product limits, supported connectors, deployment constraints, or comparison conclusions against AVEVA PI. | `SRC-APM-IIOT-0001` | To validate |
-
-### Open Questions
-
-- Which Canary documents should be treated as authoritative for historian architecture and deployment models?
-- Which use cases are reusable for Avenue positioning versus customer-specific examples?
-- Which comparison criteria with AVEVA PI can be supported directly by source evidence?
-- Which integration interfaces and retention behaviors are confirmed by current Canary documentation?
-
-### Extraction TODO
-
-- Identify detailed source documents.
-- Validate product architecture.
-- Validate deployment model.
-- Validate integration claims.
-- Validate limitations.
-- Keep pricing/commercial information out of wiki.
+| General concept | Canary is a historian-centered technology for industrial automation and operational time-series data. | `SRC-CANARY-DOC-0001` | Source-backed draft |
+| Vendor / ownership context | The Batch 1 sheet lists Canary Labs from the United States, but legal vendor identity and country remain to validate from authoritative product or vendor material. | `SRC-APM-IIOT-0001`; `SRC-CANARY-DOC-0001` | Still to validate |
+| Historian positioning | Canary should be treated primarily as an industrial historian candidate in this wiki. | `SRC-CANARY-DOC-0001` | Source-backed draft |
+| Core capabilities | Reviewed evidence supports collection, historian storage, virtual views, asset modeling, Axiom visualization, calculation server, event monitoring, and general data connector framing. | `SRC-CANARY-DOC-0001` | Source-backed draft at overview level |
+| Data collection | Canary is relevant for collecting process data from industrial automation, edge, and IIoT device contexts; exact collectors and protocols remain unresolved. | `SRC-CANARY-DOC-0001` | Partially supported |
+| Data storage | Canary supports historian tag storage and time-series storage positioning; retention, compression, scale, and performance details require technical validation. | `SRC-CANARY-DOC-0001` | Partially supported |
+| Contextualization | Virtual views and asset modeling are supported at overview level; detailed namespace strategy should be validated against `SRC-CANARY-DOC-0003`. | `SRC-CANARY-DOC-0001`, `SRC-CANARY-DOC-0003` target | Partially supported |
+| Visualization | Axiom supports dashboards, trends, and reports at an overview level. | `SRC-CANARY-DOC-0001` | Source-backed draft |
+| Deployment | Edge, site, enterprise, and cloud positioning are supported at a high level; exact deployment models and ownership boundaries remain open. | `SRC-CANARY-DOC-0001` | Partially supported |
+| Product boundary | Canary is historian-centered and may support downstream analytics/reporting workflows, but reviewed evidence does not establish Canary as a broad APM or general IIoT platform. | `SRC-CANARY-DOC-0001` | Conservative boundary note |
 
 ## Document-Level Validation Notes
 
@@ -127,48 +171,46 @@ In NOVA Knowledge Hub M1, this page acts as a placeholder for organizing reviewe
 
 | Source ID | Document Title | Validation Role | Extraction Status |
 |---|---|---|---|
-| `SRC-CANARY-DOC-0001` | Canary System Brochure.pdf | Primary Batch 1.5 validation source for Canary overview, historian positioning, and high-level capabilities. | In progress |
-| `SRC-CANARY-DOC-0002` | Canary.docx | Deferred secondary source for later crosscheck and open-question review. | Not started |
-| `SRC-CANARY-DOC-0003` | Virtualize Your World.pdf | Deferred secondary source for later contextualization and virtual-view validation. | Not started |
+| `SRC-CANARY-DOC-0001` | Canary System Brochure.pdf | Primary reviewed source for overview, historian positioning, product boundaries, and high-level capabilities. | In progress |
+| `SRC-CANARY-DOC-0002` | Canary.docx | Deferred secondary source for source-summary crosscheck, product scope, and open-question review. | Not started |
+| `SRC-CANARY-DOC-0003` | Virtualize Your World.pdf | Deferred secondary source for Virtual Views, contextualization, asset modeling, and namespace validation. | Not started |
 
 ### Validated / Refined Draft Facts
 
 | Topic | Batch 1 Draft Note | Validation Result | Evidence Source | Review Status |
 |---|---|---|---|---|
-| General concept | Canary is described as a time-series database and industrial historian for industrial automation. | Refined by source: the brochure positions Canary as data historian technology built for industrial automation. | `SRC-CANARY-DOC-0001` | Draft validation note |
-| Vendor | Canary Labs from the United States is listed as the vendor in Batch 1. | Still to validate: the brochure shows Canary branding and Canary Labs web domain, but vendor legal identity and country should be confirmed from another source. | `SRC-CANARY-DOC-0001` | Needs source crosscheck |
-| Historian positioning | Canary should be treated primarily as an Industrial Historian candidate. | Validated by source: the brochure explicitly positions Canary as a data historian. | `SRC-CANARY-DOC-0001` | Draft validation note |
-| Core capabilities | Candidate capabilities include collection, high-volume storage, contextualization, asset modeling, visualization, calculations, and downstream access. | Refined by source: the brochure supports collection and storage, virtual views, asset modeling, calculation server, event monitoring, visualization through Axiom, and general data connectors. | `SRC-CANARY-DOC-0001` | Draft validation note |
-| Data collection | Batch 1 described continuous industrial data collection from automation sources. | Refined by source: the brochure supports collecting process data from edge and IIoT devices. Specific collectors, protocols, and source-system interfaces remain to validate. | `SRC-CANARY-DOC-0001` | Partial validation |
-| Data storage | Batch 1 described high-volume time-series storage and preservation of raw historian data. | Refined by source: the brochure supports historian tag storage and brochure-level scale positioning. Retention behavior, compression details, and performance figures still require technical validation. | `SRC-CANARY-DOC-0001` | Partial validation |
-| Visualization | Batch 1 described visualization and downstream use as candidate capability areas. | Refined by source: the brochure supports dashboards, trends, and reports through Axiom. Full visualization scope and client/tool boundaries remain to validate. | `SRC-CANARY-DOC-0001` | Partial validation |
-| Contextualization / virtual views | Batch 1 included contextualization, asset modeling, and unified namespace concepts as candidate areas. | Refined by source: the brochure supports virtual views and asset modeling; unified namespace terminology still requires validation from a more specific document. | `SRC-CANARY-DOC-0001` | Partial validation |
-| Deployment model | Batch 1 listed site historian, enterprise historian, local-to-central patterns, on-premises, and cloud as candidate deployment models. | Refined by source: the brochure supports edge, site, enterprise, and cloud positioning. Exact architecture, hosting model, and local-to-central design remain to validate. | `SRC-CANARY-DOC-0001` | Partial validation |
-| Integration relevance | Batch 1 described integration with industrial automation sources and downstream use through visualization, calculations, Excel access, and API-style consumption. | Refined by source: the brochure supports general data connectors, Axiom visualization, calculation server, and collection from edge and IIoT devices. Specific connector list, Excel access, and API-style access remain to validate. | `SRC-CANARY-DOC-0001` | Partial validation |
-| Product boundaries | Batch 1 treated Canary as a historian candidate with possible downstream support for analytics and reporting. | Refined by source: the brochure supports historian-centered scope with supporting visualization, calculations, event monitoring, and connectors; it does not establish broader APM or IIoT platform scope. | `SRC-CANARY-DOC-0001` | Conservative boundary note |
-| Limitations | Batch 1 noted that product limits, supported connectors, deployment constraints, and comparison conclusions still require validation. | Still to validate: the brochure is not sufficient for detailed limits, exact connector support, retention behavior, security model, or AVEVA PI comparison conclusions. | `SRC-CANARY-DOC-0001` | Needs additional documents |
+| General concept | Canary is described as a time-series database and industrial historian for industrial automation. | Refined by source: current page describes Canary as historian technology for industrial automation and operational time-series data. | `SRC-CANARY-DOC-0001` | Draft validation note |
+| Vendor | Canary Labs from the United States is listed as the vendor in Batch 1. | Still to validate: use neutral product wording until vendor legal identity and country are confirmed. | `SRC-APM-IIOT-0001`, `SRC-CANARY-DOC-0001` | Needs source crosscheck |
+| Historian positioning | Canary should be treated primarily as an Industrial Historian candidate. | Validated by source at overview level. | `SRC-CANARY-DOC-0001` | Draft validation note |
+| Core capabilities | Candidate capabilities include collection, high-volume storage, contextualization, asset modeling, visualization, calculations, and downstream access. | Refined by source: current page uses brochure-supported terms and keeps detailed architecture unresolved. | `SRC-CANARY-DOC-0001` | Draft validation note |
+| Data collection | Batch 1 described continuous industrial data collection from automation sources. | Refined by source: collection from industrial automation, edge, and IIoT device contexts is supported at high level; exact interfaces remain to validate. | `SRC-CANARY-DOC-0001` | Partial validation |
+| Data storage | Batch 1 described high-volume time-series storage and preservation of raw historian data. | Refined by source: historian storage is supported at overview level; retention, compression, and performance details remain to validate. | `SRC-CANARY-DOC-0001` | Partial validation |
+| Contextualization / virtual views | Batch 1 included contextualization, asset modeling, and unified namespace concepts. | Refined by source: virtual views and asset modeling are supported at overview level; namespace terminology requires deeper validation. | `SRC-CANARY-DOC-0001`, `SRC-CANARY-DOC-0003` target | Partial validation |
+| Deployment model | Batch 1 listed site historian, enterprise historian, local-to-central patterns, on-premises, and cloud as candidate models. | Refined by source: edge, site, enterprise, and cloud positioning are supported at brochure level only. | `SRC-CANARY-DOC-0001` | Partial validation |
+| Product boundaries | Batch 1 treated Canary as a historian candidate with downstream analytics/reporting support. | Refined by source: historian-centered boundary retained; APM, broad IIoT platform, and comparison conclusions remain deferred. | `SRC-CANARY-DOC-0001` | Conservative boundary note |
+| Limitations | Batch 1 noted product limits, supported connectors, deployment constraints, and comparison conclusions still require validation. | Still to validate: current reviewed evidence is not sufficient for detailed limits, connectors, retention behavior, security, or AVEVA PI comparison. | `SRC-CANARY-DOC-0001` | Needs additional documents |
 
-### Open Questions After Document Review
+## Open Questions
 
-- Which technical document confirms current supported collectors, connector types, and interface details?
-- Which source validates retention behavior, compression model, and historian read/write performance without relying on brochure-level statements alone?
-- Which source confirms whether Excel access and API-style access are current supported product interfaces?
-- Which deployment document explains edge, site, enterprise, cloud, and any local-to-central architecture patterns?
-- Which source should be used for limitations, prerequisites, sizing constraints, and operational assumptions?
+- Which document confirms current supported collectors, protocols, and interface details?
+- Which source validates retention behavior, compression model, performance, and sizing assumptions?
+- Which source confirms Excel access, API-style access, and downstream analytics integration?
+- Which source confirms store-and-forward behavior, if it is part of the current Canary deployment model?
+- Which deployment source explains edge, site, enterprise, cloud, and local-to-central architecture patterns?
+- Which document should define security model, access control, backup/restore, and operational limits?
+- Which product or module boundaries are technical boundaries versus restricted licensing/commercial boundaries? Licensing and commercial details remain excluded from this wiki page.
+- Which claims from `SRC-CANARY-DOC-0003` can safely support Virtual Views, asset modeling, and namespace strategy?
+- Which Canary claims can be compared with AVEVA PI only after AVEVA PI source documents are reviewed?
 
-### Deferred Items
+## Excluded Content
 
-- Detailed extraction from `SRC-CANARY-DOC-0002` and `SRC-CANARY-DOC-0003` is deferred.
-- Pricing, licensing, discounts, proposal terms, and commercial content are excluded.
-- Canary vs AVEVA PI comparison conclusions remain deferred until both Canary and AVEVA PI source documents are reviewed.
-- Case-study claims and industry-specific examples remain deferred to later document-level validation.
-
-## Source Traceability
-
-Current content is a draft structure based on the registered Canary source folder. Validate all capability, architecture, and comparison notes against `SRC-APM-IIOT-0010` before moving this page beyond `draft`.
+- Pricing, licensing, discounts, commercial quotes, proposal prices, budgetary prices, BOM prices, service fees, support fees, training fees, and commercial terms are excluded from this wiki page.
+- `SRC-CANARY-EXTRACT-0004` is a high-pricing-risk derived source and was not used for wiki enrichment.
+- Case-study claims and quantified benefits remain deferred until selected primary case-study documents are reviewed and commercial content is excluded.
+- NotebookLM-derived content is not treated as approved knowledge and cannot independently support wiki claims.
 
 ## Review Notes
 
-- Confirm product modules and supported connectors.
-- Compare against AVEVA PI on validated criteria only.
-- Keep this page as a solution anchor; move neutral historian concepts to the Industrial Historian capability page.
+- Keep this page `draft`, `private`, and `confidence: low` until human review is complete.
+- Keep Canary vs AVEVA PI conclusions deferred until both products have source-backed validation.
+- Move reusable neutral historian concepts to the Industrial Historian capability page only after additional validation.
