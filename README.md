@@ -66,10 +66,11 @@ npm run build
 Docker:
 
 ```bash
-docker compose up --build wiki
+docker compose --env-file .env.example build nova-wiki
+docker compose --env-file .env.example up -d nova-wiki
 ```
 
-Then open `http://localhost:3000`.
+Then open `http://localhost:3100`. See `docs/DOCKER_LOCAL_PREVIEW.md` for port override and troubleshooting commands.
 
 Each wiki page must include metadata front matter for `type`, `status`, `visibility`, `tags`, and `source_refs`. Run `npm run validate:metadata` inside `apps/wiki` to check this before building.
 

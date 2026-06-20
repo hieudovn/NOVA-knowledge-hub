@@ -1,4 +1,4 @@
-FROM node:22-alpine AS build
+FROM node:20-alpine AS build
 
 WORKDIR /app
 
@@ -13,8 +13,16 @@ COPY apps/wiki ./apps/wiki
 WORKDIR /app/apps/wiki
 RUN npm run build
 
-FROM nginx:1.27-alpine
+FROM node:20-alpine AS runtime
 
-COPY --from=build /app/apps/wiki/build /usr/share/nginx/html
+WORKDIR /app/apps/wiki
 
-EXPOSE 80
+ENV NODE_ENV=production
+
+COPY --from=build /app/apps/wiki/package*.json ./
+COPY --from=build /app/apps/wiki/node_modules ./node_modules
+COPY --from=build /app/apps/wiki/build ./build
+
+EXPOSE 3000
+
+CMD ["node", "node_modules/@docusaurus/core/bin/docusaurus.mjs", "serve", "--host", "0.0.0.0", "--port", "3000"]

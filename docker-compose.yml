@@ -1,7 +1,8 @@
 services:
-  wiki:
+  nova-wiki:
     build:
       context: .
       dockerfile: apps/wiki/Dockerfile
     ports:
-      - "3000:80"
+      - "${NOVA_WIKI_PORT:-3100}:3000"
+    restart: unless-stopped
