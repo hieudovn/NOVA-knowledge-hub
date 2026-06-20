@@ -77,8 +77,15 @@ sources:
     confidentiality: internal
     extraction_priority: medium
     extraction_status: not_started
-    related_pages: []
-    notes: Registered source without an M1 wiki page yet. Defer page creation until manual extraction confirms useful M1 technical content.
+    document_inventory_status: document_audit_completed_batch_1_12
+    validation_target_pages:
+      - content/wiki/solutions/luca-bds.md
+    related_pages:
+      - content/wiki/solutions/luca-bds.md
+      - content/wiki/capabilities/iiot-platform.md
+      - content/wiki/patterns/scada-dcs-data-ingestion.md
+      - content/wiki/tender/historian-requirement-mapping.md
+    notes: Registered source for LUCA BDS. Batch 1.12 confirmed M2 scope fit as a business intelligence / data integration / analytics solution related to the APM & IIoT portfolio; keep full enrichment deferred until primary technical validation.
 
   - id: SRC-APM-IIOT-0005
     title: AVEVA APM
@@ -977,6 +984,40 @@ document_sources:
       - do_not_copy_long_raw_content_into_repository
       - do_not_add_migration_or_comparison_claims_without_separate_review
     notes: Exact migration-path document found in the IDBoxRT replacing PI folder. Use only as a future validation target; no comparison conclusions in this batch.
+
+  - id: SRC-LUCA-BDS-DOC-0001
+    title: LUCABDS_2026 [EN].pdf
+    parent_source_id: SRC-APM-IIOT-0004
+    type: pdf
+    url: https://drive.google.com/file/d/1EUZX1O0heO_sdI99S-aFxv6Qz6_Ejpzd/view?usp=drivesdk
+    drive_id: 1EUZX1O0heO_sdI99S-aFxv6Qz6_Ejpzd
+    confidentiality: internal
+    extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/luca-bds.md
+      - content/wiki/capabilities/iiot-platform.md
+      - content/wiki/patterns/scada-dcs-data-ingestion.md
+      - content/wiki/tender/historian-requirement-mapping.md
+    validation_focus:
+      - official_product_positioning
+      - relationship_to_apm_iiot_scope
+      - architecture_and_data_flow
+      - integration_with_source_systems
+      - data_service_business_data_service_capabilities
+      - deployment_model
+      - security_access_control
+      - analytics_dashboard_capabilities
+      - relationship_to_historian_data_platform_bi_layer
+      - limitations_and_product_boundaries
+    pricing_risk: possible
+    restricted_content_policy:
+      - exclude_pricing_licensing_discounts_quotes_prices_fees_and_commercial_terms
+      - validate_against_document_before_wiki_claims
+      - do_not_copy_long_raw_content_into_repository
+      - do_not_extract_quote_license_or_commercial_call_to_action_content_into_wiki
+      - treat_ai_llm_agent_claims_as_product_context_only_not_nova_scope_expansion
+    notes: Exact LUCA BDS product overview found in reference materials. Mixed source containing technical/product positioning plus AI, reference, resource, and commercial-signaling sections; use only for conservative scope fit and future technical validation.
 
 derived_sources:
   - id: SRC-ETAPRO-EXTRACT-FOLDER-0001
