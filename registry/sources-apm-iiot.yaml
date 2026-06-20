@@ -419,7 +419,7 @@ document_sources:
     drive_id: 1PmiSjOIIb7qZYqfFgGO5lDxTkO3lsNZx
     confidentiality: internal
     extraction_priority: high
-    extraction_status: not_started
+    extraction_status: in_progress
     related_pages:
       - content/wiki/solutions/canary.md
       - content/wiki/capabilities/industrial-historian.md
