@@ -79,6 +79,35 @@ In NOVA Knowledge Hub M1, this page acts as a placeholder for organizing reviewe
 - [MQTT Sparkplug](../patterns/mqtt-sparkplug)
 - [SCADA/DCS Data Ingestion](../patterns/scada-dcs-data-ingestion)
 
+## Manual Extraction Notes
+
+### Source Coverage
+
+| Source ID | Source Title | Extraction Status | Notes |
+|---|---|---|---|
+| `SRC-APM-IIOT-0011` | IDBoxRT | Planned | Registered source folder exists; exact source documents still need to be identified before facts are extracted. |
+
+### Evidence-Backed Draft Facts
+
+| Claim / Fact | Evidence Source | Confidence | Review Status |
+|---|---|---|---|
+| No source-backed facts extracted yet. | `SRC-APM-IIOT-0011` | low | Pending source document review |
+
+### Open Questions
+
+- Which IDBoxRT source documents should be treated as authoritative for product scope?
+- Which integration methods, deployment options, and use cases are explicitly supported by reviewed source documents?
+
+### Extraction TODO
+
+- Identify source documents inside the registered source folder.
+- Extract product scope.
+- Extract architecture or deployment notes.
+- Extract integration capabilities.
+- Extract supported use cases.
+- Extract limitations and assumptions.
+- Avoid pricing/licensing/commercial details.
+
 ## Source Traceability
 
 Current content is a draft structure based on the registered IDBoxRT source folder. Validate all capability and architecture notes against `SRC-APM-IIOT-0011` before moving this page beyond `draft`.

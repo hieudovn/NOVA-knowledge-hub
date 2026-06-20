@@ -82,6 +82,12 @@ In NOVA Knowledge Hub M1, this page acts as the anchor for IIoT platform knowled
 - [MQTT Sparkplug](../patterns/mqtt-sparkplug)
 - [Historian to APM](../patterns/historian-to-apm)
 
+## Manual Extraction Pointers
+
+- Use `SRC-APM-IIOT-0011` to validate IDBoxRT-related IIoT platform notes after source documents are identified.
+- Keep IDBoxRT-specific claims on the [IDBoxRT](../solutions/idboxrt) solution page until reviewed evidence supports updating this neutral capability page.
+- Do not add pricing, licensing, or commercial details to this capability page.
+
 ## Source Traceability
 
 Current content is a draft synthesis based on the registered APM & IIoT solution domain. It must be validated against source materials before moving beyond `draft`.

@@ -48,6 +48,13 @@ This page is not a final product recommendation. It is a structure for separatin
 - Avoid treating IBM MAS, EtaPRO, or any APM solution as automatically satisfying all APM-related requirements.
 - Keep module names, product scope, and comparison criteria tied to reviewed source evidence.
 
+## Manual Extraction TODO
+
+- Fill EtaPRO cells only after reviewing source documents under `SRC-APM-IIOT-0007`.
+- Fill IBM MAS cells only after registering and reviewing exact IBM MAS source documents under `SRC-PORTFOLIO-IBM-MAS`.
+- Keep all criteria as `To validate` until both sides have reviewed evidence.
+- Do not add final comparison conclusions during Batch 1.
+
 ## Related Pages
 
 - [EtaPRO](../solutions/etapro)

@@ -119,7 +119,7 @@ sources:
     drive_id: 1ePyS23Vwv1KjJ_TaB2U5JArxVyOH7YJE
     confidentiality: internal
     extraction_priority: high
-    extraction_status: not_started
+    extraction_status: planned
     related_pages:
       - content/wiki/solutions/etapro.md
       - content/wiki/capabilities/apm.md
@@ -136,7 +136,7 @@ sources:
     drive_id: 1kGv21UF86OTf9nuybNDlq7BCOQriEfEr
     confidentiality: internal
     extraction_priority: high
-    extraction_status: not_started
+    extraction_status: planned
     related_pages:
       - content/wiki/solutions/aveva-pi.md
       - content/wiki/capabilities/industrial-historian.md
@@ -163,7 +163,7 @@ sources:
     drive_id: 1HFjWEw-kl8ExbDkf3hoMXsaBmBAUMdUk
     confidentiality: internal
     extraction_priority: high
-    extraction_status: not_started
+    extraction_status: planned
     related_pages:
       - content/wiki/solutions/canary.md
       - content/wiki/capabilities/industrial-historian.md
@@ -179,7 +179,7 @@ sources:
     drive_id: 17Q2yiUSr7GmIlhvRyclGZ4whhPsezzov
     confidentiality: internal
     extraction_priority: high
-    extraction_status: not_started
+    extraction_status: planned
     related_pages:
       - content/wiki/solutions/idboxrt.md
       - content/wiki/capabilities/iiot-platform.md

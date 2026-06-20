@@ -82,6 +82,12 @@ In NOVA Knowledge Hub M1, this page defines the working boundary of APM knowledg
 - [Industrial Historian](./industrial-historian)
 - [IIoT Platform](./iiot-platform)
 
+## Manual Extraction Pointers
+
+- Use `SRC-APM-IIOT-0007` to validate EtaPRO-related APM and performance monitoring notes after source documents are identified.
+- Keep EtaPRO-specific evidence on the [EtaPRO](../solutions/etapro) solution page until reviewed evidence supports updating this neutral capability page.
+- Do not add pricing, licensing, or commercial details to this capability page.
+
 ## Source Traceability
 
 Current content is a draft synthesis based on the registered APM & IIoT solution domain. It must be checked against source documents before moving to `reviewed` or `approved`.

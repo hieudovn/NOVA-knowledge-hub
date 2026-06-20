@@ -47,6 +47,13 @@ This page is not a replacement claim. It is a structure for clarifying whether a
 - Avoid positioning IDBoxRT as a historian replacement unless reviewed evidence and project context support that conclusion.
 - Keep the Industrial Historian capability page as the neutral anchor for historian concepts.
 
+## Manual Extraction TODO
+
+- Fill IDBoxRT cells only after reviewing source documents under `SRC-APM-IIOT-0011`.
+- Keep Industrial Historian cells tied to neutral capability evidence or reviewed historian solution sources.
+- Keep all replacement or overlap language conservative until evidence supports it.
+- Do not add final comparison conclusions during Batch 1.
+
 ## Related Pages
 
 - [IDBoxRT](../solutions/idboxrt)

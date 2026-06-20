@@ -78,6 +78,35 @@ In NOVA Knowledge Hub M1, this page acts as a placeholder for organizing reviewe
 - [Historian to APM](../patterns/historian-to-apm)
 - [OPC UA Integration](../patterns/opc-ua-integration)
 
+## Manual Extraction Notes
+
+### Source Coverage
+
+| Source ID | Source Title | Extraction Status | Notes |
+|---|---|---|---|
+| `SRC-APM-IIOT-0010` | Canary | Planned | Registered source folder exists; exact source documents still need to be identified before facts are extracted. |
+
+### Evidence-Backed Draft Facts
+
+| Claim / Fact | Evidence Source | Confidence | Review Status |
+|---|---|---|---|
+| No source-backed facts extracted yet. | `SRC-APM-IIOT-0010` | low | Pending source document review |
+
+### Open Questions
+
+- Which Canary source documents should be treated as authoritative for historian scope?
+- Which data collection, storage, visualization, and integration capabilities are explicitly supported by reviewed source documents?
+
+### Extraction TODO
+
+- Identify source documents inside the registered source folder.
+- Extract product scope.
+- Extract architecture or deployment notes.
+- Extract integration capabilities.
+- Extract supported use cases.
+- Extract limitations and assumptions.
+- Avoid pricing/licensing/commercial details.
+
 ## Source Traceability
 
 Current content is a draft structure based on the registered Canary source folder. Validate all capability, architecture, and comparison notes against `SRC-APM-IIOT-0010` before moving this page beyond `draft`.

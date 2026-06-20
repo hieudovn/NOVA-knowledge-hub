@@ -47,6 +47,13 @@ This page is not a conclusion. It is a structure for collecting reviewed evidenc
 - Treat both solution columns as incomplete until source evidence is attached.
 - Keep commercial fit, pricing, and licensing outside this page.
 
+## Manual Extraction TODO
+
+- Fill Canary cells only after reviewing source documents under `SRC-APM-IIOT-0010`.
+- Fill AVEVA PI cells only after reviewing source documents under `SRC-APM-IIOT-0008`.
+- Keep all criteria as `To validate` until both sides have reviewed evidence.
+- Do not add final comparison conclusions during Batch 1.
+
 ## Related Pages
 
 - [Canary](../solutions/canary)

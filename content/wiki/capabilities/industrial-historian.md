@@ -80,6 +80,13 @@ In NOVA Knowledge Hub M1, this page defines historian knowledge as a core data i
 - [SCADA/DCS Data Ingestion](../patterns/scada-dcs-data-ingestion)
 - [OPC UA Integration](../patterns/opc-ua-integration)
 
+## Manual Extraction Pointers
+
+- Use `SRC-APM-IIOT-0010` to validate Canary-related historian notes after source documents are identified.
+- Use `SRC-APM-IIOT-0008` to validate AVEVA PI-related historian notes after source documents are identified.
+- Keep vendor-specific evidence on the [Canary](../solutions/canary) and [AVEVA PI](../solutions/aveva-pi) solution pages until reviewed evidence supports updating this neutral capability page.
+- Do not add pricing, licensing, or commercial details to this capability page.
+
 ## Source Traceability
 
 Current content is a draft synthesis based on the registered APM & IIoT solution domain. It should be validated against Canary, AVEVA PI, IDBoxRT, and historian-related source materials before approval.
