@@ -129,9 +129,9 @@ sources:
         type: google_doc
         url: https://docs.google.com/document/d/1ou79esVguZeo2w1XKsGAVisUFcLi-qxfdJWTqZksiF0/edit?usp=drivesdk
         drive_id: 1ou79esVguZeo2w1XKsGAVisUFcLi-qxfdJWTqZksiF0
-        inventory_status: discovered_not_reviewed
-        extraction_status: not_started
-        notes: Exact top-level document found during Batch 1.1 folder listing. Do not extract until Batch 1.2 validation.
+        inventory_status: promoted_to_document_source
+        extraction_status: in_progress
+        notes: Exact top-level document confirmed accessible during Batch 1.2 and promoted to document_sources as SRC-ETAPRO-DOC-0001.
     related_pages:
       - content/wiki/solutions/etapro.md
       - content/wiki/capabilities/apm.md
@@ -209,3 +209,19 @@ sources:
       - content/wiki/patterns/scada-dcs-data-ingestion.md
       - content/wiki/tender/apm-iiot-compliance-notes.md
     notes: High-priority source for IDBoxRT solution overview, IIoT capability mapping, and IDBoxRT vs historian comparison.
+
+document_sources:
+  - id: SRC-ETAPRO-DOC-0001
+    title: Master_EtaPRO_Knowledge
+    parent_source_id: SRC-APM-IIOT-0007
+    type: google_doc
+    url: https://docs.google.com/document/d/1ou79esVguZeo2w1XKsGAVisUFcLi-qxfdJWTqZksiF0/edit?usp=drivesdk
+    drive_id: 1ou79esVguZeo2w1XKsGAVisUFcLi-qxfdJWTqZksiF0
+    confidentiality: internal
+    extraction_priority: high
+    extraction_status: in_progress
+    related_pages:
+      - content/wiki/solutions/etapro.md
+      - content/wiki/capabilities/apm.md
+      - content/wiki/capabilities/condition-monitoring.md
+    notes: Document-level source for validating EtaPRO Batch 1 draft facts. Do not copy raw document content into repository.

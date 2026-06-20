@@ -12,6 +12,8 @@ tags:
 source_refs:
   - source_id: SRC-APM-IIOT-0007
     title: EtaPRO
+  - source_id: SRC-ETAPRO-DOC-0001
+    title: Master_EtaPRO_Knowledge
   - source_id: SRC-APM-IIOT-0001
     title: AVENUE APM & IIoT Solutions
 landing_candidate: false
@@ -123,6 +125,43 @@ In NOVA Knowledge Hub M1, this page acts as a placeholder for organizing reviewe
 ## Source Traceability
 
 Current content is a draft structure based on the registered EtaPRO source folder. Validate all capability, architecture, and comparison notes against `SRC-APM-IIOT-0007` before moving this page beyond `draft`.
+
+## Document-Level Validation Notes
+
+### Document Coverage
+
+| Source ID | Document Title | Validation Role | Extraction Status |
+|---|---|---|---|
+| `SRC-ETAPRO-DOC-0001` | Master_EtaPRO_Knowledge | Pilot document-level source for validating EtaPRO Batch 1 draft facts. | In progress |
+
+### Validated / Refined Draft Facts
+
+| Topic | Batch 1 Draft Note | Validation Result | Evidence Source | Review Status |
+|---|---|---|---|---|
+| General concept | EtaPRO APM is described as a solution for optimizing power plant operations and maintenance by combining data integration, analytics, condition monitoring, and performance monitoring. | Refined by source: the document frames EtaPRO as an APM platform for power-generation asset performance, with predictive maintenance and O&M optimization positioning. | `SRC-ETAPRO-DOC-0001` | Draft, pending human review |
+| Vendor | The sheet lists Toshiba Energy Systems & Solutions Corporation as the vendor. | Refined by source: the document identifies Toshiba Energy Systems & Solutions as the vendor context, with geography wording that should be checked against official vendor material. | `SRC-ETAPRO-DOC-0001` | Draft, pending human review |
+| Problems solved | EtaPRO is associated with unplanned downtime, performance degradation, data silos, and availability or outage reporting risk. | Refined by source: the document supports predictive maintenance, early anomaly warning, and operating performance optimization; outage reporting risk remains still to validate from other documents. | `SRC-ETAPRO-DOC-0001` | Draft, pending human review |
+| Core capabilities | Candidate capability areas include thermodynamic modeling, anomaly detection, rotating equipment analysis, historian/performance data storage, and performance monitoring. | Refined by source: the document supports Archive, APR, Virtual Plant, and Predictor as candidate module concepts; module status and official boundaries still require vendor confirmation. | `SRC-ETAPRO-DOC-0001` | Draft, pending human review |
+| Typical use cases | The sheet emphasizes power generation, including thermal, gas, renewables, hydro, geothermal, nuclear, and industrial co-generation or utilities contexts. | Refined by source: the document supports a power-generation focus and mentions thermal, gas, hydro, wind, and solar contexts; geothermal, nuclear, and industrial co-generation remain still to validate. | `SRC-ETAPRO-DOC-0001` | Draft, pending human review |
+| Integration relevance | The sheet lists interfaces with DCS, PLC, PI, OPC UA, Modbus, and Bently Nevada 3500 as candidate integration areas requiring validation. | Refined by source: the document supports an Avenue integration view involving OT systems, DCS/SCADA/PLC data flow, EtaPRO analytics modules, and Maximo handoff; protocol-specific claims remain still to validate. | `SRC-ETAPRO-DOC-0001` | Draft, pending human review |
+| Deployment model | The sheet describes on-premises or cloud deployment as candidate models. | Not supported by this document: deployment model is not validated by this pilot document. | `SRC-ETAPRO-DOC-0001` | Still to validate |
+| APM / IIoT / Historian positioning | EtaPRO should be treated as an APM and performance monitoring candidate for asset-intensive operations, especially power generation. | Validated by source: the document supports APM and performance-management positioning for power-generation operations, while broader IIoT or historian positioning remains secondary and still to validate. | `SRC-ETAPRO-DOC-0001` | Draft, pending human review |
+| Open questions | Official module boundaries, deployment constraints, and limitations require detailed source review. | Validated by source: the document is useful for pilot validation but still contains Avenue positioning and does not fully resolve official product boundaries, deployment constraints, or limitations. | `SRC-ETAPRO-DOC-0001` | Still to validate |
+
+### Open Questions After Document Review
+
+- Which EtaPRO module names and boundaries are official vendor product definitions versus Avenue packaging?
+- Which deployment models are officially supported for the current EtaPRO version?
+- Which protocol-specific integrations are confirmed by technical product documents?
+- Which limitations, prerequisites, and system requirements should be documented?
+- Which Batch 1 use-case sectors require additional EtaPRO source documents?
+
+### Deferred Items
+
+- Pricing/licensing/commercial terms are excluded.
+- Comparison with IBM MAS remains deferred.
+- Claims requiring other EtaPRO documents remain `Still to validate`.
+- Protocol-specific integration claims remain `Still to validate` until a technical integration source is reviewed.
 
 ## Review Notes
 
