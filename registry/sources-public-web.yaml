@@ -1,0 +1,102 @@
+source_domain:
+  id: SRC-DOMAIN-PUBLIC-WEB
+  title: Public Product Websites and Documentation
+  type: web_source_domain
+  owner: Hieu Do
+  organization: Personal / Avenue Context
+  confidentiality: public
+  purpose: Official public product websites, documentation, help pages, and public technical references for future source-backed extraction
+  status: registered
+  extraction_status: not_started
+  notes: Store URLs and metadata only. Do not copy long web content into the repository.
+
+sources:
+  - id: SRC-WEB-IDBOXRT-OFFICIAL
+    title: IDBoxRT Official Website
+    type: website
+    url: https://idboxrt.com/
+    location_status: registered
+    confidentiality: public
+    extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/idboxrt.md
+      - content/wiki/capabilities/iiot-platform.md
+    notes: Official public website URL from the Google Sheet Reference URL row. Store URL metadata only; do not scrape or copy long website content.
+
+  - id: SRC-WEB-ETAPRO-OFFICIAL
+    title: EtaPRO Official Website
+    type: website
+    url: https://etapro.com/
+    location_status: registered
+    confidentiality: public
+    extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/etapro.md
+      - content/wiki/capabilities/apm.md
+      - content/wiki/comparisons/etapro-vs-mas-apm.md
+    notes: Official public website URL from the Google Sheet Reference URL row. Store URL metadata only; do not scrape or copy long website content.
+
+  - id: SRC-WEB-CANARY-OFFICIAL
+    title: Canary Official Website
+    type: website
+    url: https://www.canarylabs.com/
+    location_status: registered
+    confidentiality: public
+    extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/canary.md
+      - content/wiki/capabilities/industrial-historian.md
+      - content/wiki/comparisons/canary-vs-aveva-pi.md
+    notes: Official public website URL from the Google Sheet Reference URL row. Store URL metadata only; do not scrape or copy long website content.
+
+  - id: SRC-WEB-LUCA-BDS-OFFICIAL
+    title: LUCA BDS Official Website
+    type: website
+    url: https://www.luca-bds.com/
+    location_status: registered
+    confidentiality: public
+    extraction_priority: low
+    extraction_status: not_started
+    related_pages: []
+    notes: Registered public URL only; defer M1 page creation until technical relevance is confirmed.
+
+  - id: SRC-WEB-AVEVA-PI-OFFICIAL
+    title: AVEVA PI System Official Product Page
+    type: website
+    url: https://www.aveva.com/en/products/aveva-pi-system/
+    location_status: registered
+    confidentiality: public
+    extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/aveva-pi.md
+      - content/wiki/capabilities/industrial-historian.md
+      - content/wiki/comparisons/canary-vs-aveva-pi.md
+    notes: Official public product page URL from the Google Sheet Reference URL row. Store URL metadata only; do not scrape or copy long website content.
+
+  - id: SRC-WEB-AI-PLANTOPS-OFFICIAL
+    title: AI PlantOps Official Solution Page
+    type: website
+    url: https://tridiagonal.ai/solutions/ai-plantops
+    location_status: registered
+    confidentiality: public
+    extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/ai-plantops.md
+      - content/wiki/capabilities/iiot-platform.md
+    notes: Official public solution page URL from the Google Sheet Reference URL row. Store URL metadata only; do not scrape or copy long website content.
+
+  - id: SRC-WEB-RETINA360-OFFICIAL
+    title: Retina360 Official Website
+    type: website
+    url: https://retina360.ai/
+    location_status: registered
+    confidentiality: public
+    extraction_priority: low
+    extraction_status: not_started
+    related_pages: []
+    notes: Registered public URL only; defer M1 page creation until technical relevance is confirmed.
