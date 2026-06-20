@@ -179,7 +179,7 @@ sources:
     confidentiality: internal
     extraction_priority: high
     extraction_status: planned
-    document_inventory_status: pending_document_audit
+    document_inventory_status: batch_1_4_document_audit_completed
     validation_target_pages:
       - content/wiki/solutions/canary.md
     related_pages:
@@ -410,3 +410,234 @@ document_sources:
       - limitations_to_check
       - terminology
     notes: Exact module-specific product info sheet found in EtaPRO reference materials. Inventory only; do not extract content until a validation batch.
+
+  - id: SRC-CANARY-DOC-0001
+    title: Canary System Brochure.pdf
+    parent_source_id: SRC-APM-IIOT-0010
+    type: pdf
+    url: https://drive.google.com/file/d/1PmiSjOIIb7qZYqfFgGO5lDxTkO3lsNZx/view?usp=drivesdk
+    drive_id: 1PmiSjOIIb7qZYqfFgGO5lDxTkO3lsNZx
+    confidentiality: internal
+    extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/canary.md
+      - content/wiki/capabilities/industrial-historian.md
+      - content/wiki/tender/historian-requirement-mapping.md
+    validation_focus:
+      - product_overview
+      - historian_positioning
+      - core_capabilities
+      - product_boundaries
+    notes: Exact Canary product brochure found in reference materials. Inventory only; do not extract content until a validation batch.
+
+  - id: SRC-CANARY-DOC-0002
+    title: Canary.docx
+    parent_source_id: SRC-APM-IIOT-0010
+    type: docx
+    url: https://docs.google.com/document/d/1CRUiDWDsmWqnHgPIVFIB9vYH2actwYZl/edit?usp=drivesdk&ouid=108564093758567510758&rtpof=true&sd=true
+    drive_id: 1CRUiDWDsmWqnHgPIVFIB9vYH2actwYZl
+    confidentiality: internal
+    extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/canary.md
+      - content/wiki/capabilities/industrial-historian.md
+    validation_focus:
+      - source_summary
+      - product_scope
+      - draft_fact_crosscheck
+      - open_questions
+    notes: Exact Canary document found in reference materials. Inventory only; confirm authorship and suitability before extraction.
+
+  - id: SRC-CANARY-DOC-0003
+    title: Virtualize Your World.pdf
+    parent_source_id: SRC-APM-IIOT-0010
+    type: pdf
+    url: https://drive.google.com/file/d/1LxiG-gfofUMwK0Xsl_jdyIT9N8e5-8dN/view?usp=drivesdk
+    drive_id: 1LxiG-gfofUMwK0Xsl_jdyIT9N8e5-8dN
+    confidentiality: internal
+    extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/canary.md
+      - content/wiki/capabilities/industrial-historian.md
+    validation_focus:
+      - virtual_views
+      - contextualization
+      - asset_modeling
+      - namespace_strategy
+    notes: Exact reference document found in Canary reference materials. Inventory only; do not extract content until a validation batch.
+
+  - id: SRC-CANARY-DOC-0004
+    title: Cygnet Collector Whitepaper.pdf
+    parent_source_id: SRC-APM-IIOT-0010
+    type: pdf
+    url: https://drive.google.com/file/d/16UHbfC1azt8FmyGoyY6cItVuPSOseJ83/view?usp=drivesdk
+    drive_id: 16UHbfC1azt8FmyGoyY6cItVuPSOseJ83
+    confidentiality: internal
+    extraction_priority: high
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/canary.md
+      - content/wiki/patterns/scada-dcs-data-ingestion.md
+      - content/wiki/tender/historian-requirement-mapping.md
+    validation_focus:
+      - data_collection
+      - collector_architecture
+      - integration_claims
+      - oil_and_gas_source_systems
+    notes: Exact collector whitepaper found in Canary reference materials. Inventory only; do not extract content until a validation batch.
+
+  - id: SRC-CANARY-DOC-0005
+    title: Canary + Seeq Better Together Whitepaper.pdf
+    parent_source_id: SRC-APM-IIOT-0010
+    type: pdf
+    url: https://drive.google.com/file/d/13yBkYTbZe0eT7t9VD8D1NM6SvxqeCv3C/view?usp=drivesdk
+    drive_id: 13yBkYTbZe0eT7t9VD8D1NM6SvxqeCv3C
+    confidentiality: internal
+    extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/canary.md
+      - content/wiki/capabilities/industrial-historian.md
+    validation_focus:
+      - downstream_analytics
+      - data_access
+      - ecosystem_integration
+      - analytics_workflows
+    notes: Exact analytics integration whitepaper found in Canary reference materials. Inventory only; do not extract content until a validation batch.
+
+  - id: SRC-CANARY-DOC-0006
+    title: 21 CFR Part 11 Compliance Whitepaper.pdf
+    parent_source_id: SRC-APM-IIOT-0010
+    type: pdf
+    url: https://drive.google.com/file/d/1Iy-Il0nY5LZxF35XTTNHSl8bNAJmTNrw/view?usp=drivesdk
+    drive_id: 1Iy-Il0nY5LZxF35XTTNHSl8bNAJmTNrw
+    confidentiality: internal
+    extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/canary.md
+      - content/wiki/capabilities/industrial-historian.md
+      - content/wiki/tender/historian-requirement-mapping.md
+    validation_focus:
+      - compliance_context
+      - regulated_industry_use
+      - historian_controls
+      - limitations_to_check
+    notes: Exact compliance whitepaper found in Canary reference materials. Inventory only; do not extract content until a validation batch.
+
+  - id: SRC-CANARY-DOC-0007
+    title: Migration Guide Aveva Pi to Canarylabs.pdf
+    parent_source_id: SRC-APM-IIOT-0010
+    type: pdf
+    url: https://drive.google.com/file/d/11BSxr97D5IXieyaSz_YPnXSWe5sijjMv/view?usp=drivesdk
+    drive_id: 11BSxr97D5IXieyaSz_YPnXSWe5sijjMv
+    confidentiality: internal
+    extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/canary.md
+      - content/wiki/comparisons/canary-vs-aveva-pi.md
+    validation_focus:
+      - migration_considerations
+      - coexistence_questions
+      - comparison_inputs
+      - assumptions_to_check
+    notes: Exact migration guide found in Canary reference materials. Inventory only; defer comparison claims until both sides have reviewed sources.
+
+  - id: SRC-CANARY-DOC-0008
+    title: Canary & Aveva PI Comparison.pdf
+    parent_source_id: SRC-APM-IIOT-0010
+    type: pdf
+    url: https://drive.google.com/file/d/1mODb7NUZH-2f8m6fw76_UQRzrvNBKqCS/view?usp=drivesdk
+    drive_id: 1mODb7NUZH-2f8m6fw76_UQRzrvNBKqCS
+    confidentiality: internal
+    extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/canary.md
+      - content/wiki/comparisons/canary-vs-aveva-pi.md
+    validation_focus:
+      - comparison_inputs
+      - historian_criteria
+      - assumptions_to_check
+      - claims_requiring_aveva_sources
+    notes: Exact comparison reference found in Canary reference materials. Inventory only; do not add comparison conclusions during this batch.
+
+  - id: SRC-CANARY-DOC-0009
+    title: East West Power Case Study.pdf
+    parent_source_id: SRC-APM-IIOT-0010
+    type: pdf
+    url: https://drive.google.com/file/d/1uY9iCINXeduPh9RMN2LnMIXpV-ZJrDTo/view?usp=drivesdk
+    drive_id: 1uY9iCINXeduPh9RMN2LnMIXpV-ZJrDTo
+    confidentiality: internal
+    extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/canary.md
+      - content/wiki/capabilities/industrial-historian.md
+    validation_focus:
+      - power_and_utilities_use_case
+      - enterprise_historian_context
+      - remote_site_data
+      - customer_example
+    notes: Exact case study found in Canary reference materials. Inventory only; do not extract content until a validation batch.
+
+  - id: SRC-CANARY-DOC-0010
+    title: CanaryMurphyOilCaseStudy.pdf
+    parent_source_id: SRC-APM-IIOT-0010
+    type: pdf
+    url: https://drive.google.com/file/d/1MTngb-sNxEYihukT88BMG5ECyLqOYxqV/view?usp=drivesdk
+    drive_id: 1MTngb-sNxEYihukT88BMG5ECyLqOYxqV
+    confidentiality: internal
+    extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/canary.md
+      - content/wiki/capabilities/industrial-historian.md
+    validation_focus:
+      - oil_and_gas_use_case
+      - remote_asset_data
+      - tag_normalization
+      - customer_example
+    notes: Exact case study found in Canary reference materials. Inventory only; do not extract content until a validation batch.
+
+  - id: SRC-CANARY-DOC-0011
+    title: Boca Raton Case Study.pdf
+    parent_source_id: SRC-APM-IIOT-0010
+    type: pdf
+    url: https://drive.google.com/file/d/1Xvm8N4_LGyjLAd92SKqtO21FELf2KMgO/view?usp=drivesdk
+    drive_id: 1Xvm8N4_LGyjLAd92SKqtO21FELf2KMgO
+    confidentiality: internal
+    extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/canary.md
+      - content/wiki/capabilities/industrial-historian.md
+    validation_focus:
+      - water_wastewater_use_case
+      - operational_trending
+      - historian_retrieval
+      - customer_example
+    notes: Exact case study found in Canary reference materials. Inventory only; do not extract content until a validation batch.
+
+  - id: SRC-CANARY-DOC-0012
+    title: Center for Breakthrough Case Study.pdf
+    parent_source_id: SRC-APM-IIOT-0010
+    type: pdf
+    url: https://drive.google.com/file/d/1m2rgMona-0JaK3WZCnc8MOq40VXJ3zLX/view?usp=drivesdk
+    drive_id: 1m2rgMona-0JaK3WZCnc8MOq40VXJ3zLX
+    confidentiality: internal
+    extraction_priority: medium
+    extraction_status: not_started
+    related_pages:
+      - content/wiki/solutions/canary.md
+      - content/wiki/capabilities/industrial-historian.md
+    validation_focus:
+      - life_sciences_use_case
+      - regulated_industry_context
+      - data_access_controls
+      - customer_example
+    notes: Exact case study found in Canary reference materials. Inventory only; do not extract content until a validation batch.
