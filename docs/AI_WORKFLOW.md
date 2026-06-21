@@ -8,6 +8,8 @@ AI is a tool for acceleration, extraction, mapping, scoring support, drafting, a
 
 AI is not the source of truth.
 
+In the current MVP lane, AI and agent work is documentation and placeholder interfaces only. There is no crawler, no agent orchestration, no automatic promotion, and no direct write from AI output into verified or promoted records.
+
 ## 2. Core Philosophy
 
 ```text

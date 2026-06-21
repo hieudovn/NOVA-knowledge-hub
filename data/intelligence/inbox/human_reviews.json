@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "review_id": "REV-SAMPLE-001",
+    "record_type": "opportunity",
+    "record_id": "OPP-SAMPLE-CANDIDATE-001",
+    "reviewer": "sample-reviewer",
+    "decision": "needs_review",
+    "comments": "Sample-only review record. Human approval is still required before promotion.",
+    "reviewed_at": "2026-06-21T00:00:00.000Z",
+    "next_required_action": "Presales validates solution fit and Sales validates stakeholder access.",
+    "owner": "sample-intelligence-owner",
+    "status": "needs_review",
+    "human_review_status": "needs_review",
+    "created_at": "2026-06-21T00:00:00.000Z"
+  }
+]

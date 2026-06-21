@@ -4,6 +4,8 @@
 
 The platform is an Opportunity-centered Industrial GTM Intelligence Platform built on the Knowledge Hub foundation.
 
+Knowledge Hub remains the validated knowledge foundation: approved solution, industry, capability, pattern, tender, case study, and lesson-learned content. GTM Intelligence is the business application layer that links validated knowledge with reviewed customer, plant, tender, market signal, evidence, and Opportunity records.
+
 It has four main layers:
 
 ```text
@@ -205,11 +207,13 @@ Practical start:
 Docusaurus + Markdown + YAML templates + governance docs
 ```
 
-Then gradually add:
+Later, after the file-based MVP lane is stable and a human decision gate approves expansion, gradually add:
 
 ```text
 API + DB + search + AI assistant + agent orchestration
 ```
+
+These are not part of the current MVP lane.
 
 ## 6. Integration With NOVA
 

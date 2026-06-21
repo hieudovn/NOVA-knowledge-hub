@@ -223,6 +223,9 @@ function requiredFieldErrors(entityType, record) {
     if (!record.customer_id) {
       errors.push('opportunity requires customer_id');
     }
+    if (!record.owner) {
+      errors.push('opportunity requires owner');
+    }
     if (!Array.isArray(record.assumptions)) {
       errors.push('opportunity assumptions must be an array');
     }
@@ -418,9 +421,12 @@ function generateOpportunityCandidates(options = {}) {
   const inboxOpportunities = readStore('inbox', 'opportunities', root);
   const candidates = [];
 
-  const customerIds = new Set(verifiedCustomers.map((customer) => customer.customer_id));
+  const approvedCustomers = verifiedCustomers.filter((customer) => customer.status === 'verified' && customer.human_review_status === 'approved');
+  const approvedTenders = verifiedTenders.filter((tender) => tender.status === 'verified' && tender.human_review_status === 'approved');
+  const approvedSignals = verifiedSignals.filter((signal) => signal.status === 'verified' && signal.human_review_status === 'approved');
+  const customerIds = new Set(approvedCustomers.map((customer) => customer.customer_id));
 
-  for (const tender of verifiedTenders) {
+  for (const tender of approvedTenders) {
     if (!tender.customer_id || !customerIds.has(tender.customer_id)) {
       continue;
     }
@@ -438,6 +444,7 @@ function generateOpportunityCandidates(options = {}) {
       assumptions: ['Tender requirements need presales validation before action.'],
       risks: tender.risks || [],
       recommended_next_actions: ['Verify stakeholder map.', 'Map requirements to Avenue solution capabilities.'],
+      owner: tender.owner || 'sample-intelligence-owner',
       status: 'needs_review',
       human_review_status: 'needs_review',
       generated_from_unverified: false,
@@ -447,7 +454,7 @@ function generateOpportunityCandidates(options = {}) {
     candidates.push(scoreOpportunity(opportunity));
   }
 
-  for (const signal of verifiedSignals) {
+  for (const signal of approvedSignals) {
     if (!signal.customer_id || !customerIds.has(signal.customer_id)) {
       continue;
     }
@@ -465,6 +472,7 @@ function generateOpportunityCandidates(options = {}) {
       assumptions: ['Market signal requires direct customer validation before action.'],
       risks: signal.risks || [],
       recommended_next_actions: ['Validate signal with Sales.', 'Research plant and stakeholder context.'],
+      owner: signal.owner || 'sample-intelligence-owner',
       status: 'needs_review',
       human_review_status: 'needs_review',
       generated_from_unverified: false,

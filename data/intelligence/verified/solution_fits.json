@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "solution_fit_id": "FIT-SAMPLE-001",
+    "opportunity_id": "OPP-SAMPLE-CANDIDATE-001",
+    "solution_id": "SOLUTION-IBM-MAS-SAMPLE",
+    "solution_name": "IBM MAS",
+    "fit_score": 75,
+    "fit_rationale": "Sample-only fit based on condition monitoring and maintenance visibility needs.",
+    "mapped_capabilities": ["APM", "condition monitoring", "maintenance reporting"],
+    "gaps": ["Requires presales validation against detailed requirements."],
+    "required_partners": [],
+    "risks": ["Fit score is heuristic and not approved for customer action."],
+    "evidence_item_ids": ["EVD-SAMPLE-001"],
+    "owner": "sample-intelligence-owner",
+    "status": "verified",
+    "human_review_status": "approved",
+    "source_url": "https://example.com/sample-tender",
+    "source_name": "Sample-only tender notice",
+    "source_type": "sample_tender_portal",
+    "collected_at": "2026-06-21T00:00:00.000Z",
+    "last_verified_at": "2026-06-21T00:00:00.000Z",
+    "reliability_score": 0.8,
+    "evidence_summary": "Sample-only solution fit derived from fictional tender evidence.",
+    "created_at": "2026-06-21T00:00:00.000Z",
+    "updated_at": "2026-06-21T00:00:00.000Z"
+  }
+]

@@ -3,8 +3,10 @@
 ## Preferred Flow
 
 ```text
-Collect -> Store as Unverified Intelligence -> Verify -> Normalize -> Link -> Score -> Human Review -> Promote to Knowledge Hub
+Collect -> Filter -> Store as Unverified Intelligence -> Verify -> Normalize -> Structure -> Link -> Enrich -> Reuse
 ```
+
+The pipeline is a Minimum Viable Intelligence Loop, not only an Opportunity-generation pipeline. Opportunity is one high-value output of enriched data. Other outputs include tender documents, proposal inputs, sales strategy, product strategy, account plans, market maps, solution briefs, and management decision support.
 
 ## 1. Collect
 
@@ -31,7 +33,17 @@ Current manual import commands:
 - `npm run import_market_signals -- --file templates/import/market_signal_import_template.json`
 - `npm run import_opportunity_data -- --file templates/import/opportunity_import_template.json`
 
-## 1.5 Store As Unverified Intelligence
+## 1.5 Filter And Store As Unverified Intelligence
+
+Filtering decides whether incoming material is worth keeping, what domain it belongs to, and what review path it needs.
+
+Filter by:
+
+- relevance to Avenue industrial GTM work;
+- source presence and reliability;
+- domain: solution, capability, customer, plant, contact, tender, market signal, case study, competitor, partner, or opportunity;
+- confidentiality and commercial sensitivity;
+- expected downstream reuse.
 
 All external records enter:
 
@@ -97,6 +109,18 @@ Normalize:
 - contact and stakeholder roles;
 - source and evidence metadata.
 
+## 3.5 Structure
+
+Convert useful material into structured records or reviewed wiki knowledge.
+
+Structured outputs may include:
+
+- solution and capability pages;
+- customer, plant, contact, tender, signal, evidence, and Opportunity records;
+- case-study and reference records;
+- partner and competitor notes;
+- reusable offer maps and proposal inputs.
+
 ## 4. Link
 
 Connect records through explicit relationships:
@@ -107,6 +131,8 @@ Connect records through explicit relationships:
 - signal to customer, plant, trigger, and opportunity candidate;
 - solution to capability, partner, case study, and requirement;
 - opportunity to all supporting branches.
+
+Links are useful even when they do not create an Opportunity immediately. A validated solution-to-capability link, tender-to-requirement link, or customer-to-plant link is reusable data.
 
 Opportunity-centered links must include:
 
@@ -121,7 +147,17 @@ Opportunity-centered links must include:
 - risks;
 - recommended next actions.
 
-## 5. Score
+## 5. Enrich And Score
+
+Enrichment adds reusable structure and context:
+
+- summaries with source references;
+- capability mappings;
+- requirement mappings;
+- industry and process context;
+- assumptions and validation needs;
+- risks and constraints;
+- reusable snippets for tenders, proposals, strategy, and offer maps.
 
 Score opportunities using visible criteria:
 
@@ -187,6 +223,22 @@ Action should be assigned to roles:
 - Partner manager if relevant.
 
 Actions should have owner, priority, due date, and status.
+
+## 9. Reuse
+
+Reuse enriched knowledge for:
+
+- tender compliance matrices;
+- bid and proposal drafts;
+- sales and presales solution briefs;
+- customer-specific proposal packs;
+- account plans;
+- APM and IIoT offer maps;
+- product and solution strategy;
+- market maps;
+- Opportunity scorecards;
+- management decision briefs;
+- approved public-ready content.
 
 ## Opportunity Candidate Generation
 

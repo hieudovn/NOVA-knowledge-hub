@@ -2,29 +2,31 @@
 
 ## Roadmap Principle
 
-Build the Opportunity-centered intelligence foundation first.
+Build the Minimum Viable Intelligence Loop first.
 
-Do not start with uncontrolled crawling, public portals, or complex automation. The product should grow through structured records, manual workflow, controlled ingestion, scoring, and then agentic orchestration.
+Do not start with uncontrolled crawling, public portals, dashboards, or complex automation. The platform should grow through structured records, manual/semi-manual enrichment, controlled ingestion, scoring/reuse, and only later automation acceleration.
 
 ```text
-Structured Intelligence Foundation
-    -> Manual Intelligence Workflow
+Reusable Knowledge Foundation
+    -> Manual/Semi-Manual Enrichment Loop
     -> Controlled Ingestion
-    -> Opportunity Scoring And Prioritization
-    -> Agentic Workflow
+    -> Reuse, Scoring, And Prioritization
+    -> Automation Acceleration
 ```
 
-## Phase 1 - Foundation
+## Phase 1 - Enrichment Foundation
 
-Goal: define the platform's core model and rules.
+Goal: define the reusable knowledge and intelligence foundation.
 
 Must have:
 
 - domain model;
-- Opportunity-centered data model;
+- enrichment domain model;
+- Opportunity-centered data model as one important output model;
 - source types;
 - evidence and assumption model;
 - minimum viable records for customer, plant, tender, signal, solution, and opportunity;
+- enrichment domains and reusable outputs;
 - manual data entry templates;
 - governance rules;
 - execution rules for future Codex and AI work.
@@ -39,13 +41,14 @@ Not required yet:
 
 Success criteria:
 
-- Opportunity is clearly the central entity;
+- Knowledge Hub is clearly the reusable validated foundation;
+- Opportunity is clearly an important convergence object;
 - Customer, Plant, MarketSignal, Tender, and Solution records all connect to Opportunity;
 - raw, verified, and approved data states are distinct.
 
-## Phase 2 - Manual Intelligence Workflow
+## Phase 2 - Manual And Semi-Manual Enrichment Loop
 
-Goal: allow users to manually add and link intelligence records.
+Goal: allow users to continuously enrich source-backed records and wiki knowledge.
 
 Must have:
 
@@ -54,14 +57,14 @@ Must have:
 - manual tender/procurement record workflow;
 - manual market signal record workflow;
 - solution and capability mapping;
+- case-study, partner, and competitor enrichment;
 - human review flow;
 - Opportunity candidate creation;
-- Opportunity strategy draft;
-- sales and presales action plan draft.
+- tender, proposal, sales, product strategy, and Opportunity reusable outputs.
 
 Success criteria:
 
-- a user can create an Opportunity from structured records;
+- enriched knowledge can be reused for tender, proposal, sales, product strategy, or Opportunity outputs;
 - evidence and assumptions are visible;
 - confidence and review status are explicit;
 - next actions can be assigned to Sales, Presales, Technical, or Management.
@@ -87,9 +90,9 @@ Success criteria:
 - human reviewers can promote, reject, or merge extracted items;
 - crawler output never directly creates final Opportunity records.
 
-## Phase 4 - Opportunity Scoring And Prioritization
+## Phase 4 - Reuse, Scoring, And Prioritization
 
-Goal: help Avenue decide where to focus.
+Goal: help Avenue reuse enriched knowledge for focused business outputs.
 
 Must have:
 
@@ -100,19 +103,20 @@ Must have:
 - estimated value signal;
 - risk flags;
 - duplicate opportunity detection;
-- opportunity ranking dashboard or report;
+- opportunity ranking report first;
+- dashboard only after a later decision gate;
 - next best action recommendation.
 
 Success criteria:
 
-- opportunities can be compared using visible criteria;
+- opportunities, accounts, tenders, and solution themes can be compared using visible criteria;
 - low-confidence opportunities are marked for review;
 - duplicate or overlapping opportunities are detected before action;
 - management can see why an opportunity is ranked highly.
 
-## Phase 5 - Agentic Workflow
+## Phase 5 - Automation Acceleration
 
-Goal: coordinate AI agents around structured records and human approval gates.
+Goal: use crawlers, agents, APIs, or dashboards only as accelerators after the enrichment loop is reliable.
 
 Must have:
 

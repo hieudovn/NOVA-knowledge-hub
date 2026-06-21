@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "contact_id": "CONT-SAMPLE-001",
+    "customer_id": "CUST-SAMPLE-001",
+    "plant_id": "PLANT-SAMPLE-001",
+    "name": "Sample Maintenance Stakeholder",
+    "role": "Maintenance Manager",
+    "stakeholder_group": "technical",
+    "relationship_status": "sample_unknown",
+    "owner": "sample-intelligence-owner",
+    "status": "verified",
+    "human_review_status": "approved",
+    "human_verified": true,
+    "source_url": "https://example.com/sample-contact",
+    "source_name": "Sample-only contact source",
+    "source_type": "sample_public_web",
+    "collected_at": "2026-06-21T00:00:00.000Z",
+    "last_verified_at": "2026-06-21T00:00:00.000Z",
+    "reliability_score": 0.6,
+    "evidence_summary": "Sample-only source lists a fictional technical stakeholder role.",
+    "created_at": "2026-06-21T00:00:00.000Z",
+    "updated_at": "2026-06-21T00:00:00.000Z"
+  }
+]

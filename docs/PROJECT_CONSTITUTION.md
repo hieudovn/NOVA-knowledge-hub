@@ -6,26 +6,31 @@
 **Repository lineage:** NOVA Knowledge Hub  
 **Owner-first user:** Hieu Do  
 **Initial deployment mode:** local-first development  
-**Strategic position:** Opportunity-centered intelligence platform for Avenue JSC, portable enough to remain usable outside one organization
+**Strategic position:** reusable industrial knowledge and GTM intelligence foundation for Avenue JSC, portable enough to remain usable outside one organization
 
-The project began as a markdown-first Knowledge Hub. It now evolves into an Industrial GTM Intelligence Platform that connects validated knowledge, customer context, market signals, procurement signals, tender intelligence, and Avenue's solution capabilities to generate and manage Opportunities.
+The project began as a markdown-first Knowledge Hub. It now evolves into a reusable intelligence foundation that continuously enriches business, technical, customer, market, tender, solution, partner, and Opportunity knowledge.
 
 ## 2. Vision
 
-Build a practical intelligence system for industrial go-to-market work.
+Build a practical enrichment system for industrial go-to-market knowledge.
 
-The platform should help Avenue answer:
+The platform should help Avenue produce and reuse:
 
-- Which industrial customers should we approach next?
-- Which plants or facilities are likely to need our solutions?
-- Which business, technical, tender, or budget signals indicate an opportunity?
-- Which Avenue solutions, partners, and references fit the situation?
-- Which contacts or stakeholder groups matter?
-- What entry strategy and next actions should Sales, Presales, Technical, and Management take?
+- high-quality solution and capability knowledge;
+- tender and bid inputs;
+- customer-specific proposal packs;
+- sales and presales strategy;
+- product and solution strategy;
+- market and tender intelligence;
+- customer and plant intelligence;
+- Opportunity evidence, assumptions, confidence, and next actions;
+- management decision support.
 
 ## 3. Core Principle
 
-Opportunity is the central convergence point.
+Continuous enrichment is the core operating loop.
+
+Opportunity is an important convergence point and one of the most valuable operating objects, but it is not the only purpose of the platform.
 
 An Opportunity is where these intelligence branches meet:
 
@@ -55,6 +60,7 @@ The platform is:
 - a market and procurement signal memory;
 - an Avenue solution and capability mapping layer;
 - an Opportunity generation and prioritization system;
+- a reusable enrichment foundation for proposals, tenders, product strategy, customer planning, and management decisions;
 - a human-reviewed AI-assisted workbench for sales, presales, tender, and management action.
 
 The platform is not only:
@@ -69,10 +75,10 @@ The platform is not only:
 ## 5. Operating Model
 
 ```text
-Collect -> Verify -> Normalize -> Link -> Score -> Strategize -> Human Review -> Act
+Collect -> Filter -> Verify -> Normalize -> Structure -> Link -> Enrich -> Reuse
 ```
 
-Manual structured records come first. Controlled ingestion and agentic workflows come later, after data governance and verification rules are stable.
+Manual and semi-manual structured enrichment comes first. Controlled ingestion and agentic acceleration come later, after data governance and verification rules are stable.
 
 ## 6. Relationship With NOVA
 
@@ -109,6 +115,7 @@ In scope now:
 - domain model and Opportunity-centered data model;
 - source and evidence rules;
 - manual entry templates for customer, plant, tender, signal, solution, and opportunity records;
+- reusable enrichment tracks for solution, tender, customer, plant, market, partner, competitor, and case-study knowledge;
 - governance and review workflow;
 - roadmap and execution rules;
 - documentation updates for agents and workflow.

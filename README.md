@@ -1,24 +1,28 @@
 # Avenue Industrial GTM Intelligence Platform
 
-This repository is evolving from a pure Knowledge Hub into an Industrial GTM Intelligence Platform for Avenue JSC.
+This repository is evolving from NOVA Knowledge Hub into an Industrial GTM Intelligence Platform for Avenue JSC.
 
-The platform still stores and retrieves validated internal knowledge, but its strategic purpose is broader: help Avenue discover, qualify, prioritize, and act on industrial business opportunities.
+Knowledge Hub remains the validated, structured, reusable knowledge and data foundation. The GTM Intelligence layer is one major business application of that foundation, helping Avenue discover, qualify, prioritize, and act on industrial business opportunities.
 
 ## Core Principle
 
-Opportunity is the central convergence point.
+Continuous enrichment is the core productive loop.
+
+The repository should continuously collect, filter, verify, structure, link, enrich, and reuse valuable industrial GTM knowledge and intelligence. Data enrichment itself is a valuable outcome because the same validated knowledge can support tenders, proposals, sales strategy, product strategy, market maps, customer planning, and management decisions.
+
+Opportunity is a high-value convergence object.
 
 An Opportunity connects customer context, plant and site context, market signals, procurement activity, tender requirements, Avenue solution capability, past references, partner capability, risks, and recommended sales/presales/tender strategy.
 
-The platform is not only a CRM, not only a document knowledge base, and not only a tender management tool. It is an intelligence system that turns knowledge and evidence into actionable opportunities.
+The platform is not only an Opportunity engine, not only a CRM, not only a document knowledge base, and not only a tender management tool. It is a reusable intelligence foundation that can produce many downstream outputs.
 
 ## Operating Model
 
 ```text
-Collect -> Verify -> Normalize -> Link -> Score -> Strategize -> Human Review -> Act
+Collect -> Filter -> Verify -> Normalize -> Structure -> Link -> Enrich -> Reuse
 ```
 
-Start with structured records and manual intelligence workflow. Add controlled ingestion and agentic automation only after governance, source traceability, and human review gates are clear.
+Start with structured records and manual/semi-manual enrichment. Add controlled ingestion and agentic automation only after governance, source traceability, and human review gates are clear.
 
 ## Documentation
 
@@ -33,6 +37,10 @@ Start with:
 - `docs/06_INTELLIGENCE_PIPELINE.md`
 - `docs/07_USE_CASES.md`
 - `docs/08_EXECUTION_RULES.md`
+- `docs/09_DATA_IMPORT_AND_VERIFICATION.md`
+- `docs/10_AGENT_TASKS.md`
+- `docs/11_CURRENT_EXECUTION_LANE.md`
+- `docs/12_DATA_ENRICHMENT_STRATEGY.md`
 
 Existing foundation docs remain useful:
 
@@ -42,6 +50,22 @@ Existing foundation docs remain useful:
 - `docs/AI_WORKFLOW.md`
 - `docs/CONTENT_MODEL.md`
 - `docs/CONTENT_WORKFLOW.md`
+
+## Current Data Enrichment Lane
+
+The current lane is deliberately small and data-first:
+
+- file-based structured records;
+- manual JSON import templates;
+- Intelligence Inbox for unverified records;
+- validation scripts;
+- sample verified records;
+- reusable solution/customer/tender/market enrichment;
+- opportunity candidate generation from verified records;
+- heuristic scoring;
+- human review status.
+
+Not now: crawlers, CRM workflow, dashboards, graph database, backend/API service, authentication, SaaS features, chatbot, public portal, or agent orchestration.
 
 ## Current App
 

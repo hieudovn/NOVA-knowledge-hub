@@ -9,6 +9,12 @@
     "tender_id": "TDR-EXAMPLE",
     "procurement_signal": "APM tender notice",
     "relevant_solutions": ["IBM MAS", "AVEVA APM"],
+    "solution_fit_score": null,
+    "urgency_score": null,
+    "confidence_score": null,
+    "strategic_fit_score": null,
+    "relationship_score": null,
+    "estimated_value_score": null,
     "evidence_items": [
       {
         "evidence_id": "EVD-EXAMPLE",
@@ -24,6 +30,9 @@
     "assumptions": ["Avenue can meet the technical scope with existing partner capability."],
     "risks": ["Unknown incumbent vendor."],
     "recommended_next_actions": ["Sales to validate stakeholder map.", "Presales to map requirements to solution fit."],
+    "owner": "sample-intelligence-owner",
+    "status": "unverified",
+    "human_review_status": "needs_review",
     "source_url": "https://example.com/tender",
     "source_name": "Example tender notice",
     "source_type": "tender_portal",

@@ -2,21 +2,22 @@
 
 ## Purpose
 
-These rules keep future implementation aligned with the Opportunity-centered strategy and prevent premature automation.
+These rules keep future implementation aligned with the continuous data enrichment strategy and prevent premature automation.
 
 ## Strategic Rules
 
-1. Keep Opportunity as the central entity.
-2. Connect customer, plant, market signal, tender, and internal knowledge branches to Opportunity.
-3. Do not reduce the product to a CRM, document repository, or tender tracker.
-4. Preserve the operating model: Collect -> Verify -> Normalize -> Link -> Score -> Strategize -> Human Review -> Act.
+1. Keep Knowledge Hub as the validated reusable knowledge foundation.
+2. Treat GTM Intelligence as one major application layer built on that foundation.
+3. Treat Opportunity as an important convergence/output object, not the only purpose.
+4. Connect customer, plant, market signal, tender, solution, partner, competitor, case-study, and internal knowledge branches for many reusable outputs.
+5. Preserve the enrichment loop: Collect -> Filter -> Verify -> Normalize -> Structure -> Link -> Enrich -> Reuse.
 
 ## Implementation Rules
 
-1. Start with structured records and manual workflow.
+1. Start with structured records and manual/semi-manual enrichment.
 2. Do not build web crawlers before source governance and verification rules are implemented.
 3. Store raw ingestion output as unverified intelligence.
-4. Do not let AI or crawler output directly update approved Opportunity records.
+4. Do not let AI or crawler output directly update verified/promoted records or approved Opportunity records.
 5. Add fields and templates before adding orchestration complexity.
 6. Prefer clear markdown documentation, templates, and schemas over heavy infrastructure until the model stabilizes.
 7. Keep integrations modular and API-based.
@@ -55,6 +56,8 @@ When changing the platform direction, update these files together when relevant:
 - `docs/08_EXECUTION_RULES.md`
 - `docs/09_DATA_IMPORT_AND_VERIFICATION.md`
 - `docs/10_AGENT_TASKS.md`
+- `docs/11_CURRENT_EXECUTION_LANE.md`
+- `docs/12_DATA_ENRICHMENT_STRATEGY.md`
 - `docs/ARCHITECTURE.md`
 - `docs/DATA_MODEL.md`
 - `docs/ROADMAP.md`
@@ -68,7 +71,8 @@ Avoid:
 - uncontrolled crawling;
 - treating raw crawled content as truth;
 - long unstructured summaries replacing structured records;
+- treating Opportunity generation as the only valuable output;
 - Opportunity records without evidence or confidence;
 - strategy recommendations without assumptions and risks;
 - automation that bypasses human approval;
-- over-engineering implementation before manual workflow is clear.
+- over-engineering implementation before manual enrichment is valuable and repeatable.

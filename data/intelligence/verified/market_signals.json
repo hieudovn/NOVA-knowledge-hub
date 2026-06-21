@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "signal_id": "SIG-SAMPLE-001",
+    "signal_type": "plant_expansion",
+    "title": "Sample plant expansion signal",
+    "customer_id": "CUST-SAMPLE-001",
+    "plant_id": "PLANT-SAMPLE-001",
+    "industry": "power_generation",
+    "trigger": "sample expansion announcement",
+    "pain_point": "new asset reliability and operations visibility",
+    "relevant_solutions": ["IBM MAS", "AVEVA APM"],
+    "risks": ["Signal is sample-only and requires human validation in real use."],
+    "owner": "sample-intelligence-owner",
+    "status": "verified",
+    "human_review_status": "approved",
+    "human_verified": true,
+    "source_url": "https://example.com/sample-market-signal",
+    "source_name": "Sample-only market signal source",
+    "source_type": "sample_public_web",
+    "collected_at": "2026-06-21T00:00:00.000Z",
+    "last_verified_at": "2026-06-21T00:00:00.000Z",
+    "reliability_score": 0.65,
+    "evidence_summary": "Sample-only source describes a fictional expansion signal.",
+    "created_at": "2026-06-21T00:00:00.000Z",
+    "updated_at": "2026-06-21T00:00:00.000Z"
+  }
+]

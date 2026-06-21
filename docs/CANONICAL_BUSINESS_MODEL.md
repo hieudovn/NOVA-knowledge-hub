@@ -6,11 +6,13 @@ The Canonical Business Model provides a stable business ontology for the Industr
 
 It sits between raw business memory and a future knowledge graph. Its purpose is to prevent uncontrolled graph growth and provide a common language for AI reasoning, manual records, and future APIs.
 
-## Central Object
+## Core Operating Frame
 
-Opportunity is the central convergence object.
+Knowledge Hub is the validated reusable foundation.
 
-Other domains provide context, evidence, constraints, and action paths for Opportunity.
+Continuous enrichment connects domains into reusable knowledge and intelligence.
+
+Opportunity is a high-value convergence object, but not the only output. Other outputs include tender artifacts, proposal inputs, solution briefs, product strategy notes, market maps, account plans, and management decision briefs.
 
 ## Core Domains
 

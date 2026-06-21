@@ -6,15 +6,17 @@
 **Repository lineage:** NOVA Knowledge Hub  
 **Initial user:** Hieu Do  
 **Initial mode:** local-first, manual workflow first  
-**Strategic role:** Opportunity-centered intelligence layer for Avenue JSC
+**Strategic role:** reusable industrial knowledge and GTM intelligence foundation for Avenue JSC
 
-The project began as NOVA Knowledge Hub: a structured, validated knowledge platform. It now evolves into an Industrial GTM Intelligence Platform that helps Avenue discover, qualify, prioritize, and act on business opportunities in industrial markets.
+The project began as NOVA Knowledge Hub: a structured, validated knowledge platform. It now evolves into a reusable data enrichment foundation that helps Avenue continuously collect, filter, verify, structure, link, enrich, and reuse industrial GTM knowledge.
 
 ## 2. Core Philosophy
 
-Opportunity is the central convergence point.
+Continuous enrichment is the core productive loop.
 
-The platform connects:
+Opportunity is a high-value convergence object, but not the only output.
+
+The platform connects and enriches:
 
 - customer and plant context;
 - market signals;
@@ -23,17 +25,17 @@ The platform connects:
 - technology gaps and existing systems;
 - Avenue solutions, partners, capabilities, and references;
 - competitors and risks;
-- recommended sales, presales, tender, and management actions.
+- recommended sales, presales, tender, product, and management actions.
 
-The platform is not only a CRM, not only a document knowledge base, and not only a tender tracker.
+The platform is not only an Opportunity engine, not only a CRM, not only a document knowledge base, and not only a tender tracker.
 
 ## 3. Operating Model
 
 ```text
-Collect -> Verify -> Normalize -> Link -> Score -> Strategize -> Human Review -> Act
+Collect -> Filter -> Verify -> Normalize -> Structure -> Link -> Enrich -> Reuse
 ```
 
-Manual structured workflow comes first. Controlled ingestion, scoring, and agentic workflow come later.
+Manual and semi-manual structured enrichment comes first. Controlled ingestion, scoring, and agentic acceleration come later.
 
 ## 4. Human-Centered Intelligence Work
 
@@ -74,7 +76,7 @@ Humans retain responsibility for:
 
 In scope now:
 
-- Opportunity-centered domain model;
+- reusable enrichment domain model;
 - customer, plant, tender, market signal, solution, and Opportunity records;
 - source and evidence rules;
 - manual data entry templates;
@@ -100,17 +102,18 @@ Integration should use APIs or export/import contracts, not tight database coupl
 
 ## 8. Non-Negotiable Rules
 
-1. Keep Opportunity as the central entity.
-2. Do not treat raw sources or AI output as truth.
-3. Do not build uncontrolled crawlers before governance is implemented.
-4. Do not overwrite verified data with unverified extraction.
-5. Do not put restricted pricing or commercial terms into general wiki knowledge.
-6. Do not bypass human review for high-impact actions.
-7. Keep the project portable across AI providers and deployment environments.
+1. Keep Knowledge Hub as the validated reusable foundation.
+2. Treat Opportunity as an important convergence object, not the only output.
+3. Do not treat raw sources or AI output as truth.
+4. Do not build uncontrolled crawlers before governance is implemented.
+5. Do not overwrite verified data with unverified extraction.
+6. Do not put restricted pricing or commercial terms into general wiki knowledge.
+7. Do not bypass human review for high-impact actions.
+8. Keep the project portable across AI providers and deployment environments.
 
 ## 9. Project Motto
 
 Knowledge gives context.  
 Signals create attention.  
-Opportunity focuses action.  
+Enrichment creates reusable advantage.  
 Human judgment approves the move.

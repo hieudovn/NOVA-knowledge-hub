@@ -1,14 +1,22 @@
-# Vision: Opportunity-Centered Industrial Intelligence
+# Vision: Reusable Industrial Intelligence Foundation
 
 ## Strategic Direction
 
-The project should evolve from a pure Knowledge Hub into an Industrial GTM Intelligence Platform for Avenue JSC.
+The project should evolve from NOVA Knowledge Hub into a reusable industrial knowledge and intelligence foundation for Avenue JSC.
 
-The platform should not only store and retrieve internal knowledge. It should help Avenue discover, qualify, prioritize, and act on business opportunities in industrial markets.
+Knowledge Hub remains the validated, structured, reusable knowledge/data foundation. GTM Intelligence is one major business application of that foundation, not the only future use.
+
+The core mission is continuous enrichment of reusable business, technical, customer, market, tender, partner, solution, and opportunity intelligence.
 
 ## Central Design Principle
 
-Opportunity is the central convergence point.
+Continuous enrichment is the central operating loop.
+
+```text
+Collect -> Filter -> Verify -> Normalize -> Structure -> Link -> Enrich -> Reuse
+```
+
+Opportunity is a high-value convergence object created from enriched data, but it is not the only output.
 
 An Opportunity is where multiple intelligence branches meet:
 
@@ -31,9 +39,26 @@ An Opportunity is where multiple intelligence branches meet:
 
 ## Product Definition
 
-The platform is an intelligence system that connects knowledge, market signals, procurement signals, customer context, and Avenue's solution capabilities to generate and manage Opportunities.
+The platform is an intelligence system that connects validated knowledge, market signals, procurement signals, customer context, plant context, partner capability, and Avenue's solution capabilities so the organization can reuse them for many purposes.
 
-It must not be designed as only a CRM, only a document knowledge base, or only a tender management tool.
+It must not be designed as only an Opportunity engine, only a CRM, only a document knowledge base, or only a tender management tool.
+
+Current shape is a Minimum Viable Intelligence Loop: file-based structured records, Intelligence Inbox, validation scripts, sample verified records, reusable enrichment domains, Opportunity candidate generation, heuristic scoring, and human review status.
+
+## Reusable Outputs
+
+Enriched knowledge should support:
+
+- tender and bid documents;
+- sales and presales strategy;
+- product and solution strategy;
+- fast customer-specific proposal generation;
+- prospect and opportunity discovery;
+- market and tender intelligence;
+- customer and plant intelligence;
+- partner and solution mapping;
+- management decision support;
+- approved public-ready website, blog, or marketing content.
 
 ## Questions The Platform Should Answer
 
@@ -54,15 +79,14 @@ It must not be designed as only a CRM, only a document knowledge base, or only a
 Collect -> Verify -> Normalize -> Link -> Score -> Strategize -> Human Review -> Act
 ```
 
-This operating model is intentionally conservative. The platform should begin with structured data and manual workflow, then move toward controlled ingestion, scoring, and agentic workflow only after governance is reliable.
+This operating model is intentionally conservative. The platform should begin with structured data and manual/semi-manual enrichment, then move toward controlled ingestion, scoring, and agentic assistance only after governance is reliable.
 
 ## Success Definition
 
-The strategy is working when Avenue can look at a customer, plant, market signal, tender, or internal capability and understand:
+The strategy is working when Avenue can reuse enriched knowledge to create better outputs faster. Examples include:
 
-- whether it points to an Opportunity;
-- what evidence supports it;
-- what assumptions remain;
-- how confident the team should be;
-- which Avenue offering and partner capability fit;
-- what action should happen next.
+- a solution brief backed by validated source material;
+- a tender compliance matrix based on extracted requirements;
+- a customer-specific proposal pack grounded in known customer/plant context;
+- a product strategy note based on solution, capability, competitor, and market evidence;
+- an Opportunity scorecard with evidence, assumptions, confidence, and next actions.
