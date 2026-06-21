@@ -41,6 +41,7 @@ Start with:
 - `docs/10_AGENT_TASKS.md`
 - `docs/11_CURRENT_EXECUTION_LANE.md`
 - `docs/12_DATA_ENRICHMENT_STRATEGY.md`
+- `docs/13_ARTIFACT_TAXONOMY.md`
 
 Existing foundation docs remain useful:
 
@@ -50,6 +51,11 @@ Existing foundation docs remain useful:
 - `docs/AI_WORKFLOW.md`
 - `docs/CONTENT_MODEL.md`
 - `docs/CONTENT_WORKFLOW.md`
+
+Artifact templates and draft artifacts live in:
+
+- `templates/artifacts/`
+- `artifacts/`
 
 ## Current Data Enrichment Lane
 
