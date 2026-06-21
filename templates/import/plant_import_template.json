@@ -1,0 +1,23 @@
+[
+  {
+    "plant_id": "PLANT-EXAMPLE",
+    "customer_id": "CUST-EXAMPLE",
+    "name": "Example Industrial Plant",
+    "aliases": [],
+    "location": "Vietnam",
+    "industry": "power_generation",
+    "segment": "thermal_power",
+    "production_process": "generation",
+    "production_capacity": "",
+    "known_systems": ["DCS", "SCADA"],
+    "existing_vendors": [],
+    "pain_points": ["asset reliability", "operations visibility"],
+    "source_url": "https://example.com/plant",
+    "source_name": "Example plant profile",
+    "source_type": "public_web",
+    "collected_at": "2026-06-21T00:00:00.000Z",
+    "last_verified_at": "",
+    "reliability_score": 0.6,
+    "evidence_summary": "Public source describes the plant and operating context."
+  }
+]

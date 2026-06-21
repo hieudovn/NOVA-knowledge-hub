@@ -1,0 +1,24 @@
+[
+  {
+    "tender_id": "TDR-EXAMPLE",
+    "title": "Example APM Tender",
+    "procurement_package_id": "PKG-EXAMPLE",
+    "buyer": "Example Industrial Customer",
+    "issuing_organization": "Example Procurement Department",
+    "customer_id": "CUST-EXAMPLE",
+    "plant_id": "",
+    "scope": "Asset performance management system",
+    "technical_requirements": ["condition monitoring", "reporting"],
+    "commercial_requirements": [],
+    "budget_signal": "",
+    "submission_deadline": "2026-09-30",
+    "competitors": [],
+    "source_url": "https://example.com/tender",
+    "source_name": "Example tender notice",
+    "source_type": "tender_portal",
+    "collected_at": "2026-06-21T00:00:00.000Z",
+    "last_verified_at": "",
+    "reliability_score": 0.8,
+    "evidence_summary": "Tender notice describes APM scope and deadline."
+  }
+]

@@ -1,267 +1,116 @@
-# NOVA Knowledge Hub — Project Constitution
+# Avenue Industrial GTM Intelligence Platform - Project Constitution
 
 ## 1. Project Identity
 
-**Project name:** NOVA Knowledge Hub  
-**Repository:** `hieudovn/NOVA-knowledge-hub`  
+**Working name:** Avenue Industrial GTM Intelligence Platform  
+**Repository lineage:** NOVA Knowledge Hub  
 **Initial user:** Hieu Do  
-**Initial mode:** Personal-first, organization-ready  
-**Long-term role:** Knowledge Layer for NOVA and standalone Knowledge Portal
+**Initial mode:** local-first, manual workflow first  
+**Strategic role:** Opportunity-centered intelligence layer for Avenue JSC
 
-NOVA Knowledge Hub is a personal-first knowledge operating system for collecting, extracting, validating, organizing, querying, and publishing business and technical knowledge.
-
-It starts as a personal tool for Hieu Do, may later serve Avenue JSC, and must remain portable enough to move to another organization, domain, server, or business context.
-
----
+The project began as NOVA Knowledge Hub: a structured, validated knowledge platform. It now evolves into an Industrial GTM Intelligence Platform that helps Avenue discover, qualify, prioritize, and act on business opportunities in industrial markets.
 
 ## 2. Core Philosophy
 
-### Human-Centered Knowledge Work
+Opportunity is the central convergence point.
+
+The platform connects:
+
+- customer and plant context;
+- market signals;
+- procurement and tender signals;
+- pain points and business triggers;
+- technology gaps and existing systems;
+- Avenue solutions, partners, capabilities, and references;
+- competitors and risks;
+- recommended sales, presales, tender, and management actions.
+
+The platform is not only a CRM, not only a document knowledge base, and not only a tender tracker.
+
+## 3. Operating Model
+
+```text
+Collect -> Verify -> Normalize -> Link -> Score -> Strategize -> Human Review -> Act
+```
+
+Manual structured workflow comes first. Controlled ingestion, scoring, and agentic workflow come later.
+
+## 4. Human-Centered Intelligence Work
 
 The system must amplify human judgment, not replace it.
 
 AI may assist in:
 
-- extracting knowledge from raw sources;
-- drafting wiki pages;
-- comparing solutions;
-- answering questions;
-- generating proposal inputs;
-- identifying gaps and risks.
-
-But humans retain responsibility for:
-
-- selecting sources;
-- validating extracted knowledge;
-- approving wiki content;
-- deciding what can be published;
-- making business and technical decisions.
-
-### AI Is an Adapter, Not the Core
-
-The system must not depend on any single AI model, vendor, or interface.
-
-Supported and future AI engines may include:
-
-- OpenAI / ChatGPT;
-- DeepSeek;
-- Gemini;
-- Claude;
-- NotebookLM;
-- local LLMs.
-
-The core assets are:
-
-- raw source registry;
-- extracted text;
-- structured knowledge;
-- reviewed wiki pages;
-- metadata and traceability;
-- human decisions.
-
-### Wiki First, Landing Page Later
-
-The wiki is the source of knowledge.  
-Landing pages are curated public views generated from approved wiki content.
-
-The system must avoid writing marketing content separately from the underlying knowledge base.
-
----
-
-## 3. Product Boundaries
-
-### What this project is
-
-NOVA Knowledge Hub is:
-
-- a knowledge hub;
-- a technical and business wiki;
-- an AI-assisted extraction pipeline;
-- a personal and later team knowledge system;
-- a future source of truth for NOVA Sales/Presales Copilot;
-- a future content source for public landing pages.
-
-### What this project is not, initially
-
-At MVP stage, it is not:
-
-- a full CRM;
-- a full public SaaS product;
-- a generic chatbot;
-- a document dump;
-- a replacement for human review;
-- a full workflow/BPM system;
-- a public lead-generation system.
-
-Those capabilities may be added later only after the knowledge core is stable.
-
----
-
-## 4. Relationship with NOVA
-
-NOVA and Knowledge Hub are separate but complementary systems.
-
-### NOVA
-
-NOVA is the system of work:
-
-- notes;
-- meeting intelligence;
-- customer context;
-- sales/presales capture;
-- opportunity intelligence;
-- recommendations.
-
-### Knowledge Hub
-
-Knowledge Hub is the system of knowledge:
-
-- solution knowledge;
-- industry knowledge;
-- technical knowledge;
-- sales knowledge;
-- tender knowledge;
-- architecture patterns;
-- validated wiki pages.
-
-### Integration principle
-
-NOVA should exchange data with Knowledge Hub through APIs or export/import contracts, not by tightly coupling databases.
-
-Example flows:
-
-1. NOVA note → AI distillation → Sales Knowledge article → Knowledge Hub.
-2. NOVA chat → query Knowledge Hub → answer based on approved solution knowledge.
-3. Knowledge Hub public content → selected for landing page publication.
-
----
-
-## 5. Initial Use Cases
-
-### Personal use cases
-
-1. Store and organize solution knowledge.
-2. Extract useful knowledge from vendor documents.
-3. Build a reusable wiki for industrial solutions.
-4. Ask questions over approved knowledge.
-5. Generate proposal/presales drafts using validated knowledge.
-6. Build future landing pages from selected wiki content.
-
-### Avenue-oriented use cases
-
-1. IBM MAS solution knowledge.
-2. IDBoxRT solution knowledge.
-3. EtaPRO solution knowledge.
-4. AVEVA PI / Canary / Historian comparison.
-5. Power generation, transmission, oil & gas, manufacturing solution mapping.
-6. Tender requirement extraction and compliance analysis.
-7. Sales/presales knowledge from field notes.
-
----
-
-## 6. Development Strategy
-
-### Phase 1 — Local Personal MVP
-
-Run on local machine first.
-
-Must include:
-
-- markdown-based wiki;
-- source registry;
-- basic page metadata;
-- draft/review/approved/public states;
-- manual content creation;
-- basic search;
-- AI extraction script prototype.
-
-No complex user management required.
-
-### Phase 2 — Dockerized Local System
-
-Package into Docker Compose.
-
-Must include:
-
-- web wiki;
-- API service;
-- database if required;
-- search service;
-- environment-based AI provider configuration.
-
-### Phase 3 — VPS Launch
-
-Deploy to VPS with:
-
-- Docker Compose;
-- reverse proxy;
-- domain;
-- SSL;
-- admin login;
-- backup strategy.
-
-### Phase 4 — Internal Sharing
-
-Add selected users:
-
-- admin;
-- editor;
-- viewer.
-
-Email-based internal user management may be added.
-
-### Phase 5 — Public Portal
-
-Add:
-
-- public landing pages;
-- guest Q&A quota;
-- lead capture;
-- sales handoff;
-- external user approval.
-
----
-
-## 7. Non-Negotiable Principles
-
-1. **Personal-first, organization-ready.**
-2. **Markdown-first content.**
-3. **Human approval before official knowledge.**
-4. **AI-model-agnostic architecture.**
-5. **Raw sources are evidence, not the daily working layer.**
-6. **Approved wiki is the operational knowledge layer.**
-7. **Landing pages are curated views of approved wiki content.**
-8. **NOVA integration must be API-based, not database-coupled.**
-9. **Token cost must be observable and controllable.**
-10. **The project must remain portable across company, server, and AI vendor.**
-
----
-
-## 8. Success Criteria for MVP
-
-MVP is successful when Hieu can:
-
-1. Run the system locally.
-2. Create and edit wiki pages.
-3. Classify pages by solution, industry, capability, pattern, tender, or sales knowledge.
-4. Mark content as draft, reviewed, approved, or public.
-5. Search approved knowledge.
-6. Use at least one AI provider to generate draft wiki content from a raw text/document.
-7. Review and approve extracted knowledge manually.
-8. Prepare the system for Docker deployment without major redesign.
-
----
-
-## 9. Product Naming
-
-Working product name:
-
-**NOVA Knowledge Hub**
-
-Possible future public-facing names:
-
-- NOVA Knowledge Layer
-- NOVA Industrial Knowledge Hub
-- Knowledge Operating System for Industrial Solutions
-
-The project should avoid being hardcoded as “Avenue Wiki,” although Avenue may be the first organization using it.
+- extracting market, customer, tender, and solution data;
+- drafting structured records;
+- mapping Avenue capabilities to needs;
+- generating Opportunity candidates;
+- scoring and prioritization support;
+- recommending strategy and next actions;
+- checking unsupported claims or conflicts.
+
+Humans retain responsibility for:
+
+- selecting trusted sources;
+- validating extracted data;
+- approving official knowledge and verified intelligence;
+- approving high-impact Opportunity actions;
+- deciding what can be shared internally, with partners, or publicly.
+
+## 5. Governance Principles
+
+1. Raw crawled data is evidence, not truth.
+2. Every external data point must have a source.
+3. Every inferred Opportunity must separate evidence from assumption.
+4. Confidence score must be explicit.
+5. Human review is required before high-impact decisions.
+6. Verified human-entered data must not be overwritten by unverified data.
+7. Source timestamp and last verified date must be maintained.
+8. Important updates must keep an audit trail.
+9. Customers, plants, tenders, and opportunities must be deduplicated.
+10. Structured records are preferred over long unstructured summaries.
+
+## 6. Early Product Boundary
+
+In scope now:
+
+- Opportunity-centered domain model;
+- customer, plant, tender, market signal, solution, and Opportunity records;
+- source and evidence rules;
+- manual data entry templates;
+- governance and review workflow;
+- agent architecture documentation;
+- roadmap and execution rules.
+
+Out of scope now:
+
+- uncontrolled web crawling;
+- automatic promotion of AI output into approved records;
+- full CRM workflow;
+- complex multi-tenant SaaS;
+- graph database implementation before records stabilize.
+
+## 7. Relationship With NOVA
+
+NOVA is the system of work. The Intelligence Platform is the system of knowledge and business intelligence.
+
+NOVA may send notes, activity, and customer context to the platform. The platform may return approved knowledge, verified intelligence, Opportunity candidates, and recommended actions.
+
+Integration should use APIs or export/import contracts, not tight database coupling.
+
+## 8. Non-Negotiable Rules
+
+1. Keep Opportunity as the central entity.
+2. Do not treat raw sources or AI output as truth.
+3. Do not build uncontrolled crawlers before governance is implemented.
+4. Do not overwrite verified data with unverified extraction.
+5. Do not put restricted pricing or commercial terms into general wiki knowledge.
+6. Do not bypass human review for high-impact actions.
+7. Keep the project portable across AI providers and deployment environments.
+
+## 9. Project Motto
+
+Knowledge gives context.  
+Signals create attention.  
+Opportunity focuses action.  
+Human judgment approves the move.

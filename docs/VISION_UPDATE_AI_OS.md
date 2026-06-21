@@ -1,52 +1,39 @@
-# Vision Update: Knowledge Hub Evolution Toward an AI Operating System
+# Vision Update: Knowledge Hub Toward An AI Operating System
 
 ## Status
 
-Accepted Strategic Direction
+Accepted long-term strategic direction, extended by the Opportunity-centered Industrial GTM Intelligence direction in `docs/00_VISION.md`.
 
----
+The current near-term product focus is Avenue industrial GTM intelligence. The AI Operating System vision remains the long-term architectural direction, but Opportunity is now the central convergence object for product design.
 
 ## Background
 
-Knowledge Hub is not intended to be a passive document repository or enterprise wiki.
+Knowledge Hub is not intended to remain a passive document repository or enterprise wiki.
 
-The long-term vision is to evolve Knowledge Hub into the central intelligence layer of an organization.
-
-The platform should eventually become the foundation of an AI Operating System capable of capturing, organizing, contextualizing, operationalizing, and coordinating enterprise knowledge.
-
----
+The long-term vision is to evolve it into a central intelligence layer that can capture, organize, contextualize, operationalize, and coordinate enterprise knowledge.
 
 ## Strategic Positioning
 
-Knowledge Hub remains the core product.
+Knowledge Hub remains the knowledge foundation.
 
-AI Operating System is not a separate product.
+The Industrial GTM Intelligence Platform is the current product direction for Avenue.
 
-AI Operating System is the natural evolutionary state of Knowledge Hub.
+AI Operating System is not a separate product. It is the long-term evolutionary state of the platform.
 
 ```text
 Knowledge Repository
-    ↓
-Business Memory
-    ↓
-Canonical Business Model
-    ↓
-Business Knowledge Graph
-    ↓
-Modes
-    ↓
-Skills
-    ↓
-AI Orchestration
+    -> Business Memory
+    -> Canonical Business Model
+    -> Opportunity Intelligence
+    -> Business Knowledge Graph
+    -> Modes
+    -> Skills
+    -> AI Orchestration
 ```
 
----
+## Layer 1 - Knowledge Repository
 
-## Layer 1 — Knowledge Repository
-
-Purpose:
-
-Store and organize enterprise knowledge.
+Purpose: store and organize enterprise knowledge.
 
 Examples:
 
@@ -56,94 +43,65 @@ Examples:
 - Customers
 - Partners
 - Projects
-- Case Studies
+- Case studies
 - Templates
-- Technical Documents
-- Commercial Documents
-- Lessons Learned
+- Technical documents
+- Lessons learned
 
-Goal:
+## Layer 2 - Business Memory
 
-Find information efficiently.
-
----
-
-## Layer 2 — Business Memory
-
-Purpose:
-
-Preserve organizational experience.
+Purpose: preserve organizational experience.
 
 Examples:
 
-- Why decisions were made
-- Proposal history
-- Won opportunity lessons
-- Lost opportunity lessons
-- Customer preferences
-- Product evolution history
-- Strategic discussions
+- why decisions were made;
+- proposal history;
+- won and lost opportunity lessons;
+- customer preferences;
+- product evolution history;
+- strategic discussions.
 
-Goal:
+## Layer 2.5 - Canonical Business Model
 
-Remember organizational experience.
+Purpose: provide a stable business ontology before introducing a graph.
 
----
-
-## Layer 2.5 — Canonical Business Model
-
-Purpose:
-
-Provide a stable business ontology before introducing a graph.
-
-Core entities may include:
+Core entities include:
 
 - Customer
+- Plant
 - Opportunity
-- Meeting
+- Tender
+- MarketSignal
 - Proposal
 - Project
 - Product
 - Partner
 - Competitor
 - Decision
-- Lesson Learned
+- LessonLearned
 - Skill
 - Mode
+- Agent
 
-Goal:
+## Layer 2.8 - Opportunity Intelligence
 
-Prevent uncontrolled graph growth.
+Purpose: turn knowledge and signals into actionable business opportunities.
 
-Provide a common language for future reasoning.
+Opportunity connects customer, plant, industry, pain point, business trigger, tender/procurement activity, Avenue solution capability, evidence, assumptions, risks, strategy, and next actions.
 
----
+## Layer 3 - Business Knowledge Graph
 
-## Layer 3 — Business Knowledge Graph
+Purpose: connect entities and context after structured records are stable.
 
-Purpose:
+Example:
 
-Connect entities and context.
+```text
+Customer -> Plant -> MarketSignal -> Opportunity -> Solution -> Partner -> CaseStudy
+```
 
-Examples:
+Do not introduce graph storage before the structured record model, governance, and deduplication rules are mature.
 
-Customer
-↔ Opportunity
-↔ Meeting
-↔ Proposal
-↔ Product
-↔ Competitor
-↔ Project
-↔ Decision
-↔ Lesson Learned
-
-Goal:
-
-Understand relationships and context.
-
----
-
-## Layer 4 — Mode Layer
+## Layer 4 - Mode Layer
 
 A Mode represents a business role or perspective.
 
@@ -157,29 +115,9 @@ Examples:
 - Marketing Mode
 - Project Manager Mode
 
-Each Mode defines:
+Mode is not an agent. Mode is a reasoning perspective.
 
-- Objectives
-- KPIs
-- Responsibilities
-- Decision Authority
-- Constraints
-- Communication Style
-- Preferred Skills
-
-Important Rule:
-
-Mode is not an agent.
-
-Mode is a reasoning perspective.
-
-Goal:
-
-Allow the system to reason from different organizational viewpoints.
-
----
-
-## Layer 5 — Skill Layer
+## Layer 5 - Skill Layer
 
 A Skill represents a reusable business capability.
 
@@ -190,173 +128,40 @@ Examples:
 - Technical Proposal Writing
 - Architecture Review
 - Competitor Analysis
-- Product Roadmap Planning
 - Opportunity Qualification
-- Marketing Content Generation
-- Project Planning
-
-Each Skill defines:
-
-- Purpose
-- Inputs
-- Workflow
-- Rules
-- Output Format
-- Quality Criteria
-
-Additional Rule:
+- Strategy Drafting
 
 Every Skill should produce a concrete artifact.
 
-Examples:
+## Layer 6 - AI Orchestration
 
-Tender Analyzer
-→ Requirement Register
+Purpose: coordinate agents, modes, skills, knowledge, records, and tools.
 
-Compliance Builder
-→ Compliance Matrix
+For the current product direction, orchestration should focus on:
 
-Architecture Reviewer
-→ Review Report
+- market intelligence;
+- customer intelligence;
+- procurement intelligence;
+- knowledge mapping;
+- opportunity generation;
+- strategy;
+- verification and governance.
 
-Goal:
+Agents must communicate through structured records, events, and shared state, with human approval gates.
 
-Convert knowledge into repeatable execution.
+## Relationship With NOVA
 
----
+Knowledge Hub / Industrial Intelligence = system of knowledge and intelligence.
 
-## Layer 6 — AI Orchestration
+NOVA = system of work.
 
-Purpose:
-
-Coordinate Modes, Skills, Knowledge, Memory, Graphs, and Tools.
-
-Example:
-
-Goal:
-Prepare a proposal for a Process Historian project.
-
-Possible orchestration:
-
-Sales Mode
-→ Presales Mode
-→ Technical Mode
-
-Using Skills:
-
-- Tender Analyzer
-- Compliance Matrix Builder
-- Architecture Reviewer
-- Proposal Writer
-
-Goal:
-
-Transform knowledge into coordinated action.
-
----
-
-## Relationship with NOVA
-
-Knowledge Hub = System of Knowledge
-
-NOVA = System of Work
-
-```text
-NOVA
-  Capture
-  Context
-  Action
-
-Knowledge Hub
-  Knowledge
-  Memory
-  Skills
-  Modes
-  Intelligence
-```
-
-NOVA can:
-
-- send notes to Knowledge Hub
-- create knowledge candidates
-- query approved knowledge
-- invoke future skills
-
-Knowledge Hub remains independently usable.
-
----
+NOVA can send notes and activity context to the platform. The platform can return approved knowledge, verified intelligence, Opportunity candidates, and recommended actions.
 
 ## Design Principles
 
-### Principle 1
-
-Knowledge First.
-
-Knowledge quality matters more than model sophistication.
-
-### Principle 2
-
-Modes are Organizational Roles.
-
-Create Modes only when they represent meaningful business perspectives.
-
-### Principle 3
-
-Skills are Reusable Capabilities.
-
-Skills should work across customers, industries, projects, and products.
-
-### Principle 4
-
-Minimize Coordination Cost.
-
-Prefer a small number of high-quality Modes and Skills.
-
-### Principle 5
-
-AI OS is an Evolution of Knowledge Hub.
-
-Do not build a separate AI OS product.
-
-### Principle 6
-
-Skills Produce Artifacts.
-
-Every Skill should have a clear, reusable output.
-
----
-
-## Initial Scope Recommendation
-
-### Initial Modes
-
-- Sales
-- Presales
-- Technical
-
-### Initial Skills
-
-- Tender Analyzer
-- Compliance Matrix Builder
-- Solution Positioning
-- Technical Proposal Writer
-- Architecture Reviewer
-
-### Focus
-
-Sales
-Presales
-Proposal Preparation
-Project Preparation
-
-Avoid building a generic AI assistant.
-
-Build a practical enterprise capability system grounded in real business workflows.
-
----
-
-## Architectural Decision
-
-Knowledge Hub is the core product.
-
-AI Operating System is its long-term evolutionary state.
+1. Knowledge quality matters more than model sophistication.
+2. Opportunity is the convergence point for current product design.
+3. Modes are organizational roles, not agents.
+4. Skills are reusable capabilities that produce artifacts.
+5. Agents must respect governance and approval gates.
+6. Do not build a separate AI OS product.

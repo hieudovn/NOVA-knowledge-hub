@@ -1,4 +1,4 @@
-# Content Model v0.1
+# Content Model v0.2
 
 ## 1. Purpose
 
@@ -11,6 +11,9 @@ The content model must support:
 - industry knowledge
 - sales/presales knowledge
 - tender knowledge
+- customer and plant intelligence
+- market signal intelligence
+- opportunity intelligence
 - technical architecture knowledge
 - future public publishing
 - future NOVA integration
@@ -143,6 +146,33 @@ A landing candidate is not a separate source of truth.
 
 It is a selected view of approved wiki content.
 
+### 2.9 Customer Intelligence Page
+
+Represents reviewed knowledge about a customer, group, subsidiary, plant, stakeholder map, known systems, initiatives, and relationship history.
+
+Customer intelligence pages must distinguish verified facts from assumptions and must link to source-backed records where possible.
+
+### 2.10 Market Signal Page
+
+Represents a reviewed signal such as investment news, plant expansion, regulation change, recruitment signal, technology adoption signal, maintenance/reliability signal, digital transformation signal, or energy/ESG signal.
+
+Market signal pages should not be treated as truth until reviewed.
+
+### 2.11 Opportunity Page
+
+Represents a human-reviewed Opportunity summary derived from structured Opportunity records.
+
+An Opportunity page should include:
+
+- customer and plant context;
+- pain points and triggers;
+- relevant Avenue solutions;
+- evidence and assumptions;
+- confidence and scoring;
+- risks;
+- recommended strategy;
+- next actions.
+
 ---
 
 ## 3. Standard Page Metadata
@@ -151,14 +181,17 @@ Every knowledge page should include front matter.
 
 ```yaml
 title: ""
-type: "solution | industry | capability | pattern | tender | sales | source-note"
+type: "solution | industry | capability | pattern | tender | sales | source-note | customer | plant | market-signal | opportunity"
 status: "draft | reviewed | approved | public"
 visibility: "private | internal | partner | public"
 owner: ""
 organization: ""
+related_customers: []
+related_plants: []
 related_solutions: []
 related_industries: []
 related_capabilities: []
+related_opportunities: []
 source_refs: []
 landing_candidate: false
 last_reviewed: ""
@@ -256,6 +289,8 @@ A page is good enough for approved status only if it has:
 5. related concepts/pages
 6. owner review
 7. no confidential content in public fields
+8. evidence and assumptions separated when the page supports an Opportunity
+9. explicit confidence when the page includes inferred intelligence
 
 ---
 
@@ -294,6 +329,8 @@ A human should review before it becomes approved Sales Knowledge.
 Avoid:
 
 - mixing raw source text with approved wiki without review
+- turning raw market signals into Opportunity claims without verification
+- using long unstructured summaries instead of structured intelligence records
 - making landing pages the source of truth
 - storing confidential tender or pricing content in public pages
 - storing pricing, licensing, discounts, commercial quotes, proposal prices, budgetary prices, BOM prices, fees, or commercial terms in any wiki knowledge page, including private/internal pages

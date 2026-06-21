@@ -1,246 +1,146 @@
-# NOVA Knowledge Hub Roadmap
+# Roadmap
 
 ## Roadmap Principle
 
-Build the knowledge core first.  
-Do not start with public portal, lead generation, or complex user management.
+Build the Opportunity-centered intelligence foundation first.
 
-The product should grow through these stages:
+Do not start with uncontrolled crawling, public portals, or complex automation. The product should grow through structured records, manual workflow, controlled ingestion, scoring, and then agentic orchestration.
 
 ```text
-Personal Knowledge System
-    ↓
-Personal AI Knowledge Assistant
-    ↓
-Internal Team Knowledge Hub
-    ↓
-Public Knowledge Portal
-    ↓
-NOVA-integrated Sales/Presales Copilot
+Structured Intelligence Foundation
+    -> Manual Intelligence Workflow
+    -> Controlled Ingestion
+    -> Opportunity Scoring And Prioritization
+    -> Agentic Workflow
 ```
 
----
+## Phase 1 - Foundation
 
-## M0 — Project Foundation
-
-Goal: establish project constitution and core design files.
-
-Deliverables:
-
-- Project constitution;
-- architecture overview;
-- repo structure;
-- data model draft;
-- content lifecycle;
-- AI provider strategy;
-- security/access model;
-- initial prompt templates.
-
-Status: foundation stage.
-
----
-
-## M1 — Local Wiki MVP
-
-Goal: build a local markdown-first wiki for personal use.
+Goal: define the platform's core model and rules.
 
 Must have:
 
-- local dev environment;
-- wiki frontend;
-- basic navigation;
-- markdown/MDX content support;
-- solution/industry/capability/pattern/tender sections;
-- page metadata;
-- draft/reviewed/approved/public status;
-- basic search.
+- domain model;
+- Opportunity-centered data model;
+- source types;
+- evidence and assumption model;
+- minimum viable records for customer, plant, tender, signal, solution, and opportunity;
+- manual data entry templates;
+- governance rules;
+- execution rules for future Codex and AI work.
 
 Not required yet:
 
-- multi-user system;
-- public registration;
-- guest Q&A;
-- landing page generator;
-- CRM/NOVA integration.
+- web crawlers;
+- agent orchestration;
+- public portal;
+- complex CRM workflow;
+- knowledge graph database.
 
 Success criteria:
 
-- Hieu can run wiki locally;
-- Hieu can create/edit pages;
-- Hieu can classify and search knowledge pages.
+- Opportunity is clearly the central entity;
+- Customer, Plant, MarketSignal, Tender, and Solution records all connect to Opportunity;
+- raw, verified, and approved data states are distinct.
 
----
+## Phase 2 - Manual Intelligence Workflow
 
-## M2 — Source Registry + Manual Extraction
-
-Goal: track sources and manually generate draft wiki pages.
+Goal: allow users to manually add and link intelligence records.
 
 Must have:
 
-- `sources.yaml` or database-backed source registry;
-- source metadata template;
-- document category taxonomy;
-- manual import workflow;
-- prompt templates for knowledge extraction;
-- draft wiki output folder.
+- manual customer record workflow;
+- manual plant record workflow;
+- manual tender/procurement record workflow;
+- manual market signal record workflow;
+- solution and capability mapping;
+- human review flow;
+- Opportunity candidate creation;
+- Opportunity strategy draft;
+- sales and presales action plan draft.
 
 Success criteria:
 
-- at least 10 real sources registered;
-- at least 10 draft wiki pages created from sources;
-- source references preserved.
+- a user can create an Opportunity from structured records;
+- evidence and assumptions are visible;
+- confidence and review status are explicit;
+- next actions can be assigned to Sales, Presales, Technical, or Management.
 
----
+## Phase 3 - Semi-Automated Ingestion
 
-## M3 — AI Extraction Prototype
-
-Goal: automate raw/text → draft wiki.
+Goal: add controlled ingestion from selected public and internal sources.
 
 Must have:
 
-- provider adapter interface;
-- OpenAI provider;
-- DeepSeek provider;
-- Gemini provider placeholder;
-- extraction prompt runner;
-- output schema validation;
-- token usage logging;
-- retry/failure handling.
+- approved source registry;
+- controlled ingestion jobs;
+- extraction into unverified intelligence items;
+- customer, tender, and market signal extraction;
+- source timestamp and reliability;
+- verification workflow;
+- link suggestions to customers, plants, tenders, solutions, and opportunities.
 
 Success criteria:
 
-- run one extraction job from text input;
-- generate structured markdown draft;
-- store token usage;
-- manually review draft into approved wiki.
+- imported data is stored as unverified until reviewed;
+- verified human-entered data is not overwritten;
+- human reviewers can promote, reject, or merge extracted items;
+- crawler output never directly creates final Opportunity records.
 
----
+## Phase 4 - Opportunity Scoring And Prioritization
 
-## M4 — Search + AI Q&A over Approved Wiki
-
-Goal: ask questions over approved knowledge.
+Goal: help Avenue decide where to focus.
 
 Must have:
 
-- search index;
-- retrieval over approved content only;
-- AI Q&A endpoint;
-- citation/source references where possible;
-- max context limit;
-- token budget controls;
-- scope guardrails.
+- confidence score;
+- strategic fit score;
+- urgency score;
+- relationship score;
+- estimated value signal;
+- risk flags;
+- duplicate opportunity detection;
+- opportunity ranking dashboard or report;
+- next best action recommendation.
 
 Success criteria:
 
-- ask questions about approved solution knowledge;
-- answer based on wiki, not raw documents by default;
-- log question, answer, sources, tokens.
+- opportunities can be compared using visible criteria;
+- low-confidence opportunities are marked for review;
+- duplicate or overlapping opportunities are detected before action;
+- management can see why an opportunity is ranked highly.
 
----
+## Phase 5 - Agentic Workflow
 
-## M5 — Dockerization
-
-Goal: make the system portable from laptop to VPS.
+Goal: coordinate AI agents around structured records and human approval gates.
 
 Must have:
 
-- Dockerfile(s);
-- docker-compose.yml;
-- `.env.example`;
-- persistent content volume;
-- database volume if used;
-- backup script draft;
-- deployment README.
+- agent orchestration model;
+- Market Intelligence Agent;
+- Customer Intelligence Agent;
+- Procurement Intelligence Agent;
+- Knowledge Mapping Agent;
+- Opportunity Generation Agent;
+- Strategy Agent;
+- Verification / Governance Agent;
+- event and shared-state contracts;
+- approval gates for important updates.
 
 Success criteria:
 
-- system runs locally with Docker Compose;
-- content persists across restarts;
-- environment variables control providers and secrets.
+- agents communicate through structured records, events, and shared state;
+- agents perform research, mapping, scoring, and drafting;
+- humans define goals, rules, and approval gates;
+- important updates are not promoted without review.
 
----
+## Later Platform Work
 
-## M6 — VPS Launch
+After the intelligence workflow is stable, the project may add:
 
-Goal: launch private instance on VPS with domain and SSL.
-
-Must have:
-
-- VPS deployment guide;
-- reverse proxy;
-- HTTPS;
-- domain binding;
-- admin login;
-- backup/restore plan;
-- basic monitoring.
-
-Success criteria:
-
-- system accessible from domain;
-- admin can login;
-- wiki content is reachable;
-- AI keys are server-side only.
-
----
-
-## M7 — Internal Team Mode
-
-Goal: allow selected users.
-
-Must have:
-
-- admin-created users;
-- email-based account creation;
-- roles: admin/editor/viewer;
-- audit log;
-- per-user AI quota;
-- content permissions.
-
-Success criteria:
-
-- selected users can access wiki;
-- only editors/admins can modify content;
-- token use tracked by user.
-
----
-
-## M8 — NOVA Integration
-
-Goal: connect NOVA and Knowledge Hub without tight coupling.
-
-Must have:
-
-- Knowledge Hub API for search/ask;
-- API endpoint for NOVA notes → draft knowledge article;
-- shared metadata contract;
-- auth token between systems;
-- integration test.
-
-Success criteria:
-
-- NOVA can query Knowledge Hub from a chat window;
-- NOVA notes can be distilled into Sales Knowledge drafts;
-- Knowledge Hub remains usable standalone.
-
----
-
-## M9 — Public Portal + Landing Page Curation
-
-Goal: publish selected content externally.
-
-Must have:
-
-- public content flag;
-- landing page candidate flag;
-- curated landing page generator;
-- guest Q&A quota;
-- lead capture;
-- sales handoff;
-- external registration/approval.
-
-Success criteria:
-
-- public visitor can browse approved public content;
-- guest Q&A limited to 3–5 questions;
-- lead captured after quota;
-- sales can follow up.
+- Dockerized API and database-backed records;
+- search over approved knowledge and verified intelligence;
+- NOVA integration;
+- internal team roles;
+- public portal and curated landing pages;
+- knowledge graph storage if record relationships justify it.

@@ -1,0 +1,18 @@
+[
+  {
+    "contact_id": "CONT-EXAMPLE",
+    "customer_id": "CUST-EXAMPLE",
+    "plant_id": "",
+    "name": "Example Contact",
+    "role": "Maintenance Manager",
+    "stakeholder_group": "technical",
+    "relationship_status": "unknown",
+    "source_url": "https://example.com/contact-source",
+    "source_name": "Example public profile",
+    "source_type": "public_web",
+    "collected_at": "2026-06-21T00:00:00.000Z",
+    "last_verified_at": "",
+    "reliability_score": 0.5,
+    "evidence_summary": "Public source lists the contact role."
+  }
+]

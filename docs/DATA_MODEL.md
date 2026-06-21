@@ -1,364 +1,420 @@
-# Initial Data Model
+# Data Model
 
 ## 1. Design Principles
 
 The data model must be:
 
-- personal-first;
-- organization-ready;
-- portable;
-- AI-provider-agnostic;
+- Opportunity-centered;
 - source-traceable;
-- suitable for wiki, AI Q&A, and future NOVA integration.
+- human-reviewable;
+- organization-ready but not hardcoded to Avenue only;
+- AI-provider-agnostic;
+- suitable for manual workflow first and controlled automation later;
+- portable across wiki, database, API, and future knowledge graph forms.
 
-Do not hardcode Avenue as the only organization.
+The model should support industrial GTM intelligence, not only wiki content.
 
----
+## 2. Core Record Families
 
-## 2. Core Entities
+### Foundation Records
 
-### User
+These support users, organizations, sources, extracted text, and knowledge pages.
 
-Represents a person using the system.
+- User
+- Organization
+- Source
+- ExtractedText
+- KnowledgePage
+- KnowledgeExtractionJob
+- PromptTemplate
+- AIProvider
+- AIUsageLog
+- Note
 
-Fields:
+### Customer Intelligence Records
 
-- id;
-- email;
-- name;
-- role;
+These describe account, group, facility, relationship, and operating context.
+
+- Customer
+- ParentCompany
+- Subsidiary
+- Plant
+- Industry
+- ProductionProcess
+- ProductionCapacity
+- BusinessStatus
+- Initiative
+- KnownSystem
+- ExistingVendor
+- Contact
+- Stakeholder
+- RelationshipHistory
+
+### Procurement And Tender Records
+
+These describe formal buying activity.
+
+- Tender
+- ProcurementPackage
+- TenderRequirement
+- CommercialRequirement
+- ComplianceRequirement
+- TenderTimeline
+- TenderAwardResult
+- Competitor
+- TenderDocument
+
+### Market Signal Records
+
+These capture external indicators of potential demand.
+
+- MarketSignal
+- NewsItem
+- PublicAnnouncement
+- InvestmentProject
+- PlantExpansion
+- RecruitmentSignal
+- RegulationChange
+- TechnologyAdoptionSignal
+- MaintenanceReliabilitySignal
+- DigitalTransformationSignal
+- EnergyEsgSignal
+
+### Avenue Internal Knowledge Records
+
+These connect Avenue's offerings and experience to market needs.
+
+- Solution
+- Product
+- Partner
+- Capability
+- CaseStudy
+- PastProject
+- Proposal
+- TechnicalDocument
+- CommercialTemplate
+- LessonLearned
+- ReferenceArchitecture
+- ComplianceMatrix
+- RiskLibraryItem
+
+### Opportunity Intelligence Records
+
+These connect all branches into action.
+
+- Opportunity
+- EvidenceItem
+- OpportunityEvidenceLink
+- SolutionFit
+- Assumption
+- Risk
+- RecommendedStrategy
+- NextAction
+- HumanReview
+- AuditLog
+
+## 3. Opportunity
+
+Opportunity is the central entity.
+
+Minimum fields:
+
+- opportunity_id;
+- title;
+- customer_id;
+- plant_id;
+- industry;
+- opportunity_type;
+- pain_points;
+- triggers;
+- relevant_solutions;
+- estimated_value;
+- estimated_timeline;
+- confidence_score;
+- strategic_fit_score;
+- urgency_score;
+- relationship_score;
+- procurement_status;
+- tender_id;
+- key_contacts;
+- competitors;
+- evidence_items;
+- assumptions;
+- risks;
+- recommended_strategy;
+- next_actions;
+- human_review_status;
+- owner;
 - status;
-- organization_id;
 - created_at;
 - updated_at.
 
-Initial state:
+No Opportunity should be considered actionable unless evidence, assumptions, confidence, owner, and human review status are visible.
 
-- only one user is required: Hieu.
+All imported external intelligence must enter the Intelligence Inbox first:
 
-Future roles:
+```text
+data/intelligence/inbox/
+```
 
-- admin;
-- editor;
-- viewer;
-- external;
-- guest.
+Verified human-reviewed records live in:
 
----
+```text
+data/intelligence/verified/
+```
 
-### Organization
+Promoted Knowledge Hub outputs live in:
 
-Represents a company, team, or context.
+```text
+data/intelligence/promoted/
+```
 
-Examples:
+## 4. Key Entity Sketches
 
-- Personal;
-- Avenue JSC;
-- future company;
-- consulting practice.
+### Customer
 
 Fields:
 
-- id;
-- name;
-- type;
-- domain;
-- owner_user_id;
-- created_at.
+- customer_id;
+- legal_name;
+- display_name;
+- aliases;
+- parent_company_id;
+- industry_ids;
+- business_status;
+- revenue_or_scale_indicator;
+- known_systems;
+- existing_vendors;
+- initiatives;
+- relationship_summary;
+- source_refs;
+- human_review_status;
+- last_verified_at;
+- created_at;
+- updated_at.
 
----
+### Plant
+
+Fields:
+
+- plant_id;
+- customer_id;
+- name;
+- aliases;
+- location;
+- industry;
+- segment;
+- production_process;
+- production_capacity;
+- known_systems;
+- existing_vendors;
+- pain_points;
+- expansion_or_investment_signals;
+- source_refs;
+- human_review_status;
+- last_verified_at;
+- created_at;
+- updated_at.
+
+### Tender
+
+Fields:
+
+- tender_id;
+- title;
+- buyer_or_owner;
+- issuing_organization;
+- customer_id;
+- plant_id;
+- tender_scope;
+- technical_requirements;
+- commercial_requirements;
+- budget_estimate;
+- timeline;
+- submission_deadline;
+- award_result;
+- winning_vendor;
+- competitors;
+- compliance_requirements;
+- related_documents;
+- related_opportunity_id;
+- source_refs;
+- human_review_status;
+- created_at;
+- updated_at.
+
+### MarketSignal
+
+Fields:
+
+- signal_id;
+- signal_type;
+- title;
+- customer_id;
+- plant_id;
+- industry;
+- trigger;
+- evidence_summary;
+- source_url;
+- source_reliability;
+- observed_at;
+- captured_at;
+- extracted_by;
+- verification_status;
+- related_opportunity_ids;
+- created_at;
+- updated_at.
+
+### Solution
+
+Fields:
+
+- solution_id;
+- name;
+- product_ids;
+- partner_ids;
+- capability_ids;
+- target_industries;
+- target_pain_points;
+- reference_architectures;
+- case_study_ids;
+- compliance_notes;
+- risk_notes;
+- source_refs;
+- status;
+- last_reviewed_at.
 
 ### Source
 
-Represents a raw source or source pointer.
-
-The system does not need to physically store all raw files.
-
 Fields:
 
-- id;
-- title;
+- source_id;
+- source_url;
+- source_name;
 - source_type;
-- location_uri;
-- storage_provider;
-- owner_user_id;
-- organization_id;
-- confidentiality;
-- source_hash;
-- version;
-- language;
-- domain;
-- related_solution_id;
-- related_industry_id;
-- extraction_status;
-- last_extracted_at;
+- collected_at;
+- last_verified_at;
+- reliability_score;
+- evidence_summary;
+- owner;
+- access_level;
 - created_at;
 - updated_at.
 
-Source types:
-
-- pdf;
-- docx;
-- pptx;
-- markdown;
-- url;
-- note;
-- email_attachment;
-- google_doc;
-- google_drive_file;
-- local_file;
-- notebooklm_output;
-- nova_note.
-
----
-
-### ExtractedText
-
-Stores extracted text from a source.
+### EvidenceItem
 
 Fields:
 
-- id;
+- evidence_id;
+- evidence_type;
 - source_id;
-- text;
-- page_start;
-- page_end;
-- section_title;
-- chunk_index;
-- extraction_method;
+- source_url;
+- source_name;
+- source_type;
+- collected_at;
+- last_verified_at;
+- reliability_score;
+- evidence_summary;
+- linked_entity_ids;
+- status;
+- human_review_status;
+- created_at;
+- updated_at.
+
+### OpportunityEvidenceLink
+
+Fields:
+
+- link_id;
+- opportunity_id;
+- evidence_id;
+- relevance;
+- supports_field;
+- status;
+- human_review_status;
+- created_at;
+- updated_at.
+
+### SolutionFit
+
+Fields:
+
+- solution_fit_id;
+- opportunity_id;
+- solution_id;
+- solution_name;
+- fit_score;
+- fit_rationale;
+- mapped_capabilities;
+- gaps;
+- required_partners;
+- risks;
+- evidence_item_ids;
+- human_review_status;
+- created_at;
+- updated_at.
+
+### HumanReview
+
+Fields:
+
+- review_id;
+- record_type;
+- record_id;
+- reviewer;
+- decision;
+- comments;
+- reviewed_at;
+- next_required_action;
 - created_at.
 
-Purpose:
+## 5. Source And Evidence
 
-- avoid re-extracting raw files repeatedly;
-- support AI extraction;
-- preserve page/section traceability.
+External claims should be represented as EvidenceItem records.
 
----
+Minimum fields:
 
-### KnowledgePage
-
-Represents a wiki page.
-
-Fields:
-
-- id;
-- slug;
-- title;
-- type;
-- status;
-- visibility;
-- owner_user_id;
-- organization_id;
-- content_path;
+- evidence_id;
+- evidence_type;
+- source_id;
 - summary;
-- tags;
-- source_refs;
-- landing_candidate;
-- last_reviewed_at;
-- created_at;
-- updated_at.
+- source_url_or_location;
+- observed_at;
+- extracted_at;
+- source_reliability;
+- linked_entity_ids;
+- reviewer;
+- review_status.
 
-Page types:
+Raw Source records remain evidence pointers. They are not official knowledge by themselves.
 
-- solution;
-- industry;
-- capability;
-- pattern;
-- tender;
-- sales_knowledge;
-- technical_note;
-- case_study;
-- comparison;
-- glossary;
-- project_knowledge.
+## 6. Review And Status
 
-Status values:
+Recommended record states:
 
-- draft;
-- reviewed;
-- approved;
-- public.
+- unverified;
+- verified;
+- rejected;
+- needs_review;
+- promoted.
 
-Visibility values:
+Human review must be required before high-impact decisions and before unverified external data is promoted into verified records.
 
-- private;
-- internal;
-- partner;
-- public.
+## 7. Relationship Examples
 
----
+- Customer owns Plant.
+- Customer has Contact and Stakeholder.
+- Plant belongs_to Industry and uses KnownSystem.
+- MarketSignal indicates Trigger for Customer or Plant.
+- Tender belongs_to Buyer and may reference Plant.
+- TenderRequirement maps_to Solution or Capability.
+- Solution delivered_by Partner and supports Capability.
+- CaseStudy supports Solution and Industry.
+- Opportunity links Customer, Plant, Tender, MarketSignal, Solution, EvidenceItem, Assumption, Risk, and NextAction.
 
-### KnowledgeExtractionJob
+## 8. Markdown Frontmatter
 
-Represents an AI extraction job.
-
-Fields:
-
-- id;
-- source_id;
-- prompt_template_id;
-- provider;
-- model;
-- status;
-- input_tokens;
-- output_tokens;
-- estimated_cost;
-- output_path;
-- error_message;
-- created_by;
-- created_at;
-- completed_at.
-
-Status values:
-
-- queued;
-- running;
-- succeeded;
-- failed;
-- cancelled.
-
----
-
-### PromptTemplate
-
-Stores reusable extraction or reasoning prompts.
-
-Fields:
-
-- id;
-- name;
-- type;
-- version;
-- description;
-- content_path;
-- output_schema;
-- created_at;
-- updated_at.
-
-Prompt types:
-
-- solution_extraction;
-- industry_extraction;
-- tender_requirement_extraction;
-- document_dna;
-- sales_note_distillation;
-- comparison;
-- proposal_draft;
-- risk_analysis.
-
----
-
-### AIProvider
-
-Represents a configured AI provider.
-
-Fields:
-
-- id;
-- name;
-- provider_type;
-- enabled;
-- default_model;
-- use_case;
-- cost_policy;
-- created_at.
-
-Provider types:
-
-- openai;
-- deepseek;
-- gemini;
-- claude;
-- notebooklm_manual;
-- local_llm.
-
----
-
-### AIUsageLog
-
-Tracks token and cost usage.
-
-Fields:
-
-- id;
-- user_id;
-- session_id;
-- provider;
-- model;
-- module;
-- input_tokens;
-- output_tokens;
-- estimated_cost;
-- created_at.
-
-Modules:
-
-- extraction;
-- wiki_qna;
-- proposal_generation;
-- tender_analysis;
-- summarization;
-- sales_assistant.
-
----
-
-### Note
-
-Represents a captured note, possibly from NOVA.
-
-Fields:
-
-- id;
-- title;
-- body;
-- note_type;
-- source_system;
-- related_customer;
-- related_project;
-- related_solution;
-- related_opportunity;
-- owner_user_id;
-- organization_id;
-- created_at;
-- updated_at.
-
-Note types:
-
-- sales_note;
-- presales_note;
-- meeting_note;
-- project_note;
-- idea_note;
-- technical_note;
-- customer_note.
-
----
-
-### Lead
-
-Future public portal entity.
-
-Fields:
-
-- id;
-- name;
-- email;
-- company;
-- phone;
-- interest;
-- question_history;
-- status;
-- assigned_sales;
-- created_at.
-
-Not required for initial personal MVP.
-
----
-
-## 3. Initial Markdown Frontmatter
-
-Each wiki page should support metadata like:
+Wiki pages should continue to support source-traceable metadata.
 
 ```yaml
 title: "IDBoxRT Overview"
@@ -366,7 +422,7 @@ type: "solution"
 status: "draft"
 visibility: "private"
 owner: "Hieu Do"
-organization: "Personal"
+organization: "Avenue JSC"
 tags:
   - idboxrt
   - iiot
@@ -374,24 +430,15 @@ tags:
 source_refs:
   - source_id: "SRC-0001"
     title: "IDBoxRT Technical Deck"
+related_opportunities: []
 landing_candidate: false
 last_reviewed: null
 ```
 
----
+Opportunity records may later be represented as markdown, YAML, database rows, or API resources. The required semantics should remain the same.
 
-## 4. Future Knowledge Graph Readiness
+## 9. Knowledge Graph Readiness
 
-The model should later support relationships such as:
+Do not implement a graph database in the MVP unless required.
 
-- Solution supports Capability;
-- Capability applies_to Industry;
-- Pattern integrates System;
-- TenderRequirement maps_to SolutionCapability;
-- SalesNote mentions Customer;
-- KnowledgePage derived_from Source;
-- NOVA Note promotes_to KnowledgePage.
-
-Do not implement graph database in MVP unless required.
-
-Start with clean metadata and relationships that can be migrated later.
+Start with clean IDs, structured fields, explicit relationship arrays, source references, and audit trails so records can be migrated to a graph later.

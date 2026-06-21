@@ -1,208 +1,130 @@
-# Project Constitution: NOVA Knowledge Hub
+# Project Constitution: Avenue Industrial GTM Intelligence Platform
 
 ## 1. Project Identity
 
-**Project name:** NOVA Knowledge Hub  
+**Working name:** Avenue Industrial GTM Intelligence Platform  
+**Repository lineage:** NOVA Knowledge Hub  
 **Owner-first user:** Hieu Do  
 **Initial deployment mode:** local-first development  
-**Future deployment mode:** Dockerized VPS with domain and SSL  
-**Strategic position:** independent product, integrable with NOVA
+**Strategic position:** Opportunity-centered intelligence platform for Avenue JSC, portable enough to remain usable outside one organization
 
-NOVA Knowledge Hub is a personal-first, organization-ready knowledge platform for transforming raw documents, notes, and experience into structured, validated, searchable, and reusable knowledge.
-
-It can later serve Avenue JSC, another organization, or an independent business context without being locked to one company structure.
-
----
+The project began as a markdown-first Knowledge Hub. It now evolves into an Industrial GTM Intelligence Platform that connects validated knowledge, customer context, market signals, procurement signals, tender intelligence, and Avenue's solution capabilities to generate and manage Opportunities.
 
 ## 2. Vision
 
-Build a Knowledge Operating System for industrial solutions, sales/presales intelligence, tender analysis, technical solution knowledge, and future AI-assisted business decision support.
+Build a practical intelligence system for industrial go-to-market work.
 
-The system should help the owner and future team members:
+The platform should help Avenue answer:
 
-- capture knowledge from documents and notes
-- distill knowledge into structured wiki pages
-- validate and approve knowledge before reuse
-- query approved knowledge with AI
-- publish selected knowledge into public-facing pages
-- integrate with NOVA as a system of work
+- Which industrial customers should we approach next?
+- Which plants or facilities are likely to need our solutions?
+- Which business, technical, tender, or budget signals indicate an opportunity?
+- Which Avenue solutions, partners, and references fit the situation?
+- Which contacts or stakeholder groups matter?
+- What entry strategy and next actions should Sales, Presales, Technical, and Management take?
 
----
+## 3. Core Principle
 
-## 3. Mission
+Opportunity is the central convergence point.
 
-Convert fragmented raw sources into a durable, structured, human-reviewed knowledge base that supports:
+An Opportunity is where these intelligence branches meet:
 
-- personal research
-- solution design
-- sales/presales preparation
-- proposal writing
-- tender review
-- internal training
-- future public thought leadership and landing pages
+- Customer
+- Plant, site, or facility
+- Industry or segment
+- Pain point
+- Business trigger
+- Technology gap
+- Existing systems
+- Budget, CAPEX, or OPEX signal
+- Tender or procurement activity
+- Contacts and stakeholders
+- Competitors and incumbents
+- Avenue solution portfolio
+- Past references and case studies
+- Partner capability
+- Risks and constraints
+- Recommended sales, presales, or tender strategy
 
----
+## 4. Product Boundary
 
-## 4. Core Principles
+The platform is:
 
-### 4.1 Person First, Organization Enabled
+- a Knowledge Hub;
+- an industrial customer and plant intelligence system;
+- a market and procurement signal memory;
+- an Avenue solution and capability mapping layer;
+- an Opportunity generation and prioritization system;
+- a human-reviewed AI-assisted workbench for sales, presales, tender, and management action.
 
-The system is first built for the owner's personal productivity and knowledge accumulation.
+The platform is not only:
 
-Organizations such as Avenue JSC are modeled as users, owners, sources, or contexts, not as hard-coded assumptions.
+- a CRM;
+- a document repository;
+- a tender tracker;
+- a generic chatbot;
+- an uncontrolled web crawler;
+- a replacement for human judgment.
 
-### 4.2 Knowledge First, Interface Second
+## 5. Operating Model
 
-The wiki and knowledge model are more important than the website appearance.
+```text
+Collect -> Verify -> Normalize -> Link -> Score -> Strategize -> Human Review -> Act
+```
 
-Landing pages are generated later from selected approved knowledge, not written separately as disconnected marketing content.
-
-### 4.3 Raw Sources Are Evidence, Wiki Is Operating Knowledge
-
-Raw documents are preserved as evidence.
-
-Daily usage should rely on approved wiki knowledge, not repeated direct reading of raw documents.
-
-### 4.4 Human Review Is Mandatory
-
-AI can draft, extract, compare, and suggest.
-
-Only human-approved content becomes official knowledge.
-
-### 4.5 AI-Model Agnostic
-
-The system must not depend on one AI provider.
-
-OpenAI, DeepSeek, Gemini, NotebookLM, Claude, or future local models should be replaceable through provider adapters.
-
-### 4.6 Local First, Docker Ready
-
-The project starts on a personal computer.
-
-It must be structured so it can later be deployed to a VPS using Docker Compose.
-
-### 4.7 Modular Integration With NOVA
-
-Knowledge Hub and NOVA are independent systems.
-
-NOVA can send sales/presales notes to Knowledge Hub.
-
-NOVA can query Knowledge Hub for technical and solution knowledge.
-
-Integration should happen through APIs, not tight database coupling.
-
-### 4.8 Pricing and Commercial Information Handling
-
-Pricing and commercial information must not become wiki knowledge, even in private/internal wiki pages.
-
-Do not put pricing, licensing, discounts, commercial quotes, proposal prices, budgetary prices, BOM prices, service fees, support fees, training fees, or commercial terms into wiki knowledge pages.
-
-Pricing information may only be used by the Product Owner/Admin for BOM building, budget estimation, proposal estimation, or internal commercial planning.
-
-Case study information about general benefits, avoided cost, savings, ROI, efficiency improvement, downtime reduction, production gain, or maintenance cost avoidance may be included in wiki pages if it does not disclose specific vendor pricing, license fees, discounts, proposal prices, or commercial terms.
-
-If a source contains pricing and technical knowledge together, extract only the technical knowledge into wiki pages and mark the pricing section as excluded/restricted.
-
-Any pricing source must remain restricted and must not be used for public/internal wiki knowledge enrichment.
-
----
-
-## 5. Product Boundary
-
-### In Scope for Early Phases
-
-- wiki content structure
-- source registry
-- markdown/MDX knowledge pages
-- draft/review/approved/public workflow
-- AI-assisted extraction from raw sources
-- search over approved knowledge
-- AI query over approved knowledge
-- Docker-ready deployment structure
-
-### Out of Scope for Early Phases
-
-- full CRM
-- complex multi-tenant SaaS
-- public user registration
-- public chatbot at scale
-- advanced knowledge graph
-- fully automated publishing without human review
-- deep integration with all company systems
-
----
+Manual structured records come first. Controlled ingestion and agentic workflows come later, after data governance and verification rules are stable.
 
 ## 6. Relationship With NOVA
 
-NOVA is the system of work.
-
-Knowledge Hub is the system of knowledge.
-
-NOVA captures notes, opportunities, customer context, meeting observations, and sales/presales activity.
-
-Knowledge Hub curates, validates, stores, queries, and publishes knowledge.
+NOVA remains the system of work. Knowledge Hub / Industrial Intelligence remains the system of knowledge and business intelligence.
 
 ```text
-NOVA                         Knowledge Hub
-System of Work               System of Knowledge
+NOVA                         Intelligence Platform
+System of Work               System of Intelligence
 Capture notes                Curate knowledge
-Track context                Validate content
-Support action               Provide reusable knowledge
-Query knowledge              Publish selected knowledge
+Track activity               Normalize customer, plant, tender, and signal records
+Support action               Generate and score Opportunity candidates
+Query knowledge              Recommend strategy and next actions
 ```
 
----
+Integration should happen through APIs or export/import contracts, not direct database coupling.
 
-## 7. Initial Users
+## 7. Governance Principles
 
-### Phase 1
+1. Raw crawled or imported data is not truth.
+2. Every external data point must have a source.
+3. Every inferred opportunity must separate evidence from assumption.
+4. Confidence score must be explicit.
+5. Human review is required before high-impact decisions.
+6. Verified human-entered data must not be overwritten by unverified crawled data.
+7. Source timestamp and last verified date must be maintained.
+8. Updates must be auditable.
+9. Customers, plants, tenders, and opportunities must be deduplicated.
+10. Structured records are preferred over long unstructured summaries.
 
-- Hieu only
+## 8. Early Scope
 
-### Phase 2
+In scope now:
 
-- selected internal users
-- sales
-- presales
-- technical solution staff
+- domain model and Opportunity-centered data model;
+- source and evidence rules;
+- manual entry templates for customer, plant, tender, signal, solution, and opportunity records;
+- governance and review workflow;
+- roadmap and execution rules;
+- documentation updates for agents and workflow.
 
-### Phase 3
+Out of scope now:
 
-- approved external users
-- prospects
-- partners
-- public visitors with limited AI quota
+- uncontrolled crawling;
+- automatic promotion of AI output into official records;
+- full CRM workflow;
+- complex multi-tenant SaaS;
+- deep integrations with all company systems;
+- implementation of a knowledge graph before the record model is stable.
 
----
+## 9. Project Motto
 
-## 8. Success Criteria for MVP
-
-MVP is successful when:
-
-1. A local wiki site can run on the owner's computer.
-2. Knowledge pages can be created, edited, searched, and categorized.
-3. Raw source metadata can be registered.
-4. AI can generate draft wiki content from selected source text.
-5. Pages can move through draft, reviewed, approved, and public statuses.
-6. Approved wiki content can be queried by an AI assistant.
-7. The system can be containerized and moved to a VPS later.
-
----
-
-## 9. Non-Negotiable Rules
-
-1. Do not let AI overwrite human judgment.
-2. Do not mix raw confidential data with public content.
-3. Do not hard-code Avenue-specific assumptions into the core model.
-4. Do not build landing pages before the wiki content model is stable.
-5. Do not process large raw sources repeatedly without hash/cache control.
-6. Do not expose public AI Q&A without quota, rate limit, and scope control.
-7. Do not place pricing, licensing, discounts, quotes, proposal prices, budgetary prices, BOM prices, fees, or commercial terms into wiki knowledge pages.
-
----
-
-## 10. Project Motto
-
-Human sets the aim.  
-AI accelerates the journey.  
-Knowledge is reviewed before it becomes truth.  
+Knowledge gives context.  
+Signals create attention.  
+Opportunity focuses action.  
+Human judgment approves the move.

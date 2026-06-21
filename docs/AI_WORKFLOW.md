@@ -1,67 +1,99 @@
-# AI Workflow v0.1
+# AI Workflow
 
 ## 1. Purpose
 
-This document defines how AI should be used inside NOVA Knowledge Hub.
+This document defines how AI should be used inside the Opportunity-centered Industrial GTM Intelligence Platform.
 
-AI is a tool for acceleration, extraction, drafting, comparison, and review.
+AI is a tool for acceleration, extraction, mapping, scoring support, drafting, and review.
 
 AI is not the source of truth.
-
----
 
 ## 2. Core Philosophy
 
 ```text
-Human sets the aim.
-AI extracts and drafts.
+Human sets the goal.
+AI collects, extracts, maps, drafts, and suggests.
 Human reviews and approves.
-Approved knowledge becomes reusable.
+Approved knowledge and verified intelligence become reusable.
 ```
 
----
+## 3. Operating Flow
 
-## 3. AI Roles
+```text
+Collect -> Verify -> Normalize -> Link -> Score -> Strategize -> Human Review -> Act
+```
 
-### 3.1 Extraction Assistant
+AI may assist at each stage, but it must not skip verification or human approval.
 
-Used for:
+## 4. Logical AI Agents
 
-- extracting solution knowledge
-- extracting tender requirements
-- extracting integration requirements
-- extracting document DNA
-- extracting case study facts
-
-### 3.2 Drafting Assistant
+### Market Intelligence Agent
 
 Used for:
 
-- draft wiki pages
-- draft comparison pages
-- draft proposal sections
-- draft landing page candidates
+- ingesting selected public market signals;
+- extracting structured signal records;
+- identifying possible customer, plant, industry, and trigger;
+- attaching source, timestamp, reliability, and evidence summary.
 
-### 3.3 Review Assistant
+Rule:
 
-Used for:
+Do not write directly into final Opportunity records.
 
-- finding gaps
-- finding contradictions
-- checking assumptions
-- identifying unclear claims
-
-### 3.4 Query Assistant
+### Customer Intelligence Agent
 
 Used for:
 
-- asking questions over approved knowledge
-- supporting NOVA chat integration
-- supporting sales/presales preparation
+- normalizing customer names and aliases;
+- linking parent company, subsidiaries, plants, contacts, and industries;
+- identifying customer profile gaps;
+- suggesting research tasks.
 
----
+### Procurement Intelligence Agent
 
-## 4. Provider-Agnostic Design
+Used for:
+
+- extracting tender scope and requirements;
+- identifying deadlines, eligibility, budget signals, competitors, and award results;
+- linking tender records to customers, plants, solutions, and opportunities.
+
+### Knowledge Mapping Agent
+
+Used for:
+
+- mapping Avenue solutions, products, partners, case studies, and capabilities to customer needs and tender requirements;
+- suggesting solution fit and capability gaps.
+
+### Opportunity Generation Agent
+
+Used for:
+
+- converting verified signals into Opportunity candidates;
+- merging duplicates;
+- scoring opportunities;
+- separating evidence from assumptions;
+- recommending next actions;
+- marking low-confidence opportunities for human review.
+
+### Strategy Agent
+
+Used for:
+
+- recommending sales, presales, tender, or executive strategy;
+- proposing entry point, message angle, solution bundle, and internal preparation;
+- generating action plans for Sales, Presales, Technical, and Management.
+
+### Verification / Governance Agent
+
+Used for:
+
+- checking data quality;
+- detecting unsupported claims;
+- detecting outdated or conflicting information;
+- flagging sensitive or risky information;
+- enforcing human approval gates.
+
+## 5. Provider-Agnostic Design
 
 AI providers must be accessed through adapters.
 
@@ -74,8 +106,6 @@ Supported/future providers:
 - NotebookLM-assisted manual workflow
 - local LLM
 
-The core system should not depend on one provider.
-
 Generic interface:
 
 ```text
@@ -84,48 +114,16 @@ ProviderAdapter.run(prompt, input, model, options) -> AIResult
 
 AIResult should include:
 
-- output text
-- structured output if available
-- input token count
-- output token count
-- estimated cost
-- model name
-- provider name
-- error state
-
----
-
-## 5. Model Routing Policy
-
-### Cheap/Fast Models
-
-Use for:
-
-- classification
-- tagging
-- metadata extraction
-- simple summarization
-- batch draft extraction
-
-### Strong Reasoning Models
-
-Use for:
-
-- architecture comparison
-- solution design
-- bid strategy
-- risk analysis
-- proposal reasoning
-
-### NotebookLM / Grounded Tools
-
-Use for:
-
-- reading source documents with citation
-- checking source-grounded claims
-- document-level research
-
----
+- output text;
+- structured output if available;
+- input token count;
+- output token count;
+- estimated cost;
+- model name;
+- provider name;
+- error state;
+- source references if grounded;
+- confidence or uncertainty notes when applicable.
 
 ## 6. Extraction Workflow
 
@@ -136,9 +134,9 @@ Select source
   -> select provider/model
   -> run extraction
   -> validate output schema
-  -> generate draft wiki page
+  -> store as draft or unverified intelligence
   -> log token/cost
-  -> mark job completed
+  -> request human review
 ```
 
 Rules:
@@ -146,16 +144,33 @@ Rules:
 - Do not process unchanged sources repeatedly.
 - Use source hash where possible.
 - Preserve source references.
-- Store AI output as draft only.
+- Store AI output as draft or unverified unless a human promotes it.
 
----
+## 7. Opportunity Workflow
 
-## 7. Query Workflow
+```text
+Verified customer / plant / tender / signal / solution data
+  -> opportunity candidate
+  -> evidence and assumption separation
+  -> scoring
+  -> strategy recommendation
+  -> human review
+  -> approved action
+```
+
+Rules:
+
+- Opportunity must show evidence, assumptions, confidence, owner, and review status.
+- Low-confidence opportunities should be marked for review.
+- Duplicate opportunities should be suggested for merge, not silently merged.
+- Strategy recommendations must include risks and constraints.
+
+## 8. Query Workflow
 
 ```text
 User asks question
   -> check role/scope
-  -> retrieve approved knowledge
+  -> retrieve approved knowledge and verified intelligence
   -> construct bounded context
   -> run AI answer
   -> cite related pages/sources
@@ -164,69 +179,48 @@ User asks question
 
 Rules:
 
-- Prefer approved knowledge.
+- Prefer approved knowledge and verified intelligence.
 - Do not retrieve private/internal content for public users.
 - Do not send excessive context to the model.
 - Reject questions outside system scope when needed.
 
----
-
-## 8. Token Cost Controls
+## 9. Token Cost Controls
 
 Must have from early implementation:
 
-- max input length
-- max output length
-- token logging
-- provider/model selection
-- reuse extracted text cache
-- avoid repeated extraction of unchanged files
-- optional daily budget limit
-- optional kill switch for public AI Q&A later
-
----
-
-## 9. AI Prompt Categories
-
-Prompt library should include:
-
-```text
-prompts/
-  solution/
-  industry/
-  capability/
-  pattern/
-  tender/
-  sales-note/
-  document-dna/
-  comparison/
-  proposal/
-```
-
----
+- max input length;
+- max output length;
+- token logging;
+- provider/model selection;
+- extracted text cache;
+- source hash checks;
+- optional daily budget limit;
+- optional kill switch for public AI Q&A later.
 
 ## 10. Human Review Rules
 
-AI-generated content must be reviewed before being approved.
+AI-generated content and AI-inferred opportunities must be reviewed before being treated as official.
 
 Reviewer should check:
 
-- factual correctness
-- missing context
-- source traceability
-- confidentiality
-- overclaiming
-- suitability for public/internal use
-
----
+- factual correctness;
+- source traceability;
+- freshness;
+- evidence vs assumption separation;
+- confidentiality;
+- overclaiming;
+- conflicts with verified human-entered data;
+- suitability for action.
 
 ## 11. Anti-Patterns
 
 Avoid:
 
-- treating AI output as final knowledge
-- using one model for all tasks
-- reprocessing long documents without caching
-- public AI Q&A without quota
-- querying raw confidential documents by default
-- letting AI create public claims without source evidence
+- treating AI output as final knowledge;
+- letting crawler output directly create approved opportunities;
+- using one model for all tasks;
+- reprocessing long documents without caching;
+- public AI Q&A without quota;
+- querying raw confidential documents by default;
+- letting AI create public claims without source evidence;
+- strategy recommendations without risks, assumptions, and review status.

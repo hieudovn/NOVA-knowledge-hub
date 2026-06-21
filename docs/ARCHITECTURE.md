@@ -2,241 +2,255 @@
 
 ## 1. System Positioning
 
-NOVA Knowledge Hub is a standalone knowledge platform that can later integrate with NOVA.
+The platform is an Opportunity-centered Industrial GTM Intelligence Platform built on the Knowledge Hub foundation.
 
-It has three main layers:
+It has four main layers:
 
 ```text
-Raw Sources
-    ↓
-Knowledge Processing Layer
-    ↓
-Approved Knowledge Wiki
-    ↓
-Query / Publish / Integrate
+Raw Sources And Manual Inputs
+    -> Intelligence Processing Layer
+    -> Structured Records And Approved Knowledge
+    -> Opportunity Intelligence And Action
 ```
 
----
+The wiki remains a critical knowledge surface. It is no longer the only product shape.
 
 ## 2. Logical Architecture
 
 ```text
-Distributed Raw Sources
-├─ Google Drive personal
-├─ Google Drive company
-├─ Local computer folders
-├─ Vendor documents
-├─ Tender documents
-├─ Web URLs
-└─ NOVA notes
-        ↓
-Source Registry
-        ↓
-Ingestion / Text Extraction
-        ↓
-AI Extraction Orchestrator
-        ↓
-Draft Knowledge Pages
-        ↓
-Human Review
-        ↓
-Approved Wiki
-        ↓
-Search / AI Q&A / Landing Page / NOVA API
+Sources And Inputs
+|-- manual customer / plant / tender / signal entry
+|-- internal notes and relationship history
+|-- vendor and solution documents
+|-- tender documents
+|-- selected public web sources
+|-- Avenue project, case study, and partner knowledge
+        |
+        v
+Source Registry And Evidence Store
+        |
+        v
+Collect -> Verify -> Normalize -> Link
+        |
+        v
+Structured Intelligence Records
+|-- Customer Intelligence
+|-- Plant / Facility Intelligence
+|-- Procurement And Tender Intelligence
+|-- Market Signal Intelligence
+|-- Avenue Internal Knowledge
+        |
+        v
+Opportunity Intelligence
+|-- opportunity candidates
+|-- evidence and assumptions
+|-- scoring
+|-- recommended strategy
+|-- next actions
+        |
+        v
+Human Review And Approval
+        |
+        v
+Sales / Presales / Technical / Management Action
 ```
-
----
 
 ## 3. Core Modules
 
 ### 3.1 Source Registry
 
-Tracks where source documents are located.
+Tracks where source documents and public references are located.
 
 It should store metadata, not necessarily the raw file itself.
 
-Typical fields:
+Required direction:
 
-- source_id;
-- title;
-- source_type;
-- location_uri;
-- owner;
-- organization;
-- confidentiality;
-- domain;
-- related_solution;
-- related_industry;
-- hash;
-- version;
-- last_modified;
-- extraction_status;
-- last_extracted_at.
+- every external claim must have a source;
+- every source should have timestamp and reliability metadata;
+- raw sources are evidence, not truth.
 
-### 3.2 Ingestion Layer
+### 3.2 Evidence Store
 
-Responsible for converting raw sources into extracted text and metadata.
+Stores extracted or manually captured evidence items that can support customer, plant, tender, signal, solution, or opportunity records.
 
-Supported future input types:
+Evidence must preserve:
 
-- PDF;
-- DOCX;
-- PPTX;
-- Markdown;
-- HTML;
-- plain text;
-- Google Docs;
-- Google Drive files;
-- manual notes;
-- NOVA notes.
+- source reference;
+- capture time;
+- observed or published time when available;
+- summary;
+- reliability;
+- review state.
 
-### 3.3 AI Extraction Orchestrator
+### 3.3 Intelligence Record Store
 
-Runs extraction prompts against source text or selected chunks.
+Stores structured records for:
 
-It must support multiple AI providers through adapters.
+- Customer;
+- Plant;
+- Tender;
+- MarketSignal;
+- Solution;
+- Opportunity;
+- EvidenceItem;
+- Assumption;
+- Risk;
+- NextAction.
 
-Provider examples:
+This may begin as markdown/YAML templates and later move to database-backed records.
 
-- OpenAI;
-- DeepSeek;
-- Gemini;
-- NotebookLM-assisted manual workflow;
-- future local models.
+### 3.4 Knowledge Hub
 
-### 3.4 Draft Knowledge Store
+Stores approved reusable knowledge:
 
-Stores AI-generated draft pages.
+- solution pages;
+- industry pages;
+- capability pages;
+- patterns;
+- tender knowledge;
+- case studies;
+- lessons learned;
+- reference architectures.
 
-Draft content is not official until reviewed.
+AI Q&A should prefer approved knowledge and verified records.
 
-### 3.5 Human Review Layer
+### 3.5 Intelligence Pipeline
 
-Allows the user or future editors to approve, edit, reject, or publish content.
+Implements the operating model:
 
-### 3.6 Approved Wiki
+```text
+Collect -> Verify -> Normalize -> Link -> Score -> Strategize -> Human Review -> Act
+```
 
-The main operational knowledge layer.
+The first implementation should be manual and structured. Automation comes later.
 
-This is the content that search, AI assistant, and NOVA integration should prefer.
+### 3.6 Agent Layer
 
-### 3.7 Publishing Layer
+Logical agents support:
 
-Publishes selected approved content to:
+- market intelligence;
+- customer intelligence;
+- procurement intelligence;
+- knowledge mapping;
+- opportunity generation;
+- strategy;
+- verification and governance.
 
-- internal wiki;
-- public wiki;
-- landing pages;
-- sales material;
-- proposal templates.
+Agents should communicate through structured records, events, and shared state. They should not bypass human approval gates.
 
----
+### 3.7 Review And Governance Layer
+
+Provides:
+
+- human review workflow;
+- conflict detection;
+- deduplication;
+- audit trail;
+- approval gates;
+- stale data checks.
 
 ## 4. Deployment Architecture
 
-### Phase 1 — Local
+### Phase 1 - Local
 
 ```text
 Laptop
-├─ Wiki web app
-├─ Local markdown content
-├─ Local scripts
-├─ Optional local database
-└─ AI API keys in .env
+|-- Wiki web app
+|-- Markdown content
+|-- Manual templates
+|-- Source registry
+|-- Optional local scripts
+|-- AI API keys in .env
 ```
 
-### Phase 2 — Docker
+### Phase 2 - Docker
 
 ```text
 Docker Compose
-├─ web
-├─ api
-├─ db
-├─ search
-└─ worker
+|-- web
+|-- api
+|-- db
+|-- search
+|-- worker
 ```
 
-### Phase 3 — VPS
+### Phase 3 - VPS
 
 ```text
 VPS Ubuntu
-├─ Docker Engine
-├─ Docker Compose
-├─ Reverse proxy: Caddy or Nginx
-├─ SSL certificate
-├─ Domain
-└─ Backup jobs
+|-- Docker Engine
+|-- Docker Compose
+|-- Reverse proxy
+|-- SSL certificate
+|-- Domain
+|-- Backup jobs
 ```
-
----
 
 ## 5. Recommended Initial Stack
 
-For MVP:
+For the current stage:
 
-- Wiki frontend: Docusaurus or Next.js with MDX;
-- Content: Markdown / MDX;
-- API: FastAPI or Node.js;
-- Database: PostgreSQL when needed;
-- Search: local full-text first, Meilisearch later;
-- AI providers: OpenAI, DeepSeek, Gemini adapters;
-- Deployment: Docker Compose.
+- wiki frontend: Docusaurus;
+- content: Markdown / MDX;
+- structured records: markdown/YAML templates first;
+- source registry: YAML first;
+- database: PostgreSQL later when records need workflow and querying;
+- search: local full-text first, Meilisearch later;
+- AI providers: adapter-based;
+- deployment: Docker Compose.
 
-Recommended practical start:
+Practical start:
 
 ```text
-Docusaurus + Markdown + simple scripts
+Docusaurus + Markdown + YAML templates + governance docs
 ```
 
 Then gradually add:
 
 ```text
-API + DB + search + AI assistant
+API + DB + search + AI assistant + agent orchestration
 ```
 
----
-
-## 6. Integration with NOVA
+## 6. Integration With NOVA
 
 NOVA should not directly depend on Knowledge Hub database internals.
 
 Preferred integration contract:
 
 ```text
-NOVA → Knowledge Hub API → Search / Retrieve / Ask
-Knowledge Hub → NOVA API → Receive distilled notes
+NOVA -> Intelligence Platform API -> Search / Retrieve / Ask / Create Candidate
+Intelligence Platform -> NOVA API -> Receive distilled notes and action updates
 ```
 
 Example future endpoints:
 
 - `POST /api/knowledge/search`
 - `POST /api/knowledge/ask`
-- `POST /api/knowledge/draft-from-note`
-- `POST /api/knowledge/publish-candidate`
+- `POST /api/intelligence/signals`
+- `POST /api/opportunities/candidates`
+- `POST /api/opportunities/{id}/review`
 - `GET /api/wiki/pages/{id}`
-
----
 
 ## 7. Architectural Constraints
 
-1. Do not hardcode Avenue as the only organization.
-2. Do not hardcode any AI provider as the only model.
-3. Do not require raw sources to be stored in one physical location.
-4. Do not allow public AI Q&A without quota and scope control.
+1. Keep Opportunity as the central convergence entity.
+2. Do not hardcode Avenue as the only possible organization, even if Avenue is the first operating context.
+3. Do not hardcode any AI provider as the only model.
+4. Do not allow raw crawler output to update final Opportunity records directly.
 5. Do not treat AI draft output as approved knowledge.
-6. Do not build landing pages as a separate knowledge source.
-7. Do not couple NOVA and Knowledge Hub databases directly.
-
----
+6. Do not overwrite verified human-entered data with unverified extracted data.
+7. Do not build landing pages as a separate knowledge source.
+8. Do not couple NOVA and Knowledge Hub databases directly.
 
 ## 8. Architectural Decision Records
 
-Major decisions should be stored in `docs/adr/`.
+Major decisions should be stored in `docs/adr/` later.
 
 Initial ADRs to create later:
 
 - ADR-001: Markdown-first wiki content.
-- ADR-002: Personal-first architecture.
+- ADR-002: Opportunity-centered intelligence model.
 - ADR-003: AI-provider adapter pattern.
 - ADR-004: API-based NOVA integration.
-- ADR-005: Draft/Approved/Public content lifecycle.
+- ADR-005: Draft/Verified/Approved lifecycle.
+- ADR-006: Controlled ingestion before crawling.

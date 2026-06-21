@@ -1,0 +1,19 @@
+[
+  {
+    "signal_id": "SIG-EXAMPLE",
+    "signal_type": "plant_expansion",
+    "title": "Example plant expansion announcement",
+    "customer_id": "CUST-EXAMPLE",
+    "plant_id": "",
+    "industry": "power_generation",
+    "trigger": "capacity expansion",
+    "pain_point": "new asset reliability and operations visibility",
+    "source_url": "https://example.com/news",
+    "source_name": "Example news source",
+    "source_type": "public_web",
+    "collected_at": "2026-06-21T00:00:00.000Z",
+    "last_verified_at": "",
+    "reliability_score": 0.6,
+    "evidence_summary": "Announcement mentions an expansion project that may require operational technology upgrades."
+  }
+]

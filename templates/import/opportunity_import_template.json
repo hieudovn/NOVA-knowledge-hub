@@ -1,0 +1,35 @@
+[
+  {
+    "opportunity_id": "OPP-EXAMPLE",
+    "title": "Example APM opportunity",
+    "customer_id": "CUST-EXAMPLE",
+    "plant_id": "",
+    "pain_points": ["asset reliability"],
+    "triggers": ["tender", "plant expansion"],
+    "tender_id": "TDR-EXAMPLE",
+    "procurement_signal": "APM tender notice",
+    "relevant_solutions": ["IBM MAS", "AVEVA APM"],
+    "evidence_items": [
+      {
+        "evidence_id": "EVD-EXAMPLE",
+        "source_url": "https://example.com/tender",
+        "source_name": "Example tender notice",
+        "source_type": "tender_portal",
+        "collected_at": "2026-06-21T00:00:00.000Z",
+        "last_verified_at": "",
+        "reliability_score": 0.8,
+        "evidence_summary": "Tender notice describes APM scope."
+      }
+    ],
+    "assumptions": ["Avenue can meet the technical scope with existing partner capability."],
+    "risks": ["Unknown incumbent vendor."],
+    "recommended_next_actions": ["Sales to validate stakeholder map.", "Presales to map requirements to solution fit."],
+    "source_url": "https://example.com/tender",
+    "source_name": "Example tender notice",
+    "source_type": "tender_portal",
+    "collected_at": "2026-06-21T00:00:00.000Z",
+    "last_verified_at": "",
+    "reliability_score": 0.8,
+    "evidence_summary": "Manual opportunity candidate based on tender evidence."
+  }
+]

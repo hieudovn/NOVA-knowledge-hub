@@ -1,50 +1,49 @@
-# NOVA Knowledge Hub
+# Avenue Industrial GTM Intelligence Platform
 
-NOVA Knowledge Hub is a personal-first, organization-ready knowledge platform for collecting, distilling, validating, querying, and publishing solution knowledge.
+This repository is evolving from a pure Knowledge Hub into an Industrial GTM Intelligence Platform for Avenue JSC.
 
-It starts as a personal knowledge operating system for Hieu Do, then can evolve into a team knowledge system for Avenue JSC or be moved to another organization without losing the core knowledge architecture.
+The platform still stores and retrieves validated internal knowledge, but its strategic purpose is broader: help Avenue discover, qualify, prioritize, and act on industrial business opportunities.
 
-## Core Idea
+## Core Principle
 
-Knowledge Hub is not just a website or a chatbot. It is a structured knowledge layer that can serve:
+Opportunity is the central convergence point.
 
-- Personal research and decision support
-- Sales and presales knowledge capture
-- Technical solution knowledge management
-- Tender and proposal intelligence
-- Internal wiki and later public landing pages
-- Future integration with NOVA as a system of work
+An Opportunity connects customer context, plant and site context, market signals, procurement activity, tender requirements, Avenue solution capability, past references, partner capability, risks, and recommended sales/presales/tender strategy.
 
-## Initial Focus
+The platform is not only a CRM, not only a document knowledge base, and not only a tender management tool. It is an intelligence system that turns knowledge and evidence into actionable opportunities.
 
-Phase 1 focuses on the wiki and knowledge pipeline:
+## Operating Model
 
 ```text
-Raw Sources
-  -> Ingestion
-  -> AI Extraction
-  -> Draft Wiki
-  -> Human Review
-  -> Approved Knowledge
-  -> Search / AI Query / Future Publishing
+Collect -> Verify -> Normalize -> Link -> Score -> Strategize -> Human Review -> Act
 ```
 
-Landing pages will be built later from selected, approved wiki content.
+Start with structured records and manual intelligence workflow. Add controlled ingestion and agentic automation only after governance, source traceability, and human review gates are clear.
 
 ## Documentation
 
 Start with:
 
+- `docs/00_VISION.md`
+- `docs/01_DOMAIN_MODEL.md`
+- `docs/02_ROADMAP.md`
+- `docs/03_AGENT_ARCHITECTURE.md`
+- `docs/04_DATA_GOVERNANCE.md`
+- `docs/05_OPPORTUNITY_MODEL.md`
+- `docs/06_INTELLIGENCE_PIPELINE.md`
+- `docs/07_USE_CASES.md`
+- `docs/08_EXECUTION_RULES.md`
+
+Existing foundation docs remain useful:
+
 - `docs/PROJECT_CONSTITUTION.md`
 - `docs/ARCHITECTURE.md`
-- `docs/ROADMAP.md`
-- `docs/CONTENT_MODEL.md`
 - `docs/DATA_MODEL.md`
 - `docs/AI_WORKFLOW.md`
-- `docs/SECURITY_AND_ACCESS.md`
-- `docs/DECISION_LOG.md`
+- `docs/CONTENT_MODEL.md`
+- `docs/CONTENT_WORKFLOW.md`
 
-## M1 Wiki
+## Current App
 
 The Docusaurus wiki lives in `apps/wiki` and reads markdown/MDX knowledge pages from `content/wiki`.
 
@@ -74,6 +73,6 @@ Then open `http://localhost:3100`. See `docs/DOCKER_LOCAL_PREVIEW.md` for port o
 
 Each wiki page must include metadata front matter for `type`, `status`, `visibility`, `tags`, and `source_refs`. Run `npm run validate:metadata` inside `apps/wiki` to check this before building.
 
-## Guiding Principle
+## Guiding Rule
 
-Human owns direction. AI owns acceleration. Human owns the final decision.
+Raw data is evidence, not truth. AI can accelerate research and drafting, but human review decides what becomes official intelligence and what action Avenue should take.

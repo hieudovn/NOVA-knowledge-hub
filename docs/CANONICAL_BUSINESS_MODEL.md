@@ -2,74 +2,125 @@
 
 ## Purpose
 
-The Canonical Business Model (CBM) provides a stable business ontology for NOVA Knowledge Hub.
+The Canonical Business Model provides a stable business ontology for the Industrial GTM Intelligence Platform.
 
-It sits between Business Memory and Knowledge Graph.
+It sits between raw business memory and a future knowledge graph. Its purpose is to prevent uncontrolled graph growth and provide a common language for AI reasoning, manual records, and future APIs.
 
-Its purpose is to prevent uncontrolled graph growth and provide a common language for future AI reasoning.
+## Central Object
 
----
+Opportunity is the central convergence object.
+
+Other domains provide context, evidence, constraints, and action paths for Opportunity.
 
 ## Core Domains
 
 ### Market Domain
+
 - Industry
 - Segment
 - Geography
 - Regulation
+- MarketSignal
+- InvestmentProject
+- PlantExpansion
 
 ### Customer Domain
+
 - Organization
 - Customer
+- ParentCompany
+- Subsidiary
+- Plant
 - Contact
 - Stakeholder
+- RelationshipHistory
+
+### Procurement Domain
+
+- Tender
+- ProcurementPackage
+- TenderRequirement
+- CommercialRequirement
+- ComplianceRequirement
+- TenderAwardResult
 
 ### Opportunity Domain
-- Lead
+
 - Opportunity
 - Qualification
-- Proposal
-- Tender
+- EvidenceItem
+- Assumption
+- Risk
+- RecommendedStrategy
+- NextAction
 - Competitor
 
 ### Delivery Domain
+
 - Project
 - Milestone
 - Deliverable
 - Issue
-- Lesson Learned
+- LessonLearned
+- CaseStudy
 
 ### Solution Domain
+
 - Product
 - Solution
+- Partner
 - Capability
 - Pattern
 - Integration
+- ReferenceArchitecture
 
 ### Knowledge Domain
+
 - Source
 - Note
-- Knowledge Page
+- KnowledgePage
 - Decision
-- Business Memory
+- BusinessMemory
+- ComplianceMatrix
+- RiskLibraryItem
 
-### AI OS Domain
+### AI Operating Domain
+
+- Agent
 - Mode
 - Skill
 - Workflow
 - Artifact
-
----
+- ReviewGate
+- AuditLog
 
 ## Relationship Examples
 
-Customer -> Opportunity
-Opportunity -> Proposal
-Proposal -> Solution
-Solution -> Capability
-Capability -> Industry
-Project -> Lesson Learned
-Decision -> Business Memory
-Mode -> Skill
-Skill -> Artifact
-Knowledge Page -> Source
+- Customer -> Plant
+- Plant -> Industry
+- Plant -> KnownSystem
+- MarketSignal -> Customer
+- MarketSignal -> Plant
+- Tender -> ProcurementPackage
+- TenderRequirement -> Capability
+- Solution -> Capability
+- Partner -> Solution
+- CaseStudy -> Solution
+- Opportunity -> Customer
+- Opportunity -> Plant
+- Opportunity -> Tender
+- Opportunity -> MarketSignal
+- Opportunity -> Solution
+- Opportunity -> EvidenceItem
+- Opportunity -> Assumption
+- Opportunity -> Risk
+- Opportunity -> RecommendedStrategy
+- Opportunity -> NextAction
+
+## Design Rules
+
+1. Model Opportunity as the convergence point.
+2. Keep evidence and assumption separate.
+3. Prefer explicit relationships over long summary text.
+4. Do not introduce graph complexity before the structured record model is stable.
+5. Preserve IDs and source references so records can migrate to a graph later.

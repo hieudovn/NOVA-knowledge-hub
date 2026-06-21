@@ -1,0 +1,20 @@
+[
+  {
+    "customer_id": "CUST-EXAMPLE",
+    "name": "Example Industrial Customer",
+    "aliases": ["Example Plant Group"],
+    "parent_company": "",
+    "industry": "power_generation",
+    "business_status": "active",
+    "known_systems": ["DCS", "SCADA"],
+    "existing_vendors": [],
+    "pain_points": ["asset reliability"],
+    "source_url": "https://example.com/customer-profile",
+    "source_name": "Example public profile",
+    "source_type": "public_web",
+    "collected_at": "2026-06-21T00:00:00.000Z",
+    "last_verified_at": "",
+    "reliability_score": 0.6,
+    "evidence_summary": "Public profile indicates the customer operates industrial assets."
+  }
+]
