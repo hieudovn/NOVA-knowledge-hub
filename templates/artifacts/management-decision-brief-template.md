@@ -8,7 +8,9 @@ source_refs: []
 input_artifacts: []
 output_artifacts: []
 related_modes: []
-related_skills: []
+related_skills:
+  - create_management_brief
+  - summarize_decision_options
 primary_role:
 supporting_roles: []
 quality_rubric: docs/14_OPERATING_ROLES_AND_QUALITY_GUIDE.md#cross-role-quality-rubric
