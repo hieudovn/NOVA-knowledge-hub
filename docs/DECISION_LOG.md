@@ -176,3 +176,43 @@ This gives fast iteration and future portability.
 - Keep environment configuration explicit.
 - Avoid cloud-only assumptions.
 - Prepare Docker and deployment docs after the local MVP is useful.
+
+---
+
+## DEC-008 - Adopt NOVA Core Three-Module Operating Model
+
+**Date:** 2026-06-24  
+**Status:** Accepted
+
+### Decision
+
+Adopt the NOVA Core model as the guiding architecture and development direction for future work in this repository.
+
+Core modules:
+
+- NOVA Signal
+- NOVA Action
+- NOVA Knowledge Governance
+
+Core loop:
+
+```text
+Signal -> Insight -> Decision -> Action -> Feedback -> Knowledge Asset -> Better Signal / Better Action
+```
+
+### Rationale
+
+The project should not drift into a generic note app, document repository, chatbot, CRM, project management tool, vector database, or automation-first AI agent system. It should strengthen the self-reinforcing loop between signal capture, sensemaking, decisions, actions, feedback, and governed knowledge assets.
+
+This decision refines the existing continuous enrichment direction without removing project-specific context. The current repository may implement a specific execution surface or knowledge foundation, but future work should still map to the NOVA Core operating model.
+
+### Implications
+
+- Future AI-assisted development must read `docs/00_NOVA_CORE_DESIGN_PRINCIPLES.md` first.
+- Future AI-assisted development should follow `docs/00_AI_STARTUP_PROMPT.md`.
+- Features must be mapped to one or more NOVA modules.
+- Changes should identify their related loop stage: Signal, Insight, Decision, Action, Feedback, Knowledge Asset, or Better Signal / Better Action.
+- `raw`, `draft`, `reviewed`, `approved`, `source_of_truth`, `deprecated`, and `archived` content must be handled differently.
+- AI output is not automatically approved knowledge.
+- Raw notes, vector databases, embeddings, AI memory, and generated content are not source of truth.
+- Important external, customer-facing, proposal, commercial, or technical outputs require visible human review gates.

@@ -24,10 +24,31 @@ Collect -> Filter -> Verify -> Normalize -> Structure -> Link -> Enrich -> Reuse
 
 Start with structured records and manual/semi-manual enrichment. Add controlled ingestion and agentic automation only after governance, source traceability, and human review gates are clear.
 
+## NOVA Core Alignment
+
+This project follows the NOVA Core operating model:
+
+```text
+Signal -> Insight -> Decision -> Action -> Feedback -> Knowledge Asset -> Better Signal / Better Action
+```
+
+Core modules:
+
+- NOVA Signal
+- NOVA Action
+- NOVA Knowledge Governance
+
+Before AI-assisted development, read:
+
+- `docs/00_NOVA_CORE_DESIGN_PRINCIPLES.md`
+- `docs/00_AI_STARTUP_PROMPT.md`
+
 ## Documentation
 
 Start with:
 
+- `docs/00_NOVA_CORE_DESIGN_PRINCIPLES.md`
+- `docs/00_AI_STARTUP_PROMPT.md`
 - `docs/00_VISION.md`
 - `docs/01_DOMAIN_MODEL.md`
 - `docs/02_ROADMAP.md`
